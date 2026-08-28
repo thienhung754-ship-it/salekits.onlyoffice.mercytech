@@ -1429,6 +1429,330 @@
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
+
+    /* ========================================================================= */
+    /* COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM (APPLE GRADE) */
+    /* ========================================================================= */
+    @media (max-width: 768px) {
+      /* Header compact layout */
+      .app-header {
+        padding: 8px 12px;
+      }
+
+      .header-inner {
+        gap: 8px;
+      }
+
+      .brand-logo {
+        font-size: 14px;
+      }
+
+      .brand-badge {
+        font-size: 9.5px;
+        padding: 2px 7px;
+      }
+
+      .header-search {
+        margin: 0 6px;
+        max-width: none;
+      }
+
+      .search-input {
+        font-size: 12px;
+        padding: 6px 10px 6px 28px;
+      }
+
+      .search-icon-svg {
+        left: 8px;
+        width: 12px;
+        height: 12px;
+      }
+
+      .theme-toggle-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+      }
+
+      /* Container & Hero */
+      .container {
+        padding: 16px 12px 60px 12px;
+      }
+
+      .hero-banner {
+        padding: 18px 8px 12px 8px;
+        margin-bottom: 16px;
+      }
+
+      .hero-eyebrow {
+        font-size: 10.5px;
+        letter-spacing: 0.8px;
+        margin-bottom: 6px;
+      }
+
+      .hero-title {
+        font-size: 23px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+      }
+
+      .hero-subtitle {
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .hero-quote-trigger-bar {
+        margin-top: 14px;
+      }
+
+      .btn-hero-quote-main {
+        width: 100%;
+        justify-content: center;
+        font-size: 12px;
+        padding: 10px 14px;
+        text-align: center;
+      }
+
+      /* Native Scrollable Navigation Tabs */
+      .nav-tabs {
+        display: flex;
+        justify-content: flex-start;
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 2px 10px 2px;
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        width: 100%;
+      }
+
+      .nav-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tab-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 12.5px;
+        padding: 7px 14px;
+      }
+
+      /* Section Headers */
+      .section-header {
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-size: 18px;
+      }
+
+      .section-desc {
+        font-size: 12.5px;
+      }
+
+      /* Tab 1: 5 Do / 5 Don't & Flashcards */
+      .dos-donts-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .do-card, .dont-card {
+        padding: 16px;
+      }
+
+      .rule-item {
+        font-size: 12.5px;
+        margin-bottom: 10px;
+      }
+
+      .flashcards-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .flashcard {
+        height: 220px;
+      }
+
+      .flashcard-front, .flashcard-back {
+        padding: 16px;
+      }
+
+      .flashcard-question {
+        font-size: 13.5px;
+      }
+
+      .flashcard-answer {
+        font-size: 12.5px;
+        line-height: 1.5;
+      }
+
+      /* Tab 2: Quote Studio */
+      .quote-studio-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 4px;
+        margin-bottom: 20px;
+      }
+
+      .input-block-card {
+        padding: 14px;
+      }
+
+      .block-title {
+        font-size: 12.5px;
+      }
+
+      .partner-toggle-container {
+        padding: 3px;
+      }
+
+      .partner-toggle-btn {
+        font-size: 11.5px;
+        padding: 7px 6px;
+      }
+
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .form-row label {
+        font-size: 11px;
+      }
+
+      .form-input-sm, .form-select-sm {
+        font-size: 12.5px;
+        padding: 7px 10px;
+      }
+
+      .repeater-controls-grid {
+        display: grid;
+        grid-template-columns: 70px 70px 1fr;
+        gap: 6px;
+      }
+
+      .btn-add-product {
+        padding: 10px 14px;
+        font-size: 12.5px;
+      }
+
+      /* A4 Preview Sheet on Mobile */
+      .a4-preview-scroll-wrapper {
+        padding: 8px 4px 14px 4px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-color);
+        background: rgba(120, 120, 128, 0.04);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .a4-sheet {
+        width: 760px;
+        min-width: 760px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      .preview-action-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+        margin: 12px 0;
+      }
+
+      .btn-action-print, .btn-action-jpg, .btn-action-copy-chat, .btn-action-reset {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 14px;
+        font-size: 13px;
+      }
+
+      /* Cards & Grids */
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .apple-card {
+        padding: 16px;
+      }
+
+      .card-title {
+        font-size: 15px;
+      }
+
+      .script-box {
+        padding: 12px;
+      }
+
+      .script-text {
+        font-size: 12.5px;
+      }
+
+      /* Tab 4 Filter Pills */
+      .filter-pills {
+        display: flex;
+        justify-content: flex-start;
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+        padding: 2px 2px 10px 2px;
+        margin-bottom: 16px;
+      }
+
+      .filter-pills::-webkit-scrollbar {
+        display: none;
+      }
+
+      .filter-pill {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 11.5px;
+        padding: 6px 12px;
+      }
+
+      .accordion-header {
+        font-size: 13px;
+        padding: 12px 14px;
+      }
+
+      .accordion-body {
+        padding: 12px 14px;
+        font-size: 12.5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-brand .brand-badge {
+        display: none;
+      }
+
+      #themeText {
+        display: none;
+      }
+
+      .theme-toggle-btn {
+        padding: 6px 8px;
+      }
+
+      .theme-toggle-btn::after {
+        content: "🌓";
+        font-size: 13px;
+      }
+
+      .repeater-controls-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .repeater-controls-grid .form-row:last-child {
+        grid-column: 1 / -1;
+      }
+    }
   </style>
 </head>
 <body>
