@@ -1672,7 +1672,7 @@
                   <button type="button" id="discModePctBtn" class="discount-pill-btn" onclick="setDiscountMode('pct')">% (Phần trăm)</button>
                 </div>
               </div>
-              <input type="number" id="quoteDiscountVal" class="form-input-sm" value="0" min="0" step="50000" oninput="renderA4Sheet()">
+              <input type="text" inputmode="numeric" id="quoteDiscountVal" class="form-input-sm" value="0" oninput="onDiscountInput(this)" placeholder="Nhập số tiền VNĐ">
             </div>
 
             <div class="form-row" style="margin-top: 6px;">
@@ -2686,6 +2686,21 @@
       renderA4Sheet();
     }
 
+    // Thousands Separator Helpers for Vietnamese Currency
+    function formatVND(val) {
+      if (val === null || val === undefined || val === '') return '0';
+      var num = typeof val === 'number' ? Math.round(val) : parseInt(String(val).replace(/\D/g, ''), 10);
+      if (isNaN(num)) return '0';
+      return num.toLocaleString('vi-VN');
+    }
+
+    function parseVND(str) {
+      if (typeof str === 'number') return Math.max(0, Math.round(str));
+      if (!str) return 0;
+      var clean = String(str).replace(/\D/g, '');
+      return parseInt(clean, 10) || 0;
+    }
+
     function setDiscountMode(mode) {
       playbookDiscountMode = mode;
       var vndBtn = document.getElementById('discModeVndBtn');
@@ -2697,17 +2712,41 @@
 
       if (discInput) {
         if (mode === 'pct') {
+          discInput.type = 'number';
           discInput.step = '1';
           discInput.max = '100';
           discInput.placeholder = 'Nhập % giảm (VD: 10)';
-          if (parseInt(discInput.value) > 100) discInput.value = '10';
+          var currVal = parseVND(discInput.value);
+          discInput.value = currVal > 100 ? '10' : (currVal || '0');
         } else {
-          discInput.step = '50000';
+          discInput.type = 'text';
+          discInput.inputMode = 'numeric';
           discInput.removeAttribute('max');
           discInput.placeholder = 'Nhập số tiền VNĐ';
+          var currVal = parseInt(discInput.value, 10) || 0;
+          discInput.value = currVal > 0 ? formatVND(currVal) : '0';
         }
       }
 
+      renderA4Sheet();
+    }
+
+    function onDiscountInput(inputEl) {
+      if (playbookDiscountMode === 'pct') {
+        var pct = parseInt(inputEl.value, 10);
+        if (isNaN(pct)) pct = 0;
+        if (pct > 100) inputEl.value = '100';
+        if (pct < 0) inputEl.value = '0';
+      } else {
+        var cursorPos = inputEl.selectionStart;
+        var prevLen = inputEl.value.length;
+        var rawVal = parseVND(inputEl.value);
+        var formatted = rawVal > 0 ? formatVND(rawVal) : (inputEl.value === '0' ? '0' : '');
+        inputEl.value = formatted;
+        var diff = formatted.length - prevLen;
+        var newPos = Math.max(0, cursorPos + diff);
+        try { inputEl.setSelectionRange(newPos, newPos); } catch(e){}
+      }
       renderA4Sheet();
     }
 
@@ -2797,10 +2836,13 @@
       renderA4Sheet();
     }
 
-    function onRowQtyChange(idx, newQtyVal) {
-      var qty = parseInt(newQtyVal) || 1;
-      if (qty < 1) qty = 1;
+    function onRowQtyInput(idx, inputEl) {
+      var rawVal = parseInt(inputEl.value, 10);
+      var qty = isNaN(rawVal) ? 1 : Math.max(1, rawVal);
       var row = currentQuoteRows[idx];
+      if (!row) return;
+
+      row.qty = qty;
 
       var prod = null;
       for (var i = 0; i < PLAYBOOK_CATALOG.length; i++) {
@@ -2812,22 +2854,44 @@
       if (!prod) prod = PLAYBOOK_CATALOG[0];
 
       var isDealer = playbookPartnerType === 'dealer';
+      var autoPrice = prod.getPrice(qty, isDealer);
 
-      row.qty = qty;
-      row.unitPrice = prod.getPrice(qty, isDealer);
-      row.totalPrice = qty * row.unitPrice;
+      row.unitPrice = autoPrice;
+      row.totalPrice = qty * autoPrice;
 
-      renderQuoteInputRows();
+      var priceInput = document.getElementById('rowPriceInput_' + idx);
+      if (priceInput) {
+        priceInput.value = formatVND(autoPrice);
+      }
+
       renderA4Sheet();
     }
 
-    function onRowUnitPriceChange(idx, newPriceVal) {
-      var price = parseInt(newPriceVal) || 0;
-      var row = currentQuoteRows[idx];
-      row.unitPrice = price;
-      row.totalPrice = row.qty * price;
+    function onRowUnitInput(idx, val) {
+      if (currentQuoteRows[idx]) {
+        currentQuoteRows[idx].unit = val;
+        renderA4Sheet();
+      }
+    }
 
-      renderQuoteInputRows();
+    function onRowPriceInput(idx, inputEl) {
+      var cursorPos = inputEl.selectionStart;
+      var prevLen = inputEl.value.length;
+      
+      var rawPrice = parseVND(inputEl.value);
+      var row = currentQuoteRows[idx];
+      if (row) {
+        row.unitPrice = rawPrice;
+        row.totalPrice = row.qty * rawPrice;
+      }
+
+      var formatted = rawPrice > 0 ? formatVND(rawPrice) : (inputEl.value === '0' ? '0' : '');
+      inputEl.value = formatted;
+
+      var diff = formatted.length - prevLen;
+      var newPos = Math.max(0, cursorPos + diff);
+      try { inputEl.setSelectionRange(newPos, newPos); } catch(e){}
+
       renderA4Sheet();
     }
 
@@ -2854,7 +2918,7 @@
 
         html += '<div class="repeater-row">' +
           '<div class="repeater-row-header">' +
-            '<span class="item-num-badge">Sản Phẩm #' + (idx + 1) + '</span>' +
+            '<span class="item-num-badge">SẢN PHẨM #' + (idx + 1) + '</span>' +
             (currentQuoteRows.length > 1 ? '<button type="button" class="btn-delete-row" onclick="removeQuoteItemRow(' + idx + ')" title="Xóa dòng">✕</button>' : '') +
           '</div>' +
           '<div class="form-row">' +
@@ -2865,15 +2929,15 @@
           '<div class="repeater-controls-grid">' +
             '<div class="form-row">' +
               '<label>SL:</label>' +
-              '<input type="number" class="form-input-sm" value="' + row.qty + '" min="1" oninput="onRowQtyChange(' + idx + ', this.value)">' +
+              '<input type="number" id="rowQtyInput_' + idx + '" class="form-input-sm" value="' + row.qty + '" min="1" oninput="onRowQtyInput(' + idx + ', this)">' +
             '</div>' +
             '<div class="form-row">' +
               '<label>ĐVT:</label>' +
-              '<input type="text" class="form-input-sm" value="' + row.unit + '" oninput="currentQuoteRows[' + idx + '].unit = this.value; renderA4Sheet();">' +
+              '<input type="text" class="form-input-sm" value="' + row.unit + '" oninput="onRowUnitInput(' + idx + ', this.value)">' +
             '</div>' +
             '<div class="form-row">' +
               '<label>Đơn Giá (VNĐ):</label>' +
-              '<input type="number" class="form-input-sm" value="' + row.unitPrice + '" step="10000" oninput="onRowUnitPriceChange(' + idx + ', this.value)">' +
+              '<input type="text" inputmode="numeric" id="rowPriceInput_' + idx + '" class="form-input-sm" value="' + formatVND(row.unitPrice) + '" oninput="onRowPriceInput(' + idx + ', this)" placeholder="99.000">' +
             '</div>' +
           '</div>' +
         '</div>';
@@ -2943,7 +3007,14 @@
       });
 
       var discEl = document.getElementById('quoteDiscountVal');
-      var rawDiscVal = parseFloat(discEl ? discEl.value : 0) || 0;
+      var rawDiscVal = 0;
+      if (discEl) {
+        if (playbookDiscountMode === 'pct') {
+          rawDiscVal = parseFloat(discEl.value) || 0;
+        } else {
+          rawDiscVal = parseVND(discEl.value);
+        }
+      }
       var discountAmount = 0;
       if (playbookDiscountMode === 'pct') {
         var pct = Math.min(100, Math.max(0, rawDiscVal));
@@ -2987,7 +3058,14 @@
       var rep = (repEl ? repEl.value : '').trim();
       var phone = (phoneEl ? phoneEl.value : '').trim();
       var addr = (addrEl ? addrEl.value : '').trim();
-      var rawDiscVal = parseFloat(discEl ? discEl.value : 0) || 0;
+      var rawDiscVal = 0;
+      if (discEl) {
+        if (playbookDiscountMode === 'pct') {
+          rawDiscVal = parseFloat(discEl.value) || 0;
+        } else {
+          rawDiscVal = parseVND(discEl.value);
+        }
+      }
       var includeStamp = stampEl ? stampEl.checked : true;
 
       // Update Header Numbers
