@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế Hoạch Re-sale & Chăm Sóc Khách Hàng Zalo - OnlyOffice Mercy Tech</title>
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090D1A;
+            --bg-surface: #12182D;
+            --bg-surface-hover: #1A223F;
+            --border-color: #232D50;
+            --text-primary: #F3F4F6;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
+            --accent-cyan: #06B6D4;
+            --accent-cyan-hover: #0891B2;
+            --accent-purple: #8B5CF6;
+            --accent-magenta: #EC4899;
+            --status-success: #10B981;
+            --status-warning: #F59E0B;
+            --font-outfit: 'Outfit', sans-serif;
+            --font-inter: 'Inter', sans-serif;
+            --glass-bg: rgba(18, 24, 45, 0.7);
+            --glass-border: rgba(35, 45, 80, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-inter);
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* Container */
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-outfit);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #FFF;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+
+        .brand-title h1 {
+            font-family: var(--font-outfit);
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #FFF, #C084FC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-title p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .header-meta {
+            text-align: right;
+        }
+
+        .campaign-badge {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .campaign-badge span::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-cyan);
+        }
+
+        /* Bento Grid Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(16px);
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(6, 182, 212, 0.3);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-card:hover::after {
+            opacity: 1;
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .stat-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-icon {
+            color: var(--accent-cyan);
+            background: rgba(6, 182, 212, 0.1);
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-value {
+            font-family: var(--font-outfit);
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-footer {
+            font-size: 0.85rem;
+            color: var(--status-success);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .stat-footer.warning {
+            color: var(--status-warning);
+        }
+
+        /* Campaign Strategy Container */
+        .campaign-section {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(16px);
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-outfit);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Tabs Control */
+        .tabs-container {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: var(--font-outfit);
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab-btn:hover {
+            color: #FFF;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: #FFF;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
+            box-shadow: inset 0 0 10px rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.4);
+        }
+
+        .tab-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .tab-btn.active .tab-badge {
+            background: var(--accent-cyan);
+            color: #000;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Strategy Layout Grid */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Strategy Plan Column */
+        .plan-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .plan-step-card {
+            background: rgba(26, 34, 63, 0.3);
+            border: 1px solid rgba(35, 45, 80, 0.4);
+            border-radius: 12px;
+            padding: 1.25rem;
+            position: relative;
+        }
+
+        .step-num {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            font-family: var(--font-outfit);
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: rgba(6, 182, 212, 0.15);
+        }
+
+        .plan-step-card h4 {
+            font-family: var(--font-outfit);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFF;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .plan-step-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .highlight-accent {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .highlight-magenta {
+            color: var(--accent-magenta);
+            font-weight: 600;
+        }
+
+        /* Action Column */
+        .action-column {
+            background: rgba(18, 24, 45, 0.4);
+            border: 1px solid rgba(35, 45, 80, 0.6);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .action-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .action-title {
+            font-family: var(--font-outfit);
+            font-weight: 700;
+            color: #FFF;
+            font-size: 1.25rem;
+        }
+
+        /* Template Card */
+        .template-wrapper {
+            background: #090E1A;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .template-header {
+            background: rgba(35, 45, 80, 0.3);
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .channel-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .indicator-zalo {
+            color: #0068FF;
+        }
+
+        .indicator-phone {
+            color: #EF4444;
+        }
+
+        .template-body {
+            padding: 1.25rem;
+            font-family: var(--font-inter);
+            font-size: 0.95rem;
+            color: #E5E7EB;
+            min-height: 120px;
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .template-variable {
+            background: rgba(139, 92, 246, 0.15);
+            color: #C084FC;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            font-weight: 500;
+        }
+
+        .copy-btn {
+            background: var(--accent-cyan);
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            padding: 0.4rem 1rem;
+            font-family: var(--font-outfit);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-cyan-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Script Call Card */
+        .script-box {
+            background: rgba(6, 182, 212, 0.03);
+            border-left: 3px solid var(--accent-cyan);
+            padding: 1rem 1.25rem;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .script-meta {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Objection Section */
+        .objections-section {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .objections-title {
+            font-family: var(--font-outfit);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFF;
+            margin-bottom: 1rem;
+        }
+
+        .objection-item {
+            background: rgba(35, 45, 80, 0.2);
+            border: 1px solid rgba(35, 45, 80, 0.4);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .objection-header {
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .objection-header:hover {
+            background: rgba(35, 45, 80, 0.4);
+        }
+
+        .objection-q {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #E5E7EB;
+        }
+
+        .objection-arrow {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+            fill: none;
+            stroke: var(--text-secondary);
+            stroke-width: 2;
+        }
+
+        .objection-item.open .objection-arrow {
+            transform: rotate(180deg);
+        }
+
+        .objection-body {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+            background: rgba(9, 13, 26, 0.4);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .objection-item.open .objection-body {
+            padding: 1rem 1.25rem;
+            max-height: 500px;
+            border-top: 1px solid rgba(35, 45, 80, 0.3);
+        }
+
+        /* Dynamic Bundle Calculator */
+        .calculator-section {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(16px);
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-family: var(--font-outfit);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #FFF;
+        }
+
+        .input-control {
+            background: rgba(9, 13, 26, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-family: var(--font-inter);
+            font-size: 1rem;
+            color: #FFF;
+            transition: all 0.2s ease;
+        }
+
+        .input-control:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+        }
+
+        .select-control {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239CA3AF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.25rem;
+            padding-right: 2.5rem;
+            appearance: none;
+        }
+
+        .calc-output {
+            background: rgba(9, 13, 26, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .pitch-preview-box {
+            background: #090E1A;
+            border: 1px solid rgba(35, 45, 80, 0.8);
+            border-radius: 12px;
+            padding: 1.25rem;
+            font-family: var(--font-inter);
+            font-size: 0.925rem;
+            color: #E5E7EB;
+            min-height: 150px;
+            white-space: pre-wrap;
+        }
+
+        .calc-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .calc-result-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .result-item {
+            background: rgba(35, 45, 80, 0.3);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(35, 45, 80, 0.5);
+        }
+
+        .result-lbl {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .result-val {
+            font-family: var(--font-outfit);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-top: 0.25rem;
+        }
+
+        .result-val.highlight {
+            color: var(--status-success);
+        }
+
+        /* Toast Alert */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: -25rem;
+            background: #111827;
+            border: 1px solid var(--accent-cyan);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            color: #FFF;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1000;
+        }
+
+        .toast.show {
+            right: 2rem;
+        }
+
+        .toast-icon {
+            color: var(--status-success);
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Header -->
+    <header>
+        <div class="brand-section">
+            <div class="brand-logo">O</div>
+            <div class="brand-title">
+                <h1>OnlyOffice Mercy Tech</h1>
+                <p>Chiến dịch Re-sale Khách hàng Zalo & Kế hoạch Kịch bản Chốt số</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <div class="campaign-badge">
+                <span>Trạng thái: Hoạt động</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Dashboard Block -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="stat-title">Tồn kho Lead Chưa Chốt</span>
+                <span class="stat-icon">👤</span>
+            </div>
+            <div class="stat-value">154</div>
+            <div class="stat-footer">
+                <span>📊 Có sẵn trên tài khoản Zalo sếp Hùng</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="stat-title">Tỷ lệ Phản Hồi Trung bình</span>
+                <span class="stat-icon">⚡</span>
+            </div>
+            <div class="stat-value">34.2%</div>
+            <div class="stat-footer">
+                <span>📈 Tăng 8.5% từ khi tối ưu AI</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="stat-title">Tỷ lệ Chuyển đổi Kỳ vọng</span>
+                <span class="stat-icon">🎯</span>
+            </div>
+            <div class="stat-value">12.5%</div>
+            <div class="stat-footer warning">
+                <span>🎯 Mục tiêu: Chốt tối thiểu 19 đại lý</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Campaign Section -->
+    <div class="campaign-section">
+        <div class="section-header">
+            <h2>Kịch Bản & Quy Trình Chăm Sóc Re-sale Cho Từng Nhóm</h2>
+            <p>Chọn phân nhóm khách hàng dưới đây để lấy kế hoạch hành động và mẫu tin nhắn copy-paste tương ứng.</p>
+        </div>
+
+        <!-- Tabs Controller -->
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTab('ghosted')">
+                1. Đồng ý nhưng im lặng
+                <span class="tab-badge">Nhóm A</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab('hesitant')">
+                2. Xem giá sỉ rồi đắn đo
+                <span class="tab-badge">Nhóm B</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab('unresponsive')">
+                3. Đã gửi Demo nhưng im lặng
+                <span class="tab-badge">Nhóm C</span>
+            </button>
+        </div>
+
+        <!-- TAB CONTENT 1: GHOSTED -->
+        <div id="tab-ghosted" class="tab-content active">
+            <div class="strategy-grid">
+                <!-- Kế hoạch -->
+                <div class="plan-column">
+                    <div class="plan-step-card">
+                        <span class="step-num">01</span>
+                        <h4>Hành Động: Gửi Đánh Giá Ngắn</h4>
+                        <p>Khách hàng đã kết bạn nhưng chưa từng rep hoặc đọc tài liệu. Ta cần gửi <span class="highlight-accent">1 câu hỏi mang tính gợi ý cực kỳ ngắn</span> để kích thích phản hồi, không spam tài liệu dồn dập.</p>
+                    </div>
+                    <div class="plan-step-card">
+                        <span class="step-num">02</span>
+                        <h4>Đòn Bẩy: Đề xuất Tặng Key</h4>
+                        <p>Đưa ra đề xuất gửi tặng <span class="highlight-accent">01 Key kích hoạt vĩnh viễn</span> dùng thử cho máy cá nhân của chính họ để họ tin tưởng chất lượng trước khi bàn đến đại lý.</p>
+                    </div>
+                    <div class="plan-step-card">
+                        <span class="step-num">03</span>
+                        <h4>Thời Điểm Vàng</h4>
+                        <p>Nên nhắn tin vào mốc thời gian: <span class="highlight-magenta">9:30 - 10:15 Sáng</span> hoặc <span class="highlight-magenta">14:00 - 14:45 Chiều</span>.</p>
+                    </div>
+                </div>
+                <!-- Kịch bản & Copy -->
+                <div class="action-column">
+                    <div class="action-header">
+                        <span class="action-title">Kịch Bản Chat & Gọi Điện</span>
+                    </div>
+
+                    <div class="template-wrapper">
+                        <div class="template-header">
+                            <span class="channel-indicator indicator-zalo">💬 Tin nhắn Zalo chăm sóc lại</span>
+                            <button class="copy-btn" onclick="copyTemplate('txt-ghosted-zalo')">Sao chép</button>
+                        </div>
+                        <div id="txt-ghosted-zalo" class="template-body">Dạ em chào <span class="template-variable">anh/chị</span> ạ. Hôm trước em có gửi cho bên mình bộ chính sách đại lý OnlyOffice tối ưu bởi Mercy Tech vĩnh viễn bên em á. 
+
+Không biết <span class="template-variable">anh/chị</span> đã kịp xem thử file chính sách sỉ chưa ạ? Tiện đây em xin phép được kích hoạt tặng bên mình 01 Key bản quyền vĩnh viễn cài thử nghiệm để kiểm tra độ tương thích với máy văn phòng của mình trước nhé ạ?</div>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-meta">📞 Cuộc gọi nhanh (Nếu có SĐT)</div>
+                        <p style="font-size: 0.95rem; font-style: italic; color: #E5E7EB;">
+                            "Alo em chào anh Hùng ạ, em bên Mercy Tech chuyên cung cấp bộ OnlyOffice bản quyền thay thế cho Office lậu ấy ạ. Hôm trước hai anh em mình có kết bạn Zalo rồi, em gọi điện hỏi xem bên mình đã cài thử cái bản demo kiểm tra tính tương thích file excel, word chưa để em hỗ trợ cấp key bản quyền chạy thử cho máy bên mình..."
+                        </p>
+                    </div>
+
+                    <!-- Objections -->
+                    <div class="objections-section">
+                        <div class="objections-title">Xử Lý Từ Chối & Thắc Mắc Thường Gặp</div>
+                        
+                        <div class="objection-item">
+                            <div class="objection-header" onclick="toggleObjection(this)">
+                                <span class="objection-q">"Để anh xem lại sau / Bận quá chưa xem"</span>
+                                <svg class="objection-arrow" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="objection-body">
+                                Dạ vâng không sao đâu ạ, anh cứ bận việc đi ạ. Em biết anh bận nên em xin phép gửi thêm 1 ảnh giao diện thực tế của phần quản lý portal cấp key đại lý qua Zalo để lúc nào rảnh anh lướt xem qua 5 giây là nắm được cơ chế tự quản lý key cho khách của mình rất tiện lợi nhé ạ.
+                            </div>
+                        </div>
+
+                        <div class="objection-item">
+                            <div class="objection-header" onclick="toggleObjection(this)">
+                                <span class="objection-q">"Khách hàng ở đây ít quan tâm bản quyền OnlyOffice"</span>
+                                <svg class="objection-arrow" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="objection-body">
+                                Dạ anh ơi, do đợt này các bên thuế và thanh tra bản quyền quét gắt phần mềm crack lậu ghê lắm anh ạ. OnlyOffice bên em giải quyết đúng bài toán: dùng y hệt Word/Excel không bị vỡ phông, lại có đầy đủ giấy tờ thanh tra đóng mộc đỏ mà giá sỉ nhập rẻ chỉ bằng 1/10 Microsoft Office, nên các công ty doanh nghiệp gom mua sỉ cài cho nhân viên nhiều lắm ạ.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 2: HESITANT -->
+        <div id="tab-hesitant" class="tab-content">
+            <div class="strategy-grid">
+                <!-- Kế hoạch -->
+                <div class="plan-column">
+                    <div class="plan-step-card">
+                        <span class="step-num">01</span>
+                        <h4>Hành Động: Ưu Đãi Giới Hạn</h4>
+                        <p>Khách hàng đã hỏi giá sỉ, biết gói 50 key giá 149k/key nhưng còn ngần ngại về vốn ban đầu. Kế hoạch là đề xuất <span class="highlight-accent">chia nhỏ gói thử nghiệm ban đầu (Gói 10-20 key)</span> với đơn giá sỉ nguyên vẹn để kích hoạt đại lý.</p>
+                    </div>
+                    <div class="plan-step-card">
+                        <span class="step-num">02</span>
+                        <h4>Đòn Bẩy: Khóa Ưu Đãi Ký Hợp Đồng</h4>
+                        <p>Đề xuất làm hợp đồng khung đại lý trước, cọc trước 1 khoản cực nhỏ (chỉ 1-2 triệu) để <span class="highlight-accent">khóa mức giá sỉ ưu đãi</span>, số lượng key sẽ lấy dần trong vòng 6-12 tháng.</p>
+                    </div>
+                    <div class="plan-step-card">
+                        <span class="step-num">03</span>
+                        <h4>Thời Điểm Vàng</h4>
+                        <p>Nên gọi điện trực tiếp hoặc nhắn tin vào mốc thời gian: <span class="highlight-magenta">15:30 - 16:30 Chiều</span>.</p>
+                    </div>
+                </div>
+                <!-- Kịch bản & Copy -->
+                <div class="action-column">
+                    <div class="action-header">
+                        <span class="action-title">Kịch Bản Chat & Gọi Điện</span>
+                    </div>
+
+                    <div class="template-wrapper">
+                        <div class="template-header">
+                            <span class="channel-indicator indicator-zalo">💬 Tin nhắn Zalo chia nhỏ gói sỉ</span>
+                            <button class="copy-btn" onclick="copyTemplate('txt-hesitant-zalo')">Sao chép</button>
+                        </div>
+                        <div id="txt-hesitant-zalo" class="template-body">Dạ <span class="template-variable">anh/chị</span> ơi, hôm trước anh em mình trao đổi về gói sỉ đại lý tối thiểu 50 key á. 
+
+Để hỗ trợ bên mình thuận tiện chạy thử thị trường giai đoạn đầu mà không lo đọng vốn, sếp bên em vừa duyệt cơ chế đặc biệt cho đại lý mới: Cho phép kích hoạt gói sỉ thử nghiệm chỉ <span class="highlight-accent">15 key</span> với nguyên đơn giá sỉ đại lý là <span class="highlight-accent">149.000đ/key</span> (tổng vốn nhập ban đầu chỉ 2.235.000đ) để mình lắp đặt cho vài khách hàng quen test trước ạ. 
+
+Không biết em lên hợp đồng đại lý cho gói sỉ thử nghiệm này gửi anh xem trước nhé ạ?</div>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-meta">📞 Cuộc gọi chốt sỉ gói nhỏ</div>
+                        <p style="font-size: 0.95rem; font-style: italic; color: #E5E7EB;">
+                            "Dạ alo anh Hùng ơi, em gọi lại từ Mercy Tech đây ạ. Em thấy anh vẫn đang đắn đo về mức tối thiểu 50 key đúng không anh? Em vừa xin được sếp em hỗ trợ tạo điều kiện tối đa cho cửa hàng mình đợt đầu, đó là cho anh vào gói sỉ thử nghiệm chỉ 15-20 key thôi nhưng vẫn giữ nguyên giá sỉ 149k để anh dễ ra hàng và lắp thử cho khách. Hợp đồng khung bên em vẫn bảo đảm đầy đủ pháp lý xuất VAT cho anh..."
+                        </p>
+                    </div>
+
+                    <!-- Objections -->
+                    <div class="objections-section">
+                        <div class="objections-title">Xử Lý Từ Chối & Thắc Mắc Thường Gặp</div>
+                        
+                        <div class="objection-item">
+                            <div class="objection-header" onclick="toggleObjection(this)">
+                                <span class="objection-q">"Nếu khách hàng mua lẻ về dùng không được thì sao?"</span>
+                                <svg class="objection-arrow" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="objection-body">
+                                Dạ anh yên tâm hoàn toàn, OnlyOffice tương thích chéo 99% - 100% với file Word/Excel của Microsoft Office cũ. Key đi theo UUID vĩnh viễn của mainboard máy nên khách cài lại Win thoải mái vẫn nhận key tự động. Bên em hỗ trợ kỹ thuật UltraView 1-1 cho đại lý và bảo hành 12 tháng nên anh không lo bất cứ rủi ro nào về phần kỹ thuật đâu ạ.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 3: UNRESPONSIVE -->
+        <div id="tab-unresponsive" class="tab-content">
+            <div class="strategy-grid">
+                <!-- Kế hoạch -->
+                <div class="plan-column">
+                    <div class="plan-step-card">
+                        <span class="step-num">01</span>
+                        <h4>Hành Động: Tạo Sự Khan Hiếm</h4>
+                        <p>Khách hàng đã nhận link demo và ảnh chụp nhưng im lặng lâu ngày. Cần kích hoạt re-sale bằng kịch bản <span class="highlight-accent">"Hạn chót ưu đãi đợt tuyển sỉ"</span> để họ hành động.</p>
+                    </div>
+                    <div class="plan-step-card">
+                        <span class="step-num">02</span>
+                        <h4>Đòn Bẩy: Chương trình Hỗ trợ CTV</h4>
+                        <p>Nếu khách phản hồi không đủ ngân sách đại lý, đề xuất hạ cấp sang làm <span class="highlight-accent">Cộng tác viên (CTV) không ôm hàng</span> với mức chiết khấu 15% để duy trì tương tác và chuyển hóa dần.</p>
+                    </div>
+                    <div class="plan-step-card">
+                        <span class="step-num">03</span>
+                        <h4>Thời Điểm Vàng</h4>
+                        <p>Nên nhắn tin vào mốc thời gian: <span class="highlight-magenta">10:30 - 11:15 Sáng</span>.</p>
+                    </div>
+                </div>
+                <!-- Kịch bản & Copy -->
+                <div class="action-column">
+                    <div class="action-header">
+                        <span class="action-title">Kịch Bản Chat & Gọi Điện</span>
+                    </div>
+
+                    <div class="template-wrapper">
+                        <div class="template-header">
+                            <span class="channel-indicator indicator-zalo">💬 Tin nhắn Zalo tạo sự khan hiếm</span>
+                            <button class="copy-btn" onclick="copyTemplate('txt-unresponsive-zalo')">Sao chép</button>
+                        </div>
+                        <div id="txt-unresponsive-zalo" class="template-body">Dạ em chào <span class="template-variable">anh/chị</span> ạ. Em thấy tài khoản trải nghiệm thử bản demo của mình đã hết thời gian dùng thử 7 ngày á. 
+
+Không biết qua trải nghiệm dùng thử phần mềm thì bên mình có gặp vướng mắc gì cần kỹ thuật bên em hỗ trợ UltraView xử lý không ạ? 
+
+Hiện tại chương trình hỗ trợ tặng thêm <span class="highlight-accent">03 key đại lý miễn phí</span> khi đăng ký gói sỉ đợt này của bên em sắp kết thúc vào cuối tuần này rồi. Anh tranh thủ chốt sớm để nhận ưu đãi nạp thêm key miễn phí vào tài khoản nhé ạ!</div>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-meta">📞 Cuộc gọi hỏi trải nghiệm dùng thử</div>
+                        <p style="font-size: 0.95rem; font-style: italic; color: #E5E7EB;">
+                            "Alo em chào anh Hùng ạ. Hôm trước em có gửi link tài khoản demo OnlyOffice bản quyền vĩnh viễn tối ưu bởi Mercy Tech cho anh dùng thử. Em gọi kiểm tra xem anh cài thử chạy có lỗi lầm gì không, với đợt này bên em đang có ưu đãi tặng thêm key cho đại lý mới chốt trước thứ Bảy tuần này nên em gọi báo anh giữ chỗ trước..."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CALCULATOR SECTION -->
+    <div class="calculator-section">
+        <div class="section-header">
+            <h2>Công Cụ Tạo Deal Sỉ & Soạn Tin Nhắn Pitching Nhanh</h2>
+            <p>Nhập các thông số deal sỉ bên dưới để hệ thống tự động tính toán tổng vốn và sinh văn bản chào hàng gửi khách hàng trên Zalo/SMS.</p>
+        </div>
+
+        <div class="calculator-grid">
+            <!-- Form Input -->
+            <div class="calc-form">
+                <div class="form-group">
+                    <label for="calc-gender">Xưng hô khách hàng</label>
+                    <select id="calc-gender" class="input-control select-control" onchange="updatePitch()">
+                        <option value="anh">Anh (Nam)</option>
+                        <option value="chị">Chị (Nữ)</option>
+                        <option value="anh/chị">Anh/Chị (Chung)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="calc-name">Tên khách hàng</label>
+                    <input type="text" id="calc-name" class="input-control" value="Hùng" oninput="updatePitch()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-qty">Số lượng Key đại lý đề xuất</label>
+                    <input type="number" id="calc-qty" class="input-control" value="20" min="5" oninput="updatePitch()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-price">Đơn giá sỉ đề xuất (VNĐ/Key)</label>
+                    <input type="number" id="calc-price" class="input-control" value="149000" step="5000" oninput="updatePitch()">
+                </div>
+            </div>
+
+            <!-- Output Pitch Text -->
+            <div class="calc-output">
+                <div class="calc-header-row">
+                    <span class="action-title">Nội Dung Tin Nhắn Chào Deal Sinh Tự Động</span>
+                    <button class="copy-btn" onclick="copyTemplate('pitch-preview')">Sao chép tin nhắn</button>
+                </div>
+                
+                <div id="pitch-preview" class="pitch-preview-box">Loading...</div>
+
+                <div class="calc-result-summary">
+                    <div class="result-item">
+                        <div class="result-lbl">Số lượng key đề xuất</div>
+                        <div id="res-qty" class="result-val">20 Key</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-lbl">Tổng vốn nhập ban đầu</div>
+                        <div id="res-total" class="result-val highlight">2,980,000 VNĐ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 OnlyOffice Mercy Tech Global Bot & CRM System. Kế hoạch triển khai độc quyền bởi Mercy Tech.</p>
+    </footer>
+</div>
+
+<!-- Toast element -->
+<div id="copy-toast" class="toast">
+    <svg class="toast-icon" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+    </svg>
+    <span>Đã sao chép nội dung kịch bản vào clipboard!</span>
+</div>
+
+<script>
+    // Tab switching logic
+    function switchTab(tabId) {
+        // Remove active class from all buttons and contents
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Find clicked button
+        event.currentTarget.classList.add('active');
+        
+        // Show target content
+        document.getElementById('tab-' + tabId).classList.add('active');
+    }
+
+    // Toggle objection accordions
+    function toggleObjection(header) {
+        const item = header.parentElement;
+        item.classList.toggle('open');
+    }
+
+    // Copy to clipboard with Toast Notification
+    function copyTemplate(elementId) {
+        const textElement = document.getElementById(elementId);
+        let text = "";
+        
+        if (textElement.tagName === 'INPUT' || textElement.tagName === 'TEXTAREA') {
+            text = textElement.value;
+        } else {
+            text = textElement.innerText;
+        }
+
+        // Variable tags clean up if any
+        text = text.replace(/<span class="template-variable">/g, "").replace(/<\/span>/g, "");
+
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('copy-toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        });
+    }
+
+    // Format currency helper
+    function formatMoney(amount) {
+        return new Intl.NumberFormat('vi-VN').format(amount) + " VNĐ";
+    }
+
+    // Dynamic pitch generation
+    function updatePitch() {
+        const gender = document.getElementById('calc-gender').value;
+        const name = document.getElementById('calc-name').value.trim() || 'Hùng';
+        const qty = parseInt(document.getElementById('calc-qty').value) || 0;
+        const price = parseInt(document.getElementById('calc-price').value) || 0;
+        const total = qty * price;
+
+        // Update calculations summary labels
+        document.getElementById('res-qty').innerText = qty + " Key";
+        document.getElementById('res-total').innerText = formatMoney(total);
+
+        // Generate customized pitch template text
+        const pitchText = `Dạ em chào ${gender} ${name} ạ. Em gửi ${gender} chương trình ưu đãi sỉ giới hạn thiết kế riêng cho bên mình:
+
+• Gói đề xuất sỉ: ${qty} key bản quyền OnlyOffice vĩnh viễn.
+• Đơn giá sỉ ưu đãi: ${formatMoney(price)} / Key.
+• Tổng vốn đầu tư ban đầu: ${formatMoney(total)}.
+
+Cơ chế này sẽ hỗ trợ tạo sẵn tài khoản quản lý Portal riêng để ${gender} tự cấp phát, quản lý thu hồi key cho khách hàng của bên mình vô cùng chủ động. 
+
+Em xin phép được soạn thảo hợp đồng đại lý cho gói đề xuất ${qty} key này gửi ${gender} xem trước qua Zalo luôn nhé ạ?`;
+
+        document.getElementById('pitch-preview').innerText = pitchText;
+    }
+
+    // Initialize pitch on load
+    window.onload = function() {
+        updatePitch();
+    }
+</script>
+</body>
+</html>

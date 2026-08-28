@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang & Kịch Bản Phỏng Vấn Telesales B2B | Mercy Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Apple Signature Palette */
+      --bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --border: rgba(0, 0, 0, 0.08);
+      --border-strong: rgba(0, 0, 0, 0.14);
+      --text: #1d1d1f;
+      --text-secondary: #515154;
+      --text-muted: #86868b;
+      
+      --apple-blue: #0071e3;
+      --apple-blue-light: #f0f7ff;
+      --apple-blue-border: #d0e7ff;
+      
+      --apple-green: #248a3d;
+      --apple-green-light: #f2faf4;
+      --apple-green-border: #c6ebd0;
+      
+      --apple-red: #d70015;
+      --apple-red-light: #fdf2f2;
+      --apple-red-border: #f8c9c9;
+      
+      --apple-purple: #5856d6;
+      --apple-purple-light: #f7f6fd;
+      --apple-purple-border: #dedbfb;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding: 40px 20px 80px 20px;
+    }
+
+    .document-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Action top bar */
+    .action-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .brand-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1d1d1f;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .btn-print {
+      background: #ffffff;
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background: #f0f0f2;
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Vector Icon Utility */
+    .icon {
+      width: 15px;
+      height: 15px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .icon-lg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .meta-item h5 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .meta-item p {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Stage Cards */
+    .stage-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .stage-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-strong);
+    }
+
+    .stage-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stage-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .stage-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #1d1d1f;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .stage-card.salary-theme .stage-number {
+      background: #248a3d;
+    }
+
+    .stage-card.roleplay-theme .stage-number {
+      background: #5856d6;
+    }
+
+    .stage-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    .stage-pill {
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: #f5f5f7;
+      color: var(--text-secondary);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stage-card.salary-theme .stage-pill {
+      background: var(--apple-green-light);
+      color: var(--apple-green);
+      border-color: var(--apple-green-border);
+    }
+
+    .stage-card.roleplay-theme .stage-pill {
+      background: var(--apple-purple-light);
+      color: var(--apple-purple);
+      border-color: var(--apple-purple-border);
+    }
+
+    .stage-goal {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    /* Dialogue & Speech Blocks */
+    .dialogue-box {
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 14px 0;
+      border: 1px solid var(--border);
+    }
+
+    .dialogue-box.interviewer {
+      background: var(--apple-blue-light);
+      border-left: 4px solid var(--apple-blue);
+      border-color: var(--apple-blue-border);
+    }
+
+    .dialogue-box.salary {
+      background: var(--apple-green-light);
+      border-left: 4px solid var(--apple-green);
+      border-color: var(--apple-green-border);
+    }
+
+    .dialogue-box.roleplay {
+      background: var(--apple-purple-light);
+      border-left: 4px solid var(--apple-purple);
+      border-color: var(--apple-purple-border);
+    }
+
+    .dialogue-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dialogue-label.blue {
+      color: var(--apple-blue);
+    }
+
+    .dialogue-label.green {
+      color: var(--apple-green);
+    }
+
+    .dialogue-label.purple {
+      color: var(--apple-purple);
+    }
+
+    .dialogue-text {
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 450;
+      line-height: 1.7;
+    }
+
+    .dialogue-text em {
+      color: var(--apple-blue);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .dialogue-text strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* Criteria Callout Box */
+    .criteria-box {
+      background: #fafafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-top: 14px;
+    }
+
+    .criteria-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .criteria-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .criteria-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .criteria-list li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bullet-point {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--apple-blue);
+      flex-shrink: 0;
+    }
+
+    /* Green / Red Flags */
+    .flags-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .flags-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .flag-card {
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .flag-card.green {
+      background: var(--apple-green-light);
+      border: 1px solid var(--apple-green-border);
+    }
+
+    .flag-card.green h5 {
+      color: var(--apple-green);
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .flag-card.red {
+      background: var(--apple-red-light);
+      border: 1px solid var(--apple-red-border);
+    }
+
+    .flag-card.red h5 {
+      color: var(--apple-red);
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .flag-card ul {
+      padding-left: 18px;
+      color: var(--text-secondary);
+    }
+
+    .flag-card li {
+      margin-bottom: 5px;
+    }
+
+    /* Roleplay Script Sample */
+    .sample-script-card {
+      background: #ffffff;
+      border: 1px dashed var(--apple-purple-border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-top: 12px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .sample-script-card strong {
+      color: var(--apple-purple);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sample-script-card em {
+      font-style: italic;
+      color: #3a3a3c;
+    }
+
+    /* Document Footer */
+    .document-footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .btn-print {
+        display: none !important;
+      }
+      .stage-card {
+        box-shadow: none;
+        border: 1px solid #e5e5ea;
+        page-break-inside: avoid;
+        margin-bottom: 16px;
+      }
+      .hero-card {
+        box-shadow: none;
+        border: 1px solid #e5e5ea;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-wrapper">
+
+    <!-- Top Action Bar -->
+    <div class="action-top-bar">
+      <span class="brand-tag">Mercy Tech Global</span>
+      <button class="btn-print" onclick="window.print()">
+        <svg class="icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        In / Lưu PDF
+      </button>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="hero-card">
+      <h1 class="hero-title">Kịch Bản Phỏng Vấn Tuyển Dụng Telesales & CSKH B2B</h1>
+      <p class="hero-subtitle">Bộ khung phỏng vấn chuẩn 6 bước dành cho Ban Giám Đốc đánh giá năng lực ứng viên kinh doanh</p>
+      
+      <div class="meta-grid">
+        <div class="meta-item">
+          <h5>Vị trí tuyển dụng</h5>
+          <p>Telesales / CSKH B2B (Remote Online)</p>
+        </div>
+        <div class="meta-item">
+          <h5>Hình thức phỏng vấn</h5>
+          <p>Google Meet / Zalo Video (20 - 30 Phút)</p>
+        </div>
+        <div class="meta-item">
+          <h5>Sản phẩm phụ trách</h5>
+          <p>OnlyOffice Bản Quyền & Microsoft</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= GIAI ĐOẠN 1 ================= -->
+    <section class="stage-card">
+      <div class="stage-header">
+        <div class="stage-title-wrap">
+          <div class="stage-number">01</div>
+          <div class="stage-title">Mở Đầu & Phá Băng (Warm-up & Ice Breaking)</div>
+        </div>
+        <span class="stage-pill">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          2 – 3 Phút
+        </span>
+      </div>
+
+      <p class="stage-goal">
+        <strong>Mục tiêu:</strong> Tạo bầu không khí cởi mở, kiểm tra tín hiệu đường truyền âm thanh/camera và cảm nhận ban đầu về chất giọng, tác phong của ứng viên.
+      </p>
+
+      <div class="dialogue-box interviewer">
+        <div class="dialogue-label blue">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Lời thoại gợi ý của Người phỏng vấn:
+        </div>
+        <div class="dialogue-text">
+          "Chào em! Anh là Hùng, phụ trách điều hành tại <em>Mercy Tech Global</em>. Đầu tiên anh cảm ơn em đã quan tâm và nộp hồ sơ ứng tuyển vị trí Telesale / CSKH bên anh nhé.<br><br>
+          Em nghe rõ âm thanh và thấy đường truyền ổn định không? Buổi trao đổi hôm nay rất thoải mái, anh muốn lắng nghe kinh nghiệm và định hướng của em, cũng như chia sẻ rõ về công việc và quyền lợi tại công ty.<br><br>
+          Trước hết, em giới thiệu đôi nét ngắn gọn về bản thân và cơ duyên biết đến Mercy Tech nhé?"
+        </div>
+      </div>
+
+      <div class="criteria-box">
+        <div class="criteria-title">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Quan sát nhanh trong 3 phút đầu:
+        </div>
+        <ul class="criteria-list">
+          <li><span class="bullet-point"></span> Bật Camera đầy đủ, trang phục lịch sự</li>
+          <li><span class="bullet-point"></span> Âm thanh rõ ràng, không bị tạp âm ồn ào</li>
+          <li><span class="bullet-point"></span> Giọng nói dễ nghe, nhẹ nhàng, tự tin</li>
+          <li><span class="bullet-point"></span> Tác phong nhanh nhẹn, năng lượng tích cực</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= GIAI ĐOẠN 2 ================= -->
+    <section class="stage-card">
+      <div class="stage-header">
+        <div class="stage-title-wrap">
+          <div class="stage-number">02</div>
+          <div class="stage-title">Khai Thác Kinh Nghiệm Thực Chiến & Kỷ Luật Online</div>
+        </div>
+        <span class="stage-pill">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          5 – 7 Phút
+        </span>
+      </div>
+
+      <p class="stage-goal">
+        <strong>Mục tiêu:</strong> Đánh giá kinh nghiệm gọi điện thực tế, phản xạ xử lý khi bị khách từ chối và tính tự giác khi làm việc tại nhà.
+      </p>
+
+      <div class="dialogue-box interviewer">
+        <div class="dialogue-label blue">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Câu hỏi 1 (Kinh nghiệm gọi điện thực tế):
+        </div>
+        <div class="dialogue-text">
+          "Trong CV em có ghi đã từng làm Chăm sóc khách hàng / Telesale. Em chia sẻ cụ thể hơn: Trước đây em bán hoặc tư vấn sản phẩm gì? Mỗi ngày em gọi khoảng bao nhiêu cuộc và đối tượng khách hàng là ai?"
+        </div>
+      </div>
+
+      <div class="dialogue-box interviewer">
+        <div class="dialogue-label blue">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Câu hỏi 2 (Kỹ năng xử lý từ chối - Trọng tâm):
+        </div>
+        <div class="dialogue-text">
+          "Khi nhấc máy gọi điện cho khách hàng B2B (như chủ cửa hàng máy tính hoặc kế toán công ty), nếu khách vừa nghe đã gạt đi: <em>'Anh bận lắm / Bên anh có bên khác cung cấp rồi không có nhu cầu'</em> thì bình thường em sẽ phản ứng và xử lý tình huống này thế nào?"
+        </div>
+      </div>
+
+      <div class="dialogue-box interviewer">
+        <div class="dialogue-label blue">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Câu hỏi 3 (Kỷ luật làm việc Remote / Online):
+        </div>
+        <div class="dialogue-text">
+          "Công việc bên anh là làm việc online 100% tại nhà theo giờ hành chính (08:00 – 17:30). Không có ai đứng sau giám sát từng phút, em tự quản lý thời gian và giữ kỷ luật làm việc như thế nào để đảm bảo hiệu suất?"
+        </div>
+      </div>
+
+      <div class="flags-grid">
+        <div class="flag-card green">
+          <h5>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Tín Hiệu Tích Cực (Green Flags)
+          </h5>
+          <ul>
+            <li>Trả lời tự tin, giọng điệu chủ động, có kinh nghiệm gọi data thật.</li>
+            <li>Biết cách hạ giọng, đồng cảm và mở ra cơ hội kết bạn Zalo gửi tài liệu khi khách từ chối.</li>
+            <li>Có laptop/PC riêng, cam kết ngồi bàn làm việc đúng 08:00 - 17:30.</li>
+            <li>Mong muốn kiếm tiền, khao khát đạt hoa hồng cao.</li>
+          </ul>
+        </div>
+
+        <div class="flag-card red">
+          <h5>
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+            Tín Hiệu Cảnh Báo (Red Flags)
+          </h5>
+          <ul>
+            <li>Giọng rụt rè, ấp úng, sợ nhấc máy gọi điện thoại.</li>
+            <li>Đang vướng lịch học ban ngày hoặc chỉ muốn làm part-time.</li>
+            <li>Không có máy tính riêng, đòi làm bằng điện thoại.</li>
+            <li>Thái độ thụ động, chỉ muốn ngồi chờ khách tự nhắn tin.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GIAI ĐOẠN 3 ================= -->
+    <section class="stage-card">
+      <div class="stage-header">
+        <div class="stage-title-wrap">
+          <div class="stage-number">03</div>
+          <div class="stage-title">Giới Thiệu Sản Phẩm & Vũ Khí 25 Data Nóng / Ngày</div>
+        </div>
+        <span class="stage-pill">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          3 – 5 Phút
+        </span>
+      </div>
+
+      <p class="stage-goal">
+        <strong>Mục tiêu:</strong> Làm rõ chân dung công việc, giải tỏa nỗi sợ "phải tự tìm kiếm khách hàng" và giới thiệu hệ thống Bot AI hỗ trợ bám đuổi.
+      </p>
+
+      <div class="dialogue-box interviewer">
+        <div class="dialogue-label blue">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Lời giải thích từ Người phỏng vấn:
+        </div>
+        <div class="dialogue-text">
+          "Anh chia sẻ rõ về công việc để em hình dung nhé:<br><br>
+          • <strong>Sản phẩm:</strong> Công ty phân phối phần mềm văn phòng bản quyền vĩnh viễn <strong>OnlyOffice</strong> (thay thế MS Office, tiết kiệm 80% chi phí cho doanh nghiệp và đại lý máy tính) & các gói bản quyền Microsoft chính hãng.<br>
+          • <strong>Lợi thế Data Nóng 100%:</strong> Công ty chạy quảng cáo cung cấp sẵn <strong>20 – 25 SĐT khách hàng có nhu cầu mỗi ngày</strong>. Em <em>hoàn toàn KHÔNG phải tự đi tìm kiếm khách, KHÔNG phải gọi data lạnh/rác</em>.<br>
+          • <strong>Có Trợ lý AI 'chia lửa' đằng sau:</strong> Hệ thống Bot AI của công ty tự động trả lời ban đầu, tự bám đuổi khách cũ 24h - 72h qua Zalo. Em chỉ tập trung vào khâu đắt giá nhất là: <em>Nhấc máy gọi điện 5 - 15 phút đầu, kết bạn Zalo gửi bản Demo 7 ngày và chốt đơn hưởng hoa hồng</em>."
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GIAI ĐOẠN 4 ================= -->
+    <section class="stage-card salary-theme">
+      <div class="stage-header">
+        <div class="stage-title-wrap">
+          <div class="stage-number">04</div>
+          <div class="stage-title">Cơ Chế Thu Nhập, 5% Hoa Hồng & Quyền Lợi</div>
+        </div>
+        <span class="stage-pill">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          Chính Sách Đãi Ngộ
+        </span>
+      </div>
+
+      <p class="stage-goal">
+        <strong>Mục tiêu:</strong> Công bố rõ ràng bảng lương, tỷ lệ hoa hồng không trần và lộ trình ký hợp đồng đóng BHXH để tạo động lực làm việc.
+      </p>
+
+      <div class="dialogue-box salary">
+        <div class="dialogue-label green">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Chi tiết chính sách thu nhập:
+        </div>
+        <div class="dialogue-text">
+          1. <strong>Lương cơ bản:</strong><br>
+          &nbsp;&nbsp;• <em>Tháng thử việc:</em> <strong>4.250.000 VNĐ/tháng</strong> (85% của 5M, tính chuẩn 26 ngày công).<br>
+          &nbsp;&nbsp;• <em>Chính thức:</em> <strong>5.000.000 VNĐ/tháng</strong>.<br>
+          2. <strong>Hoa hồng doanh số trực tiếp:</strong> <strong>5% trên tổng doanh thu</strong> chốt được (cả đơn lẻ 799k và hợp đồng đại lý 7.45M, 19.8M...).<br>
+          3. <strong>Thưởng vượt KPI:</strong> Đạt mốc 15 hợp đồng đại lý thưởng nóng thêm <strong>+1.000.000 VNĐ</strong>.<br>
+          4. <strong>Thu nhập thực tế:</strong> Trung bình từ <strong>8.000.000đ – 15.000.000đ+/tháng</strong> (không giới hạn trần).<br>
+          5. <strong>Chế độ:</strong> Thử việc 2 tháng ➔ Ký hợp đồng lao động chính thức và đóng BHXH, BHYT đầy đủ.<br>
+          6. <strong>Thời gian làm việc:</strong> 08:00 – 17:30 (Nghỉ trưa 12:00 – 13:30), Thứ 2 đến Thứ 7, nghỉ cố định Chủ Nhật.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GIAI ĐOẠN 5 ================= -->
+    <section class="stage-card roleplay-theme">
+      <div class="stage-header">
+        <div class="stage-title-wrap">
+          <div class="stage-number">05</div>
+          <div class="stage-title">Bài Test Nhập Vai Thực Chiến (Roleplay 1 Phút)</div>
+        </div>
+        <span class="stage-pill">
+          <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          Thực Chiến 60 Giây
+        </span>
+      </div>
+
+      <p class="stage-goal">
+        <strong>Mục tiêu:</strong> Yêu cầu ứng viên đóng vai Telesales gọi điện thoại cho người phỏng vấn để kiểm tra tông giọng, sự tự nhiên và mức độ trôi chảy khi bắt đầu cuộc gọi.
+      </p>
+
+      <div class="dialogue-box roleplay">
+        <div class="dialogue-label purple">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Đặt tình huống cho ứng viên:
+        </div>
+        <div class="dialogue-text">
+          "Bây giờ anh em mình thử nhập vai thực tế 1 phút nhé! Giả định anh là <strong>anh Hùng - Chủ một cửa hàng máy tính ở Cần Thơ</strong>, vừa để lại số điện thoại trên Fanpage OnlyOffice. Em hãy nhấc máy gọi điện thoại mở đầu cuộc gọi với anh nhé!"
+        </div>
+      </div>
+
+      <div class="sample-script-card">
+        <strong>
+          <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Mẫu Lời Thoại Chuẩn Để Tham Khảo:
+        </strong>
+        <em>"Dạ em chào anh Hùng ạ! Em là Minh Anh gọi cho anh từ Bộ phận Hỗ trợ Doanh nghiệp OnlyOffice bên em. Hồi sáng em thấy anh có để lại số điện thoại quan tâm đến phần mềm văn phòng bản quyền vĩnh viễn cho cửa hàng máy tính. Em gọi điện kết nối Zalo gửi anh xem bảng giá chiết khấu sỉ đại lý và hỗ trợ anh kích hoạt bản Demo 7 ngày trải nghiệm thử trước nhé ạ!"</em>
+      </div>
+    </section>
+
+    <!-- ================= GIAI ĐOẠN 6 ================= -->
+    <section class="stage-card">
+      <div class="stage-header">
+        <div class="stage-title-wrap">
+          <div class="stage-number">06</div>
+          <div class="stage-title">Hỏi Đáp & Chốt Thỏa Thuận Nhận Việc</div>
+        </div>
+        <span class="stage-pill">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          2 – 3 Phút
+        </span>
+      </div>
+
+      <div class="dialogue-box interviewer">
+        <div class="dialogue-label blue">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Chốt buổi phỏng vấn:
+        </div>
+        <div class="dialogue-text">
+          "Qua trao đổi anh thấy em có tố chất giao tiếp tốt và tinh thần rất phù hợp với đội ngũ bên anh. Em có câu hỏi nào muốn anh giải đáp thêm không?<br><br>
+          Nếu trúng tuyển, em có thể <strong>bắt đầu nhận việc và tham gia đào tạo Onboarding từ ngày nào</strong>? Máy tính và điện thoại của em đã sẵn sàng để cài đặt Zalo CSKH và Telegram làm việc chưa?"
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Footer -->
+    <footer class="document-footer">
+      <p>© 2026 CÔNG TY TNHH CÔNG NGHỆ MERCY • Tài liệu nội bộ chuẩn hóa quy trình tuyển dụng Telesales</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

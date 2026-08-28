@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercy Tech — Kế Hoạch Tuyển Dụng B2B Sales Closer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --surface-2: #1c1c1e;
+            --surface-3: #2c2c2e;
+            --border: #2c2c2e;
+            --border-light: #3a3a3c;
+            --text: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --text-tertiary: #6e6e73;
+            --accent: #0a84ff;
+            --accent-dim: rgba(10,132,255,0.12);
+            --green: #30d158;
+            --green-dim: rgba(48,209,88,0.12);
+            --orange: #ff9f0a;
+            --orange-dim: rgba(255,159,10,0.12);
+            --red: #ff453a;
+            --red-dim: rgba(255,69,58,0.12);
+            --purple: #bf5af2;
+            --purple-dim: rgba(191,90,242,0.12);
+            --yellow: #ffd60a;
+            --yellow-dim: rgba(255,214,10,0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ─── SCROLLBAR ─── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        /* ─── LAYOUT ─── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 48px 32px 80px; }
+
+        /* ─── HEADER ─── */
+        .header { margin-bottom: 56px; }
+        .header-top {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border);
+        }
+        .brand { display: flex; flex-direction: column; gap: 2px; }
+        .brand-name { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+        .brand-sub { font-size: 11px; font-weight: 500; color: var(--text-tertiary); letter-spacing: 1.5px; text-transform: uppercase; }
+        .doc-badge {
+            font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+            color: var(--accent); background: var(--accent-dim);
+            padding: 5px 12px; border-radius: 6px;
+        }
+        .hero-label { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+        .hero-title { font-size: 44px; font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 14px; }
+        .hero-title span { background: linear-gradient(135deg, #0a84ff, #5e5ce6, #bf5af2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-sub { font-size: 17px; font-weight: 400; color: var(--text-secondary); line-height: 1.55; max-width: 640px; }
+
+        /* ─── PHASE TIMELINE ─── */
+        .timeline { margin-bottom: 64px; }
+        .timeline-title { font-size: 12px; font-weight: 700; color: var(--text-tertiary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+        .timeline-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .phase-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+        .phase-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
+        .phase-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+        }
+        .phase-card.now::before { background: var(--green); }
+        .phase-card.next::before { background: var(--accent); }
+        .phase-card.later::before { background: var(--purple); }
+        .phase-card.future::before { background: var(--text-tertiary); }
+        .phase-num { font-size: 11px; font-weight: 600; color: var(--text-tertiary); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .phase-name { font-size: 16px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
+        .phase-time { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; }
+        .phase-status {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 11px; font-weight: 600; padding: 4px 10px;
+            border-radius: 6px; letter-spacing: 0.3px;
+        }
+        .status-active { background: var(--green-dim); color: var(--green); }
+        .status-pending { background: var(--accent-dim); color: var(--accent); }
+        .status-later { background: var(--purple-dim); color: var(--purple); }
+        .status-future { background: rgba(110,110,115,0.12); color: var(--text-tertiary); }
+        .status-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+        /* ─── SECTIONS ─── */
+        .section { margin-bottom: 56px; }
+        .section-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border);
+        }
+        .section-title { font-size: 12px; font-weight: 700; color: var(--text-tertiary); letter-spacing: 2px; text-transform: uppercase; }
+        .section-badge { font-size: 11px; font-weight: 600; color: var(--text-secondary); padding: 3px 10px; background: var(--surface-2); border-radius: 6px; }
+
+        /* ─── MATRIX TABLE ─── */
+        .matrix-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+        .matrix-table thead th {
+            background: var(--surface-2); font-size: 11px; font-weight: 600;
+            color: var(--text-tertiary); letter-spacing: 0.8px; text-transform: uppercase;
+            padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border);
+        }
+        .matrix-table tbody td {
+            padding: 14px 18px; font-size: 14px; color: var(--text-secondary);
+            border-bottom: 1px solid var(--border); vertical-align: top;
+        }
+        .matrix-table tbody tr:last-child td { border-bottom: none; }
+        .matrix-table tbody tr:hover td { background: var(--surface-2); }
+        .matrix-table td strong { color: var(--text); font-weight: 600; }
+        .matrix-table .val-green { color: var(--green); font-weight: 600; }
+        .matrix-table .val-accent { color: var(--accent); font-weight: 600; }
+        .matrix-table .val-orange { color: var(--orange); font-weight: 600; }
+        .matrix-table .val-red { color: var(--red); font-weight: 600; }
+        .matrix-table .val-purple { color: var(--purple); font-weight: 600; }
+        .row-highlight td { background: var(--green-dim) !important; }
+
+        /* ─── FUNNEL ─── */
+        .funnel { display: flex; flex-direction: column; gap: 4px; }
+        .funnel-step {
+            display: grid; grid-template-columns: 200px 1fr 80px; align-items: center;
+            background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+            padding: 14px 20px; transition: border-color 0.2s;
+        }
+        .funnel-step:hover { border-color: var(--border-light); }
+        .funnel-label { font-size: 14px; font-weight: 600; color: var(--text); }
+        .funnel-bar-wrap { height: 8px; background: var(--surface-3); border-radius: 4px; overflow: hidden; }
+        .funnel-bar { height: 100%; border-radius: 4px; transition: width 1s ease; }
+        .funnel-value { font-size: 14px; font-weight: 700; text-align: right; }
+
+        /* ─── KPI CARDS ─── */
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .kpi-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 24px; transition: border-color 0.2s;
+        }
+        .kpi-card:hover { border-color: var(--border-light); }
+        .kpi-label { font-size: 11px; font-weight: 600; color: var(--text-tertiary); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .kpi-value { font-size: 28px; font-weight: 800; letter-spacing: -1px; margin-bottom: 4px; }
+        .kpi-note { font-size: 12px; color: var(--text-tertiary); }
+
+        /* ─── INCOME SIM ─── */
+        .income-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .income-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 24px; position: relative; overflow: hidden;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .income-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
+        .income-label { font-size: 12px; font-weight: 600; color: var(--text-tertiary); letter-spacing: 0.5px; margin-bottom: 6px; }
+        .income-detail { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.5; }
+        .income-amount { font-size: 26px; font-weight: 800; letter-spacing: -1px; }
+        .income-roi { font-size: 12px; font-weight: 600; margin-top: 6px; }
+
+        /* ─── CHECKLIST ─── */
+        .checklist { display: flex; flex-direction: column; gap: 6px; }
+        .check-item {
+            display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 12px;
+            background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+            padding: 14px 18px; transition: border-color 0.2s;
+        }
+        .check-item:hover { border-color: var(--border-light); }
+        .check-icon { font-size: 16px; text-align: center; }
+        .check-text { font-size: 14px; color: var(--text-secondary); }
+        .check-text strong { color: var(--text); }
+        .check-tag {
+            font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+            padding: 3px 8px; border-radius: 4px;
+        }
+        .tag-now { background: var(--green-dim); color: var(--green); }
+        .tag-month1 { background: var(--accent-dim); color: var(--accent); }
+        .tag-month2 { background: var(--orange-dim); color: var(--orange); }
+        .tag-month3 { background: var(--purple-dim); color: var(--purple); }
+
+        /* ─── TWO SPLIT ─── */
+        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 56px; }
+        .split-box {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 28px;
+        }
+        .split-title {
+            font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+            margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+        }
+        .split-title.green { color: var(--green); }
+        .split-title.red { color: var(--red); }
+        .split-list { list-style: none; }
+        .split-list li {
+            position: relative; padding: 8px 0 8px 22px; font-size: 14px;
+            color: var(--text-secondary); line-height: 1.5;
+            border-bottom: 1px solid var(--border);
+        }
+        .split-list li:last-child { border-bottom: none; }
+        .split-list li::before {
+            content: ''; position: absolute; left: 4px; top: 15px;
+            width: 5px; height: 5px; border-radius: 50%;
+        }
+        .split-box:first-child .split-list li::before { background: var(--green); }
+        .split-box:last-child .split-list li::before { background: var(--red); }
+
+        /* ─── FLOW DIAGRAM ─── */
+        .flow { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+        .flow-row { display: flex; align-items: center; gap: 12px; width: 100%; }
+        .flow-node {
+            flex: 1; background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 16px 20px; text-align: center;
+        }
+        .flow-node.ai { border-color: rgba(48,209,88,0.3); }
+        .flow-node.human { border-color: rgba(255,69,58,0.3); }
+        .flow-node.both { border-color: rgba(255,159,10,0.3); }
+        .flow-node-label { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+        .flow-node-label.ai { color: var(--green); }
+        .flow-node-label.human { color: var(--red); }
+        .flow-node-label.both { color: var(--orange); }
+        .flow-node-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+        .flow-node-desc { font-size: 12px; color: var(--text-tertiary); line-height: 1.4; }
+        .flow-arrow { font-size: 18px; color: var(--text-tertiary); text-align: center; padding: 4px 0; }
+
+        /* ─── CALLOUT ─── */
+        .callout {
+            background: var(--surface); border: 1px solid var(--border); border-left: 3px solid;
+            border-radius: 12px; padding: 20px 24px; margin-bottom: 24px;
+        }
+        .callout.warn { border-left-color: var(--orange); }
+        .callout.info { border-left-color: var(--accent); }
+        .callout.success { border-left-color: var(--green); }
+        .callout-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+        .callout.warn .callout-title { color: var(--orange); }
+        .callout.info .callout-title { color: var(--accent); }
+        .callout.success .callout-title { color: var(--green); }
+        .callout-body { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+        /* ─── FOOTER ─── */
+        .footer { text-align: center; padding-top: 32px; border-top: 1px solid var(--border); margin-top: 48px; }
+        .footer-text { font-size: 12px; color: var(--text-tertiary); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 768px) {
+            .container { padding: 24px 16px 48px; }
+            .hero-title { font-size: 28px; }
+            .timeline-grid { grid-template-columns: 1fr 1fr; }
+            .kpi-grid { grid-template-columns: 1fr; }
+            .income-grid { grid-template-columns: 1fr; }
+            .split { grid-template-columns: 1fr; }
+        }
+
+        /* ─── PRINT ─── */
+        @media print {
+            body { background: #fff; color: #1d1d1f; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .container { max-width: none; padding: 24px; }
+            @page { margin: 10mm; size: A4; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-top">
+                <div class="brand">
+                    <div class="brand-name">Mercy Tech Global</div>
+                    <div class="brand-sub">Internal Strategy Document</div>
+                </div>
+                <div class="doc-badge">Tháng 8/2026</div>
+            </div>
+            <div class="hero-label">Kế hoạch tuyển dụng & vận hành</div>
+            <h1 class="hero-title">Tuyển <span>B2B Sales Closer</span></h1>
+            <p class="hero-sub">Phân tích mô hình, cơ chế lương thưởng, KPI và lộ trình triển khai — dựa trên hệ thống AI automation đã có sẵn.</p>
+        </div>
+
+        <!-- PHASE TIMELINE -->
+        <div class="timeline">
+            <div class="timeline-title">Lộ trình triển khai</div>
+            <div class="timeline-grid">
+                <div class="phase-card now">
+                    <div class="phase-num">Phase 1</div>
+                    <div class="phase-name">Chuẩn bị</div>
+                    <div class="phase-time">Tuần 1–2</div>
+                    <div class="phase-status status-active"><span class="status-dot"></span>Đang thực hiện</div>
+                </div>
+                <div class="phase-card next">
+                    <div class="phase-num">Phase 2</div>
+                    <div class="phase-name">Tuyển & Onboard</div>
+                    <div class="phase-time">Tuần 3–4</div>
+                    <div class="phase-status status-pending"><span class="status-dot"></span>Sắp tới</div>
+                </div>
+                <div class="phase-card later">
+                    <div class="phase-num">Phase 3</div>
+                    <div class="phase-name">Thử việc & Đánh giá</div>
+                    <div class="phase-time">Tháng 2–3</div>
+                    <div class="phase-status status-later"><span class="status-dot"></span>Chưa bắt đầu</div>
+                </div>
+                <div class="phase-card future">
+                    <div class="phase-num">Phase 4</div>
+                    <div class="phase-name">Scale Up</div>
+                    <div class="phase-time">Tháng 4+</div>
+                    <div class="phase-status status-future"><span class="status-dot"></span>Tương lai</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VÌ SAO CẦN NGƯỜI -->
+        <div class="split">
+            <div class="split-box">
+                <div class="split-title green">✅ AI đã tự động hóa</div>
+                <ul class="split-list">
+                    <li>Tìm kiếm lead mới (Ads + Bot)</li>
+                    <li>Thu thập SĐT, MST, tên công ty</li>
+                    <li>Gửi bảng giá, chính sách đại lý</li>
+                    <li>Follow-up nhắc lại 2–3 lần</li>
+                    <li>Phân loại lead COLD / WARM / HOT</li>
+                    <li>Gửi tài liệu, hình ảnh tự động</li>
+                    <li>Lưu CRM, ghi chú trạng thái</li>
+                    <li>Kết nối Zalo tự động</li>
+                </ul>
+            </div>
+            <div class="split-box">
+                <div class="split-title red">❌ Cần con người (Sale Closer)</div>
+                <ul class="split-list">
+                    <li>Gọi điện khai thác nhu cầu thật</li>
+                    <li>Xác định người ra quyết định (DM)</li>
+                    <li>Xử lý phản đối (Objection Handling)</li>
+                    <li>Thương lượng gói, chiết khấu linh hoạt</li>
+                    <li>Demo sản phẩm 1-1 qua Zoom</li>
+                    <li>Chốt đơn / hướng dẫn thanh toán</li>
+                    <li>Cứu deal bị ghost (Win-back)</li>
+                    <li>Xây quan hệ với chủ đại lý</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- KPI TARGET -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">KPI mục tiêu hàng tháng</div>
+                <div class="section-badge">Per 1 Sale Closer</div>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">SQL tiếp nhận</div>
+                    <div class="kpi-value" style="color: var(--accent);">20–25</div>
+                    <div class="kpi-note">Lead đã qualify bởi AI</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Deal đại lý chốt</div>
+                    <div class="kpi-value" style="color: var(--green);">3+</div>
+                    <div class="kpi-note">Trọng số đánh giá: 35%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Key lẻ chốt bổ sung</div>
+                    <div class="kpi-value" style="color: var(--orange);">20–40</div>
+                    <div class="kpi-note">Trọng số đánh giá: 20%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FUNNEL -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Pipeline Funnel</div>
+                <div class="section-badge">Conversion mục tiêu</div>
+            </div>
+            <div class="funnel">
+                <div class="funnel-step">
+                    <div class="funnel-label">SQL nhận từ AI</div>
+                    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%; background: var(--accent);"></div></div>
+                    <div class="funnel-value" style="color: var(--accent);">20–25</div>
+                </div>
+                <div class="funnel-step">
+                    <div class="funnel-label">Hội thoại chất lượng</div>
+                    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:80%; background: var(--accent);"></div></div>
+                    <div class="funnel-value" style="color: var(--accent);">15–20</div>
+                </div>
+                <div class="funnel-step">
+                    <div class="funnel-label">Opportunity</div>
+                    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:48%; background: var(--purple);"></div></div>
+                    <div class="funnel-value" style="color: var(--purple);">8–12</div>
+                </div>
+                <div class="funnel-step">
+                    <div class="funnel-label">Demo / Hẹn gặp</div>
+                    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:32%; background: var(--orange);"></div></div>
+                    <div class="funnel-value" style="color: var(--orange);">5–8</div>
+                </div>
+                <div class="funnel-step">
+                    <div class="funnel-label">Proposal gửi</div>
+                    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:24%; background: var(--orange);"></div></div>
+                    <div class="funnel-value" style="color: var(--orange);">4–6</div>
+                </div>
+                <div class="funnel-step">
+                    <div class="funnel-label" style="font-weight:800; color:var(--green);">ĐẠI LÝ NẠP TIỀN</div>
+                    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:14%; background: var(--green);"></div></div>
+                    <div class="funnel-value" style="color: var(--green);">2–3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CƠ CẤU LƯƠNG -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Cơ cấu lương & hoa hồng</div>
+                <div class="section-badge">B2B Closer Hybrid</div>
+            </div>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Thành phần</th>
+                        <th>Giá trị</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Lương cứng</strong></td>
+                        <td class="val-accent">5.000.000 đ/tháng</td>
+                        <td>~5 tiếng/ngày, có thể remote</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HH deal đại lý</strong></td>
+                        <td class="val-green">8% giá trị gói</td>
+                        <td>Mọi deal đại lý chốt thành công</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HH gói lớn ≥15tr</strong></td>
+                        <td class="val-green">12% giá trị gói</td>
+                        <td>Khuyến khích upsell gói cao</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HH key lẻ</strong></td>
+                        <td class="val-orange">50.000 đ/key</td>
+                        <td>Khách AI chốt không được → Sale gọi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thưởng vượt KPI</strong></td>
+                        <td class="val-purple">+3% từ deal thứ 4+</td>
+                        <td>Lũy tiến</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thưởng retention</strong></td>
+                        <td class="val-accent">3% tái nạp</td>
+                        <td>Đại lý cũ nạp thêm</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thưởng quý</strong></td>
+                        <td class="val-green">2.000.000 đ</td>
+                        <td>Đạt KPI 3 tháng liên tục</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- MÔ PHỎNG THU NHẬP -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Mô phỏng thu nhập Sale</div>
+                <div class="section-badge">Kịch bản thực tế</div>
+            </div>
+            <div class="income-grid">
+                <div class="income-card">
+                    <div class="income-label">😐 Tháng yếu</div>
+                    <div class="income-detail">1 deal ĐL × 7.5tr + 15 key lẻ</div>
+                    <div class="income-amount" style="color: var(--orange);">6.350.000 đ</div>
+                    <div class="income-roi" style="color: var(--text-tertiary);">ROI doanh nghiệp: 1.75x</div>
+                </div>
+                <div class="income-card">
+                    <div class="income-label">🙂 Tháng trung bình</div>
+                    <div class="income-detail">2 deal ĐL × 12tr + 20 key lẻ</div>
+                    <div class="income-amount" style="color: var(--accent);">7.920.000 đ</div>
+                    <div class="income-roi" style="color: var(--accent);">ROI doanh nghiệp: 2.88x</div>
+                </div>
+                <div class="income-card">
+                    <div class="income-label">💪 Tháng tốt</div>
+                    <div class="income-detail">3 deal ĐL × 12tr + 25 key lẻ</div>
+                    <div class="income-amount" style="color: var(--green);">9.130.000 đ</div>
+                    <div class="income-roi" style="color: var(--green);">ROI doanh nghiệp: 3.50x</div>
+                </div>
+                <div class="income-card">
+                    <div class="income-label">🔥 Top performer</div>
+                    <div class="income-detail">5 deal ĐL × 15tr + 40 key lẻ</div>
+                    <div class="income-amount" style="color: var(--purple);">17.800.000 đ</div>
+                    <div class="income-roi" style="color: var(--purple);">ROI doanh nghiệp: 4.2x</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALLOUT BREAK-EVEN -->
+        <div class="callout warn">
+            <div class="callout-title">⚠️ Điểm hòa vốn</div>
+            <div class="callout-body">
+                KPI tối thiểu: <strong>≥3 deal đại lý/tháng</strong> HOẶC <strong>2 deal ĐL + ≥15 key lẻ</strong>. Dưới mức này thì không đáng tuyển người. Tháng nào Sale dưới 3 deal mà không bù bằng key lẻ → review ngay.
+            </div>
+        </div>
+
+        <!-- LỊCH TRÌNH NGÀY -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Lịch trình ngày thực tế</div>
+                <div class="section-badge">~5 tiếng/ngày tạo giá trị</div>
+            </div>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Khung giờ</th>
+                        <th>Hoạt động</th>
+                        <th>Thời gian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>8:00 – 8:30</strong></td>
+                        <td>Review pipeline trên CRM, chọn 3–5 lead ưu tiên</td>
+                        <td class="val-accent">30 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8:30 – 10:00</strong></td>
+                        <td>Gọi điện chất lượng (3–4 cuộc × 20–30 phút)</td>
+                        <td class="val-green">90 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:00 – 10:30</strong></td>
+                        <td>Ghi chú CRM sau cuộc gọi</td>
+                        <td class="val-accent">30 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:30 – 11:30</strong></td>
+                        <td>Demo/Zoom call cho khách đã hẹn (nếu có)</td>
+                        <td class="val-accent">0–60 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>13:30 – 14:00</strong></td>
+                        <td>Chốt khách lẻ: gọi nhanh 5–10 phút, chốt 2–5 key</td>
+                        <td class="val-orange">30 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>14:00 – 14:45</strong></td>
+                        <td>Follow-up nóng: win-back deal ghost (2–3 cuộc)</td>
+                        <td class="val-orange">45 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>14:45 – 15:15</strong></td>
+                        <td>Chốt đơn đại lý: hướng dẫn TT, xác nhận nạp tiền</td>
+                        <td class="val-green">30 phút</td>
+                    </tr>
+                    <tr>
+                        <td><strong>15:15 – 15:45</strong></td>
+                        <td>Chăm sóc đại lý cũ: hỏi thăm, gợi ý upsell</td>
+                        <td class="val-purple">30 phút</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- QUY TRÌNH AI vs SALE -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Quy trình: AI làm gì → Sale làm gì</div>
+            </div>
+            <div class="flow">
+                <div class="flow-node ai">
+                    <div class="flow-node-label ai">🤖 AI tự động</div>
+                    <div class="flow-node-title">Lead Gen + Qualify</div>
+                    <div class="flow-node-desc">Ads → Bot chào → Thu thập SĐT/MST → Phân loại ĐL/CT/CN → Gửi chính sách</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node ai">
+                    <div class="flow-node-label ai">🤖 AI tự động</div>
+                    <div class="flow-node-title">Nuôi Lead + Follow-up</div>
+                    <div class="flow-node-desc">Follow-up 2–3 lần → Kết nối Zalo → Gửi bảng giá sỉ → Chấm điểm WARM/HOT</div>
+                </div>
+                <div class="flow-arrow">↓ SQL đủ điều kiện</div>
+                <div class="flow-node human">
+                    <div class="flow-node-label human">👤 Sale Closer</div>
+                    <div class="flow-node-title">Khai thác + Demo + Chốt</div>
+                    <div class="flow-node-desc">Gọi điện 15–30p → Xác định DM → Xử lý phản đối → Demo 1-1 → Thương lượng → Chốt đơn</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node both">
+                    <div class="flow-node-label both">🤖+👤 Kết hợp</div>
+                    <div class="flow-node-title">Onboarding + Chăm sóc</div>
+                    <div class="flow-node-desc">🤖 Gửi tài liệu, thêm nhóm Zalo, nhắc tái nạp &nbsp;|&nbsp; 👤 Gọi chào mừng, upsell hàng tháng</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHECKLIST HÀNH ĐỘNG -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Checklist hành động</div>
+            </div>
+            <div class="checklist">
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><strong>Phân tích mô hình</strong> — Xác định khối lượng công việc thực tế, cơ chế lương thưởng</div>
+                    <div class="check-tag tag-now">Đã xong</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><strong>Soạn JD tuyển dụng</strong> — HTML phong cách Apple, tối ưu xuất PDF</div>
+                    <div class="check-tag tag-now">Đã xong</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><strong>Cấu hình bot xử lý ứng viên</strong> — Thu thập SĐT, phân loại UNG_VIEN, gửi Telegram</div>
+                    <div class="check-tag tag-now">Đã xong</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Đăng tuyển</strong> — Post JD lên Facebook / nhóm tuyển dụng / TopCV</div>
+                    <div class="check-tag tag-month1">Tuần 1</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Sàng lọc CV + Phỏng vấn</strong> — Zalo/Google Meet 15–20 phút</div>
+                    <div class="check-tag tag-month1">Tuần 2–3</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Soạn Sales Training Kit</strong> — Script chốt, xử lý objection, bảng giá, quy trình</div>
+                    <div class="check-tag tag-month1">Tuần 2</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Xây tính năng chuyển SQL cho Sale</strong> — Alert Telegram + context lead đầy đủ</div>
+                    <div class="check-tag tag-month1">Tuần 3</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Onboard Sale</strong> — Training sản phẩm + demo thực tế + thử gọi 3 lead</div>
+                    <div class="check-tag tag-month2">Tuần 4</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Thử việc 2 tuần</strong> — Chốt ≥2 deal để đánh giá năng lực</div>
+                    <div class="check-tag tag-month2">Tháng 2</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Đánh giá & quyết định</strong> — Conversion ≥15%: giữ | <15%: review</div>
+                    <div class="check-tag tag-month3">Tháng 3</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon">⬜</div>
+                    <div class="check-text"><strong>Scale up</strong> — Pipeline ≥40 SQL → tuyển Closer thứ 2 hoặc nâng AE full-time</div>
+                    <div class="check-tag tag-month3">Tháng 4+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALLOUT CONCLUSION -->
+        <div class="callout success">
+            <div class="callout-title">✅ Kết luận chính</div>
+            <div class="callout-body">
+                <strong>Không cần Telesales full-time 8 tiếng/ngày.</strong> Khối lượng công việc thực chỉ chiếm 54% thời gian full-time. Tuyển <strong>1 B2B Closer hybrid</strong> (4–5h/ngày, remote), lương 5tr + HH 8–12%, thu nhập kỳ vọng 8–15tr/tháng. ROI cho doanh nghiệp từ tháng trung bình trở lên đều ≥ 2.8x.
+            </div>
+        </div>
+
+        <div class="callout info">
+            <div class="callout-title">💡 Điều kiện scale</div>
+            <div class="callout-body">
+                Khi pipeline đạt <strong>≥40 SQL/tháng</strong> (gấp đôi hiện tại): tuyển thêm Closer thứ 2 hoặc nâng cấp thành Account Executive full-time (lương 7–8tr + HH 6–10%).
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p class="footer-text">
+                Mercy Tech Global — Tài liệu nội bộ — Tháng 8/2026<br>
+                Phân tích bởi hệ thống AI Mercy Tech
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
