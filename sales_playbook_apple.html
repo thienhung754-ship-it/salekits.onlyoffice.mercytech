@@ -1930,11 +1930,11 @@
             <div class="form-grid-2">
               <div class="form-row">
                 <label>Số Báo Giá:</label>
-                <input type="text" id="quoteDocNum" class="form-input-sm" value="2908/BG-01/MERCY" oninput="renderA4Sheet()">
+                <input type="text" id="quoteDocNum" class="form-input-sm" value="" placeholder="Tự động theo ngày" oninput="renderA4Sheet()">
               </div>
               <div class="form-row">
                 <label>Ngày Phát Hành:</label>
-                <input type="date" id="quoteDocDateInput" class="form-input-sm" value="2026-08-29" onchange="onDateInputChange(this.value)">
+                <input type="date" id="quoteDocDateInput" class="form-input-sm" value="" onchange="onDateInputChange(this.value)">
               </div>
             </div>
 
@@ -2026,7 +2026,7 @@
 
               <!-- Title -->
               <div class="a4-doc-title">BẢNG BÁO GIÁ GIẢI PHÁP PHẦN MỀM</div>
-              <div id="a4DocNumber" class="a4-doc-number">Số: 2908/BG-01/MERCY | ngày 29 tháng 08 năm 2026</div>
+              <div id="a4DocNumber" class="a4-doc-number">Số: -- | ngày --</div>
 
               <!-- Customer Box -->
               <div class="a4-party-box">
@@ -2091,7 +2091,7 @@
 
                 <!-- Stamp & Director Signature -->
                 <div class="a4-sig-col" style="width: 62%; align-items: center; text-align: center;">
-                  <div id="a4DisplayDate" style="font-size: 7.5pt; font-style: italic; color: #475569; margin-bottom: 3px;">TP. Hồ Chí Minh, ngày 29 tháng 08 năm 2026</div>
+                  <div id="a4DisplayDate" style="font-size: 7.5pt; font-style: italic; color: #475569; margin-bottom: 3px;">TP. Hồ Chí Minh</div>
                   <div class="sig-company-title">ĐẠI DIỆN CÔNG TY TNHH CÔNG NGHỆ MERCY</div>
                   <div style="font-size: 7.5pt; color: #475569; margin-bottom: 2px;">Giám đốc</div>
                   <div class="a4-stamp-wrapper">
@@ -2786,7 +2786,22 @@
     // =========================================================================
     var playbookPartnerType = 'retail'; // 'retail' or 'dealer'
     var playbookDiscountMode = 'vnd'; // 'vnd' or 'pct'
-    var formattedLegalDate = 'ngày 29 tháng 08 năm 2026';
+    var formattedLegalDate = '';
+
+    function getTodayDateInfo() {
+      var now = new Date();
+      var yyyy = now.getFullYear();
+      var mm = String(now.getMonth() + 1).padStart(2, '0');
+      var dd = String(now.getDate()).padStart(2, '0');
+      return {
+        year: yyyy,
+        month: mm,
+        day: dd,
+        iso: yyyy + '-' + mm + '-' + dd,
+        legalDate: 'ngày ' + dd + ' tháng ' + mm + ' năm ' + yyyy,
+        defaultDocNum: dd + mm + '/BG-01/MERCY'
+      };
+    }
 
     var PLAYBOOK_CATALOG = [
       {
@@ -2993,20 +3008,41 @@
     ];
 
     function onDateInputChange(val) {
+      var d, m, y;
       if (!val) {
-        var now = new Date();
-        var d = String(now.getDate()).padStart(2, '0');
-        var m = String(now.getMonth() + 1).padStart(2, '0');
-        var y = now.getFullYear();
-        formattedLegalDate = 'ngày ' + d + ' tháng ' + m + ' năm ' + y;
+        var today = getTodayDateInfo();
+        d = today.day;
+        m = today.month;
+        y = today.year;
+        formattedLegalDate = today.legalDate;
+        var dateInput = document.getElementById('quoteDocDateInput');
+        if (dateInput) dateInput.value = today.iso;
       } else {
         var parts = val.split('-');
         if (parts.length === 3) {
-          formattedLegalDate = 'ngày ' + parts[2] + ' tháng ' + parts[1] + ' năm ' + parts[0];
+          y = parts[0];
+          m = parts[1];
+          d = parts[2];
+          formattedLegalDate = 'ngày ' + d + ' tháng ' + m + ' năm ' + y;
         } else {
           formattedLegalDate = val;
         }
       }
+
+      // Tự động cập nhật Số Báo Giá theo ngày mới nếu đang để trống hoặc theo format chuẩn DDMM/BG-...
+      var docNumEl = document.getElementById('quoteDocNum');
+      if (docNumEl && d && m) {
+        var curVal = docNumEl.value.trim();
+        var standardPattern = /^(\d{4})(\/BG-.*)$/i;
+        if (!curVal) {
+          docNumEl.value = d + m + '/BG-01/MERCY';
+        } else if (standardPattern.test(curVal)) {
+          var match = curVal.match(standardPattern);
+          var suffix = (match && match[2]) ? match[2] : '/BG-01/MERCY';
+          docNumEl.value = d + m + suffix;
+        }
+      }
+
       renderA4Sheet();
     }
 
@@ -3376,8 +3412,9 @@
       var discEl = document.getElementById('quoteDiscountVal');
       var stampEl = document.getElementById('quoteIncludeStamp');
 
-      var docNum = (docNumEl ? docNumEl.value : '2908/BG-01/MERCY').trim();
-      var docDate = formattedLegalDate;
+      var today = getTodayDateInfo();
+      var docNum = (docNumEl && docNumEl.value.trim()) ? docNumEl.value.trim() : today.defaultDocNum;
+      var docDate = formattedLegalDate || today.legalDate;
       var company = (compEl ? compEl.value : '').trim();
       var rep = (repEl ? repEl.value : '').trim();
       var phone = (phoneEl ? phoneEl.value : '').trim();
@@ -3626,12 +3663,11 @@
       if (discEl) discEl.value = '0';
       if (stampEl) stampEl.checked = true;
 
-      var now = new Date();
-      var yyyy = now.getFullYear();
-      var mm = String(now.getMonth() + 1).padStart(2, '0');
-      var dd = String(now.getDate()).padStart(2, '0');
-      if (dateInput) dateInput.value = yyyy + '-' + mm + '-' + dd;
-      onDateInputChange(dateInput ? dateInput.value : '');
+      var today = getTodayDateInfo();
+      var docNumEl = document.getElementById('quoteDocNum');
+      if (dateInput) dateInput.value = today.iso;
+      if (docNumEl) docNumEl.value = today.defaultDocNum;
+      onDateInputChange(dateInput ? dateInput.value : today.iso);
 
       setDiscountMode('vnd');
       renderQuoteInputRows();
@@ -3639,19 +3675,34 @@
       showToast('Đã làm mới thông tin báo giá');
     }
 
+    function initQuotationDateAndDocNum() {
+      var today = getTodayDateInfo();
+      var dateInput = document.getElementById('quoteDocDateInput');
+      var docNumEl = document.getElementById('quoteDocNum');
+      if (dateInput && !dateInput.value) {
+        dateInput.value = today.iso;
+      }
+      if (docNumEl && !docNumEl.value) {
+        docNumEl.value = today.defaultDocNum;
+      }
+      if (dateInput && dateInput.value) {
+        onDateInputChange(dateInput.value);
+      } else {
+        formattedLegalDate = today.legalDate;
+      }
+    }
+
     // Initial load
     document.addEventListener('DOMContentLoaded', function() {
       restoreActiveTab();
-      var dateInput = document.getElementById('quoteDocDateInput');
-      if (dateInput) onDateInputChange(dateInput.value);
+      initQuotationDateAndDocNum();
       renderQuoteInputRows();
       renderA4Sheet();
     });
 
     // Also run immediately
     restoreActiveTab();
-    var dateInput = document.getElementById('quoteDocDateInput');
-    if (dateInput) onDateInputChange(dateInput.value);
+    initQuotationDateAndDocNum();
     renderQuoteInputRows();
     renderA4Sheet();
   </script>
