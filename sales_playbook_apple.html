@@ -2071,7 +2071,7 @@
 
               <!-- Terms -->
               <div class="a4-section-heading">GHI CHÚ & ĐIỀU KHOẢN THƯƠNG MẠI</div>
-              <ul class="a4-terms-list">
+              <ul id="a4TermsList" class="a4-terms-list">
                 <li>Báo giá có hiệu lực trong vòng <strong>15 ngày</strong> kể từ ngày phát hành.</li>
                 <li>Quý khách hàng được hỗ trợ cài đặt dùng thử 7 ngày miễn phí để trải nghiệm giao diện và kiểm tra độ tương thích trước khi thanh toán.</li>
                 <li>Giá trên đã bao gồm chi phí cài đặt, tối ưu hóa bộ phông chữ Tiếng Việt và hỗ trợ kỹ thuật trực tuyến 24/7.</li>
@@ -3384,11 +3384,30 @@
       }
       var grandTotal = Math.max(0, total - discountAmount);
 
+      var hasOnlyOffice = currentQuoteRows.some(function(item) {
+        return item.name && item.name.toLowerCase().indexOf('onlyoffice') !== -1;
+      });
+      var hasOther = currentQuoteRows.some(function(item) {
+        return item.name && item.name.toLowerCase().indexOf('onlyoffice') === -1;
+      });
+
       var text = '';
       if (isDealer) {
-        text = 'Dạ em gửi anh/chị Bảng báo giá sỉ đại lý:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm VAT và hỗ trợ kỹ thuật 24/7).\nBên em có cấp tài khoản Portal Mercy Keys để cửa hàng chủ động nạp key cho khách ạ.';
+        if (hasOnlyOffice && !hasOther) {
+          text = 'Dạ em gửi anh/chị Bảng báo giá sỉ đại lý:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm VAT và hỗ trợ kỹ thuật 24/7).\nBên em có cấp tài khoản Portal Mercy Keys để cửa hàng chủ động nạp key cho khách và hỗ trợ cài demo 7 ngày tại cửa hàng ạ.';
+        } else if (hasOnlyOffice && hasOther) {
+          text = 'Dạ em gửi anh/chị Bảng báo giá sỉ đại lý:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm VAT và hỗ trợ kỹ thuật 24/7).\nBên em cấp Portal quản trị key OnlyOffice và cung cấp bản quyền chính hãng đầy đủ tem/key cho cửa hàng ạ.';
+        } else {
+          text = 'Dạ em gửi anh/chị Bảng báo giá sỉ đại lý:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm VAT và hỗ trợ kỹ thuật 24/7).\nBên em cung cấp key/tem COA chính hãng, hỗ trợ cài đặt từ xa và bảo hành bản quyền trọn đời cho cửa hàng ạ.';
+        }
       } else {
-        text = 'Dạ em gửi anh/chị Bảng báo giá chi tiết:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm hóa đơn VAT và cài đặt từ xa miễn phí).\nAnh/chị xem qua giúp em, cần hỗ trợ cài đặt test thử 7 ngày thì nhắn em nhé ạ.';
+        if (hasOnlyOffice && !hasOther) {
+          text = 'Dạ em gửi anh/chị Bảng báo giá chi tiết:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm hóa đơn VAT và cài đặt từ xa miễn phí).\nAnh/chị xem qua giúp em, cần hỗ trợ cài đặt test thử 7 ngày thì nhắn em nhé ạ.';
+        } else if (hasOnlyOffice && hasOther) {
+          text = 'Dạ em gửi anh/chị Bảng báo giá chi tiết:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm hóa đơn VAT và cài đặt từ xa miễn phí).\nAnh/chị xem qua giúp em, bên em có hỗ trợ cài test thử 7 ngày OnlyOffice và kích hoạt bản quyền từ xa qua UltraView đầy đủ ạ.';
+        } else {
+          text = 'Dạ em gửi anh/chị Bảng báo giá chi tiết:\n' + itemsList + '\n\nTổng chi phí: ' + grandTotal.toLocaleString('vi-VN') + ' đ (Đã gồm hóa đơn VAT và cài đặt từ xa miễn phí).\nAnh/chị xem qua giúp em, bên em hỗ trợ cài đặt và kích hoạt bản quyền từ xa qua UltraView đầy đủ ạ.';
+        }
       }
       return text;
     }
@@ -3520,6 +3539,31 @@
       var a4InWords = document.getElementById('a4InWords');
       if (a4InWords) {
         a4InWords.innerHTML = '(Số tiền bằng chữ: <strong>' + numberToVietnameseWords(grandTotal) + '</strong>)';
+      }
+
+      // Dynamic Commercial Terms based on products in quote
+      var hasOnlyOffice = currentQuoteRows.some(function(item) {
+        return item.name && item.name.toLowerCase().indexOf('onlyoffice') !== -1;
+      });
+      var hasOther = currentQuoteRows.some(function(item) {
+        return item.name && item.name.toLowerCase().indexOf('onlyoffice') === -1;
+      });
+
+      var termsListEl = document.getElementById('a4TermsList');
+      if (termsListEl) {
+        var termsHtml = '<li>Báo giá có hiệu lực trong vòng <strong>15 ngày</strong> kể từ ngày phát hành.</li>';
+        if (hasOnlyOffice && !hasOther) {
+          termsHtml += '<li>Quý khách hàng được hỗ trợ cài đặt dùng thử 7 ngày miễn phí để trải nghiệm giao diện và kiểm tra độ tương thích trước khi thanh toán.</li>';
+          termsHtml += '<li>Giá trên đã bao gồm chi phí cài đặt, tối ưu hóa bộ phông chữ Tiếng Việt và hỗ trợ kỹ thuật trực tuyến 24/7.</li>';
+        } else if (hasOnlyOffice && hasOther) {
+          termsHtml += '<li>Quý khách hàng được hỗ trợ cài đặt dùng thử 7 ngày miễn phí đối với gói OnlyOffice để trải nghiệm giao diện và kiểm tra độ tương thích trước khi thanh toán.</li>';
+          termsHtml += '<li>Bản quyền hệ điều hành / phần mềm chính hãng được kích hoạt theo máy, hỗ trợ cài đặt từ xa và đầy đủ hóa đơn VAT.</li>';
+        } else {
+          termsHtml += '<li>Bản quyền phần mềm chính hãng được kích hoạt theo máy (hoặc thời hạn bản quyền), cam kết bản quyền hợp pháp vĩnh viễn và bảo hành kích hoạt trọn đời.</li>';
+          termsHtml += '<li>Giá trên đã bao gồm chi phí cài đặt, kích hoạt bản quyền từ xa qua UltraView/TeamViewer và hỗ trợ kỹ thuật trực tuyến 24/7.</li>';
+        }
+        termsHtml += '<li>Hình thức thanh toán: Chuyển khoản ngân hàng (<strong>Techcombank - 98896889 - Công ty TNHH Công nghệ Mercy</strong>).</li>';
+        termsListEl.innerHTML = termsHtml;
       }
 
       // Stamp Visibility
