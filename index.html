@@ -6,42 +6,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONLYOFFICE Mercy — Sales Mastery Playbook (Enterprise Edition)</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>ONLYOFFICE Vietnam — Cẩm Nang Chốt Đơn & Báo Giá Chuẩn Hóa Đơn | Mercy Tech</title>
   <style>
     :root {
-      --bg-primary: #fbfbfd;
-      --bg-card: rgba(255, 255, 255, 0.92);
+      --oo-orange: #ff6f3d;
+      --oo-orange-deep: #ea580c;
+      --oo-orange-dark: #c2410c;
+      --oo-gradient: linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%);
+      --oo-gradient-hover: linear-gradient(135deg, #ff5921 0%, #c2410c 100%);
+      --oo-peach-bg: #fff7ed;
+      --oo-peach-soft: #fffaf5;
+      --oo-peach-border: #fed7aa;
+      --oo-peach-border-strong: #fdba74;
+
+      --bg-primary: #fffdfb;
+      --bg-card: #ffffff;
       --bg-card-hover: #ffffff;
-      --text-primary: #1d1d1f;
-      --text-secondary: #6e6e73;
-      --text-muted: #86868b;
-      --accent-blue: #0071e3;
-      --accent-blue-hover: #0077ed;
-      --accent-green: #1d8348;
-      --accent-orange: #b75900;
-      --accent-red: #d70015;
-      --border-color: rgba(0, 0, 0, 0.08);
-      --border-subtle: rgba(0, 0, 0, 0.04);
-      --card-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
-      --card-shadow-hover: 0 6px 24px rgba(0, 0, 0, 0.08);
-      --radius-sm: 6px;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent-blue: #ea580c;
+      --accent-blue-hover: #c2410c;
+      --accent-green: #15803d;
+      --accent-orange: #ea580c;
+      --accent-red: #dc2626;
+      --border-color: rgba(254, 215, 170, 0.85);
+      --border-subtle: rgba(254, 215, 170, 0.45);
+      --card-shadow: 0 10px 28px -6px rgba(234, 88, 12, 0.07), 0 2px 8px rgba(15, 23, 42, 0.03);
+      --card-shadow-hover: 0 16px 36px -8px rgba(234, 88, 12, 0.13), 0 4px 12px rgba(15, 23, 42, 0.04);
+      --radius-sm: 8px;
       --radius-md: 12px;
-      --radius-lg: 18px;
-      --radius-full: 980px;
-      --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     [data-theme="dark"] {
-      --bg-primary: #000000;
-      --bg-card: rgba(28, 28, 30, 0.92);
-      --bg-card-hover: rgba(44, 44, 46, 0.98);
-      --text-primary: #f5f5f7;
-      --text-secondary: #a1a1a6;
-      --text-muted: #6e6e73;
-      --border-color: rgba(255, 255, 255, 0.12);
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.7);
+      --oo-peach-bg: rgba(255, 111, 61, 0.14);
+      --oo-peach-soft: rgba(255, 111, 61, 0.07);
+      --oo-peach-border: rgba(255, 138, 91, 0.28);
+      --oo-peach-border-strong: rgba(255, 138, 91, 0.45);
+
+      --bg-primary: #14100e;
+      --bg-card: #1d1714;
+      --bg-card-hover: #251d19;
+      --text-primary: #faf5f0;
+      --text-secondary: #cbbab0;
+      --text-muted: #9a887d;
+      --accent-blue: #ff7a4d;
+      --accent-blue-hover: #ff946e;
+      --accent-green: #4ade80;
+      --accent-orange: #ff7a4d;
+      --accent-red: #f87171;
+      --border-color: rgba(255, 138, 91, 0.22);
+      --border-subtle: rgba(255, 138, 91, 0.12);
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --card-shadow-hover: 0 14px 36px rgba(0, 0, 0, 0.65);
     }
 
     * {
@@ -53,60 +74,137 @@
 
     body {
       background-color: var(--bg-primary);
+      background-image:
+        radial-gradient(circle at 12% 14%, rgba(254, 215, 170, 0.50) 0%, rgba(255, 247, 237, 0.24) 46%, rgba(0, 0, 0, 0) 74%),
+        radial-gradient(circle at 88% 52%, rgba(255, 237, 213, 0.42) 0%, rgba(255, 247, 237, 0.14) 50%, rgba(0, 0, 0, 0) 75%),
+        radial-gradient(circle at 14% 88%, rgba(254, 215, 170, 0.36) 0%, rgba(0, 0, 0, 0) 70%),
+        radial-gradient(circle, rgba(234, 88, 12, 0.075) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px;
+      background-attachment: fixed;
       color: var(--text-primary);
       font-family: var(--font-family);
-      line-height: 1.5;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.55;
       padding-bottom: 90px;
       transition: background-color 0.25s ease, color 0.25s ease;
       overflow-x: hidden;
     }
 
-    /* HEADER */
+    [data-theme="dark"] body {
+      background-image:
+        radial-gradient(circle at 15% 12%, rgba(234, 88, 12, 0.14) 0%, rgba(0, 0, 0, 0) 60%),
+        radial-gradient(circle at 85% 60%, rgba(194, 65, 12, 0.10) 0%, rgba(0, 0, 0, 0) 65%),
+        radial-gradient(circle, rgba(255, 138, 91, 0.06) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 28px 28px;
+    }
+
+    /* HEADER — SYNCHRONIZED WITH ONLYOFFICEVIETNAM.COM */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: saturate(180%) blur(20px);
-      background-color: rgba(251, 251, 253, 0.85);
-      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: saturate(180%) blur(16px);
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(254, 215, 170, 0.78);
+      box-shadow: 0 2px 12px rgba(234, 88, 12, 0.05);
       padding: 12px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: background-color 0.25s ease;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
     }
 
     [data-theme="dark"] header {
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(20, 16, 14, 0.94);
+      border-bottom-color: rgba(255, 138, 91, 0.22);
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
     }
 
     .header-brand {
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-shrink: 0;
     }
 
-    .brand-badge {
-      background: var(--text-primary);
-      color: var(--bg-primary);
+    .oo-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .oo-brand-svg .oo-wordmark-path {
+      fill: #faf5f0;
+    }
+
+    .mercy-header-divider {
+      width: 1.5px;
+      height: 26px;
+      background-color: #fed7aa;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .mercy-header-divider {
+      background-color: rgba(255, 138, 91, 0.3);
+    }
+
+    .mercy-header-badge {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      white-space: nowrap;
+    }
+
+    .mercy-header-top {
       font-size: 11px;
-      font-weight: 700;
-      padding: 3px 9px;
-      border-radius: var(--radius-full);
-      letter-spacing: 0.6px;
+      font-weight: 800;
+      color: var(--oo-orange-deep);
+      letter-spacing: 0.3px;
       text-transform: uppercase;
+      line-height: 1.2;
     }
 
-    .header-title {
-      font-size: 15px;
+    [data-theme="dark"] .mercy-header-top {
+      color: #ff7a4d;
+    }
+
+    .mercy-header-sub {
+      font-size: 10.5px;
       font-weight: 600;
-      letter-spacing: -0.01em;
+      color: var(--text-muted);
+      line-height: 1.2;
+    }
+
+    .brand-sub-ribbon {
+      background: linear-gradient(90deg, #fff7ed 0%, #ffedd5 50%, #fff7ed 100%);
+      border-bottom: 1px solid rgba(254, 215, 170, 0.85);
+      padding: 7px 20px;
+      text-align: center;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #7c2d12;
+      letter-spacing: 0.15px;
+    }
+
+    .brand-sub-ribbon strong {
+      color: #c2410c;
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] .brand-sub-ribbon {
+      background: #1b1411;
+      border-bottom-color: rgba(255, 138, 91, 0.2);
+      color: #e2cfc3;
+    }
+
+    [data-theme="dark"] .brand-sub-ribbon strong {
+      color: #ff8a5b;
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .search-box-wrapper {
@@ -116,10 +214,10 @@
 
     .search-input {
       width: 100%;
-      padding: 7px 14px 7px 32px;
+      padding: 8px 16px;
       border-radius: var(--radius-full);
-      border: 1px solid var(--border-color);
-      background: rgba(120, 120, 128, 0.08);
+      border: 1px solid var(--oo-peach-border);
+      background: var(--oo-peach-soft);
       color: var(--text-primary);
       font-size: 13px;
       outline: none;
@@ -127,24 +225,40 @@
       font-family: inherit;
     }
 
-    .search-input:focus {
-      background: var(--bg-card);
-      border-color: var(--accent-blue);
-      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    .search-input::placeholder {
+      color: var(--text-muted);
     }
 
-    .search-icon-svg {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 13px;
-      height: 13px;
-      fill: var(--text-secondary);
+    .search-input:focus {
+      background: var(--bg-card);
+      border-color: var(--oo-orange);
+      box-shadow: 0 0 0 3px rgba(255, 111, 61, 0.16);
+    }
+
+    .header-site-link {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--oo-orange-deep);
+      background: var(--oo-peach-bg);
+      border: 1px solid var(--oo-peach-border);
+      border-radius: var(--radius-full);
+      padding: 6px 13px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .header-site-link:hover {
+      background: rgba(255, 111, 61, 0.16);
+      border-color: var(--oo-orange);
+    }
+
+    [data-theme="dark"] .header-site-link {
+      color: #ff8a5b;
     }
 
     .theme-toggle-btn {
-      background: transparent;
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
       border-radius: var(--radius-full);
@@ -152,91 +266,139 @@
       font-size: 12px;
       font-weight: 600;
       cursor: pointer;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
       transition: all 0.2s ease;
       font-family: inherit;
+      white-space: nowrap;
     }
 
     .theme-toggle-btn:hover {
-      background: rgba(120, 120, 128, 0.1);
+      border-color: var(--oo-orange);
+      color: var(--oo-orange-deep);
+      background: var(--oo-peach-bg);
     }
 
     /* CONTAINER */
     .container {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 28px 24px 80px 24px;
+      padding: 26px 24px 80px 24px;
       box-sizing: border-box;
       width: 100%;
     }
 
-    /* HERO BANNER */
+    /* HERO BANNER — ONLYOFFICEVIETNAM.COM WARM PEACH HERO */
     .hero-banner {
       text-align: center;
-      padding: 32px 20px 24px 20px;
+      padding: 34px 28px 28px 28px;
       margin-bottom: 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255, 247, 237, 0.95) 0%, rgba(255, 237, 213, 0.48) 56%, rgba(255, 255, 255, 0.78) 100%);
+      border: 1px solid rgba(254, 215, 170, 0.85);
+      box-shadow: 0 14px 36px -10px rgba(234, 88, 12, 0.10);
+    }
+
+    [data-theme="dark"] .hero-banner {
+      background: linear-gradient(180deg, rgba(234, 88, 12, 0.14) 0%, rgba(29, 23, 20, 0.92) 100%);
+      border-color: rgba(255, 138, 91, 0.24);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
     }
 
     .hero-eyebrow {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--oo-orange-deep);
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: var(--radius-full);
+      padding: 6px 16px;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin-bottom: 10px;
+      letter-spacing: 0.6px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 10px rgba(234, 88, 12, 0.08);
+    }
+
+    [data-theme="dark"] .hero-eyebrow {
+      background: rgba(255, 111, 61, 0.14);
+      border-color: rgba(255, 138, 91, 0.32);
+      color: #ff8a5b;
     }
 
     .hero-title {
-      font-size: 38px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
       margin-bottom: 12px;
       color: var(--text-primary);
     }
 
-    .hero-subtitle {
-      font-size: 15px;
-      color: var(--text-secondary);
-      max-width: 760px;
-      margin: 0 auto;
-      font-weight: 400;
+    .hero-accent {
+      background: var(--oo-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--oo-orange-deep);
     }
 
-    /* NAV TABS */
+    .hero-subtitle {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      max-width: 820px;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* NAV TABS — FLOATING WARM PILL BAR */
     .nav-tabs {
       display: flex;
       justify-content: center;
       gap: 6px;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
       flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border-color);
+      padding: 7px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px -10px rgba(234, 88, 12, 0.12);
+    }
+
+    [data-theme="dark"] .nav-tabs {
+      background: rgba(29, 23, 20, 0.92);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
     }
 
     .tab-btn {
       background: transparent;
-      border: 1px solid var(--border-color);
+      border: 1px solid transparent;
       color: var(--text-secondary);
       font-size: 13px;
-      font-weight: 500;
-      padding: 8px 18px;
-      border-radius: var(--radius-full);
+      font-weight: 600;
+      padding: 9px 16px;
+      border-radius: 12px;
       cursor: pointer;
       transition: all 0.2s ease;
       font-family: inherit;
     }
 
     .tab-btn:hover {
-      color: var(--text-primary);
-      border-color: rgba(120, 120, 128, 0.3);
+      color: var(--oo-orange-deep);
+      background: rgba(255, 111, 61, 0.08);
+      border-color: rgba(255, 111, 61, 0.22);
     }
 
     .tab-btn.active {
-      background: var(--text-primary);
-      color: var(--bg-primary);
-      border-color: var(--text-primary);
-      font-weight: 600;
+      background: var(--oo-gradient);
+      color: #ffffff;
+      border-color: transparent;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(234, 88, 12, 0.30);
     }
 
     /* TAB CONTENT */
@@ -261,9 +423,9 @@
 
     .section-title {
       font-size: 21px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       color: var(--text-primary);
     }
 
@@ -281,7 +443,7 @@
     }
 
     .apple-card {
-      background: var(--bg-card);
+      background: linear-gradient(180deg, var(--bg-card) 0%, var(--oo-peach-soft) 100%);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       padding: 24px;
@@ -293,21 +455,25 @@
     .apple-card:hover {
       background: var(--bg-card-hover);
       box-shadow: var(--card-shadow-hover);
-      border-color: rgba(120, 120, 128, 0.25);
+      border-color: var(--oo-peach-border-strong);
     }
 
     .card-badge {
       display: inline-block;
-      font-size: 10px;
+      font-size: 10.5px;
       font-weight: 700;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: var(--radius-full);
       margin-bottom: 12px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.45px;
       text-transform: uppercase;
-      background: rgba(120, 120, 128, 0.08);
-      color: var(--text-secondary);
-      border: 1px solid var(--border-subtle);
+      background: var(--oo-peach-bg);
+      color: var(--oo-orange-deep);
+      border: 1px solid var(--oo-peach-border);
+    }
+
+    [data-theme="dark"] .card-badge {
+      color: #ff8a5b;
     }
 
     .card-title {
@@ -322,13 +488,14 @@
       font-size: 13px;
       color: var(--text-secondary);
       margin-bottom: 14px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* SCRIPT BOX */
     .script-box {
-      background: rgba(120, 120, 128, 0.04);
-      border: 1px solid var(--border-color);
+      background: var(--oo-peach-soft);
+      border: 1px solid var(--oo-peach-border);
+      border-left: 4px solid var(--oo-orange);
       border-radius: var(--radius-md);
       padding: 16px;
       margin-top: 12px;
@@ -340,38 +507,46 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
+      gap: 10px;
     }
 
     .script-label {
       font-size: 10.5px;
       font-weight: 700;
-      color: var(--text-muted);
+      color: var(--oo-orange-deep);
       text-transform: uppercase;
       letter-spacing: 0.6px;
     }
 
     .copy-btn {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-primary);
+      background: var(--oo-peach-bg);
+      border: 1px solid var(--oo-peach-border-strong);
+      color: var(--oo-orange-dark);
       font-size: 11px;
-      font-weight: 600;
-      padding: 3px 10px;
+      font-weight: 700;
+      padding: 4px 12px;
       border-radius: var(--radius-full);
       cursor: pointer;
       transition: all 0.15s ease;
       font-family: inherit;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .copy-btn {
+      color: #ff946e;
     }
 
     .copy-btn:hover {
-      background: var(--text-primary);
-      color: var(--bg-primary);
-      border-color: var(--text-primary);
+      background: var(--oo-gradient);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 3px 10px rgba(234, 88, 12, 0.25);
     }
 
     .copy-btn.copied {
-      background: var(--text-primary);
-      color: var(--bg-primary);
+      background: #15803d;
+      color: #ffffff;
+      border-color: #15803d;
     }
 
     .script-text {
@@ -382,11 +557,20 @@
     }
 
     .script-note {
-      font-size: 11px;
-      color: var(--accent-red);
+      font-size: 11.5px;
+      color: #9a3412;
+      background: var(--oo-peach-bg);
+      border: 1px solid var(--oo-peach-border);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
       font-weight: 600;
-      margin-top: 8px;
+      margin-top: 10px;
       font-style: normal;
+      line-height: 1.45;
+    }
+
+    [data-theme="dark"] .script-note {
+      color: #ffb294;
     }
 
     /* COMPARISON TABLE 5 DO / 5 DONT */
@@ -398,27 +582,31 @@
     }
 
     .do-card {
-      background: var(--bg-card);
+      background: linear-gradient(180deg, var(--bg-card) 0%, var(--oo-peach-soft) 100%);
       border: 1px solid var(--border-color);
+      border-top: 3.5px solid var(--oo-orange);
       border-radius: var(--radius-lg);
       padding: 22px;
+      box-shadow: var(--card-shadow);
     }
 
     .dont-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
+      border-top: 3.5px solid #dc2626;
       border-radius: var(--radius-lg);
       padding: 22px;
+      box-shadow: var(--card-shadow);
     }
 
     .group-header {
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
       text-transform: uppercase;
       margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .rule-item {
@@ -427,7 +615,8 @@
       gap: 8px;
       margin-bottom: 12px;
       font-size: 13px;
-      line-height: 1.45;
+      line-height: 1.5;
+      color: var(--text-secondary);
     }
 
     .rule-item strong {
@@ -445,7 +634,7 @@
     .flashcard {
       background: transparent;
       perspective: 1000px;
-      height: 240px;
+      height: 255px;
       cursor: pointer;
     }
 
@@ -479,12 +668,14 @@
     }
 
     .flashcard-front {
-      background: var(--bg-card);
+      background: linear-gradient(180deg, var(--bg-card) 0%, var(--oo-peach-soft) 100%);
+      border-top: 3.5px solid var(--oo-orange);
     }
 
     .flashcard-back {
-      background: var(--text-primary);
-      color: var(--bg-primary);
+      background: linear-gradient(145deg, #c2410c 0%, #9a3412 58%, #7c2d12 100%);
+      color: #ffffff;
+      border-color: #9a3412;
       transform: rotateY(180deg);
     }
 
@@ -497,24 +688,31 @@
 
     .flashcard-hint {
       font-size: 11.5px;
-      color: var(--text-secondary);
-      font-weight: 500;
+      color: var(--oo-orange-deep);
+      font-weight: 600;
+    }
+
+    [data-theme="dark"] .flashcard-hint {
+      color: #ff8a5b;
     }
 
     .flashcard-answer {
-      font-size: 13px;
-      line-height: 1.5;
-      color: var(--bg-primary);
+      font-size: 12.8px;
+      line-height: 1.52;
+      color: #ffffff;
     }
 
     .flashcard-back .copy-btn {
-      border-color: rgba(255, 255, 255, 0.3);
-      color: var(--bg-primary);
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      align-self: flex-start;
     }
 
     .flashcard-back .copy-btn:hover {
-      background: var(--bg-primary);
-      color: var(--text-primary);
+      background: #ffffff;
+      color: #9a3412;
+      border-color: #ffffff;
     }
 
     /* INSTANT CALCULATOR */
@@ -611,30 +809,47 @@
       margin-bottom: 10px;
       overflow: hidden;
       transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(234, 88, 12, 0.03);
     }
 
     .accordion-item:hover {
-      border-color: rgba(120, 120, 128, 0.3);
+      border-color: var(--oo-peach-border-strong);
+    }
+
+    .accordion-item.open {
+      border-color: var(--oo-orange);
+      box-shadow: var(--card-shadow);
     }
 
     .accordion-header {
       padding: 15px 20px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
       user-select: none;
       color: var(--text-primary);
+      gap: 12px;
+    }
+
+    .accordion-item.open .accordion-header {
+      background: var(--oo-peach-soft);
+      color: var(--oo-orange-deep);
+    }
+
+    [data-theme="dark"] .accordion-item.open .accordion-header {
+      color: #ff8a5b;
     }
 
     .accordion-header::after {
       content: "+";
       font-size: 18px;
-      font-weight: 400;
-      color: var(--text-secondary);
+      font-weight: 600;
+      color: var(--oo-orange-deep);
       transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
 
     .accordion-item.open .accordion-header::after {
@@ -643,33 +858,32 @@
 
     .accordion-body {
       display: none;
-      padding: 0 20px 18px 20px;
+      padding: 14px 20px 18px 20px;
       font-size: 13px;
       line-height: 1.55;
       color: var(--text-secondary);
       border-top: 1px solid var(--border-subtle);
-      padding-top: 14px;
     }
 
     .accordion-item.open .accordion-body {
       display: block;
     }
 
-    /* FILTER PILLS */
+    /* FILTER PILLS — EXACT ONLYOFFICEVIETNAM.COM NAV ACTIVE STYLE */
     .filter-pills {
       display: flex;
-      gap: 6px;
+      gap: 7px;
       margin-bottom: 18px;
       flex-wrap: wrap;
     }
 
     .filter-pill {
-      background: transparent;
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      font-size: 12px;
-      font-weight: 500;
+      padding: 7px 15px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 600;
       cursor: pointer;
       color: var(--text-secondary);
       transition: all 0.15s ease;
@@ -677,14 +891,22 @@
     }
 
     .filter-pill:hover {
-      color: var(--text-primary);
+      color: var(--oo-orange-deep);
+      border-color: rgba(255, 111, 61, 0.35);
+      background: var(--oo-peach-soft);
     }
 
     .filter-pill.active {
-      background: var(--text-primary);
-      color: var(--bg-primary);
-      border-color: var(--text-primary);
-      font-weight: 600;
+      background: rgba(255, 111, 61, 0.11);
+      color: var(--oo-orange-deep);
+      border-color: rgba(255, 111, 61, 0.32);
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] .filter-pill.active {
+      background: rgba(255, 111, 61, 0.20);
+      color: #ff8a5b;
+      border-color: rgba(255, 138, 91, 0.45);
     }
 
     /* TABLES */
@@ -696,23 +918,29 @@
       border-radius: var(--radius-md);
       overflow: hidden;
       border: 1px solid var(--border-color);
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 2px 10px rgba(234, 88, 12, 0.04);
     }
 
     .price-table-light th, .price-table-light td {
       padding: 12px 16px;
       text-align: left;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-subtle);
       vertical-align: top;
+      color: var(--text-secondary);
     }
 
     .price-table-light th {
-      background: rgba(120, 120, 128, 0.06);
-      color: var(--text-secondary);
-      font-weight: 700;
+      background: var(--oo-peach-bg);
+      color: #9a3412;
+      font-weight: 800;
       font-size: 11.5px;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.55px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .price-table-light th {
+      color: #ff946e;
     }
 
     .price-table-light td strong {
@@ -731,55 +959,49 @@
 
     .header-inner {
       width: 100%;
-      max-width: 1160px;
+      max-width: 1240px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .brand-logo {
-      font-weight: 800;
-      font-size: 16px;
-      letter-spacing: -0.02em;
-      color: var(--text-primary);
+      gap: 14px;
     }
 
     .header-search {
       flex: 1;
-      max-width: 380px;
-      margin: 0 20px;
+      max-width: 390px;
+      margin: 0 12px;
     }
 
-    /* HERO TRIGGER BUTTON */
+    /* HERO TRIGGER BUTTON — EXACT ONLYOFFICEVIETNAM.COM PRIMARY CTA */
     .hero-quote-trigger-bar {
-      margin-top: 18px;
+      margin-top: 20px;
       display: flex;
       justify-content: center;
     }
 
     .btn-hero-quote-main {
-      background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
+      background: var(--oo-gradient);
       color: #ffffff;
       border: none;
-      padding: 10px 22px;
-      border-radius: var(--radius-full);
-      font-size: 13px;
+      padding: 12px 26px;
+      border-radius: 10px;
+      font-size: 13.5px;
       font-weight: 700;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.25px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.28);
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(255, 111, 61, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.22);
       transition: all 0.2s ease;
       font-family: inherit;
     }
 
     .btn-hero-quote-main:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(0, 113, 227, 0.4);
-      background: linear-gradient(135deg, #0077ed 0%, #0085ff 100%);
+      box-shadow: 0 8px 24px rgba(234, 88, 12, 0.45);
+      background: var(--oo-gradient-hover);
     }
 
     /* ========================================================================= */
@@ -809,7 +1031,7 @@
     }
 
     .input-block-card {
-      background: var(--bg-card);
+      background: linear-gradient(180deg, var(--bg-card) 0%, var(--oo-peach-soft) 100%);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       padding: 20px;
@@ -819,7 +1041,7 @@
 
     .input-block-card:hover {
       box-shadow: var(--card-shadow-hover);
-      border-color: rgba(120, 120, 128, 0.25);
+      border-color: var(--oo-peach-border-strong);
     }
 
     .block-header {
@@ -833,21 +1055,21 @@
 
     .block-title {
       font-size: 13.5px;
-      font-weight: 700;
-      color: var(--text-primary);
+      font-weight: 800;
+      color: var(--oo-orange-deep);
       display: flex;
       align-items: center;
-      gap: 8px;
       letter-spacing: -0.01em;
     }
 
-    .block-title svg {
-      color: var(--accent-blue);
+    [data-theme="dark"] .block-title {
+      color: #ff8a5b;
     }
 
     .partner-toggle-container {
       display: flex;
-      background: rgba(120, 120, 128, 0.08);
+      background: var(--oo-peach-bg);
+      border: 1px solid var(--oo-peach-border);
       padding: 4px;
       border-radius: var(--radius-md);
       gap: 4px;
@@ -857,7 +1079,7 @@
       flex: 1;
       background: transparent;
       border: none;
-      padding: 8px 12px;
+      padding: 9px 12px;
       border-radius: 8px;
       font-size: 12.5px;
       font-weight: 600;
@@ -869,13 +1091,14 @@
     }
 
     .partner-toggle-btn.active {
-      background: var(--bg-card);
-      color: var(--text-primary);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      background: var(--oo-gradient);
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 3px 10px rgba(234, 88, 12, 0.28);
     }
 
     [data-theme="dark"] .partner-toggle-btn.active {
-      background: rgba(255, 255, 255, 0.15);
+      background: var(--oo-gradient);
       color: #ffffff;
     }
 
@@ -916,8 +1139,8 @@
     }
 
     .form-input-sm:focus, .form-select-sm:focus {
-      border-color: var(--accent-blue);
-      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+      border-color: var(--oo-orange);
+      box-shadow: 0 0 0 3px rgba(255, 111, 61, 0.16);
     }
 
     .discount-toggle-group {
@@ -926,12 +1149,12 @@
     }
 
     .discount-pill-btn {
-      background: rgba(120, 120, 128, 0.08);
+      background: var(--oo-peach-soft);
       border: 1px solid var(--border-color);
       color: var(--text-secondary);
       font-size: 11px;
       font-weight: 600;
-      padding: 3px 8px;
+      padding: 3px 9px;
       border-radius: var(--radius-full);
       cursor: pointer;
       transition: all 0.15s ease;
@@ -939,9 +1162,9 @@
     }
 
     .discount-pill-btn.active {
-      background: var(--text-primary);
-      color: var(--bg-primary);
-      border-color: var(--text-primary);
+      background: var(--oo-gradient);
+      color: #ffffff;
+      border-color: transparent;
     }
 
     .checkbox-row {
@@ -957,7 +1180,7 @@
     .checkbox-row input[type="checkbox"] {
       width: 16px;
       height: 16px;
-      accent-color: var(--accent-blue);
+      accent-color: var(--oo-orange-deep);
       cursor: pointer;
     }
 
@@ -970,7 +1193,7 @@
     }
 
     .repeater-row {
-      background: rgba(120, 120, 128, 0.04);
+      background: var(--oo-peach-soft);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       padding: 12px;
@@ -986,25 +1209,30 @@
 
     .item-num-badge {
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: var(--text-secondary);
+      color: var(--oo-orange-deep);
+    }
+
+    [data-theme="dark"] .item-num-badge {
+      color: #ff8a5b;
     }
 
     .btn-delete-row {
-      background: rgba(215, 0, 21, 0.08);
+      background: rgba(220, 38, 38, 0.08);
       color: var(--accent-red);
-      border: none;
-      width: 22px;
-      height: 22px;
+      border: 1px solid rgba(220, 38, 38, 0.2);
+      padding: 2px 8px;
       border-radius: var(--radius-full);
       cursor: pointer;
-      font-size: 12px;
-      display: flex;
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       transition: all 0.15s ease;
+      font-family: inherit;
     }
 
     .btn-delete-row:hover {
@@ -1021,25 +1249,28 @@
 
     .btn-add-product {
       width: 100%;
-      background: rgba(0, 113, 227, 0.06);
-      border: 1px dashed rgba(0, 113, 227, 0.35);
-      color: var(--accent-blue);
+      background: var(--oo-peach-bg);
+      border: 1px dashed var(--oo-peach-border-strong);
+      color: var(--oo-orange-deep);
       padding: 10px;
       border-radius: var(--radius-md);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
       transition: all 0.2s ease;
       font-family: inherit;
     }
 
     .btn-add-product:hover {
-      background: rgba(0, 113, 227, 0.12);
-      border-color: var(--accent-blue);
+      background: rgba(255, 111, 61, 0.14);
+      border-color: var(--oo-orange);
+    }
+
+    [data-theme="dark"] .btn-add-product {
+      color: #ff8a5b;
     }
 
     .repeater-add-actions {
@@ -1114,18 +1345,18 @@
     }
 
     .a4-preview-scroll-wrapper {
-      background: #e2e8f0;
+      background: #f5ebe1;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       padding: 24px;
       display: flex;
       justify-content: center;
       overflow-x: auto;
-      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.06);
+      box-shadow: inset 0 2px 10px rgba(154, 52, 18, 0.06);
     }
 
     [data-theme="dark"] .a4-preview-scroll-wrapper {
-      background: #18181b;
+      background: #1a1411;
     }
 
     /* A4 REAL PAPER STYLING */
@@ -1343,69 +1574,79 @@
     }
 
     .btn-action-print {
-      background: var(--text-primary);
-      color: var(--bg-primary);
-      border: 1px solid var(--text-primary);
-      padding: 9px 18px;
-      border-radius: var(--radius-full);
-      font-size: 12.5px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
-      font-family: inherit;
-    }
-
-    .btn-action-print:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    .btn-action-jpg {
-      background: #059669;
+      background: var(--oo-gradient);
       color: #ffffff;
-      border: 1px solid #059669;
-      padding: 9px 18px;
-      border-radius: var(--radius-full);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
       font-size: 12.5px;
       font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
       transition: all 0.2s ease;
-      box-shadow: 0 3px 12px rgba(5, 150, 105, 0.25);
+      box-shadow: 0 4px 14px rgba(234, 88, 12, 0.30);
+      font-family: inherit;
+    }
+
+    .btn-action-print:hover {
+      background: var(--oo-gradient-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(234, 88, 12, 0.40);
+    }
+
+    .btn-action-jpg {
+      background: #1e293b;
+      color: #ffffff;
+      border: 1px solid #1e293b;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
       font-family: inherit;
     }
 
     .btn-action-jpg:hover {
-      background: #047857;
-      border-color: #047857;
+      background: #0f172a;
+      border-color: #0f172a;
       transform: translateY(-1px);
-      box-shadow: 0 5px 16px rgba(5, 150, 105, 0.35);
+    }
+
+    [data-theme="dark"] .btn-action-jpg {
+      background: #059669;
+      border-color: #059669;
     }
 
     .btn-action-copy-chat {
-      background: var(--bg-card);
-      color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      padding: 9px 16px;
-      border-radius: var(--radius-full);
+      background: var(--oo-peach-bg);
+      color: var(--oo-orange-dark);
+      border: 1px solid var(--oo-peach-border-strong);
+      padding: 10px 16px;
+      border-radius: 10px;
       font-size: 12.5px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
       transition: all 0.2s ease;
       font-family: inherit;
     }
 
+    [data-theme="dark"] .btn-action-copy-chat {
+      color: #ff946e;
+    }
+
     .btn-action-copy-chat:hover {
-      background: rgba(120, 120, 128, 0.1);
-      border-color: rgba(120, 120, 128, 0.3);
+      background: rgba(255, 111, 61, 0.16);
+      border-color: var(--oo-orange);
     }
 
     /* CHAT MESSAGE PREVIEW */
@@ -1424,41 +1665,49 @@
       margin-bottom: 10px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border-subtle);
+      gap: 10px;
     }
 
     .chat-preview-title {
       font-size: 11.5px;
-      font-weight: 700;
-      color: var(--text-secondary);
+      font-weight: 800;
+      color: var(--oo-orange-deep);
       display: flex;
       align-items: center;
-      gap: 6px;
       letter-spacing: 0.4px;
     }
 
+    [data-theme="dark"] .chat-preview-title {
+      color: #ff8a5b;
+    }
+
     .btn-copy-chat-inline {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-primary);
+      background: var(--oo-peach-bg);
+      border: 1px solid var(--oo-peach-border-strong);
+      color: var(--oo-orange-dark);
       font-size: 11px;
-      font-weight: 600;
-      padding: 3px 10px;
+      font-weight: 700;
+      padding: 4px 12px;
       border-radius: var(--radius-full);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
       transition: all 0.15s ease;
       font-family: inherit;
     }
 
+    [data-theme="dark"] .btn-copy-chat-inline {
+      color: #ff946e;
+    }
+
     .btn-copy-chat-inline:hover {
-      background: var(--text-primary);
-      color: var(--bg-primary);
+      background: var(--oo-gradient);
+      color: #ffffff;
+      border-color: transparent;
     }
 
     .chat-message-text-box {
-      background: rgba(120, 120, 128, 0.05);
+      background: var(--oo-peach-soft);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
       padding: 12px 14px;
@@ -1475,14 +1724,13 @@
       bottom: 28px;
       left: 50%;
       transform: translateX(-50%) translateY(70px);
-      background: rgba(29, 29, 31, 0.95);
+      background: #9a3412;
       color: #ffffff;
       padding: 10px 22px;
       border-radius: var(--radius-full);
       font-size: 13px;
-      font-weight: 600;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(10px);
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(154, 52, 18, 0.35);
       opacity: 0;
       pointer-events: none;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1495,25 +1743,22 @@
     }
 
     /* ========================================================================= */
-    /* COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM (APPLE GRADE) */
+    /* COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM */
     /* ========================================================================= */
     @media (max-width: 768px) {
       /* Header compact layout */
       .app-header {
-        padding: 8px 12px;
+        padding: 10px 12px;
       }
 
       .header-inner {
         gap: 8px;
       }
 
-      .brand-logo {
-        font-size: 14px;
-      }
-
-      .brand-badge {
-        font-size: 9.5px;
-        padding: 2px 7px;
+      .mercy-header-divider,
+      .mercy-header-badge,
+      .header-site-link {
+        display: none;
       }
 
       .header-search {
@@ -1523,18 +1768,18 @@
 
       .search-input {
         font-size: 12px;
-        padding: 6px 10px 6px 28px;
-      }
-
-      .search-icon-svg {
-        left: 8px;
-        width: 12px;
-        height: 12px;
+        padding: 7px 12px;
       }
 
       .theme-toggle-btn {
-        padding: 5px 10px;
+        padding: 6px 10px;
         font-size: 11px;
+      }
+
+      .brand-sub-ribbon {
+        font-size: 10.5px;
+        padding: 6px 10px;
+        line-height: 1.4;
       }
 
       /* Container & Hero */
@@ -1543,14 +1788,16 @@
       }
 
       .hero-banner {
-        padding: 18px 8px 12px 8px;
+        padding: 20px 14px 18px 14px;
         margin-bottom: 16px;
+        border-radius: 18px;
       }
 
       .hero-eyebrow {
-        font-size: 10.5px;
-        letter-spacing: 0.8px;
-        margin-bottom: 6px;
+        font-size: 10px;
+        letter-spacing: 0.4px;
+        padding: 5px 12px;
+        margin-bottom: 10px;
       }
 
       .hero-title {
@@ -1561,7 +1808,7 @@
 
       .hero-subtitle {
         font-size: 13px;
-        line-height: 1.45;
+        line-height: 1.5;
       }
 
       .hero-quote-trigger-bar {
@@ -1572,7 +1819,7 @@
         width: 100%;
         justify-content: center;
         font-size: 12px;
-        padding: 10px 14px;
+        padding: 11px 14px;
         text-align: center;
       }
 
@@ -1584,7 +1831,7 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        padding: 4px 2px 10px 2px;
+        padding: 6px;
         margin-bottom: 20px;
         flex-wrap: nowrap;
         width: 100%;
@@ -1598,7 +1845,7 @@
         flex-shrink: 0;
         white-space: nowrap;
         font-size: 12.5px;
-        padding: 7px 14px;
+        padding: 8px 14px;
       }
 
       /* Section Headers */
@@ -1636,7 +1883,7 @@
       }
 
       .flashcard {
-        height: 220px;
+        height: 240px;
       }
 
       .flashcard-front, .flashcard-back {
@@ -1648,8 +1895,8 @@
       }
 
       .flashcard-answer {
-        font-size: 12.5px;
-        line-height: 1.5;
+        font-size: 12.3px;
+        line-height: 1.48;
       }
 
       /* Tab 2: Quote Studio */
@@ -1712,7 +1959,6 @@
         padding: 8px 4px 14px 4px;
         border-radius: var(--radius-md);
         border: 1px solid var(--border-color);
-        background: rgba(120, 120, 128, 0.04);
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
       }
@@ -1796,21 +2042,9 @@
     }
 
     @media (max-width: 480px) {
-      .header-brand .brand-badge {
-        display: none;
-      }
-
-      #themeText {
-        display: none;
-      }
-
       .theme-toggle-btn {
-        padding: 6px 8px;
-      }
-
-      .theme-toggle-btn::after {
-        content: "🌓";
-        font-size: 13px;
+        padding: 6px 9px;
+        font-size: 10.5px;
       }
 
       .repeater-controls-grid {
@@ -1826,45 +2060,70 @@
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER — SYNCHRONIZED WITH ONLYOFFICEVIETNAM.COM -->
   <header class="app-header">
     <div class="header-inner">
       <div class="header-brand">
-        <span class="brand-logo">ONLYOFFICE</span>
-        <span class="brand-badge">Sales Playbook</span>
+        <span class="oo-logo-wrap" aria-label="ONLYOFFICE">
+          <svg class="oo-brand-svg" width="129" height="24" viewBox="0 0 129 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9721 23.7059L0.6589 18.7649C-0.219633 18.3335 -0.219633 17.6669 0.6589 17.2748L4.24943 15.5493L10.9339 18.7649C11.8125 19.1963 13.2257 19.1963 14.0661 18.7649L20.7506 15.5493L24.3411 17.2748C25.219 17.7061 25.219 18.3728 24.3411 18.7649L14.0279 23.7059C13.2257 24.0981 11.8125 24.0981 10.9721 23.7059Z" fill="#FF6F3D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9387 17.5916L0.656893 12.6449C-0.218964 12.213 -0.218964 11.5456 0.656893 11.153L4.16032 9.46484L10.9387 12.7234C11.8145 13.1553 13.2235 13.1553 14.0613 12.7234L20.8397 9.46484L24.3431 11.153C25.219 11.5849 25.219 12.2523 24.3431 12.6449L14.0613 17.5916C13.1855 18.0235 11.7765 18.0235 10.9387 17.5916Z" fill="#95C038"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9387 11.5408L0.656893 6.66521C-0.218964 6.23956 -0.218964 5.58175 0.656893 5.1948L10.9387 0.319234C11.8145 -0.106411 13.2235 -0.106411 14.0613 0.319234L24.3431 5.1948C25.219 5.62044 25.219 6.27826 24.3431 6.66521L14.0613 11.5408C13.1855 11.9277 11.7765 11.9277 10.9387 11.5408Z" fill="#5DC0E8"/>
+            <path class="oo-wordmark-path" d="M37.5385 6C34.5431 6 31.5996 7.74302 31.5996 12C31.5996 16.257 34.5431 18 37.5385 18C40.534 18 43.4775 16.257 43.4775 12C43.4775 7.74302 40.534 6 37.5385 6ZM37.5385 7.67598C38.4562 7.67598 40.8803 8.02793 40.8803 12C40.8803 15.9721 38.4562 16.324 37.5385 16.324C36.6209 16.324 34.1968 15.9721 34.1968 12C34.1968 8.02793 36.6209 7.67598 37.5385 7.67598Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M45.475 6.13408V17.8659H47.9337V10.9609L47.8818 8.88268H47.9337L48.5397 10.1899L52.7645 17.8659H55.9504V6.13408H53.4917V13.0391L53.5437 15.1173H53.4917L52.8511 13.5251L48.6609 6.13408H45.475Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M58.3765 6.13408V17.8659H65.6487V15.8883H60.8352V6.13408H58.3765Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M63.5709 6.13408L68.0381 13.0726V17.8659H70.4968V13.1061L74.8601 6.13408H72.2629L69.7523 10.257L69.3367 11.0615H69.2848L68.9038 10.257L66.4105 6.13408H63.5709Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M80.5885 6C77.5931 6 74.6496 7.74302 74.6496 12C74.6496 16.257 77.5931 18 80.5885 18C83.584 18 86.5275 16.257 86.5275 12C86.5275 7.74302 83.584 6 80.5885 6ZM80.5885 7.67598C81.5062 7.67598 83.9303 8.02793 83.9303 12C83.9303 15.9721 81.5062 16.324 80.5885 16.324C79.6709 16.324 77.2468 15.9721 77.2468 12C77.2468 8.02793 79.6709 7.67598 80.5885 7.67598Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M88.525 6.13408V17.8659H90.9837V12.8883H95.1046V10.9609H90.9837V8.11173H95.3124V6.13408H88.525Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M97.0471 6.13408V17.8659H99.5058V12.8883H103.627V10.9609H99.5058V8.11173H103.834V6.13408H97.0471Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M105.569 17.8659H108.028V6.13408H105.569V17.8659Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M119.304 15.5028C118.698 15.771 117.849 16.0223 116.776 16.0223C114.594 16.0223 112.62 14.8659 112.62 12.0335C112.62 9.63687 114.23 7.97765 116.949 7.97765C117.867 7.97765 118.646 8.14525 119.356 8.41341L119.459 6.40223C118.542 6.11732 117.728 6 116.776 6C112.966 6 110.023 8.02793 110.023 12.067C110.023 16.3408 113.313 18 116.326 18C117.295 18 118.386 17.8492 119.459 17.4972L119.304 15.5028Z" fill="#1E293B"/>
+            <path class="oo-wordmark-path" d="M121.362 6.13408V17.8659H128.6V15.7877H123.821V12.7877H128.167V10.8603H123.821V8.21229H128.6V6.13408H121.362Z" fill="#1E293B"/>
+          </svg>
+        </span>
+        <div class="mercy-header-divider"></div>
+        <div class="mercy-header-badge">
+          <span class="mercy-header-top">Đơn vị phân phối tại Việt Nam</span>
+          <span class="mercy-header-sub">Tối ưu bởi Mercy Tech • Sales Playbook</span>
+        </div>
       </div>
       <div class="header-search">
         <input type="text" class="search-input" id="searchInput" placeholder="Tìm nhanh kịch bản, câu từ chối, từ khóa, giá...">
       </div>
-      <button class="theme-toggle-btn" onclick="toggleTheme()"><span id="themeText">Giao diện Tối</span></button>
+      <div class="header-actions">
+        <a class="header-site-link" href="https://onlyofficevietnam.com" target="_blank" rel="noopener">onlyofficevietnam.com</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()"><span id="themeText">Giao diện Tối</span></button>
+      </div>
     </div>
   </header>
+
+  <div class="brand-sub-ribbon">
+    <strong>CÔNG TY TNHH CÔNG NGHỆ MERCY</strong> &nbsp;•&nbsp; MST: <strong>0319227767</strong> &nbsp;•&nbsp; Hotline / Zalo CSKH: <strong>0763.068.614</strong> &nbsp;•&nbsp; Techcombank: <strong>98896889</strong>
+  </div>
 
   <!-- CONTAINER -->
   <div class="container">
 
     <!-- HERO -->
     <div class="hero-banner">
-      <div class="hero-eyebrow">Mercy Tech Global • Live Call Training Hub</div>
-      <h1 class="hero-title">Cẩm Nang Chốt Sale & Xử Lý Từ Chối</h1>
-      <p class="hero-subtitle">Bộ quy chuẩn tâm lý thực chiến từ 900+ cuộc hội thoại Facebook & Zalo, công cụ tính giá tự động và ma trận 35+ tình huống bốc máy gọi điện.</p>
-    <div class="hero-quote-trigger-bar">
-      <button type="button" class="btn-hero-quote-main" onclick="switchTab('quote-calc')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-        BỘ TÍNH GIÁ & XUẤT BÁO GIÁ NHANH (A4 PDF & JPG)
-      </button>
-    </div>
-    
+      <div class="hero-eyebrow">Đơn Vị Phân Phối Tại Việt Nam &nbsp;•&nbsp; Tối Ưu Bởi Mercy Tech</div>
+      <h1 class="hero-title">Cẩm Nang Chốt Đơn &amp; Báo Giá <span class="hero-accent">ONLYOFFICE</span></h1>
+      <p class="hero-subtitle">Hệ thống đào tạo tư vấn trung thực (Smart Honesty), phễu chuyển đổi B2B 3 bước, bộ tính giá xuất Báo giá A4 chuẩn Hóa đơn VAT và ma trận 36 tình huống thực chiến.</p>
+      <div class="hero-quote-trigger-bar">
+        <button type="button" class="btn-hero-quote-main" onclick="switchTab('quote-calc')">
+          MỞ BỘ TÍNH GIÁ &amp; XUẤT BÁO GIÁ NHANH (A4 PDF / JPG)
+        </button>
+      </div>
     </div>
 
     <!-- TABS NAVIGATION -->
     <div class="nav-tabs">
       <button class="tab-btn active" onclick="switchTab('fast-track')">01. Học Cấp Tốc 30 Phút</button>
-      <button class="tab-btn" onclick="switchTab('quote-calc')">02. Tính Giá & Báo Giá</button>
-      <button class="tab-btn" onclick="switchTab('telesale-flow')">03. Kịch Bản Gọi Thoại 4 Bước</button>
-      <button class="tab-btn" onclick="switchTab('objection-matrix')">04. Ma Trận Xử Lý Từ Chối (35+)</button>
+      <button class="tab-btn" onclick="switchTab('quote-calc')">02. Tính Giá &amp; Báo Giá</button>
+      <button class="tab-btn" onclick="switchTab('telesale-flow')">03. Kịch Bản Gọi Thoại &amp; B2B</button>
+      <button class="tab-btn" onclick="switchTab('objection-matrix')">04. Ma Trận Xử Lý Từ Chối (36)</button>
       <button class="tab-btn" onclick="switchTab('persona-calls')">05. Kịch Bản Theo Người Nghe Máy</button>
-      <button class="tab-btn" onclick="switchTab('zalo-guideline')">06. Quy Chuẩn Zalo & CRM</button>
+      <button class="tab-btn" onclick="switchTab('zalo-guideline')">06. Quy Chuẩn Zalo, CTV &amp; SOP</button>
     </div>
 
     <!-- ========================================================================= -->
@@ -1873,31 +2132,54 @@
     <div id="fast-track" class="tab-pane active">
       <div class="section-header">
         <h2 class="section-title">Quy Tắc Vàng: 5 Điều Phải Nói vs 5 Lệnh Cấm Vĩnh Viễn</h2>
-        <p class="section-desc">Khắc ghi bảng đối chiếu này để luôn giữ đúng tâm thế chuyên viên tư vấn.</p>
+        <p class="section-desc">Nguyên tắc cốt lõi từ các buổi đào tạo: Không thần thánh hóa sản phẩm — tư vấn trung thực, đúng thực tế kỹ thuật để khách tin tưởng chốt bền vững.</p>
       </div>
 
       <div class="dos-donts-grid">
         <div class="do-card">
-          <div class="group-header" style="color: var(--text-primary);">5 ĐIỀU BẮT BUỘC NÓI</div>
-          <div class="rule-item"><span>• <strong>Khẳng định mượt mà 99%:</strong> "OnlyOffice đáp ứng mượt mà 99% văn phòng thông thường, chuẩn font tiếng Việt, in ấn cực chuẩn."</span></div>
-          <div class="rule-item"><span>• <strong>Đòn bẩy Tiết kiệm 80%:</strong> "Bản quyền vĩnh viễn chỉ từ 499k-699k, tiết kiệm hơn 80% so với mua MS Office 4.5 triệu/bộ."</span></div>
-          <div class="rule-item"><span>• <strong>Hook UltraView 2 phút (Sale trực tiếp cài):</strong> "Anh cho em xin UltraView 2 phút, em vào cài đặt sẵn bản Demo 7 ngày và nạp font mở test trực tiếp file công ty mình xem có mượt mà rồi mới quyết định mua nhé ạ."</span></div>
-          <div class="rule-item"><span>• <strong>Hook Báo Giá Chính Thức:</strong> "Anh cho em xin SĐT Zalo để em xuất bản Báo giá chính thức chính thức gửi qua cho mình lưu lại nhé ạ."</span></div>
-          <div class="rule-item"><span>• <strong>Chính Sách Sỉ Đại Lý (từ 50 key):</strong> "Bên em hỗ trợ tài khoản Portal Mercy Keys chủ động cấp key, chiết khấu sâu 149k/129k/99k để cửa hàng kinh doanh lâu dài."</span></div>
+          <div class="group-header" style="color: var(--oo-orange-deep);">5 ĐIỀU BẮT BUỘC NÓI</div>
+          <div class="rule-item"><span>• <strong>Định vị trung thực &amp; thực tế (85% – 90% tác vụ văn phòng):</strong> "Bản OnlyOffice tối ưu bởi Mercy Tech đáp ứng tốt khoảng 85% – 90% công việc văn phòng phổ thông hàng ngày (Word, Excel hàm chuẩn, PowerPoint, PDF, sẵn hơn 1.000 font tiếng Việt và công thức MathType/LaTeX). Với file đặc thù bên mình, em hỗ trợ cài Demo 7 ngày mở kiểm tra trực tiếp trước khi mua ạ."</span></div>
+          <div class="rule-item"><span>• <strong>Đòn bẩy Tiết kiệm 80%:</strong> "Bản quyền vĩnh viễn chỉ từ 499k – 699k/máy, tiết kiệm hơn 80% ngân sách so với trang bị đồng loạt MS Office 4,2 – 4,5 triệu/bộ."</span></div>
+          <div class="rule-item"><span>• <strong>Hook UltraView 2 phút (Sale trực tiếp cài Demo 7 ngày):</strong> "Anh cho em xin UltraView khoảng 2 phút, em cài sẵn bản Demo 7 ngày và bộ font tiếng Việt để bên mình mở thử trực tiếp file thực tế của công ty rồi mới quyết định nhé ạ."</span></div>
+          <div class="rule-item"><span>• <strong>Hook Báo Giá Chính Thức Có Mộc Đỏ:</strong> "Anh cho em xin SĐT Zalo để em xuất bản Báo giá chính thức có đóng dấu công ty gửi qua cho mình lưu hồ sơ trình duyệt nhé ạ."</span></div>
+          <div class="rule-item"><span>• <strong>Phễu Đại Lý Linh Hoạt (5 Key mở phễu → 50 Key chủ lực):</strong> "Cửa hàng có thể test trước gói trải nghiệm 5 key (299k/key, bán 2 máy hoàn vốn) hoặc vào gói Đại lý chính thức từ 50 key (149k/key, cấp Portal Mercy Keys chủ động xuất mã, không áp doanh số tháng)."</span></div>
         </div>
 
         <div class="dont-card">
-          <div class="group-header" style="color: var(--text-muted);">5 LỆNH CẤM VĨNH VIỄN</div>
-          <div class="rule-item"><span>• <strong>CẤM tự giới thiệu Microsoft trước khi chốt nhu cầu:</strong> Không chủ động mời chào Microsoft Office 2024 (4,5 triệu) ngay từ đầu làm khách bị dội giá; ưu tiên tư vấn OnlyOffice tối ưu trước hoặc giải pháp Hybrid khi khách có file VBA sâu.</span></div>
-          <div class="rule-item"><span>• <strong>Thành thật thông minh (Smart Honesty):</strong> Thừa nhận chân thành nếu khách có file Macro VBA quá phức tạp/chuyên sâu thì bất kỳ phần mềm thay thế nào cũng sẽ có điểm khác biệt so với MS Office gốc, và lập tức dùng giải pháp cài Demo 7 ngày UltraView mở test trực tiếp file thực tế của khách xem có mượt mà rồi mới quyết định mua.</span></div>
-          <div class="rule-item"><span>• <strong>CẤM dùng từ "100%" & "Tuyệt đối":</strong> Tránh câu quảng cáo quá đà, thiếu chân thực và rủi ro pháp lý nếu file khách có lỗi nhỏ.</span></div>
-          <div class="rule-item"><span>• <strong>CẤM dùng dấu chấm cảm (!):</strong> Kết thúc câu nhẹ nhàng bằng dấu chấm (.) hoặc các từ đệm (nha a, nhé anh, ạ...).</span></div>
-          <div class="rule-item"><span>• <strong>CẤM lộ giá sỉ cho khách lẻ:</strong> Chỉ gửi bảng giá sỉ khi khách đã xác minh là thợ IT / cửa hàng máy tính (có MST hoặc ảnh bảng hiệu) để bảo vệ quyền lợi các đại lý.</span></div>
+          <div class="group-header" style="color: var(--accent-red);">5 LỆNH CẤM VĨNH VIỄN</div>
+          <div class="rule-item"><span>• <strong>CẤM thần thánh hóa sản phẩm ("99%", "100%", "Hoàn hảo", "Tuyệt đối"):</strong> Giấu điểm giới hạn khiến khách kỳ vọng quá đà rồi phản tác dụng khi gặp file đặc thù; chia sẻ thẳng ngay từ đầu giúp khách đánh giá cao sự chuyên nghiệp.</span></div>
+          <div class="rule-item"><span>• <strong>CẤM tự giới thiệu Microsoft trước khi chốt nhu cầu:</strong> Không chủ động mời chào Microsoft Office 2024 (4,2 – 4,5 triệu) ngay phút đầu làm khách bị dội giá; ưu tiên tư vấn OnlyOffice tối ưu trước và dùng Mô hình Hybrid khi khách có máy chạy Macro VBA sâu.</span></div>
+          <div class="rule-item"><span>• <strong>Thành thật thông minh (Smart Honesty):</strong> Nói rõ ngay từ đầu nếu khách có file dự toán đuôi <code>.xls</code> đời cũ hoặc lập trình Macro VBA chuyên sâu thì cần cài Demo 7 ngày test file thật hoặc phối hợp Hybrid (1–2 máy chuyên trách dùng MS Office, 70–80% máy văn phòng dùng OnlyOffice).</span></div>
+          <div class="rule-item"><span>• <strong>CẤM dùng dấu chấm cảm (!) trong tin nhắn &amp; kịch bản:</strong> Luôn kết thúc câu điềm đạm bằng dấu chấm (.) hoặc từ đệm lịch sự (nha anh, nhé anh, ạ).</span></div>
+          <div class="rule-item"><span>• <strong>CẤM lộ giá sỉ màu CAM cho khách lẻ:</strong> Chỉ gửi Bảng giá sỉ sau khi đã xác minh khách là cửa hàng máy tính, công ty IT hoặc thợ kỹ thuật (qua MST, ảnh bảng hiệu hoặc bàn kỹ thuật).</span></div>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top: 34px;">
+        <h2 class="section-title">Bản Đồ Thực Tế Kỹ Thuật: Thế Mạnh Đã Tối Ưu vs 4 Lưu Ý Cần Tư Vấn Hybrid</h2>
+        <p class="section-desc">Nắm chuẩn ranh giới kỹ thuật thực tế để cam kết đúng phần làm tốt và chủ động dẫn dắt giải pháp ở phần đặc thù.</p>
+      </div>
+
+      <div class="dos-donts-grid">
+        <div class="do-card">
+          <div class="group-header" style="color: var(--accent-green);">NHÓM ĐÃ TỐI ƯU VỮNG CHẮC (TỰ TIN CAM KẾT)</div>
+          <div class="rule-item"><span>• <strong>4 Công cụ văn phòng cốt lõi (.docx, .xlsx, .pptx, PDF):</strong> Giao diện Ribbon quen thuộc, xử lý mượt văn bản hợp đồng, trình chiếu, đọc và xuất trực tiếp file PDF chuẩn.</span></div>
+          <div class="rule-item"><span>• <strong>Hàm kế toán &amp; văn phòng phổ thông:</strong> Chạy ổn định các nhóm hàm chuẩn (<code>SUM, IF, VLOOKUP, HLOOKUP, SUMIFS, COUNTIFS, INDEX, MATCH, PivotTable</code>).</span></div>
+          <div class="rule-item"><span>• <strong>Tích hợp sẵn hơn 1.000 Font tiếng Việt:</strong> Đầy đủ 3 bảng mã <code>Unicode</code>, <code>VNI</code>, <code>TCVN3 (ABC)</code> và thể thức văn bản hành chính Nghị định 30, mở lại hồ sơ cũ rõ dấu tiếng Việt.</span></div>
+          <div class="rule-item"><span>• <strong>ĐÃ KHẮC PHỤC &amp; HỖ TRỢ TRỌN VẸN MathType &amp; LaTeX (Khối Giáo Dục):</strong> Phiên bản tối ưu mới nhất đã xử lý hoàn chỉnh công thức Toán – Lý – Hóa, gõ và chỉnh sửa mượt cả <strong>MathType</strong> lẫn <strong>LaTeX</strong> cho giáo viên bộ môn và đồng bộ SGK Tin học mới (tuyệt đối không còn là hạn chế).</span></div>
+        </div>
+
+        <div class="dont-card" style="border-top-color: var(--oo-orange-dark);">
+          <div class="group-header" style="color: var(--oo-orange-dark);">4 LƯU Ý THỰC TẾ PHẢI CHIA SẺ THẲNG + HƯỚNG XỬ LÝ</div>
+          <div class="rule-item"><span>• <strong>1. File Excel lập trình Macro VBA chuyên sâu / Dự toán xây dựng đuôi .xls cũ:</strong> OnlyOffice dùng Macro chuẩn JavaScript thay vì MS VBA cổ điển → <em>Giải pháp:</em> Cài Demo 7 ngày mở thử file thật + tư vấn <strong>Mô hình Hybrid</strong> (1–2 máy dự toán/kế toán trưởng trang bị <code>Office H&amp;B 2024</code> 4,2M ESD hoặc 4,5M Box; 70–80% máy còn lại dùng OnlyOffice vĩnh viễn).</span></div>
+          <div class="rule-item"><span>• <strong>2. Cổng dịch vụ công nội bộ bắt buộc nhúng Plugin ký số trực tiếp vào MS Word:</strong> → <em>Giải pháp Hybrid:</em> Xuất PDF từ OnlyOffice để ký USB Token độc lập, hoặc giữ 1 máy văn thư dùng MS Office còn toàn bộ máy chuyên viên phòng ban dùng OnlyOffice tiết kiệm 80% ngân sách.</span></div>
+          <div class="rule-item"><span>• <strong>3. Lần khởi động đầu tiên chậm hơn MS Office khoảng 1 – 2 giây:</strong> Do nạp nhân hiển thị đa tab hiện đại; khi đã vào cửa sổ làm việc thì mở nhiều tab tài liệu cùng lúc rất mượt và ổn định.</span></div>
+          <div class="rule-item"><span>• <strong>4. Một số máy in văn phòng đời quá cũ (Ricoh, HP đời cũ):</strong> In trực tiếp đôi khi có thể xê dịch lề nhẹ → <em>Mẹo chuẩn:</em> Bấm <strong>Xuất/Lưu nhanh sang PDF</strong> ngay trên thanh công cụ OnlyOffice rồi bấm In là khóa cứng chuẩn trang in trên mọi dòng máy.</span></div>
         </div>
       </div>
 
       <div class="section-header" style="margin-top: 36px;">
-        <h2 class="section-title">4 Nền Tảng Pháp Lý & Chiến Lược Sản Phẩm Bắt Buộc Thuộc Lòng</h2>
+        <h2 class="section-title">4 Nền Tảng Pháp Lý &amp; Chiến Lược Sản Phẩm Bắt Buộc Thuộc Lòng</h2>
         <p class="section-desc">Tinh hoa đào tạo Onboarding thực chiến giúp Sale nắm chắc bản chất pháp lý, phạm vi kỹ thuật và kỷ luật giá thị trường.</p>
       </div>
 
@@ -1905,18 +2187,18 @@
         <div class="apple-card">
           <span class="card-badge">Pháp Lý Bắt Buộc</span>
           <h3 class="card-title">Luôn Ghi Đủ: "OnlyOffice tối ưu bởi Mercy Tech"</h3>
-          <p class="card-desc">Tuyệt đối không ghi cụt là <strong>"OnlyOffice"</strong> trên hợp đồng, báo giá hay văn bản gửi khách vì bản gốc là mã nguồn mở. Khách hàng doanh nghiệp chi tiền mua <strong>4 giá trị thương mại cốt lõi của Mercy Tech</strong>: (1) Bộ cài đã tối ưu sẵn hơn 1.000 font tiếng Việt và tương thích công thức Toán – Lý – Hóa, MathType, LaTeX; (2) Pháp nhân Công ty TNHH Công nghệ Mercy đứng ra bảo hộ chống thanh tra bản quyền; (3) Hóa đơn GTGT điện tử hợp pháp thuộc diện <strong>Không chịu thuế (KCT — 0%)</strong> sạch thuế; (4) Đội ngũ kỹ thuật Việt Nam đồng hành hỗ trợ trọn đời máy. Mercy Tech được niêm yết công khai tại <code>onlyoffice.com</code> (Partner Vietnam).</p>
+          <p class="card-desc">Tuyệt đối không ghi cụt là <strong>"OnlyOffice"</strong> trên hợp đồng, báo giá hay văn bản gửi khách vì bản gốc là mã nguồn mở. Khách hàng doanh nghiệp chi tiền mua <strong>4 giá trị thương mại cốt lõi của Mercy Tech</strong>: (1) Bộ cài đã tối ưu sẵn hơn 1.000 font tiếng Việt và tương thích hoàn chỉnh công thức Toán – Lý – Hóa, MathType, LaTeX; (2) Pháp nhân Công ty TNHH Công nghệ Mercy đứng ra bảo hộ chống thanh tra bản quyền; (3) Hóa đơn GTGT điện tử hợp pháp thuộc diện <strong>Không chịu thuế (KCT — 0%)</strong> sạch thuế; (4) Đội ngũ kỹ thuật Việt Nam đồng hành hỗ trợ trọn đời máy. Mercy Tech được niêm yết công khai tại <code>onlyoffice.com</code> (Partner Vietnam).</p>
         </div>
 
         <div class="apple-card">
           <span class="card-badge">Nghệ Thuật Tư Vấn</span>
-          <h3 class="card-title">Minh Bạch Ngay Từ Đầu & Chiến Lược Phối Hợp Hybrid</h3>
-          <p class="card-desc">Bộ 4 công cụ cốt lõi (<strong>Word, Excel, PowerPoint, PDF</strong>) đáp ứng mượt 95% tác vụ văn phòng và đã hỗ trợ đầy đủ <strong>MathType & LaTeX</strong> cho trường học. Sale luôn công tâm nói rõ trước 2 trường hợp đặc thù: (1) File Excel xây dựng/kỹ thuật chứa tập lệnh <strong>Macro VBA siêu phức tạp</strong> (do Microsoft dùng VBA còn OnlyOffice dùng Macro JavaScript); (2) Tích hợp <strong>chữ ký số chuyên ngành trực tiếp vào cổng hành chính công nội bộ</strong> của cơ quan nhà nước. <strong>Giải pháp Hybrid:</strong> Trang bị Microsoft Office 2024 (4.500.000 đ/bộ) cho 1–2 máy chuyên trách chạy VBA sâu, còn 70–80% nhân sự văn phòng dùng <strong>OnlyOffice tối ưu bởi Mercy Tech</strong> — giảm ngay 60–80% tổng ngân sách mà hợp pháp toàn diện.</p>
+          <h3 class="card-title">Minh Bạch Ngay Từ Đầu &amp; Chiến Lược Phối Hợp Hybrid</h3>
+          <p class="card-desc">Bộ 4 công cụ cốt lõi (<strong>Word, Excel, PowerPoint, PDF</strong>) đáp ứng tốt <strong>85% – 90%</strong> tác vụ văn phòng phổ thông và đã hỗ trợ trọn vẹn <strong>MathType &amp; LaTeX</strong> cho trường học. Sale luôn công tâm nói rõ trước 2 trường hợp đặc thù: (1) File Excel xây dựng/kỹ thuật chứa tập lệnh <strong>Macro VBA chuyên sâu hoặc dự toán .xls cũ</strong>; (2) Tích hợp <strong>plugin chữ ký số chuyên ngành trực tiếp vào cổng hành chính công nội bộ</strong>. <strong>Giải pháp Hybrid:</strong> Trang bị Microsoft Office 2024 (<strong>4.200.000 đ bản Key Online ESD</strong> hoặc <strong>4.500.000 đ bản Box</strong>) cho 1–2 máy chuyên trách chạy VBA sâu, còn 70–80% nhân sự văn phòng dùng <strong>OnlyOffice tối ưu bởi Mercy Tech</strong> — giảm ngay 60–80% tổng ngân sách mà hợp pháp toàn diện.</p>
         </div>
 
         <div class="apple-card">
           <span class="card-badge">Cơ Chế Bản Quyền</span>
-          <h3 class="card-title">Khóa Cứng Mainboard Trọn Đời & Chia Sẻ Rủi Ro Thiên Tai</h3>
+          <h3 class="card-title">Khóa Cứng Mainboard Trọn Đời &amp; Chia Sẻ Rủi Ro Thiên Tai</h3>
           <p class="card-desc">Bản quyền vĩnh viễn gắn cứng theo mã định danh bo mạch chủ (<strong>Mainboard / UUID</strong>). Cài lại Windows, Ghost máy hay nâng cấp RAM, ổ cứng SSD thì phần mềm tự nhận diện lại mã máy kích hoạt bình thường, không tốn thêm chi phí. Nếu đổi sang máy tính mới hoàn toàn thì trang bị mã mới; riêng trường hợp <strong>bất khả kháng (hỏa hoạn, cháy nổ, thiên tai hỏng dàn máy có hình ảnh/biên bản xác thực)</strong>, Mercy Tech hỗ trợ cấp đổi lại key để chia sẻ rủi ro cùng khách hàng.</p>
         </div>
 
@@ -1944,8 +2226,8 @@
               <div class="flashcard-hint">Chạm thẻ để lật xem câu trả lời →</div>
             </div>
             <div class="flashcard-back">
-              <div class="flashcard-answer">"Dạ OnlyOffice đáp ứng mượt mà 99% công việc văn phòng (Word, Excel, PowerPoint, in ấn, hợp đồng...) chuẩn font tiếng Việt, chi phí chỉ từ 499k-799k vĩnh viễn (tiết kiệm hơn 80% ngân sách so với MS Office 2024 4,5 triệu). Đầy đủ hóa đơn VAT hợp pháp cho doanh nghiệp ạ."</div>
-              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Dạ OnlyOffice đáp ứng mượt mà 99% công việc văn phòng (Word, Excel, PowerPoint, in ấn, hợp đồng...) chuẩn font tiếng Việt, chi phí chỉ từ 499k-799k vĩnh viễn (tiết kiệm hơn 80% ngân sách so với MS Office 2024 4,5 triệu). Đầy đủ hóa đơn VAT hợp pháp cho doanh nghiệp ạ.')">Sao chép</button>
+              <div class="flashcard-answer">"Dạ bản OnlyOffice tối ưu bởi Mercy Tech đáp ứng tốt khoảng 85% – 90% công việc văn phòng phổ thông (soạn thảo Word, bảng tính Excel hàm chuẩn, trình chiếu, PDF) với bộ font tiếng Việt nạp sẵn, chi phí chỉ từ 499k – 799k vĩnh viễn theo máy, tiết kiệm hơn 80% so với MS Office 2024 (4,2 – 4,5 triệu) và đầy đủ hóa đơn VAT hợp pháp. Em hỗ trợ cài bản Demo 7 ngày để anh mở thử trực tiếp file công ty mình nhé ạ."</div>
+              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Dạ bản OnlyOffice tối ưu bởi Mercy Tech đáp ứng tốt khoảng 85% - 90% công việc văn phòng phổ thông (soạn thảo Word, bảng tính Excel hàm chuẩn, trình chiếu, PDF) với bộ font tiếng Việt nạp sẵn, chi phí chỉ từ 499k - 799k vĩnh viễn theo máy, tiết kiệm hơn 80% so với MS Office 2024 (4,2 - 4,5 triệu) và đầy đủ hóa đơn VAT hợp pháp. Em hỗ trợ cài bản Demo 7 ngày để anh mở thử trực tiếp file công ty mình nhé ạ.')">Sao chép</button>
             </div>
           </div>
         </div>
@@ -1961,8 +2243,8 @@
               <div class="flashcard-hint">Chạm thẻ để lật xem câu trả lời →</div>
             </div>
             <div class="flashcard-back">
-              <div class="flashcard-answer">"Dạ OnlyOffice hỗ trợ rất tốt 99% các hàm Excel thông dụng (VLOOKUP, SUMIFS, IF...) và chuẩn font tiếng Việt. Riêng các file Macro VBA chuyên sâu thì để chị an tâm nhất, chị cho em UltraView 2 phút em vào cài sẵn bản Demo 7 ngày mở test thử trực tiếp đúng file kế toán của công ty mình xem có mượt mà rồi mới quyết định mua nhé ạ."</div>
-              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Dạ OnlyOffice hỗ trợ đầy đủ các hàm Excel thông dụng (VLOOKUP, SUMIFS, IF...) và chuẩn font tiếng Việt. Để chị an tâm nhất, chị cho em UltraView 2 phút kỹ thuật bên em mở test trực tiếp đúng file kế toán của bên mình xem có mượt mà rồi mới quyết định mua ạ!')">Sao chép</button>
+              <div class="flashcard-answer">"Dạ các hàm kế toán thông dụng như SUM, IF, VLOOKUP, SUMIFS, PivotTable thì OnlyOffice chạy ổn định và chuẩn font tiếng Việt. Riêng các file dự toán đuôi .xls cũ hoặc lập trình Macro VBA chuyên sâu thì có thể khác biệt — để chắc chắn nhất, chị cho em xin UltraView 2 phút cài bản Demo 7 ngày mở kiểm tra trực tiếp đúng file kế toán của công ty mình rồi mới quyết định mua nhé ạ."</div>
+              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Dạ các hàm kế toán thông dụng như SUM, IF, VLOOKUP, SUMIFS, PivotTable thì OnlyOffice chạy ổn định và chuẩn font tiếng Việt. Riêng các file dự toán đuôi .xls cũ hoặc lập trình Macro VBA chuyên sâu thì có thể khác biệt - để chắc chắn nhất, chị cho em xin UltraView 2 phút cài bản Demo 7 ngày mở kiểm tra trực tiếp đúng file kế toán của công ty mình rồi mới quyết định mua nhé ạ.')">Sao chép</button>
             </div>
           </div>
         </div>
@@ -2054,10 +2336,7 @@
           <!-- Card Block 1: Partner Type -->
           <div class="input-block-card">
             <div class="block-header">
-              <span class="block-title">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                1. Nhóm Khách Hàng
-              </span>
+              <span class="block-title">1. Nhóm Khách Hàng</span>
             </div>
             <div class="partner-toggle-container">
               <button type="button" id="partnerRetailBtn" class="partner-toggle-btn active" onclick="setPlaybookPartner('retail')">
@@ -2072,10 +2351,7 @@
           <!-- Card Block 2: Customer Info -->
           <div class="input-block-card">
             <div class="block-header">
-              <span class="block-title">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                2. Thông Tin Khách Hàng (Tùy chọn)
-              </span>
+              <span class="block-title">2. Thông Tin Khách Hàng (Tùy chọn)</span>
             </div>
 
             <div class="form-grid-2">
@@ -2114,10 +2390,7 @@
           <!-- Card Block 3: Items List -->
           <div class="input-block-card">
             <div class="block-header">
-              <span class="block-title">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-                3. Danh Sách Sản Phẩm Báo Giá
-              </span>
+              <span class="block-title">3. Danh Sách Sản Phẩm Báo Giá</span>
             </div>
 
             <div id="quoteItemsList" class="items-repeater">
@@ -2126,11 +2399,9 @@
 
             <div class="repeater-add-actions">
               <button type="button" class="btn-add-product" onclick="addQuoteItemRow()">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                Thêm SP Có Sẵn
+                + Thêm SP Có Sẵn
               </button>
               <button type="button" class="btn-add-custom" id="btnAddCustomProduct" onclick="addCustomQuoteItemRow()">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
                 + Tự Nhập SP Khác
               </button>
             </div>
@@ -2139,10 +2410,7 @@
           <!-- Card Block 4: Discount & Legal Options -->
           <div class="input-block-card">
             <div class="block-header">
-              <span class="block-title">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-                4. Chiết Khấu & Đóng Dấu Pháp Lý
-              </span>
+              <span class="block-title">4. Chiết Khấu &amp; Đóng Dấu Pháp Lý</span>
             </div>
 
             <div class="form-row">
@@ -2263,22 +2531,18 @@
           <!-- Centered Action Toolbar Under Preview -->
           <div class="preview-action-toolbar">
             <button type="button" class="btn-action-print" onclick="printQuotationA4()">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
               Xuất PDF / In Báo Giá
             </button>
 
             <button type="button" class="btn-action-jpg" onclick="downloadQuotationJPG()">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              TẢI ẢNH JPG (GỬI ZALO/FB)
+              Tải Ảnh JPG (Gửi Zalo/FB)
             </button>
 
             <button type="button" class="btn-action-copy-chat" onclick="copyQuotationChatSummary(this)">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               Sao Chép Tin Nhắn Zalo
             </button>
 
             <button type="button" class="btn-action-copy-chat" style="color: var(--text-muted);" onclick="resetQuotationForm()">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
               Làm Mới
             </button>
           </div>
@@ -2286,12 +2550,8 @@
           <!-- Direct Zalo / Messenger Message Preview Box -->
           <div class="chat-message-preview-card">
             <div class="chat-preview-header">
-              <span class="chat-preview-title">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                NỘI DUNG TIN NHẮN TƯ VẤN (GỬI ZALO / MESSENGER)
-              </span>
+              <span class="chat-preview-title">NỘI DUNG TIN NHẮN TƯ VẤN (GỬI ZALO / MESSENGER)</span>
               <button type="button" class="btn-copy-chat-inline" onclick="copyQuotationChatSummary(this)">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                 Sao Chép
               </button>
             </div>
@@ -2305,10 +2565,10 @@
       <!-- SUMMARY REFERENCE TABLES (BELOW) -->
       <div class="grid-2">
         <div class="apple-card">
-          <span class="card-badge">Bảng Giá Sỉ Đại Lý & Điểm Hòa Vốn (30.10)</span>
-          <h3 class="card-title">Chính Sách Sỉ Key Online & Tem Cào Hologram 7 Màu</h3>
+          <span class="card-badge">Bảng Giá Sỉ Đại Lý &amp; Điểm Hòa Vốn (30.10)</span>
+          <h3 class="card-title">Chính Sách Sỉ Key Online &amp; Tem Cào Hologram 7 Màu</h3>
           <p class="card-desc">Áp dụng cho Cửa hàng máy tính / Công ty IT sau khi xác thực MST hoặc ảnh bảng hiệu (Không áp doanh số tháng — Key không hạn lưu kho):</p>
-          <div class="rule-item"><span>• <strong>Gói 5 Key Online (Trải nghiệm mở phễu):</strong> 299.000 đ/key (1.495.000 đ) — <strong>Bán đúng 2 key lẻ (799k) là hoàn vốn gốc</strong>, lãi ròng 3 key còn lại (~2,4 triệu).</span></div>
+          <div class="rule-item"><span>• <strong>Gói 5 Key Online (Trải nghiệm mở phễu):</strong> 299.000 đ/key (1.495.000 đ) — <strong>Bán đúng 2 key lẻ (799k) là hoàn vốn gốc</strong>, lãi ròng 3 key còn lại (~2,5 triệu).</span></div>
           <div class="rule-item"><span>• <strong>Gói 50 Key Online (Gói chủ lực chốt nhiều nhất):</strong> 149.000 đ/key (7.450.000 đ) — <strong>Bán chưa tới 10 key là hoàn vốn gốc</strong>, lãi ròng 40 key còn lại (~32,5 triệu).</span></div>
           <div class="rule-item"><span>• <strong>Gói 100 Key Online:</strong> 129.000 đ/key (12.900.000 đ) | <strong>Gói 200 Key Online:</strong> 99.000 đ/key (19.800.000 đ — chạm đáy giá sỉ Key Online).</span></div>
           <div class="rule-item"><span>• <strong>Tem Cào Vật Lý Hologram 7 Màu (Niêm yết 999k | Giá sàn lẻ &ge; 699k):</strong> 50 Tem: <strong>299.000 đ/tem</strong> (14.950.000 đ) | 200 Tem: <strong>249.000 đ/tem</strong> (49.800.000 đ) | 500 Tem: <strong>149.000 đ/tem</strong> (74.500.000 đ).</span></div>
@@ -2316,14 +2576,14 @@
         </div>
 
         <div class="apple-card">
-          <span class="card-badge">Sản Phẩm Microsoft Chính Ngạch & Chuẩn Hóa Đơn</span>
-          <h3 class="card-title">2 Dòng Microsoft Thương Mại FPP/Retail Singapore Duy Nhất</h3>
-          <p class="card-desc">Tên hàng hóa chuẩn Hóa đơn VAT & quy định pháp lý – kỹ thuật bắt buộc:</p>
-          <div class="rule-item"><span>• <strong>Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163):</strong> Lẻ 2.900.000 đ | Đại lý / &ge;50 hộp: 2.800.000 đ (Hộp USB 3.0 nguyên seal, đổi máy hợp pháp).</span></div>
-          <div class="rule-item"><span>• <strong>Microsoft Office Home & Business 2024 English APAC EM MEDIALess SKU EP2-06630:</strong> Lẻ 4.500.000 đ | Đại lý / &ge;50 bộ: 4.400.000 đ (Gắn TK Microsoft, đổi máy tối đa 5 lần cách nhau &ge;90 ngày).</span></div>
-          <div class="rule-item"><span>• <strong>Combo Doanh Nghiệp Chuẩn (Win Pro FPP USB + OnlyOffice):</strong> Lẻ 3.599.000 đ/máy | Đại lý 3.499.000 đ/máy.</span></div>
-          <div class="rule-item"><span>• <strong>Hạng mục đặc thù phát sinh thêm:</strong> Bấm nút <strong>+ Tự Nhập SP Khác</strong> để tự nhập tên hạng mục/dịch vụ, ĐVT và đơn giá trực tiếp lên Báo giá A4.</span></div>
-          <div class="script-note">PHÁP LÝ & KỸ THUẬT: Hàng nhập khẩu chính ngạch Singapore đủ Hợp đồng, Hóa đơn VAT, Chứng thư mộc đỏ & Microsoft Partner (Tờ khai Hải quan gốc bảo mật giá vốn, cam kết văn bản xuất trình trực tiếp cho Đoàn Thanh tra khi hậu kiểm). Kỹ thuật chỉ hỗ trợ nhập Key kích hoạt từ xa, không Ghost/Format cài lại Windows.</div>
+          <span class="card-badge">Sản Phẩm Microsoft Chính Ngạch &amp; Chuẩn Hóa Đơn</span>
+          <h3 class="card-title">3 Dòng Microsoft Thương Mại FPP / Retail Chính Ngạch</h3>
+          <p class="card-desc">Tên hàng hóa chuẩn Hóa đơn VAT &amp; quy định pháp lý – kỹ thuật bắt buộc (dùng độc lập hoặc phối hợp Hybrid):</p>
+          <div class="rule-item"><span>• <strong>Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163):</strong> Lẻ <strong>2.900.000 đ</strong> | Đại lý / &ge;50 hộp: <strong>2.800.000 đ</strong> (Hộp USB 3.0 nguyên seal vật lý, đổi máy hợp pháp).</span></div>
+          <div class="rule-item"><span>• <strong>Microsoft Office Home &amp; Business 2024 English APAC EM MEDIALess SKU EP2-06630:</strong> Lẻ <strong>4.500.000 đ</strong> | Đại lý / &ge;50 bộ: <strong>4.400.000 đ</strong> (Hộp Full Box vật lý kèm thẻ Keycard, gắn TK Microsoft, đổi máy tối đa 5 lần cách nhau &ge;90 ngày).</span></div>
+          <div class="rule-item"><span>• <strong>Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604):</strong> Lẻ <strong>4.200.000 đ</strong> | Đại lý / &ge;50 bản: <strong>4.100.000 đ</strong> (Bản Key Online ESD điện tử nhận mã nhanh, gắn TK Microsoft chính hãng).</span></div>
+          <div class="rule-item"><span>• <strong>Combo Doanh Nghiệp Chuẩn (Win Pro FPP USB + OnlyOffice):</strong> Lẻ <strong>3.599.000 đ/máy</strong> | Đại lý <strong>3.499.000 đ/máy</strong>. Cần thêm hạng mục riêng bấm nút <strong>+ Tự Nhập SP Khác</strong>.</span></div>
+          <div class="script-note">PHÁP LÝ &amp; KỸ THUẬT: Hàng nhập khẩu chính ngạch Singapore đủ Hợp đồng, Hóa đơn VAT, Chứng thư mộc đỏ &amp; Microsoft Partner (Tờ khai Hải quan gốc bảo mật giá vốn, cam kết văn bản xuất trình trực tiếp cho Đoàn Thanh tra khi hậu kiểm). Kỹ thuật chỉ hỗ trợ nhập Key kích hoạt từ xa, không Ghost/Format cài lại Windows.</div>
         </div>
       </div>
 
@@ -2373,17 +2633,17 @@
     </div>
 
     <!-- ========================================================================= -->
-    <!-- TAB 3: TELESALE & RE-CALL SCRIPTS (KỊCH BẢN GỌI THOẠI 4 BƯỚC) -->
+    <!-- TAB 3: TELESALE & RE-CALL SCRIPTS (KỊCH BẢN GỌI THOẠI & CHIẾN LƯỢC B2B) -->
     <!-- ========================================================================= -->
     <div id="telesale-flow" class="tab-pane">
       <div class="section-header">
-        <h2 class="section-title">Kịch Bản Telesale & Re-Call Chuẩn 4 Bước</h2>
-        <p class="section-desc">Tâm thế chuyên viên tư vấn hỗ trợ kỹ thuật tận tâm, tự tin và giải quyết đúng nỗi đau của khách.</p>
+        <h2 class="section-title">Kịch Bản Telesale, Phễu Chuyển Đổi B2B 3 Bước &amp; Định Vị 4 Tệp Khách</h2>
+        <p class="section-desc">Đúc kết từ Biên bản Chiến lược B2B 10/10/2026 &amp; Recap Thực chiến 30/10/2026: đi thẳng vào bài toán kinh tế, không giảng tính năng dài dòng.</p>
       </div>
 
       <div class="apple-card" style="margin-bottom: 20px;">
         <span class="card-badge">Phân Khúc 1: Khách Doanh Nghiệp / Công Ty</span>
-        <h3 class="card-title">Kịch Bản Gọi Thoại Chốt Hóa Đơn VAT & Hợp Đồng</h3>
+        <h3 class="card-title">Kịch Bản Gọi Thoại Chốt Hóa Đơn VAT &amp; Hợp Đồng</h3>
         <p class="card-desc">Nhu cầu: Cần hóa đơn hợp lệ, sợ bị phạt bản quyền và ngân sách có hạn.</p>
         
         <div class="script-box">
@@ -2392,15 +2652,15 @@
             <button class="copy-btn" onclick="copyScript(this)">Sao chép</button>
           </div>
           <div class="script-text">
-            "Dạ alo, em chào anh [Tên] ạ. Em là [Tên bạn] bên bộ phận giải pháp phần mềm văn phòng Mercy Tech Global đây ạ. Em thấy công ty mình vừa có để lại thông tin quan tâm bản quyền OnlyOffice vĩnh viễn cho máy tính văn phòng. Dạ hiện tại bên mình đang có nhu cầu trang bị cho khoảng bao nhiêu máy để em hỗ trợ xuất bản Báo giá chính thức chính thức và hỗ trợ kỹ thuật cài đặt bản Demo 7 ngày mở thử file công ty mình luôn nhé anh?"
+            "Dạ alo, em chào anh [Tên] ạ. Em là [Tên bạn] bên bộ phận giải pháp phần mềm văn phòng Mercy Tech Global đây ạ. Em thấy công ty mình vừa có để lại thông tin quan tâm bản quyền OnlyOffice tối ưu bởi Mercy Tech vĩnh viễn cho máy tính văn phòng. Dạ hiện tại bên mình đang có nhu cầu trang bị cho khoảng bao nhiêu máy để em hỗ trợ xuất bản Báo giá chính thức và cài đặt bản Demo 7 ngày mở thử trực tiếp file công ty mình luôn nhé anh?"
           </div>
         </div>
       </div>
 
       <div class="apple-card" style="margin-bottom: 20px;">
         <span class="card-badge">Phân Khúc 2: Khách Đại Lý / Cửa Hàng IT / Thợ Máy Tính</span>
-        <h3 class="card-title">Kịch Bản Gọi Thoại Chốt Chính Sách Đại Lý & Phân Phối</h3>
-        <p class="card-desc">Nhu cầu: Cần biên lợi nhuận cao, được bảo vệ giá bán lẻ và hỗ trợ kỹ thuật tận nơi.</p>
+        <h3 class="card-title">Kịch Bản Gọi Thoại Chốt Chính Sách Đại Lý &amp; Bài Toán Lãi 650k/Máy = 2 Ngày Công Thợ</h3>
+        <p class="card-desc">Đánh thẳng vào bài toán kinh tế thực tế tại tiệm: ráp 1 bộ máy hay cài Win dạo cả buổi chỉ công vài trăm nghìn mà gánh bảo hành vặt; cài 1 bản quyền vĩnh viễn mất 15 phút lãi ròng tới 650.000 đ/máy.</p>
         
         <div class="script-box">
           <div class="script-header">
@@ -2408,7 +2668,7 @@
             <button class="copy-btn" onclick="copyScript(this)">Sao chép</button>
           </div>
           <div class="script-text">
-            "Dạ alo, em chào anh [Tên] bên cửa hàng máy tính [Tên Cửa hàng/Khu vực] đúng không ạ? Em là [Tên bạn] bên Mercy Tech Global. Em thấy mình có quan tâm đến chính sách chiết khấu đại lý OnlyOffice. Bên em đang có chính sách sỉ rất tốt với chiết khấu từ 149k/key (gói 50 key), cấp tài khoản Portal Mercy Keys tự nạp key cho khách và bảo vệ giá sàn bán lẻ 799k để cửa hàng mình thu trọn lợi nhuận hơn 32 triệu đồng. Em kết nối Zalo gửi anh bảng chính sách chiết khấu sỉ và hỗ trợ UltraView cài thử lên máy cửa hàng để anh trải nghiệm trước nhé anh!"
+            "Dạ alo, em chào anh [Tên] bên cửa hàng máy tính [Tên Cửa hàng/Khu vực] đúng không ạ? Em là [Tên bạn] bên Mercy Tech Global. Em thấy mình có quan tâm chính sách chiết khấu đại lý OnlyOffice tối ưu bởi Mercy Tech. Hiện anh em kỹ thuật ráp máy hoặc đi cài phần mềm cả buổi công khá mỏng mà dễ dính bảo hành vặt, trong khi kẹp bản quyền OnlyOffice vĩnh viễn vốn sỉ gói 50 key chỉ 149k/key, bán lẻ đề xuất 799k là chỉ 15 phút cài đặt cửa hàng thu lãi ròng 650.000 đ/máy, tương đương bù cả 2 ngày công thợ. Bên em cấp tài khoản Portal Mercy Keys tự xuất mã không hạn sử dụng và hỗ trợ UltraView cài Demo 7 ngày lên máy kỹ thuật tại tiệm để anh kiểm chứng trước nhé anh."
           </div>
         </div>
       </div>
@@ -2416,7 +2676,7 @@
       <div class="apple-card" style="margin-bottom: 20px;">
         <span class="card-badge">Phân Khúc 3: Khách Cá Nhân / Lead Cũ Im Lặng (Re-Call)</span>
         <h3 class="card-title">Kịch Bản Gọi Thoại Re-Call Hook UltraView 2 Phút</h3>
-        <p class="card-desc">Nhu cầu: Lười tự tải, sợ không biết cài font tiếng Việt, sợ file bị lỗi hiển thị.</p>
+        <p class="card-desc">Nhu cầu: Ngại tự tải, sợ không biết cài font tiếng Việt, sợ file bị lỗi hiển thị.</p>
         
         <div class="script-box">
           <div class="script-header">
@@ -2424,8 +2684,53 @@
             <button class="copy-btn" onclick="copyScript(this)">Sao chép</button>
           </div>
           <div class="script-text">
-            "Dạ alo anh [Tên] ơi, em là [Tên bạn] bên hỗ trợ kỹ thuật phần mềm OnlyOffice hôm trước anh có nhắn tin hỏi thăm đây ạ. Đợt này bên em có đợt kỹ thuật viên vào hỗ trợ trực tiếp từ xa: anh có đang ngồi máy tính không em nhờ kỹ thuật UltraView 2 phút cài sẵn bản Demo 7 ngày và nạp bộ font tiếng Việt mở thử file công việc của mình luôn cho tiện nha anh, đỡ mất công anh phải tự tải về ạ!"
+            "Dạ alo anh [Tên] ơi, em là [Tên bạn] bên bộ phận hỗ trợ phần mềm OnlyOffice hôm trước anh có nhắn tin hỏi thăm đây ạ. Đợt này bên em có lịch hỗ trợ trực tiếp từ xa: anh có đang ngồi máy tính không em xin UltraView 2 phút cài sẵn bản Demo 7 ngày và bộ font tiếng Việt mở thử file công việc của mình luôn cho tiện nha anh, đỡ mất công anh phải tự tải về ạ."
           </div>
+        </div>
+      </div>
+
+      <!-- CHIẾN LƯỢC B2B 10/10/2026: PHỄU CHUYỂN ĐỔI 3 BƯỚC & MA TRẬN 4 TỆP KHÁCH HÀNG B2B -->
+      <div class="apple-card" style="margin-bottom: 20px;">
+        <span class="card-badge">Chiến Lược B2B Cốt Lõi (Biên Bản Họp 10/10/2026)</span>
+        <h3 class="card-title">Phễu Chuyển Đổi Đại Lý 3 Bước &amp; Ma Trận Định Vị 4 Tệp Khách Hàng B2B Trọng Tâm</h3>
+        <p class="card-desc">Không ép đại lý mới xuống tiền gói lớn ngay phút đầu khi chưa trải nghiệm. Dẫn dắt đúng 3 nấc thang tâm lý và đánh trúng tử huyệt từng ngành:</p>
+
+        <div class="rule-item"><span>• <strong>Nấc 1 — Phá băng bằng Demo 7 ngày trên chính máy kỹ thuật của tiệm (0 đồng rủi ro):</strong> Xin UltraView 2 phút cài bản Demo 7 ngày để chủ shop và thợ tự mở file Word, Excel, font VNI/TCVN3 kiểm chứng thực tế.</span></div>
+        <div class="rule-item"><span>• <strong>Nấc 2 — Mở phễu Gói Trải Nghiệm 05 Key (299.000 đ/key = 1.495.000 đ):</strong> Dành cho shop nhỏ muốn đo phản ứng khách thật tại quầy; bán kèm đúng <strong>02 bộ máy đầu tiên</strong> là thu hồi đủ vốn gốc.</span></div>
+        <div class="rule-item"><span>• <strong>Nấc 3 — Nâng cấp Gói Đại Lý Chính Thức 50 Key (149.000 đ/key = 7.450.000 đ):</strong> Mở tài khoản Portal Mercy Keys, cấp Chứng nhận Đại lý, điểm hòa vốn chỉ <strong>10 máy</strong>, tổng lợi nhuận gộp hơn <strong>32.500.000 đ</strong> và không áp chỉ tiêu doanh số tháng.</span></div>
+
+        <div style="overflow-x: auto; margin-top: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <table class="price-table-light" style="margin: 0; border: none; width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 22%; padding: 12px 14px;">Tệp Khách Hàng B2B</th>
+                <th style="width: 34%; padding: 12px 14px;">Nỗi Đau Thực Tế &amp; Điểm Đã Tối Ưu</th>
+                <th style="width: 44%; padding: 12px 14px;">Giải Pháp Đề Xuất &amp; Đòn Bẩy Chốt Đơn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Cơ Quan Nhà Nước &amp; Hành Chính Công</strong></td>
+                <td>Áp lực thanh tra bản quyền, định mức ngân sách chặt, yêu cầu chuẩn phông chữ và thể thức văn bản hành chính Nghị định 30.</td>
+                <td>Trang bị <strong>OnlyOffice tối ưu bởi Mercy Tech</strong> (499k – 699k/máy, hóa đơn KCT hợp lệ, sẵn 1.000+ font Unicode/VNI/TCVN3). Nếu có cổng nội bộ cần plugin ký số riêng trên MS Word: xuất PDF ký USB Token hoặc giữ 1 máy văn thư dùng MS Office (Mô hình Hybrid).</td>
+              </tr>
+              <tr>
+                <td><strong>2. Trường Học, Phòng Máy &amp; Giáo Viên Bộ Môn</strong></td>
+                <td>Phòng máy số lượng lớn (30 – 100 máy), giáo viên Toán – Lý – Hóa cần soạn đề thi công thức phức tạp, bám sát chương trình SGK Tin học mới.</td>
+                <td><strong>ĐÃ KHẮC PHỤC &amp; HỖ TRỢ TRỌN VẸN MathType + LaTeX</strong> trên bản tối ưu mới nhất (không còn là điểm hạn chế). Mức giá dự án từ 50 máy chỉ <strong>499.000 đ/máy</strong> vĩnh viễn, tiết kiệm hơn 85% kinh phí nhà trường. Mời gửi 1 đề thi thật để mở kiểm chứng trực tiếp.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Xây Dựng, Kiến Trúc, Nội Thất &amp; Kế Toán</strong></td>
+                <td>Rủi ro bị đoàn kiểm tra phạt nặng bản quyền phần mềm; lo ngại các bảng tính dự toán công trình đuôi <code>.xls</code> cũ hoặc file chạy lệnh Macro VBA sâu.</td>
+                <td><strong>Tư vấn trung thực (Smart Honesty):</strong> Cài Demo 7 ngày mở thử file dự toán trước. Triển khai <strong>Mô hình Hybrid</strong>: 70 – 80% máy hành chính/nhân sự/kinh doanh dùng OnlyOffice, riêng 1 – 2 máy kỹ sư dự toán/kế toán trưởng chạy VBA đặc thù dùng <code>Office H&amp;B 2024</code> (4,2M Key ESD hoặc 4,5M Box).</td>
+              </tr>
+              <tr>
+                <td><strong>4. Thợ Máy Tính, Cửa Hàng PC &amp; IT Tự Do</strong></td>
+                <td>Lãi phần cứng ngày càng mỏng, cài phần mềm crack dễ dính mã độc Ransomware khiến khách bắt đền bảo hành mất uy tín.</td>
+                <td>Bài toán <strong>15 phút cài lãi ròng 650.000 đ/máy = bù 2 ngày công thợ</strong>. Đặc quyền cộng hưởng: Khi Mercy Tech có khách lẻ/doanh nghiệp ở tỉnh cần hỗ trợ trực tiếp tại chỗ, công ty ưu tiên <strong>ủy nhiệm cho Đại lý/Thợ khu vực đó đến cài và giữ trọn 100% phí dịch vụ (150.000 – 200.000 đ/máy)</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -2518,21 +2823,21 @@
     </div>
 
     <!-- ========================================================================= -->
-    <!-- TAB 4: OBJECTION HANDLING MATRIX (MA TRẬN 35+ TÌNH HUỐNG) -->
+    <!-- TAB 4: OBJECTION HANDLING MATRIX (MA TRẬN 36 TÌNH HUỐNG) -->
     <!-- ========================================================================= -->
     <div id="objection-matrix" class="tab-pane">
       <div class="section-header">
-        <h2 class="section-title">Ma Trận Xử Lý 35+ Tình Huống Thực Chiến Toàn Diện</h2>
-        <p class="section-desc">Tuyển tập 100% tình huống thực tế từ 900+ cuộc chat Facebook & Zalo của Mercy Tech Global.</p>
+        <h2 class="section-title">Ma Trận Xử Lý 36 Tình Huống Thực Chiến Toàn Diện</h2>
+        <p class="section-desc">Tuyển tập tình huống thực tế từ hơn 900 cuộc chat Facebook, Zalo và 3 đợt đào tạo chuyên sâu của Mercy Tech Global.</p>
       </div>
 
       <!-- Filter Pills -->
       <div class="filter-pills">
-        <button class="filter-pill active" onclick="filterCategory('all')">Tất Cả (35+)</button>
-        <button class="filter-pill" onclick="filterCategory('cat-tech')">Kỹ Thuật & Tính Năng</button>
-        <button class="filter-pill" onclick="filterCategory('cat-price')">Giá Cả & Thị Trường</button>
-        <button class="filter-pill" onclick="filterCategory('cat-legal')">Pháp Lý & Bản Quyền</button>
-        <button class="filter-pill" onclick="filterCategory('cat-agency')">Đại Lý & Thợ IT</button>
+        <button class="filter-pill active" onclick="filterCategory('all')">Tất Cả (36)</button>
+        <button class="filter-pill" onclick="filterCategory('cat-tech')">Kỹ Thuật &amp; Tính Năng</button>
+        <button class="filter-pill" onclick="filterCategory('cat-price')">Giá Cả &amp; Thị Trường</button>
+        <button class="filter-pill" onclick="filterCategory('cat-legal')">Pháp Lý &amp; Bản Quyền</button>
+        <button class="filter-pill" onclick="filterCategory('cat-agency')">Đại Lý &amp; Thợ IT</button>
         <button class="filter-pill" onclick="filterCategory('cat-delay')">Tâm Lý Trì Hoãn</button>
       </div>
 
@@ -2541,10 +2846,10 @@
         <div class="accordion-item cat-tech open">
           <div class="accordion-header" onclick="toggleAccordion(this)">1. "OnlyOffice khác gì Microsoft Office / Office 2024?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Không tự dìm OnlyOffice, tôn vinh độ mượt 99%, chuẩn font tiếng Việt và tiết kiệm 80% ngân sách.</p>
+            <p><strong>Chiến thuật:</strong> Tư vấn trung thực (Smart Honesty): khẳng định đáp ứng tốt 85% – 90% công việc văn phòng phổ thông, nạp sẵn hơn 1.000 font tiếng Việt và tiết kiệm hơn 80% ngân sách.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ OnlyOffice đáp ứng mượt mà 99% công việc văn phòng thông thường (Word, Excel, PowerPoint, in ấn, hợp đồng, bảng tính...) với giao diện thân thuộc chuẩn font tiếng Việt, chi phí chỉ từ 499k-799k vĩnh viễn theo máy (tiết kiệm hơn 80% ngân sách so với mua MS Office 2024 giá 4,5 triệu). Bản quyền đầy đủ hóa đơn hợp pháp cho doanh nghiệp. Em gửi anh bản Demo 7 ngày mở thử file công ty mình xem có mượt mà không nhé ạ."</div>
+              <div class="script-text">"Dạ bản OnlyOffice tối ưu bởi Mercy Tech đáp ứng tốt khoảng 85% - 90% công việc văn phòng phổ thông hàng ngày (soạn thảo Word, bảng tính Excel hàm chuẩn, trình chiếu PowerPoint, đọc xuất PDF) với giao diện quen thuộc và hơn 1.000 font tiếng Việt nạp sẵn. Chi phí chỉ từ 499k - 799k vĩnh viễn theo máy, tiết kiệm hơn 80% ngân sách so với mua Microsoft Office 2024 (4,2 - 4,5 triệu) và có đầy đủ hóa đơn VAT hợp pháp cho doanh nghiệp. Em hỗ trợ cài bản Demo 7 ngày để anh mở thử trực tiếp file công ty mình nhé ạ."</div>
             </div>
           </div>
         </div>
@@ -2556,7 +2861,7 @@
             <p><strong>Chiến thuật:</strong> Khẳng định pháp lý công ty, mã kích hoạt riêng biệt và hóa đơn VAT KCT.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ bên em là công ty phần mềm Mercy Tech Global, bản quyền OnlyOffice tối ưu là key kích hoạt riêng cho từng máy, kích hoạt trực tiếp từ máy chủ chính hãng, sạch sẽ không virus và có đầy đủ hợp đồng kinh tế kèm hóa đơn VAT hợp pháp cho doanh nghiệp. Khác hoàn toàn với các phần mềm crack hay key lậu trôi nổi trên mạng ạ."</div>
+              <div class="script-text">"Dạ bên em là công ty phần mềm Mercy Tech Global, bản quyền OnlyOffice tối ưu bởi Mercy Tech là mã kích hoạt riêng cho từng máy từ hệ thống phân phối chính thức, sạch virus và có đầy đủ hợp đồng kinh tế kèm hóa đơn VAT hợp pháp cho doanh nghiệp. Khác hẳn với các phần mềm crack hay key dùng chung trôi nổi trên mạng ạ."</div>
             </div>
           </div>
         </div>
@@ -2565,22 +2870,22 @@
         <div class="accordion-item cat-tech">
           <div class="accordion-header" onclick="toggleAccordion(this)">3. "Mở file Excel có bị nhảy dòng, lỗi font chữ hay mất hàm kế toán không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Smart Honesty + Đề xuất UltraView 2 phút mở test file trực tiếp.</p>
+            <p><strong>Chiến thuật:</strong> Smart Honesty (phân rõ nhóm hàm chuẩn và file dự toán .xls / Macro VBA) + Đề xuất UltraView 2 phút mở test file trực tiếp.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ OnlyOffice bên em đã nạp sẵn bộ font tiếng Việt chuẩn và hỗ trợ đầy đủ các hàm Excel thông dụng (VLOOKUP, SUMIFS, IF...). Để anh an tâm nhất, anh cho em xin UltraView 2 phút em nhờ em vào mở test thử trực tiếp đúng cái file bảng tính của bên mình xem hiển thị và in ấn có chuẩn đẹp không rồi mình mới quyết định mua nhé anh!"</div>
+              <div class="script-text">"Dạ OnlyOffice tối ưu bởi Mercy Tech đã nạp sẵn bộ font tiếng Việt chuẩn và xử lý ổn định các nhóm hàm kế toán thông dụng như VLOOKUP, SUMIFS, IF, PivotTable. Riêng các file dự toán đuôi .xls đời cũ hoặc chứa lệnh Macro VBA chuyên sâu thì có thể cần kiểm tra trước — để anh an tâm nhất, anh cho em xin UltraView 2 phút em vào cài bản Demo 7 ngày mở thử trực tiếp đúng file bảng tính của bên mình xem hiển thị và in ấn có chuẩn không rồi mình mới quyết định mua nhé anh."</div>
             </div>
           </div>
         </div>
 
         <!-- 4 -->
         <div class="accordion-item cat-tech">
-          <div class="accordion-header" onclick="toggleAccordion(this)">4. "Mở file Excel nặng 50MB - 100MB có bị đơ, giật lag hay treo máy không?"</div>
+          <div class="accordion-header" onclick="toggleAccordion(this)">4. "Mở file Excel nặng nhiều dòng có bị đơ, giật lag hay chậm không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Khẳng định kiến trúc C++ siêu nhẹ, tối ưu RAM và mở bảng tính hàng vạn dòng cực nhanh.</p>
+            <p><strong>Chiến thuật:</strong> Chia sẻ đúng thực tế kỹ thuật (lần mở đầu tiên nạp nhân đa tab mất thêm 1–2 giây, nhưng khi đã vào cửa sổ làm việc thì mở nhiều tab bảng tính cùng lúc rất ổn định) + mời test file thật.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ OnlyOffice được xây dựng trên lõi C++ tối ưu hóa bộ nhớ RAM rất tốt, mở các file bảng tính nặng hàng chục nghìn dòng cực kỳ nhẹ và không bị ngốn tài nguyên như các phần mềm khác. Anh gửi file qua Zalo hoặc mở UltraView em cho mở thử trực tiếp trên máy mình luôn ạ."</div>
+              <div class="script-text">"Dạ em chia sẻ thực tế để anh nắm rõ: ở lần bấm khởi động đầu tiên trong ngày, OnlyOffice có thể chậm hơn MS Office khoảng 1 - 2 giây do phần mềm nạp nhân hiển thị đa tab hiện đại. Khi đã mở lên rồi thì anh mở cùng lúc nhiều tab bảng tính hàng chục nghìn dòng trên một cửa sổ rất gọn và ổn định bộ nhớ. Anh gửi file mẫu qua Zalo hoặc mở UltraView 2 phút em cài bản Demo 7 ngày để mình test tốc độ thực tế ngay trên máy công ty nhé ạ."</div>
             </div>
           </div>
         </div>
@@ -2589,10 +2894,10 @@
         <div class="accordion-item cat-tech">
           <div class="accordion-header" onclick="toggleAccordion(this)">5. "Các font chữ cũ như VNI-Times, .VNTime, TCVN3 có đọc được không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Khẳng định tích hợp sẵn bộ 1.000+ font Việt Nam Unicode, VNI và TCVN3.</p>
+            <p><strong>Chiến thuật:</strong> Khẳng định tích hợp sẵn bộ 1.000+ font Việt Nam Unicode, VNI và TCVN3 ngay trong trình cài đặt.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ bản cài đặt OnlyOffice tối ưu bởi Mercy Tech bên em đã tích hợp sẵn trọn bộ hơn 1.000 font tiếng Việt bao gồm cả Unicode, VNI và TCVN3 (ABC). Anh mở lại toàn bộ các văn bản hợp đồng cũ từ 10 năm trước vẫn hiển thị chuẩn từng dấu, không bao giờ bị lỗi ô vuông hay dấu hỏi chấm ạ."</div>
+              <div class="script-text">"Dạ bản cài đặt OnlyOffice tối ưu bởi Mercy Tech bên em đã đóng gói sẵn hơn 1.000 font tiếng Việt thông dụng bao gồm cả 3 bảng mã Unicode, VNI và TCVN3 (ABC). Anh mở lại các văn bản hành chính hay hợp đồng lưu trữ cũ đều nhận diện đúng phông chữ và dấu tiếng Việt, hạn chế tối đa tình trạng lỗi ô vuông hay dấu hỏi chấm ạ."</div>
             </div>
           </div>
         </div>
@@ -2601,34 +2906,34 @@
         <div class="accordion-item cat-tech">
           <div class="accordion-header" onclick="toggleAccordion(this)">6. "Có cài song song với Microsoft Office cũ trên cùng 1 máy được không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Khẳng định cài đặt độc lập 100%, không xung đột và có thể chọn mở file mặc định.</p>
+            <p><strong>Chiến thuật:</strong> Khẳng định cài đặt độc lập, không xung đột và có thể chọn mở file mặc định.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ cài đặt song song hoàn toàn độc lập anh nhé. OnlyOffice không can thiệp hay xung đột với bất kỳ phần mềm Office cũ nào trên máy. Anh có thể để cả 2 bản dùng song song để trải nghiệm thử trước rất tiện lợi ạ."</div>
+              <div class="script-text">"Dạ cài đặt song song hoàn toàn độc lập anh nhé. OnlyOffice không can thiệp hay xung đột với phần mềm Office cũ đang có trên máy. Anh có thể để cả 2 bản dùng song song trong 7 ngày dùng thử để đối chiếu trực tiếp rất tiện lợi ạ."</div>
             </div>
           </div>
         </div>
 
         <!-- 7 -->
         <div class="accordion-item cat-tech">
-          <div class="accordion-header" onclick="toggleAccordion(this)">7. "Máy tính văn phòng đời cũ (Win 7/8, RAM 2GB-4GB) chạy có mượt không?"</div>
+          <div class="accordion-header" onclick="toggleAccordion(this)">7. "Máy tính văn phòng cấu hình phổ thông (RAM 4GB - 8GB) chạy có ổn không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Nhấn mạnh bộ cài siêu nhẹ chỉ ~150MB RAM, chạy mượt trên mọi cấu hình.</p>
+            <p><strong>Chiến thuật:</strong> Nêu đúng thực tế vận hành trên cấu hình văn phòng phổ thông (Win 10/11, RAM 4GB–8GB) và cơ chế gộp đa tab tiết kiệm cửa sổ nền.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ OnlyOffice chiếm tài nguyên cực kỳ nhẹ (chỉ khoảng 150MB RAM khi chạy), nhẹ hơn Microsoft Office rất nhiều. Máy tính văn phòng cấu hình bình thường hoặc máy đời cũ chạy vẫn cực kỳ mượt mà, khởi động chỉ mất 1-2 giây thôi ạ."</div>
+              <div class="script-text">"Dạ các dàn máy tính văn phòng phổ thông chạy Windows 10/11, RAM từ 4GB - 8GB đều vận hành OnlyOffice ổn định anh nhé. Lúc mới bật lần đầu phần mềm nạp giao diện mất khoảng vài giây, sau đó toàn bộ file Word, Excel, PDF đều gộp chung trên một cửa sổ chia tab giống trình duyệt web nên không làm nặng máy khi mở nhiều tài liệu. Em hỗ trợ cài Demo 7 ngày lên đúng dàn máy bên mình để nhân viên dùng thử trước nhé anh."</div>
             </div>
           </div>
         </div>
 
         <!-- 8 -->
         <div class="accordion-item cat-tech">
-          <div class="accordion-header" onclick="toggleAccordion(this)">8. "Có in ấn máy in kim, máy in hóa đơn, in 2 mặt được chuẩn không?"</div>
+          <div class="accordion-header" onclick="toggleAccordion(this)">8. "In ấn văn bản, bảng tính trên các dòng máy in văn phòng có chuẩn lề không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Khẳng định tương thích 100% mọi driver máy in Canon, HP, Epson, Brother.</p>
+            <p><strong>Chiến thuật:</strong> Tư vấn trung thực theo Đào tạo 16/10: in chuẩn trên các máy in đời mới, đồng thời chỉ sẵn mẹo Xuất nhanh sang PDF trên thanh công cụ khi gặp máy in Ricoh/HP đời quá cũ.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ OnlyOffice tương thích hoàn hảo với mọi dòng máy in trên thị trường (Canon, HP, Brother, Epson...), hỗ trợ in 2 mặt, in hóa đơn, phiếu xuất kho chuẩn khổ giấy và hiển thị bản xem trước in (Print Preview) cực kỳ chuẩn xác ạ."</div>
+              <div class="script-text">"Dạ với các dòng máy in văn phòng phổ biến hiện nay như Canon, Brother, Epson, HP thì OnlyOffice hỗ trợ in trực tiếp, in 2 mặt và xem trước bản in (Print Preview) bình thường. Riêng trường hợp công ty đang dùng một số dòng máy in đời quá cũ (như Ricoh hoặc HP đời cũ) đôi khi driver in trực tiếp có thể lệch lề nhẹ, anh chỉ cần bấm nút Xuất nhanh sang PDF có sẵn ngay trên thanh công cụ OnlyOffice rồi bấm In là giữ nguyên định dạng chuẩn trang giấy ạ."</div>
             </div>
           </div>
         </div>
@@ -2640,7 +2945,7 @@
             <p><strong>Chiến thuật:</strong> Giải thích bảo mật giá sỉ để bảo vệ quyền lợi và biên lợi nhuận của chính đại lý.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ anh thông cảm giúp em, do chính sách bảo mật bảng giá sỉ nghiêm ngặt để bảo vệ quyền lợi và biên lợi nhuận cho các đại lý/cửa hàng đang bán ra, tránh để khách lẻ mua dùng biết giá sỉ nên bên em cần xác thực ngành nghề của mình chút mới mở bảng giá chiết khấu được ạ. Anh nhắn giúp em MST hoặc gửi ảnh bảng hiệu cửa hàng nha anh."</div>
+              <div class="script-text">"Dạ anh thông cảm giúp em, do chính sách bảo mật bảng giá sỉ nghiêm ngặt để bảo vệ quyền lợi và biên lợi nhuận cho các đại lý/cửa hàng đang bán ra, tránh để khách lẻ mua dùng biết giá sỉ nên bên em cần xác thực ngành nghề của mình chút mới mở bảng giá chiết khấu màu cam được ạ. Anh nhắn giúp em MST hoặc gửi ảnh bảng hiệu cửa hàng nha anh."</div>
             </div>
           </div>
         </div>
@@ -2661,10 +2966,10 @@
         <div class="accordion-item cat-agency">
           <div class="accordion-header" onclick="toggleAccordion(this)">11. "Đại lý mới muốn dùng thử hoặc kiểm tra độ chuộng của khách trước khi nhập sỉ?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Hỗ trợ cài đặt UltraView dùng thử 7 ngày miễn phí lên máy cửa hàng để kiểm tra thực tế, sau đó nhập gói sỉ 50 key hưởng chiết khấu 149k/key.</p>
+            <p><strong>Chiến thuật:</strong> Dẫn dắt đúng Phễu 3 bước: Cài Demo 7 ngày miễn phí lên máy cửa hàng → Gói trải nghiệm 5 key (299k/key, bán 2 máy hoàn vốn) → Gói Đại lý 50 key (149k/key).</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ hoàn toàn được anh nhé! Để cửa hàng mình an tâm nhất về chất lượng, bên em hỗ trợ UltraView 2 phút cài đặt bản Demo 7 ngày đầy đủ tính năng lên ngay máy tính tại cửa hàng để anh test mở file thực tế. Khi thấy mượt mà và khách chuộng, anh vào gói sỉ 50 key (giá chỉ 149k/key) là thu về lợi nhuận hơn 32 triệu đồng ngay ạ!"</div>
+              <div class="script-text">"Dạ hoàn toàn được anh nhé. Bước đầu bên em hỗ trợ UltraView 2 phút cài đặt bản Demo 7 ngày đầy đủ tính năng lên ngay máy kỹ thuật tại cửa hàng để anh test mở file thực tế. Nếu muốn thử phản ứng khách mua máy trước khi nhập lớn, anh có thể lấy Gói trải nghiệm 5 key (vốn 1.495.000 đ, bán đúng 2 máy hoàn vốn), sau đó nâng lên gói sỉ 50 key (149k/key) để hưởng biên lợi nhuận hơn 32 triệu đồng ạ."</div>
             </div>
           </div>
         </div>
@@ -2673,10 +2978,10 @@
         <div class="accordion-item cat-agency">
           <div class="accordion-header" onclick="toggleAccordion(this)">12. "Đại lý có được cấp Chứng Nhận Đại Lý Ủy Quyền để treo cửa hàng không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Khẳng định cấp Partner Certificate mộc đỏ + File cài đặt riêng.</p>
+            <p><strong>Chiến thuật:</strong> Khẳng định cấp Partner Certificate mộc đỏ (từ Gói Tiêu chuẩn trở lên tặng bản đóng khung kính gửi tận nơi).</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ có anh nhé! Mercy Tech Global sẽ cấp Chứng Nhận Đối Tác Phân Phối Bản Quyền Chính Thức chính thức để cửa hàng mình treo tại quầy tạo uy tín với khách hàng, đồng thời hỗ trợ bộ tài liệu bán hàng và file cài đặt kích hoạt nhanh cho kỹ thuật cửa hàng ạ."</div>
+              <div class="script-text">"Dạ có anh nhé. Mercy Tech Global cấp Giấy Chứng Nhận Đối Tác Phân Phối Bản Quyền Chính Thức để cửa hàng mình trưng bày tại quầy tạo uy tín với khách hàng (riêng từ Gói Tiêu Chuẩn trở lên công ty in màu đóng khung kính gửi tận nơi), đồng thời hỗ trợ bộ tài liệu bán hàng và bộ cài đặt kích hoạt nhanh cho kỹ thuật cửa hàng ạ."</div>
             </div>
           </div>
         </div>
@@ -2685,10 +2990,10 @@
         <div class="accordion-item cat-delay">
           <div class="accordion-header" onclick="toggleAccordion(this)">13. "Khách kêu để suy nghĩ thêm / hỏi lại ý kiến sếp / kế toán"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Xuất Báo giá Mộc đỏ gửi Zalo để làm tài liệu trình sếp + Cài Demo 7 ngày trước.</p>
+            <p><strong>Chiến thuật:</strong> Xuất Báo giá chính thức có mộc đỏ gửi Zalo để làm tài liệu trình sếp + Cài Demo 7 ngày trước.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Dạ vâng anh, việc trang bị cho công ty cần xem xét kỹ là rất đúng ạ. Anh cho em xin SĐT Zalo để em xuất bản Báo giá chính thức chính thức gửi qua cho anh tiện kẹp hồ sơ trình sếp duyệt, đồng thời em hỗ trợ cài bản Demo 7 ngày lên 1 máy để sếp và kế toán dùng thử thấy mượt mà thực tế luôn nhé anh!"</div>
+              <div class="script-text">"Dạ vâng anh, việc trang bị phần mềm cho công ty cần xem xét kỹ là rất hợp lý ạ. Anh cho em xin SĐT Zalo để em xuất bản Báo giá chính thức có đóng dấu công ty gửi qua cho anh tiện kẹp hồ sơ trình ban giám đốc duyệt, đồng thời em hỗ trợ cài bản Demo 7 ngày lên 1 máy để sếp và phòng kế toán trải nghiệm thực tế trước nhé anh."</div>
             </div>
           </div>
         </div>
@@ -2827,12 +3132,12 @@
 
         <!-- 25 -->
         <div class="accordion-item cat-tech">
-          <div class="accordion-header" onclick="toggleAccordion(this)">25. "Công ty xây dựng / kế toán có file Excel chứa tập lệnh Macro VBA phức tạp thì chạy được không?"</div>
+          <div class="accordion-header" onclick="toggleAccordion(this)">25. "Công ty xây dựng / kế toán có file dự toán .xls cũ hoặc Excel chứa tập lệnh Macro VBA phức tạp thì chạy được không?"</div>
           <div class="accordion-body">
-            <p><strong>Chiến thuật:</strong> Thành thật thông minh (Smart Honesty về nền tảng JS vs VBA) + Tư vấn Giải pháp Phối hợp Hybrid tiết kiệm 70–80% ngân sách + Cài Demo 7 ngày test file thật.</p>
+            <p><strong>Chiến thuật:</strong> Thành thật thông minh (Smart Honesty về nền tảng JS vs VBA &amp; file dự toán .xls cũ) + Tư vấn Giải pháp Phối hợp Hybrid tiết kiệm 70–80% ngân sách + Cài Demo 7 ngày test file thật.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Em xin phép chia sẻ rất thật ngay từ đầu để bên mình yên tâm: các hàm kế toán thông dụng như VLOOKUP, SUMIFS, PivotTable thì OnlyOffice chạy rất mượt, nhưng riêng các file kỹ thuật lập trình Macro VBA tự động quá chuyên sâu thì có thể khác biệt do Microsoft dùng ngôn ngữ VBA còn OnlyOffice xây dựng Macro trên nền JavaScript. Giải pháp tối ưu nhất các doanh nghiệp đang áp dụng là mô hình Hybrid: khoảng 70-80% máy nhân sự hành chính, kinh doanh, kế toán viên thông thường dùng OnlyOffice tối ưu bởi Mercy Tech chỉ 499k-699k/máy, còn đúng 1-2 máy kỹ thuật chạy VBA đặc thù thì trang bị bộ Microsoft Office Home &amp; Business 2024 chính hãng 4,5 triệu bên em. Cách này giúp công ty giảm tới 75% ngân sách mà vẫn hợp pháp toàn bộ, anh gửi em UltraView 2 phút cài bản Demo 7 ngày mở thử đúng file Excel đó trước nhé anh."</div>
+              <div class="script-text">"Em xin phép chia sẻ rất thật ngay từ đầu để bên mình yên tâm: các hàm kế toán thông dụng như VLOOKUP, SUMIFS, PivotTable thì OnlyOffice chạy ổn định, nhưng riêng các bảng tính dự toán đuôi .xls đời cũ hoặc lập trình Macro VBA tự động quá chuyên sâu thì có thể khác biệt do Microsoft dùng ngôn ngữ VBA còn OnlyOffice xây dựng Macro trên nền JavaScript. Giải pháp tối ưu các doanh nghiệp đang áp dụng là mô hình Hybrid: khoảng 70-80% máy nhân sự hành chính, kinh doanh, kế toán viên thông thường dùng OnlyOffice tối ưu bởi Mercy Tech chỉ 499k-699k/máy, còn đúng 1-2 máy kỹ sư chạy VBA đặc thù thì trang bị bộ Microsoft Office Home &amp; Business 2024 chính hãng bên em (4,2 triệu bản Key Online ESD EP2-06604 hoặc 4,5 triệu bản Hộp EP2-06630). Cách này giúp công ty giảm tới 75% ngân sách mà vẫn hợp pháp toàn bộ, anh gửi em UltraView 2 phút cài bản Demo 7 ngày mở thử đúng file Excel đó trước nhé anh."</div>
             </div>
           </div>
         </div>
@@ -2892,7 +3197,7 @@
             <p><strong>Chiến thuật:</strong> Giải thích chuẩn nghiệp vụ Bảo mật Tờ khai Hải quan Singapore (chứa giá vốn lô hàng) + cam kết xuất trình trực tiếp cho Đoàn Thanh tra Liên ngành.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Các dòng Windows Pro FPP USB (HAV-00163) và Office Home &amp; Business 2024 (EP2-06630) bên em nhập khẩu chính ngạch qua nhà phân phối khu vực Singapore, bàn giao đầy đủ Hợp đồng kinh tế, Hóa đơn GTGT điện tử, Chứng thư cam kết bản quyền chính hãng mộc đỏ của Mercy Tech và đường link đối tác trên Microsoft Partner. Riêng tờ khai Hải quan nhập khẩu gốc là chứng từ mật thương mại vì thể hiện giá vốn nhập khẩu và tổng lô hàng của công ty nên bên em không phát hành rộng rãi ra ngoài, nhưng Mercy Tech cam kết bằng văn bản sẵn sàng mang tờ khai Hải quan gốc xuất trình trực tiếp trước Đoàn Thanh tra Liên ngành hoặc cơ quan nhà nước có thẩm quyền bất cứ khi nào đơn vị mình có đợt hậu kiểm nhé anh."</div>
+              <div class="script-text">"Các dòng Windows Pro FPP USB (HAV-00163) và Office Home &amp; Business 2024 (bản Key Online ESD EP2-06604 và bản Hộp EP2-06630) bên em phân phối chính ngạch qua nhà phân phối khu vực Singapore, bàn giao đầy đủ Hợp đồng kinh tế, Hóa đơn GTGT điện tử, Chứng thư cam kết bản quyền chính hãng mộc đỏ của Mercy Tech và đường link đối tác trên Microsoft Partner. Riêng tờ khai Hải quan nhập khẩu gốc là chứng từ mật thương mại vì thể hiện giá vốn nhập khẩu và tổng lô hàng của công ty nên bên em không phát hành rộng rãi ra ngoài, nhưng Mercy Tech cam kết bằng văn bản sẵn sàng mang tờ khai Hải quan gốc xuất trình trực tiếp trước Đoàn Thanh tra Liên ngành hoặc cơ quan nhà nước có thẩm quyền bất cứ khi nào đơn vị mình có đợt hậu kiểm nhé anh."</div>
             </div>
           </div>
         </div>
@@ -2904,7 +3209,7 @@
             <p><strong>Chiến thuật:</strong> Phân tích sắc bén Luật Sở hữu trí tuệ giữa bản OEM (bắt buộc kèm PC mới) và bản FPP/Retail thương mại hợp pháp.</p>
             <div class="script-box">
               <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-              <div class="script-text">"Các bản Windows hay Office dạng OEM/DVD giá 500k-900k ngoài thị trường theo quy định của Microsoft và Luật Sở hữu trí tuệ bắt buộc phải được nhà lắp ráp bán kèm bộ máy tính phần cứng mới xuất xưởng trên cùng một hóa đơn. Nếu mua tách lẻ tem OEM dán bổ sung cho dàn máy tính đang sử dụng của công ty thì khi đoàn liên ngành kiểm tra vẫn bị coi là bản quyền không hợp lệ và bị xử phạt bình thường anh ạ. Dòng Win Pro FPP USB (2,9 triệu) và Office H&amp;B 2024 Retail (4,5 triệu) bên em phân phối là phiên bản thương mại hợp pháp được phép mua bổ sung độc lập cho mọi máy tính doanh nghiệp, lại cho phép chuyển đổi sang máy mới tối đa 5 lần (mỗi lần cách nhau tối thiểu 90 ngày) nên tính ra đầu tư một lần dùng bền bỉ nhiều đời máy rất kinh tế ạ."</div>
+              <div class="script-text">"Các bản Windows hay Office dạng OEM/DVD giá 500k-900k ngoài thị trường theo quy định của Microsoft và Luật Sở hữu trí tuệ bắt buộc phải được nhà lắp ráp bán kèm bộ máy tính phần cứng mới xuất xưởng trên cùng một hóa đơn. Nếu mua tách lẻ tem OEM dán bổ sung cho dàn máy tính đang sử dụng của công ty thì khi đoàn liên ngành kiểm tra vẫn bị coi là bản quyền không hợp lệ và bị xử phạt bình thường anh ạ. Dòng Win Pro FPP USB (2,9 triệu) và Office H&amp;B 2024 Retail (4,2 triệu bản Key Online ESD EP2-06604 hoặc 4,5 triệu bản Hộp EP2-06630) bên em phân phối là phiên bản thương mại hợp pháp được phép mua bổ sung độc lập cho mọi máy tính doanh nghiệp, lại cho phép chuyển đổi sang máy mới tối đa 5 lần (mỗi lần cách nhau tối thiểu 90 ngày) nên tính ra đầu tư một lần dùng bền bỉ nhiều đời máy rất kinh tế ạ."</div>
             </div>
           </div>
         </div>
@@ -2994,10 +3299,10 @@
         <div class="apple-card">
           <span class="card-badge">Tình Huống B</span>
           <h3 class="card-title">Gặp Trưởng Phòng IT / Kỹ Thuật Viên Máy Tính</h3>
-          <p class="card-desc">Mục tiêu: Đánh vào tính tương thích, cài đặt nhẹ máy và hỗ trợ UltraView test file.</p>
+          <p class="card-desc">Mục tiêu: Đánh vào tính tương thích thực tế, cài đặt độc lập song song và hỗ trợ UltraView test file thật.</p>
           <div class="script-box">
             <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-            <div class="script-text">"Dạ chào anh, em gọi bên Mercy Tech. Bên em đang triển khai giải pháp OnlyOffice vĩnh viễn tối ưu cho doanh nghiệp, tương thích 99% file Word/Excel và nạp sẵn font Việt Nam. Em gửi anh link Demo 7 ngày hoặc UltraView 2 phút để anh test mở thử các file nặng của công ty xem độ mượt mà rồi anh em mình trao đổi tiếp nhé anh."</div>
+            <div class="script-text">"Dạ chào anh, em gọi bên Mercy Tech. Bên em đang triển khai giải pháp OnlyOffice tối ưu bởi Mercy Tech bản quyền vĩnh viễn cho doanh nghiệp, đáp ứng tốt 85% - 90% tác vụ Word/Excel văn phòng phổ thông và nạp sẵn hơn 1.000 font tiếng Việt. Em gửi anh link Demo 7 ngày hoặc xin UltraView 2 phút để anh test mở thử các file thực tế của công ty xem độ ổn định rồi anh em mình trao đổi tiếp nhé anh."</div>
           </div>
         </div>
 
@@ -3007,7 +3312,7 @@
           <p class="card-desc">Mục tiêu: Đánh vào hóa đơn VAT KCT hợp lệ và bài toán tiết kiệm 80% ngân sách.</p>
           <div class="script-box">
             <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-            <div class="script-text">"Dạ em chào chị, bên em cung cấp bản quyền OnlyOffice vĩnh viễn có đầy đủ Hóa đơn điện tử VAT hợp pháp để công ty đưa vào chi phí hợp lý. Chi phí chỉ 499k-699k/máy, giúp công ty tiết kiệm hơn 80% so với mua Microsoft Office mà vẫn đầy đủ chứng từ thanh tra. Em xuất bản Báo giá chính thức gửi qua Zalo cho chị lưu hồ sơ nhé ạ."</div>
+            <div class="script-text">"Dạ em chào chị, bên em cung cấp bản quyền OnlyOffice tối ưu bởi Mercy Tech vĩnh viễn có đầy đủ Hóa đơn điện tử VAT hợp pháp để công ty đưa vào chi phí hợp lý. Chi phí chỉ 499k-699k/máy, giúp công ty tiết kiệm hơn 80% so với mua Microsoft Office mà vẫn đầy đủ chứng từ thanh tra. Em xuất bản Báo giá chính thức gửi qua Zalo cho chị lưu hồ sơ nhé ạ."</div>
           </div>
         </div>
 
@@ -3017,7 +3322,7 @@
           <p class="card-desc">Mục tiêu: Hook xin phép kết nối Zalo trong 10 giây, không cố nài ép nói dài.</p>
           <div class="script-box">
             <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-            <div class="script-text">"Dạ vâng anh, em biết anh đang bận nên em xin phép không làm phiền anh lâu ạ. Em sẽ kết nối Zalo qua số điện thoại này của anh để gửi trước bản Báo giá chính thức và link dùng thử 7 ngày để lúc rảnh anh mở xem tiện hơn nhé anh. Em cảm ơn anh nhiều ạ!"</div>
+            <div class="script-text">"Dạ vâng anh, em biết anh đang bận nên em xin phép không làm phiền anh lâu ạ. Em sẽ kết nối Zalo qua số điện thoại này của anh để gửi trước bản Báo giá chính thức và link dùng thử 7 ngày để lúc rảnh anh mở xem tiện hơn nhé anh. Em cảm ơn anh nhiều ạ."</div>
           </div>
         </div>
 
@@ -3027,7 +3332,7 @@
           <p class="card-desc">Mục tiêu: Trò chuyện thực tế như người đồng hành kiếm tiền; đánh vào biên lãi ròng 32,5 triệu gói 50 key, điểm hòa vốn 10 máy và chính sách Không áp doanh số.</p>
           <div class="script-box">
             <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-            <div class="script-text">"Em chào anh [Tên], anh đang ở ngoài tiệm máy tính mình đó hả anh? Em bên đầu mối phân phối bản quyền OnlyOffice tối ưu bởi Mercy Tech cho anh em cửa hàng PC/Laptop đây anh. Đợt này các công ty với trường học quanh khu mình tìm mua phần mềm văn phòng hợp lệ thay bản crack nhiều lắm mà bộ Microsoft 4,5 triệu chát quá họ ngại mua. Bên em đang cấp sỉ mã OnlyOffice vĩnh viễn cho các shop vốn chỉ 149k/máy, không ép doanh số tháng, cửa hàng bán kèm máy thu 699k-799k là bỏ túi thêm hơn 500k tiền lãi mỗi máy ngon ơ, gói 50 key chỉ bán 10 máy là thu đủ vốn gốc rồi. Anh dùng Zalo số này đúng không, em gửi bảng giá sỉ màu cam qua anh em mình ngó thử nhé."</div>
+            <div class="script-text">"Em chào anh [Tên], anh đang ở ngoài tiệm máy tính mình đó hả anh? Em bên đầu mối phân phối bản quyền OnlyOffice tối ưu bởi Mercy Tech cho anh em cửa hàng PC/Laptop đây anh. Đợt này các công ty với trường học quanh khu mình tìm mua phần mềm văn phòng hợp lệ thay bản crack nhiều lắm mà bộ Microsoft 4,2 - 4,5 triệu cao quá họ ngại mua. Bên em đang cấp sỉ mã OnlyOffice vĩnh viễn cho các shop vốn chỉ 149k/máy, không ép doanh số tháng, cửa hàng bán kèm máy thu 699k-799k là bỏ túi thêm 550k-650k tiền lãi mỗi máy, gói 50 key chỉ bán 10 máy là thu đủ vốn gốc rồi. Anh dùng Zalo số này đúng không, em gửi bảng giá sỉ màu cam qua anh em mình ngó thử nhé."</div>
           </div>
         </div>
 
@@ -3057,19 +3362,19 @@
           <p class="card-desc">Mục tiêu: Tạo niềm tin bằng sự công tâm (Smart Honesty) và chốt Mô hình Phối hợp Hybrid tiết kiệm 70–80% tổng chi phí.</p>
           <div class="script-box">
             <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
-            <div class="script-text">"Em chào anh [Tên], qua trao đổi em nắm được công ty mình có khoảng [X] máy văn phòng nhưng riêng phòng kỹ thuật/kế toán trưởng có vài máy chạy file Excel viết lệnh Macro VBA đặc thù. Để hiệu quả và tiết kiệm nhất cho công ty, em đề xuất phương án Hybrid rất thực tế: khoảng 80% dàn máy hành chính, nhân sự, kinh doanh mình trang bị OnlyOffice tối ưu bởi Mercy Tech bản quyền vĩnh viễn chỉ 499k-699k/máy, còn đúng 1-2 máy chạy Macro VBA chuyên sâu thì dùng bộ Microsoft Office Home &amp; Business 2024 chính hãng 4,5 triệu bên em cung cấp luôn. Như vậy toàn công ty đều có hóa đơn bản quyền hợp pháp khi thanh tra mà tổng chi phí giảm được hơn 70%. Anh cho em kết nối UltraView 2 phút cài Demo 7 ngày test trực tiếp các file của công ty mình trước nhé anh."</div>
+            <div class="script-text">"Em chào anh [Tên], qua trao đổi em nắm được công ty mình có khoảng [X] máy văn phòng nhưng riêng phòng kỹ thuật/kế toán trưởng có vài máy chạy file Excel viết lệnh Macro VBA đặc thù. Để hiệu quả và tiết kiệm nhất cho công ty, em đề xuất phương án Hybrid rất thực tế: khoảng 80% dàn máy hành chính, nhân sự, kinh doanh mình trang bị OnlyOffice tối ưu bởi Mercy Tech bản quyền vĩnh viễn chỉ 499k-699k/máy, còn đúng 1-2 máy chạy Macro VBA chuyên sâu thì dùng bộ Microsoft Office Home &amp; Business 2024 chính hãng bên em cung cấp luôn (4,2 triệu bản Key Online ESD hoặc 4,5 triệu bản Hộp). Như vậy toàn công ty đều có hóa đơn bản quyền hợp pháp khi thanh tra mà tổng chi phí giảm được hơn 70%. Anh cho em kết nối UltraView 2 phút cài Demo 7 ngày test trực tiếp các file của công ty mình trước nhé anh."</div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- ========================================================================= -->
-    <!-- TAB 6: ZALO & CRM SHEET GUIDELINE -->
+    <!-- TAB 6: ZALO, CTV POLICY & SOP GUIDELINE -->
     <!-- ========================================================================= -->
     <div id="zalo-guideline" class="tab-pane">
       <div class="section-header">
-        <h2 class="section-title">Quy Chuẩn Chăm Sóc Zalo & Đồng Bộ CRM Sheet</h2>
-        <p class="section-desc">Các quy định bắt buộc về giao tiếp Zalo và cách điền ghi chú trên Google Sheet để hệ thống tự động hóa.</p>
+        <h2 class="section-title">Quy Chuẩn Zalo, Chính Sách Cộng Tác Viên (CTV) &amp; 4 SOP Vận Hành</h2>
+        <p class="section-desc">Quy định chuẩn mực về giao tiếp Zalo, bảng hoa hồng CTV 3 cấp độ, cơ chế hoàn chênh lệch VAT 48h và 4 quy trình vận hành bắt buộc.</p>
       </div>
 
       <div class="grid-2">
@@ -3077,13 +3382,50 @@
           <span class="card-badge">Đầu Mối Zalo CSKH</span>
           <h3 class="card-title">Số Zalo CSKH Chính Thức</h3>
           <p class="card-desc"><strong>Số Zalo: 0763 068 614</strong> (Tên Zalo: <strong>Mercy Tech Global</strong>)<br>
-          Đây là đầu mối duy nhất để kết bạn, gửi Báo giá chính thức, hợp đồng và xuất hóa đơn. Tránh dùng số cá nhân để giảm rủi ro bị Zalo khóa tài khoản.</p>
+          Đây là đầu mối chính thức để kết bạn, gửi Báo giá, hợp đồng và xuất hóa đơn. Hạn chế tối đa dùng số Zalo cá nhân nhắn dồn dập cho người lạ để tránh rủi ro khóa tài khoản.</p>
         </div>
 
         <div class="apple-card">
-          <span class="card-badge">Lệnh Cấm Bảo Mật</span>
-          <h3 class="card-title">Tuyệt Đối Cấm Gửi Link zalo.me</h3>
-          <p class="card-desc">Khách hàng Việt Nam rất đề phòng bấm link lạ. Tuyệt đối không gửi link <code>https://zalo.me/...</code>. Luôn thông báo nhẹ nhàng: Chuyên viên bên em sẽ chủ động kết bạn qua SĐT của anh, hoặc anh có thể kết bạn qua số CSKH 0763 068 614.</p>
+          <span class="card-badge">An Ninh &amp; Mời Nhóm Đại Lý</span>
+          <h3 class="card-title">Chiến Thuật Mời Nhóm Đại Lý Chủ Động &amp; Chống Bill Giả / Link Lạ</h3>
+          <p class="card-desc">• <strong>Mời nhóm Zalo Đại lý chủ động:</strong> Tránh hỏi câu đóng <em>"Anh có muốn vào nhóm không?"</em> dễ bị từ chối; hãy chủ động gửi lời mời kèm quyền lợi nhận bảng giá sỉ mới, chính sách thưởng và hỗ trợ kỹ thuật trực tiếp.<br>
+          • <strong>Cảnh giác lừa đảo Bill giả &amp; File mã độc:</strong> Tuyệt đối không bấm link lạ hay mở file nén <code>.zip/.rar</code> không rõ nguồn gốc; <strong>chỉ xuất mã Key sỉ sau khi Kế toán xác nhận tiền thực đã nổi trên tài khoản Techcombank 98896889</strong> (không xuất kho chỉ qua ảnh chụp màn hình bill chuyển khoản).</p>
+        </div>
+      </div>
+
+      <!-- CTV 3-TIER COMMISSION & 48H VAT DIFFERENCE REFUND -->
+      <div class="apple-card" style="margin-top: 18px;">
+        <span class="card-badge">Chính Sách Đối Tác Linh Hoạt (Đào Tạo 10/10 &amp; 16/10/2026)</span>
+        <h3 class="card-title">Bảng Hoa Hồng Cộng Tác Viên (CTV) 3 Cấp Độ &amp; Cơ Chế Xuất Hóa Đơn VAT Hoàn Tiền Chênh Lệch 48 Giờ</h3>
+        <p class="card-desc">Áp dụng cho thợ IT tự do, nhân viên IT nội bộ, kế toán dịch vụ chưa đủ vốn ôm gói sỉ 50 key hoặc Đại lý muốn nhờ Công ty xuất thẳng Hóa đơn VAT cho doanh nghiệp cuối:</p>
+
+        <div style="overflow-x: auto; margin-top: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <table class="price-table-light" style="margin: 0; border: none; width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 26%; padding: 12px 16px;">Mô Hình Hợp Tác</th>
+                <th style="width: 34%; padding: 12px 16px;">Phạm Vi Công Việc Của Đối Tác</th>
+                <th style="width: 40%; padding: 12px 16px;">Mức Hoa Hồng &amp; Thời Gian Đối Soát Thanh Toán</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cấp Độ 1 — Giới Thiệu Đầu Mối (Referral)</strong></td>
+                <td>Chỉ cần giới thiệu thông tin khách hàng có nhu cầu (Tên đơn vị + SĐT người phụ trách). Đội ngũ Sale Mercy Tech trực tiếp tư vấn, cài Demo và chốt hợp đồng.</td>
+                <td>Hưởng hoa hồng <strong>5% – 10%</strong> trên tổng giá trị đơn hàng thực thu (tùy quy mô số lượng máy của dự án).</td>
+              </tr>
+              <tr>
+                <td><strong>Cấp Độ 2 — CTV Tự Tư Vấn &amp; Chốt Đơn</strong></td>
+                <td>CTV trực tiếp tư vấn chốt khách; Mercy Tech hỗ trợ xuất Báo giá, Hợp đồng, Hóa đơn VAT và cấp mã bản quyền.</td>
+                <td>Hưởng hoa hồng <strong>10% – 15%</strong>. Nếu CTV trực tiếp hỗ trợ cài đặt kỹ thuật cho khách thì được <strong>cộng thêm +5% công kỹ thuật</strong> (tổng nhận <strong>15% – 20%</strong>). Đối soát &amp; thanh toán định kỳ vào <strong>ngày 10 hàng tháng</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>Cấp Độ 3 — Đại Lý Nhờ Xuất HĐ VAT Giá Bán Lẻ</strong></td>
+                <td>Đại lý/Cửa hàng chưa có pháp nhân xuất hóa đơn phần mềm KCT, nhờ Mercy Tech ký hợp đồng &amp; xuất Hóa đơn VAT trực tiếp cho doanh nghiệp theo giá bán lẻ (699k – 799k/máy).</td>
+                <td>Khi doanh nghiệp thanh toán đủ 100% về STK Công ty TNHH Công nghệ Mercy, kế toán khấu trừ đúng giá vốn sỉ của Đại lý (và phí chứng từ nếu có thỏa thuận) rồi <strong>chuyển khoản hoàn trả toàn bộ phần tiền chênh lệch cho Đại lý trong vòng 48 giờ làm việc</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -3141,7 +3483,7 @@
         <div class="apple-card">
           <span class="card-badge">SOP Vận Hành #2 — Pháp Lý Thu Tiền</span>
           <h3 class="card-title">Quy Trình 5 Bước Xuất Hóa Đơn GTGT Điện Tử Nháp &amp; Bắn Ảnh Bill Doanh Số</h3>
-          <p class="card-desc">Tạo niềm tin tuyệt đối cho đại lý và doanh nghiệp giao dịch từ xa lần đầu:</p>
+          <p class="card-desc">Tạo sự an tâm minh bạch cho đại lý và doanh nghiệp giao dịch từ xa lần đầu:</p>
           <div class="rule-item"><span>• <strong>Bước 1:</strong> Xin chuẩn 2 thông tin từ khách hàng/đại lý: <strong>Mã số thuế (MST)</strong> và <strong>Email nhận hóa đơn điện tử</strong>.</span></div>
           <div class="rule-item"><span>• <strong>Bước 2:</strong> Gửi yêu cầu lên nhóm nội bộ theo đúng cú pháp: <code>[Mã số thuế] + [Tên sản phẩm chuẩn hóa đơn / Gói đăng ký + Số lượng] + [Tổng giá tiền]</code> để Quản lý / Kế toán lập file <strong>Hóa đơn Nháp</strong>.</span></div>
           <div class="rule-item"><span>• <strong>Bước 3:</strong> Gửi bản Hóa đơn Nháp qua Zalo để khách kiểm tra từng chi tiết tên đơn vị, MST, địa chỉ và mặt hàng trước khi ký số.</span></div>
@@ -3462,6 +3804,16 @@
         shortName: 'Microsoft Office H&B 2024 English APAC EM MEDIALess (EP2-06630) - 4.500.000 đ',
         unit: 'Bộ',
         getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 4400000 : 4500000; },
+        defaultQtyDealer: 2,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'office-2024-esd',
+        group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
+        name: 'Phần mềm Microsoft Office Home & Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)',
+        shortName: 'Microsoft Office H&B 2024 Retail Online ESD (Key Online EP2-06604) - 4.200.000 đ',
+        unit: 'Bản',
+        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 4100000 : 4200000; },
         defaultQtyDealer: 2,
         defaultQtyRetail: 1
       },
@@ -3850,7 +4202,7 @@
       var html = '';
       currentQuoteRows.forEach(function(row, idx) {
         var optGroupsHtml = '<optgroup label="0. Tùy Chỉnh / Tự Nhập">' +
-          '<option value="custom" ' + (row.productId === 'custom' ? 'selected' : '') + '>✏️ Tự nhập tên sản phẩm / hạng mục tùy chỉnh...</option>' +
+          '<option value="custom" ' + (row.productId === 'custom' ? 'selected' : '') + '>Tự nhập tên sản phẩm / hạng mục tùy chỉnh...</option>' +
         '</optgroup>';
 
         for (var grp in groups) {
@@ -3866,7 +4218,7 @@
             '<span class="item-num-badge">SẢN PHẨM #' + (idx + 1) +
               (row.productId === 'custom' ? '<span class="custom-item-pill">TỰ NHẬP</span>' : '') +
             '</span>' +
-            (currentQuoteRows.length > 1 ? '<button type="button" class="btn-delete-row" onclick="removeQuoteItemRow(' + idx + ')" title="Xóa dòng">✕</button>' : '') +
+            (currentQuoteRows.length > 1 ? '<button type="button" class="btn-delete-row" onclick="removeQuoteItemRow(' + idx + ')" title="Xóa dòng">Xóa</button>' : '') +
           '</div>' +
           '<div class="form-row">' +
             '<select id="rowProdSelect_' + idx + '" class="form-select-sm" onchange="onProductSelectChange(' + idx + ', this.value)">' +
@@ -4259,7 +4611,7 @@
         link.click();
         document.body.removeChild(link);
 
-        showToast('Đã tải xuống ảnh JPG Báo Giá thành công!');
+        showToast('Đã tải xuống ảnh JPG Báo Giá thành công');
       } catch (err) {
         console.error(err);
         showToast('Lỗi khi xuất ảnh JPG, vui lòng thử lại');
