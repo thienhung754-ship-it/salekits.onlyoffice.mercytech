@@ -1042,6 +1042,70 @@
       border-color: var(--accent-blue);
     }
 
+    .repeater-add-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .btn-add-custom {
+      width: 100%;
+      background: rgba(5, 150, 105, 0.07);
+      border: 1px dashed rgba(5, 150, 105, 0.45);
+      color: #059669;
+      padding: 10px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-add-custom:hover {
+      background: rgba(5, 150, 105, 0.14);
+      border-color: #059669;
+    }
+
+    [data-theme="dark"] .btn-add-custom {
+      color: #34d399;
+      border-color: rgba(52, 211, 153, 0.45);
+      background: rgba(52, 211, 153, 0.08);
+    }
+
+    [data-theme="dark"] .btn-add-custom:hover {
+      background: rgba(52, 211, 153, 0.16);
+      border-color: #34d399;
+    }
+
+    .custom-item-pill {
+      display: inline-block;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 1px 7px;
+      border-radius: 999px;
+      background: rgba(5, 150, 105, 0.12);
+      color: #059669;
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.3px;
+    }
+
+    [data-theme="dark"] .custom-item-pill {
+      background: rgba(52, 211, 153, 0.16);
+      color: #34d399;
+    }
+
+    @media (max-width: 480px) {
+      .repeater-add-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* RIGHT PREVIEW PANEL */
     .quote-preview-panel {
       display: flex;
@@ -1590,10 +1654,15 @@
 
       /* Tab 2: Quote Studio */
       .quote-studio-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 16px;
         margin-top: 4px;
         margin-bottom: 20px;
+      }
+
+      .quote-input-panel, .quote-preview-panel {
+        min-width: 0;
+        max-width: 100%;
       }
 
       .input-block-card {
@@ -1671,7 +1740,7 @@
 
       /* Cards & Grids */
       .grid-2 {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 14px;
       }
 
@@ -1811,7 +1880,7 @@
         <div class="do-card">
           <div class="group-header" style="color: var(--text-primary);">5 ĐIỀU BẮT BUỘC NÓI</div>
           <div class="rule-item"><span>• <strong>Khẳng định mượt mà 99%:</strong> "OnlyOffice đáp ứng mượt mà 99% văn phòng thông thường, chuẩn font tiếng Việt, in ấn cực chuẩn."</span></div>
-          <div class="rule-item"><span>• <strong>Đòn bẩy Tiết kiệm 80%:</strong> "Bản quyền vĩnh viễn chỉ từ 499k-699k, tiết kiệm hơn 80% so với mua MS Office 3.5 triệu/máy."</span></div>
+          <div class="rule-item"><span>• <strong>Đòn bẩy Tiết kiệm 80%:</strong> "Bản quyền vĩnh viễn chỉ từ 499k-699k, tiết kiệm hơn 80% so với mua MS Office 4.5 triệu/bộ."</span></div>
           <div class="rule-item"><span>• <strong>Hook UltraView 2 phút (Sale trực tiếp cài):</strong> "Anh cho em xin UltraView 2 phút, em vào cài đặt sẵn bản Demo 7 ngày và nạp font mở test trực tiếp file công ty mình xem có mượt mà rồi mới quyết định mua nhé ạ."</span></div>
           <div class="rule-item"><span>• <strong>Hook Báo Giá Chính Thức:</strong> "Anh cho em xin SĐT Zalo để em xuất bản Báo giá chính thức chính thức gửi qua cho mình lưu lại nhé ạ."</span></div>
           <div class="rule-item"><span>• <strong>Chính Sách Sỉ Đại Lý (từ 50 key):</strong> "Bên em hỗ trợ tài khoản Portal Mercy Keys chủ động cấp key, chiết khấu sâu 149k/129k/99k để cửa hàng kinh doanh lâu dài."</span></div>
@@ -1824,6 +1893,37 @@
           <div class="rule-item"><span>• <strong>CẤM dùng từ "100%" & "Tuyệt đối":</strong> Tránh câu quảng cáo quá đà, thiếu chân thực và rủi ro pháp lý nếu file khách có lỗi nhỏ.</span></div>
           <div class="rule-item"><span>• <strong>CẤM dùng dấu chấm cảm (!):</strong> Kết thúc câu nhẹ nhàng bằng dấu chấm (.) hoặc các từ đệm (nha a, nhé anh, ạ...).</span></div>
           <div class="rule-item"><span>• <strong>CẤM lộ giá sỉ cho khách lẻ:</strong> Chỉ gửi bảng giá sỉ khi khách đã xác minh là thợ IT / cửa hàng máy tính (có MST hoặc ảnh bảng hiệu) để bảo vệ quyền lợi các đại lý.</span></div>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top: 36px;">
+        <h2 class="section-title">4 Nền Tảng Pháp Lý & Chiến Lược Sản Phẩm Bắt Buộc Thuộc Lòng</h2>
+        <p class="section-desc">Tinh hoa đào tạo Onboarding thực chiến giúp Sale nắm chắc bản chất pháp lý, phạm vi kỹ thuật và kỷ luật giá thị trường.</p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 28px;">
+        <div class="apple-card">
+          <span class="card-badge">Pháp Lý Bắt Buộc</span>
+          <h3 class="card-title">Luôn Ghi Đủ: "OnlyOffice tối ưu bởi Mercy Tech"</h3>
+          <p class="card-desc">Tuyệt đối không ghi cụt là <strong>"OnlyOffice"</strong> trên hợp đồng, báo giá hay văn bản gửi khách vì bản gốc là mã nguồn mở. Khách hàng doanh nghiệp chi tiền mua <strong>4 giá trị thương mại cốt lõi của Mercy Tech</strong>: (1) Bộ cài đã tối ưu sẵn hơn 1.000 font tiếng Việt và tương thích công thức Toán – Lý – Hóa, MathType, LaTeX; (2) Pháp nhân Công ty TNHH Công nghệ Mercy đứng ra bảo hộ chống thanh tra bản quyền; (3) Hóa đơn GTGT điện tử hợp pháp thuộc diện <strong>Không chịu thuế (KCT — 0%)</strong> sạch thuế; (4) Đội ngũ kỹ thuật Việt Nam đồng hành hỗ trợ trọn đời máy. Mercy Tech được niêm yết công khai tại <code>onlyoffice.com</code> (Partner Vietnam).</p>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Nghệ Thuật Tư Vấn</span>
+          <h3 class="card-title">Minh Bạch Ngay Từ Đầu & Chiến Lược Phối Hợp Hybrid</h3>
+          <p class="card-desc">Bộ 4 công cụ cốt lõi (<strong>Word, Excel, PowerPoint, PDF</strong>) đáp ứng mượt 95% tác vụ văn phòng và đã hỗ trợ đầy đủ <strong>MathType & LaTeX</strong> cho trường học. Sale luôn công tâm nói rõ trước 2 trường hợp đặc thù: (1) File Excel xây dựng/kỹ thuật chứa tập lệnh <strong>Macro VBA siêu phức tạp</strong> (do Microsoft dùng VBA còn OnlyOffice dùng Macro JavaScript); (2) Tích hợp <strong>chữ ký số chuyên ngành trực tiếp vào cổng hành chính công nội bộ</strong> của cơ quan nhà nước. <strong>Giải pháp Hybrid:</strong> Trang bị Microsoft Office 2024 (4.500.000 đ/bộ) cho 1–2 máy chuyên trách chạy VBA sâu, còn 70–80% nhân sự văn phòng dùng <strong>OnlyOffice tối ưu bởi Mercy Tech</strong> — giảm ngay 60–80% tổng ngân sách mà hợp pháp toàn diện.</p>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Cơ Chế Bản Quyền</span>
+          <h3 class="card-title">Khóa Cứng Mainboard Trọn Đời & Chia Sẻ Rủi Ro Thiên Tai</h3>
+          <p class="card-desc">Bản quyền vĩnh viễn gắn cứng theo mã định danh bo mạch chủ (<strong>Mainboard / UUID</strong>). Cài lại Windows, Ghost máy hay nâng cấp RAM, ổ cứng SSD thì phần mềm tự nhận diện lại mã máy kích hoạt bình thường, không tốn thêm chi phí. Nếu đổi sang máy tính mới hoàn toàn thì trang bị mã mới; riêng trường hợp <strong>bất khả kháng (hỏa hoạn, cháy nổ, thiên tai hỏng dàn máy có hình ảnh/biên bản xác thực)</strong>, Mercy Tech hỗ trợ cấp đổi lại key để chia sẻ rủi ro cùng khách hàng.</p>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Kỷ Luật Giá Thị Trường</span>
+          <h3 class="card-title">Bảng Giá XANH (Khách Lẻ/DN) vs Bảng Giá CAM (Đại Lý)</h3>
+          <p class="card-desc"><strong>Bảng giá màu XANH DƯƠNG</strong> chỉ dùng cho khách lẻ và doanh nghiệp mua sử dụng trực tiếp (799k / 699k / 499k, Tem cào 999k). <strong>Bảng giá màu CAM</strong> chỉ gửi cho cửa hàng máy tính, công ty tin học, thợ IT sau khi đã xác thực MST, ảnh bảng hiệu hoặc website. <strong>Quy định Giá sàn thép bảo vệ đại lý:</strong> Cấm bán lẻ Key Online dưới <strong>499.000 đ/key</strong> và cấm bán lẻ Tem cào dán máy dưới <strong>699.000 đ/tem</strong> (vi phạm khóa Portal và phạt bồi thường gấp 05 lần chênh lệch theo Hợp đồng Nguyên tắc 15.10.2026).</p>
         </div>
       </div>
 
@@ -1880,6 +1980,57 @@
             <div class="flashcard-back">
               <div class="flashcard-answer">"Dạ key 50k trên sàn là key crack, key lậu dùng chung 1 mã cho hàng trăm máy, sau 1-3 tháng Microsoft quét là bị khóa và có rủi ro pháp lý. Bên em là công ty phần mềm cung cấp bản quyền hợp pháp vĩnh viễn, có hợp đồng và hóa đơn VAT bảo hành trọn đời máy ạ."</div>
               <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Dạ key 50k trên sàn là key crack, key lậu dùng chung 1 mã cho hàng trăm máy, sau 1-3 tháng Microsoft quét là bị khóa và có rủi ro pháp lý. Bên em là công ty phần mềm cung cấp bản quyền hợp pháp vĩnh viễn, có hợp đồng và hóa đơn VAT bảo hành trọn đời máy ạ.')">Sao chép</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 4 -->
+        <div class="flashcard" onclick="this.classList.toggle('flipped')">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <div>
+                <span class="card-badge">Pháp Lý Mã Nguồn Mở</span>
+                <div class="flashcard-question">"OnlyOffice trên mạng là mã nguồn mở tải miễn phí mà, sao bên em lại đi bán?"</div>
+              </div>
+              <div class="flashcard-hint">Chạm thẻ để lật xem câu trả lời →</div>
+            </div>
+            <div class="flashcard-back">
+              <div class="flashcard-answer">"Bản gốc trên mạng đúng là mã nguồn mở tự tải anh ạ, còn bản bên em cung cấp là OnlyOffice tối ưu bởi Mercy Tech. Doanh nghiệp mua là mua 3 giá trị thực tế: bộ cài đã tối ưu sẵn hơn 1.000 font tiếng Việt cùng công thức MathType/LaTeX, có Hóa đơn VAT hợp pháp và chứng nhận đối tác chính thức tại Việt Nam để xuất trình khi thanh tra bản quyền, và có đội kỹ thuật Mercy Tech hỗ trợ xử lý dữ liệu trọn đời máy nhé anh."</div>
+              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Bản gốc trên mạng đúng là mã nguồn mở tự tải anh ạ, còn bản bên em cung cấp là OnlyOffice tối ưu bởi Mercy Tech. Doanh nghiệp mua là mua 3 giá trị thực tế: bộ cài đã tối ưu sẵn hơn 1.000 font tiếng Việt cùng công thức MathType/LaTeX, có Hóa đơn VAT hợp pháp và chứng nhận đối tác chính thức tại Việt Nam để xuất trình khi thanh tra bản quyền, và có đội kỹ thuật Mercy Tech hỗ trợ xử lý dữ liệu trọn đời máy nhé anh.')">Sao chép</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 5 -->
+        <div class="flashcard" onclick="this.classList.toggle('flipped')">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <div>
+                <span class="card-badge">Tem Cào vs Key Online</span>
+                <div class="flashcard-question">"Tem cào giấy với Key Online khác gì nhau mà tem cào lại đắt hơn thế em?"</div>
+              </div>
+              <div class="flashcard-hint">Chạm thẻ để lật xem câu trả lời →</div>
+            </div>
+            <div class="flashcard-back">
+              <div class="flashcard-answer">"Về kỹ thuật thì cả 2 đều kích hoạt bản quyền vĩnh viễn theo Mainboard như nhau anh nhé. Riêng tem cào Hologram vật lý mang lại 3 lợi thế lớn cho cửa hàng: khách mua PC cầm tận tay thẻ cào nên rất tin tưởng không sợ mã online trôi nổi; dán tem lên vỏ máy xuất xưởng giúp nâng tầm giá trị dàn PC chốt thêm 700k-999k rất dễ; và anh có thể chia lẻ từng tem bán sỉ lại cho anh em thợ IT tuyến dưới thu tiền mặt trực tiếp mà không cần mở tài khoản Portal ạ."</div>
+              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Về kỹ thuật thì cả 2 đều kích hoạt bản quyền vĩnh viễn theo Mainboard như nhau anh nhé. Riêng tem cào Hologram vật lý mang lại 3 lợi thế lớn cho cửa hàng: khách mua PC cầm tận tay thẻ cào nên rất tin tưởng không sợ mã online trôi nổi; dán tem lên vỏ máy xuất xưởng giúp nâng tầm giá trị dàn PC chốt thêm 700k-999k rất dễ; và anh có thể chia lẻ từng tem bán sỉ lại cho anh em thợ IT tuyến dưới thu tiền mặt trực tiếp mà không cần mở tài khoản Portal ạ.')">Sao chép</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard 6 -->
+        <div class="flashcard" onclick="this.classList.toggle('flipped')">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <div>
+                <span class="card-badge">Microsoft Chính Ngạch</span>
+                <div class="flashcard-question">"Sao bên ngoài bán Win/Office OEM có 500k–900k? Mua Win bên em có cài lại Win luôn không?"</div>
+              </div>
+              <div class="flashcard-hint">Chạm thẻ để lật xem câu trả lời →</div>
+            </div>
+            <div class="flashcard-back">
+              <div class="flashcard-answer">"Các bản OEM/DVD 500k-900k ngoài thị trường bắt buộc phải bán kèm linh kiện PC xuất xưởng mới trên cùng hóa đơn, mua lẻ dán vào máy cũ là sai Luật Sở hữu trí tuệ vẫn bị phạt khi kiểm tra anh ạ. Bên em chỉ phân phối bản FPP/Retail chính ngạch nhập khẩu Singapore được phép mua bán độc lập và đổi máy tối đa 5 lần. Về kỹ thuật, bên em hỗ trợ nhập Key kích hoạt từ xa qua UltraView chứ không Ghost hay cài lại Windows để bảo vệ an toàn dữ liệu trên ổ cứng của khách nhé anh."</div>
+              <button class="copy-btn" onclick="event.stopPropagation(); copyText(this, 'Các bản OEM/DVD 500k-900k ngoài thị trường bắt buộc phải bán kèm linh kiện PC xuất xưởng mới trên cùng hóa đơn, mua lẻ dán vào máy cũ là sai Luật Sở hữu trí tuệ vẫn bị phạt khi kiểm tra anh ạ. Bên em chỉ phân phối bản FPP/Retail chính ngạch nhập khẩu Singapore được phép mua bán độc lập và đổi máy tối đa 5 lần. Về kỹ thuật, bên em hỗ trợ nhập Key kích hoạt từ xa qua UltraView chứ không Ghost hay cài lại Windows để bảo vệ an toàn dữ liệu trên ổ cứng của khách nhé anh.')">Sao chép</button>
             </div>
           </div>
         </div>
@@ -1973,10 +2124,16 @@
               <!-- Dynamic rows rendered here -->
             </div>
 
-            <button type="button" class="btn-add-product" onclick="addQuoteItemRow()">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-              Thêm Dòng Sản Phẩm
-            </button>
+            <div class="repeater-add-actions">
+              <button type="button" class="btn-add-product" onclick="addQuoteItemRow()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Thêm SP Có Sẵn
+              </button>
+              <button type="button" class="btn-add-custom" id="btnAddCustomProduct" onclick="addCustomQuoteItemRow()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                + Tự Nhập SP Khác
+              </button>
+            </div>
           </div>
 
           <!-- Card Block 4: Discount & Legal Options -->
@@ -2148,26 +2305,69 @@
       <!-- SUMMARY REFERENCE TABLES (BELOW) -->
       <div class="grid-2">
         <div class="apple-card">
-          <span class="card-badge">Chính Sách Sỉ Đại Lý ONLYOFFICE</span>
-          <h3 class="card-title">Bảng Giá Sỉ Đại Lý & Cửa Hàng Máy Tính</h3>
-          <p class="card-desc">Áp dụng cho Thợ IT / Cửa hàng máy tính mua sỉ về phân phối lại (sau khi xác thực MST/bảng hiệu):</p>
-          <div class="rule-item"><span>• <strong>Gói Đại Lý 50 Key:</strong> 149.000 đ/key (Gói 7.450.000 đ) — Bán lẻ 799k thu về gần 40 triệu, lãi ròng >32 triệu.</span></div>
-          <div class="rule-item"><span>• <strong>Gói Đại Lý 100 Key:</strong> 129.000 đ/key (Gói 12.900.000 đ) — Chiết khấu sâu cho đại lý khu vực.</span></div>
-          <div class="rule-item"><span>• <strong>Gói Đại Lý 200 Key:</strong> 99.000 đ/key (Gói 19.800.000 đ) — Đại lý độc quyền thành phố/tỉnh.</span></div>
-          <div class="rule-item"><span>• <strong>Quyền Lợi:</strong> Cấp tài khoản Portal Mercy Keys tự nạp key 24/7 + Cấp Chứng Nhận Đại Lý chính thức.</span></div>
-          <div class="script-note">LƯU Ý BẢO MẬT: Bắt buộc xác minh MST hoặc ảnh bảng hiệu trước khi báo bảng giá sỉ này. Tuyệt đối cấm báo cho khách lẻ.</div>
+          <span class="card-badge">Bảng Giá Sỉ Đại Lý & Điểm Hòa Vốn (30.10)</span>
+          <h3 class="card-title">Chính Sách Sỉ Key Online & Tem Cào Hologram 7 Màu</h3>
+          <p class="card-desc">Áp dụng cho Cửa hàng máy tính / Công ty IT sau khi xác thực MST hoặc ảnh bảng hiệu (Không áp doanh số tháng — Key không hạn lưu kho):</p>
+          <div class="rule-item"><span>• <strong>Gói 5 Key Online (Trải nghiệm mở phễu):</strong> 299.000 đ/key (1.495.000 đ) — <strong>Bán đúng 2 key lẻ (799k) là hoàn vốn gốc</strong>, lãi ròng 3 key còn lại (~2,4 triệu).</span></div>
+          <div class="rule-item"><span>• <strong>Gói 50 Key Online (Gói chủ lực chốt nhiều nhất):</strong> 149.000 đ/key (7.450.000 đ) — <strong>Bán chưa tới 10 key là hoàn vốn gốc</strong>, lãi ròng 40 key còn lại (~32,5 triệu).</span></div>
+          <div class="rule-item"><span>• <strong>Gói 100 Key Online:</strong> 129.000 đ/key (12.900.000 đ) | <strong>Gói 200 Key Online:</strong> 99.000 đ/key (19.800.000 đ — chạm đáy giá sỉ Key Online).</span></div>
+          <div class="rule-item"><span>• <strong>Tem Cào Vật Lý Hologram 7 Màu (Niêm yết 999k | Giá sàn lẻ &ge; 699k):</strong> 50 Tem: <strong>299.000 đ/tem</strong> (14.950.000 đ) | 200 Tem: <strong>249.000 đ/tem</strong> (49.800.000 đ) | 500 Tem: <strong>149.000 đ/tem</strong> (74.500.000 đ).</span></div>
+          <div class="script-note">LƯU Ý BẢO MẬT: Bắt buộc xác minh MST hoặc ảnh bảng hiệu trước khi gửi Bảng giá sỉ màu CAM. Giá sàn bán lẻ tối thiểu: Key Online &ge; 499.000 đ, Tem cào &ge; 699.000 đ.</div>
         </div>
 
         <div class="apple-card">
-          <span class="card-badge">Sản Phẩm Microsoft Bổ Trợ</span>
-          <h3 class="card-title">Bảng Giá Rút Gọn Microsoft (Khi Khách Hỏi Đích Danh)</h3>
-          <p class="card-desc">Báo đúng giá chuẩn 2 nấc, không làm dội giá:</p>
-          <div class="rule-item"><span>• <strong>Win 11 Pro DSP Tem COA 7 màu:</strong> Lẻ 850.000 đ | Sỉ 750.000 đ (Vĩnh viễn theo mainboard)</span></div>
-          <div class="rule-item"><span>• <strong>Win 11 Pro DSP DVD Full Box Hải quan:</strong> Lẻ 1.300.000 đ | Sỉ 1.200.000 đ (Có CO/CQ kiểm toán)</span></div>
-          <div class="rule-item"><span>• <strong>Win 11 Pro Online ESD:</strong> Lẻ 1.200.000 đ | Sỉ 1.100.000 đ (Gắn TK Microsoft, đổi máy được)</span></div>
-          <div class="rule-item"><span>• <strong>Office Pro Plus 2021 Key Online:</strong> Lẻ 2.200.000 đ | Sỉ 2.100.000 đ (Word/Excel/PP vĩnh viễn)</span></div>
-          <div class="rule-item"><span>• <strong>Office Pro Plus 2021 Full Box DVD:</strong> Lẻ 2.990.000 đ | Sỉ 2.800.000 đ (Hộp đĩa DVD)</span></div>
-          <div class="rule-item"><span>• <strong>Combo Siêu Tiết Kiệm:</strong> Win 11 Pro COA (850k) + OnlyOffice (699k) = <strong>1.549.000 đ/máy</strong> (Tiết kiệm >3 triệu so với full Microsoft).</span></div>
+          <span class="card-badge">Sản Phẩm Microsoft Chính Ngạch & Chuẩn Hóa Đơn</span>
+          <h3 class="card-title">Microsoft FPP/Retail Singapore & Giải Pháp Bổ Trợ</h3>
+          <p class="card-desc">Tên hàng hóa chuẩn Hóa đơn VAT & quy định pháp lý – kỹ thuật bắt buộc:</p>
+          <div class="rule-item"><span>• <strong>Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163):</strong> Lẻ 2.900.000 đ | Đại lý / &ge;50 hộp: 2.800.000 đ (Hộp USB 3.0 nguyên seal, đổi máy hợp pháp).</span></div>
+          <div class="rule-item"><span>• <strong>Microsoft Office Home & Business 2024 English APAC EM MEDIALess SKU EP2-06630:</strong> Lẻ 4.500.000 đ | Đại lý / &ge;50 bộ: 4.400.000 đ (Gắn TK Microsoft, đổi máy tối đa 5 lần cách nhau &ge;90 ngày).</span></div>
+          <div class="rule-item"><span>• <strong>Combo Doanh Nghiệp Chuẩn (Win Pro FPP USB + OnlyOffice):</strong> Lẻ 3.599.000 đ/máy | Đại lý 3.499.000 đ/máy.</span></div>
+          <div class="rule-item"><span>• <strong>Các dòng bổ trợ khác:</strong> Win 11 Pro COA (850k/750k), Win 11 DVD (1.3M/1.2M), Combo Tiết Kiệm COA + OnlyOffice (1.549k/1.350k), Windows Server & SQL Server.</span></div>
+          <div class="script-note">PHÁP LÝ & KỸ THUẬT: Hàng nhập khẩu chính ngạch Singapore đủ Hợp đồng, Hóa đơn VAT, Chứng thư mộc đỏ & Microsoft Partner (Tờ khai Hải quan gốc bảo mật giá vốn, cam kết văn bản xuất trình trực tiếp cho Đoàn Thanh tra khi hậu kiểm). Kỹ thuật chỉ hỗ trợ nhập Key kích hoạt từ xa, không Ghost/Format cài lại Windows.</div>
+        </div>
+      </div>
+
+      <div class="apple-card" style="margin-top: 20px;">
+        <span class="card-badge">Chính Sách Đại Lý Chiến Lược (15.10)</span>
+        <h3 class="card-title">Bảng Đối Chiếu 2 Gói Đại Lý Chiến Lược: Tiêu Chuẩn vs Độc Quyền Tuyến VIP</h3>
+        <p class="card-desc">Dùng khi tư vấn nâng cấp chủ cửa hàng máy tính lớn, chuỗi IT hoặc nhà thầu thiết bị văn phòng khu vực:</p>
+        <div style="overflow-x: auto; margin-top: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <table class="price-table-light" style="margin: 0; border: none; width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 24%; padding: 12px 14px;">Tiêu Chí Quyền Lợi</th>
+                <th style="width: 38%; padding: 12px 14px;">GÓI ĐẠI LÝ TIÊU CHUẨN (34.750.000 VNĐ)</th>
+                <th style="width: 38%; padding: 12px 14px;">GÓI ĐẠI LÝ ĐỘC QUYỀN TUYẾN VIP (94.300.000 VNĐ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Quy mô bản quyền nhận về</strong></td>
+                <td><strong>200 Key Online</strong> (19,8M) + <strong>50 Tem Cào Hologram</strong> (14,95M) + Tặng thêm <strong>03 Key Online</strong> marketing</td>
+                <td><strong>200 Key Online</strong> (19,8M) + <strong>500 Tem Cào Hologram</strong> (74,5M) + Tặng thêm <strong>10 Key Online</strong> (tổng 210 Key Online)</td>
+              </tr>
+              <tr>
+                <td><strong>Lợi nhuận gộp dự kiến</strong></td>
+                <td><strong style="color: var(--accent-green);">+100 – 175 Triệu VNĐ</strong> (ROI &gt; 280%)</td>
+                <td><strong style="color: var(--accent-green);">+445 – 665 Triệu VNĐ</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Nhận diện & Bộ cài riêng</strong></td>
+                <td>• Chứng nhận Đại lý mộc đỏ in màu đóng <strong>KHUNG KÍNH</strong> gửi tận nơi<br>• <strong>Bộ cài White-Label</strong> gắn <strong>Tên cửa hàng & Hotline bảo hành</strong> (không gắn logo riêng)<br>• Cấp quyền xuất chứng nhận bản quyền QR cho khách lẻ</td>
+                <td>• Toàn bộ đặc quyền chứng nhận đóng <strong>KHUNG KÍNH</strong> & Bộ cài White-Label Tên cửa hàng + Hotline bảo hành<br>• Ưu tiên hỗ trợ kỹ thuật & hồ sơ thầu dự án VIP</td>
+              </tr>
+              <tr>
+                <td><strong>Bảo hộ thị trường & Khu vực</strong></td>
+                <td>Bảo hộ dự án chào thầu <strong>14 ngày</strong> (Deal Protection) + Chứng thư mộc đỏ cho dự án &ge; 20 máy</td>
+                <td>• <strong>ĐỘC QUYỀN PHÂN PHỐI THEO TUYẾN ĐƯỜNG / KHU VỰC 01 NĂM (Mộc đỏ)</strong><br>• Bảo hộ dự án <strong>30 ngày</strong>, khách DN trong tuyến liên hệ hãng được chuyển ngược về đại lý</td>
+              </tr>
+              <tr>
+                <td><strong>Quà tặng công nghệ & Trợ giá</strong></td>
+                <td>Kho tài liệu Marketing VIP, Standee, ấn phẩm trưng bày quầy kệ</td>
+                <td>• <strong>TẶNG 01 WEBSITE DOANH NGHIỆP chuẩn SEO</strong> (trị giá 5.500.000 đ) + Tên miền quốc tế <strong>.COM</strong><br>• Trợ giá mua Microsoft FPP/Retail giảm trực tiếp <strong>100.000 đ/bộ</strong></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -2213,7 +2413,7 @@
         </div>
       </div>
 
-      <div class="apple-card">
+      <div class="apple-card" style="margin-bottom: 20px;">
         <span class="card-badge">Phân Khúc 3: Khách Cá Nhân / Lead Cũ Im Lặng (Re-Call)</span>
         <h3 class="card-title">Kịch Bản Gọi Thoại Re-Call Hook UltraView 2 Phút</h3>
         <p class="card-desc">Nhu cầu: Lười tự tải, sợ không biết cài font tiếng Việt, sợ file bị lỗi hiển thị.</p>
@@ -2225,6 +2425,93 @@
           </div>
           <div class="script-text">
             "Dạ alo anh [Tên] ơi, em là [Tên bạn] bên hỗ trợ kỹ thuật phần mềm OnlyOffice hôm trước anh có nhắn tin hỏi thăm đây ạ. Đợt này bên em có đợt kỹ thuật viên vào hỗ trợ trực tiếp từ xa: anh có đang ngồi máy tính không em nhờ kỹ thuật UltraView 2 phút cài sẵn bản Demo 7 ngày và nạp bộ font tiếng Việt mở thử file công việc của mình luôn cho tiện nha anh, đỡ mất công anh phải tự tải về ạ!"
+          </div>
+        </div>
+      </div>
+
+      <!-- RECAP TRAINING: COLD CALL VS HOT CALL MATRIX -->
+      <div class="apple-card" style="margin-bottom: 20px;">
+        <span class="card-badge">Chiến Thuật Phân Luồng Cuộc Gọi (Recap 30/10)</span>
+        <h3 class="card-title">Bảng Đối Chiếu Chiến Thuật: Lead Nguội (Cold Call) vs Lead Nóng (Hot Call)</h3>
+        <p class="card-desc">Phân biệt rõ tâm lý khách nghe máy để điều tiết thời lượng và mục tiêu chốt từng nhịp, tránh giảng tính năng dài dòng sai thời điểm:</p>
+        <div style="overflow-x: auto; margin-top: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <table class="price-table-light" style="margin: 0; border: none; width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 24%; padding: 12px 14px;">Đặc Điểm Phân Biệt</th>
+                <th style="width: 38%; padding: 12px 14px;">LEAD NGUỘI (COLD LEAD — GOOGLE MAPS)</th>
+                <th style="width: 38%; padding: 12px 14px;">LEAD NÓNG (HOT LEAD — FANPAGE ADS)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tâm lý khách nghe máy</strong></td>
+                <td>Hoàn toàn bị động, chưa biết Mercy Tech là ai, thường đang bận ráp máy hoặc sửa máy tại tiệm.</td>
+                <td>Chủ động để lại SĐT tìm hiểu sau khi xem quảng cáo, có nhu cầu thật, sẵn sàng lắng nghe.</td>
+              </tr>
+              <tr>
+                <td><strong>Thời lượng vàng</strong></td>
+                <td><strong>Cực ngắn: 1 – 2 phút</strong> (Tuyệt đối không giảng tính năng lan man).</td>
+                <td><strong>Chuyên sâu: 5 – 7 phút</strong> (Mở lời xin 2 phút nhưng đào sâu bài toán lợi nhuận).</td>
+              </tr>
+              <tr>
+                <td><strong>Mục tiêu tối thượng</strong></td>
+                <td>Xướng đúng tên cửa hàng vi tính → Nêu sóng thanh tra bản quyền → Chốt kết bạn Zalo gửi bảng giá sỉ.</td>
+                <td>Phá băng hỏi sản lượng máy/tháng → Tháo rào cản "Không áp doanh số" → Điểm hòa vốn 2 key / 10 key → Hẹn cài Demo 7 ngày UltraView.</td>
+              </tr>
+              <tr>
+                <td><strong>Khung giờ gửi Bảng giá Zalo</strong></td>
+                <td>Kết bạn xong, canh khung chiều <strong>tầm 17:00</strong> (khi chủ shop bớt việc kỹ thuật) gửi thẳng <strong>Bảng giá sỉ (màu cam)</strong> + Bộ chính sách.</td>
+                <td>Gửi ngay lập tức sau cuộc gọi kèm lời mời vào cài Demo 7 ngày trên máy mẫu tại cửa hàng.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RECAP TRAINING: GOOGLE MAPS COLD CALL & PIVOT -->
+      <div class="apple-card" style="margin-bottom: 20px;">
+        <span class="card-badge">Phân Khúc 4: Cold Call Tệp 11.868 Shop Vi Tính Toàn Quốc</span>
+        <h3 class="card-title">Kịch Bản Cold Call 90 Giây & Phản Xạ Chữa Lỗi Khi Khách Báo "Có Mối Win/Office Rồi"</h3>
+        <p class="card-desc">Bắt buộc xướng đúng tên cửa hàng để tạo sự thân thuộc và luôn kẹp sản phẩm chủ lực OnlyOffice tối ưu bởi Mercy Tech trước khi kết thúc cuộc gọi.</p>
+
+        <div class="script-box" style="margin-bottom: 14px;">
+          <div class="script-header">
+            <span class="script-label">Lời Thoại Cold Call Chuẩn (1 – 2 Phút)</span>
+            <button class="copy-btn" onclick="copyScript(this)">Sao chép</button>
+          </div>
+          <div class="script-text">
+            "Alo, mình bên cửa hàng máy tính [Tên Cửa Hàng, ví dụ: Vạn Thịnh] đúng không anh? Em chào anh, em là [Tên bạn] bên công ty phần mềm Mercy Tech ạ. Đợt này các bên đang siết thanh tra bản quyền Windows với Office gắt quá nên nhu cầu khách tìm bản quyền hợp lệ tăng rất mạnh. Bên em đang là đầu mối phân phối sỉ các dòng phần mềm này, hiện cửa hàng mình đã có bên nào cấp nguồn sỉ ổn định chưa anh ha? Với Microsoft Office chính hãng giá đang khá cao khoảng 4,5 triệu một bộ khách lẻ khó xuống tiền, nên bên em có dòng chủ lực là OnlyOffice tối ưu bởi Mercy Tech thay thế trực tiếp tiết kiệm tới 80% chi phí, có hóa đơn VAT đầy đủ và bản dùng thử 7 ngày miễn phí. Anh đang dùng Zalo số điện thoại này luôn đúng không anh, để em kết bạn gửi bảng giá sỉ đại lý qua anh xem tham khảo trước nhé."
+          </div>
+        </div>
+
+        <div class="script-box">
+          <div class="script-header">
+            <span class="script-label">Phản Xạ Bắt Buộc Khi Chủ Shop Cắt Ngang: "Bên Anh Có Mối Lấy Win/Office Rồi"</span>
+            <button class="copy-btn" onclick="copyScript(this)">Sao chép</button>
+          </div>
+          <div class="script-text">
+            "Vâng tốt quá anh, Win với Microsoft bên mình có nguồn quen rồi thì cứ duy trì thôi ạ. Còn riêng mảng văn phòng khi gặp khách doanh nghiệp nhỏ hoặc khách cá nhân thấy bộ Microsoft 4,5 triệu cao quá không mua nổi, anh kẹp thêm giải pháp OnlyOffice tối ưu bởi Mercy Tech bên em vào rất dễ chốt, vốn sỉ chỉ từ hơn trăm nghìn một máy mà cửa hàng lời ngay 500k-650k/máy, lại có bản dùng thử 7 ngày miễn phí. Anh dùng Zalo số này luôn đúng không ạ, em gửi riêng bảng chiết khấu sỉ OnlyOffice qua Zalo để lúc rảnh anh ngó qua nhé."
+          </div>
+        </div>
+      </div>
+
+      <!-- RECAP TRAINING: 3-STEP BREAK-EVEN FUNNEL & DAY-3 DEMO FOLLOW-UP -->
+      <div class="apple-card">
+        <span class="card-badge">Phân Khúc 5: Dẫn Dắt Tâm Lý Chủ Shop & Chốt Sau Demo 3 Ngày</span>
+        <h3 class="card-title">Quy Trình Bước Đệm 3 Nhịp (Hot Call Đại Lý) & Kịch Bản Chốt Gói Sỉ Ngày Thứ 3 Sau Demo</h3>
+        <p class="card-desc">Tháo bỏ hoàn toàn nỗi sợ ôm vốn của cửa hàng nhỏ bằng bài toán điểm hòa vốn thực tế:</p>
+        <div class="rule-item"><span>• <strong>Bước 1 — Phá băng &amp; Tháo phòng thủ doanh số:</strong> Hỏi nhẹ <em>"Trung bình một tháng cửa hàng nhà mình xuất ra tầm bao nhiêu bộ PC/Laptop anh ha?"</em> → Dù khách báo chỉ 5–10 máy, khẳng định ngay: <em>"Mức đó quá hợp với chính sách bên em luôn anh, vì bên em không áp doanh số tháng và mã key lưu trên Portal không có hạn sử dụng, bán tới đâu kích hoạt tới đó."</em></span></div>
+        <div class="rule-item"><span>• <strong>Bước 2 — Bài toán Điểm hòa vốn siêu tốc:</strong> Gói chủ lực <strong>50 Key vốn 7.450.000 đ</strong> (149k/key), bán lẻ đề xuất 799.000 đ/key <strong>chỉ cần bán đúng 10 máy đầu tiên là thu hồi đủ vốn gốc</strong>, 40 key còn lại là lợi nhuận ròng ~32,5 triệu đồng. Nếu shop nhỏ muốn test thị trường trước, mở <strong>Gói trải nghiệm 5 Key (1.495.000 đ) — bán đúng 2 máy hoàn vốn ngay</strong>.</span></div>
+        <div class="rule-item"><span>• <strong>Bước 3 — Chăm sóc chốt đơn ngày thứ 3 sau khi cài Demo 7 ngày:</strong> Chủ động gọi hoặc nhắn tin hỏi cảm nhận thực tế và đề xuất mở mã Đại lý ngay trong tuần.</span></div>
+
+        <div class="script-box" style="margin-top: 12px;">
+          <div class="script-header">
+            <span class="script-label">Lời Thoại Chăm Sóc &amp; Chốt Đơn Ngày Thứ 3 Sau Khi Cài Demo</span>
+            <button class="copy-btn" onclick="copyScript(this)">Sao chép</button>
+          </div>
+          <div class="script-text">
+            "Anh [Tên] ơi, mấy hôm nay ở cửa hàng anh mở thử bộ OnlyOffice tối ưu bởi Mercy Tech trên máy mẫu thấy các tác vụ Word, Excel với font tiếng Việt chạy êm chứ anh? Nếu anh thấy mượt và dễ tư vấn cho khách rồi thì hôm nay ngày đẹp anh mở hàng trước gói Đại lý 50 key để bên em cấp tài khoản Portal Mercy Keys và xuất Chứng nhận đại lý cho cửa hàng mình lên kệ luôn nhé anh."
           </div>
         </div>
       </div>
@@ -2381,7 +2668,6 @@
             </div>
           </div>
         </div>
-        </div>
 
         <!-- 12 -->
         <div class="accordion-item cat-agency">
@@ -2490,6 +2776,198 @@
             </div>
           </div>
         </div>
+
+        <!-- 21 -->
+        <div class="accordion-item cat-price">
+          <div class="accordion-header" onclick="toggleAccordion(this)">21. "OnlyOffice trên mạng là phần mềm mã nguồn mở miễn phí, sao bên em lại thu tiền?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Phân tách rạch ròi bản cộng đồng thô tự tải và gói thương mại OnlyOffice tối ưu bởi Mercy Tech kèm pháp lý VAT + bảo hành kỹ thuật trọn đời máy.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Đúng rồi anh, bản gốc quốc tế là mã nguồn mở tải tự do, nhưng bản thương mại bên em cung cấp là OnlyOffice tối ưu bởi Mercy Tech. Khi doanh nghiệp mua là mua sự an tâm toàn diện về pháp lý và vận hành: bộ cài đã tích hợp sẵn hơn 1.000 font tiếng Việt chuẩn cùng bộ gõ công thức MathType/LaTeX, có Hóa đơn GTGT điện tử hợp lệ và chứng nhận đối tác chính thức tại Việt Nam để giải trình thanh tra bản quyền, kèm đội ngũ kỹ thuật Mercy Tech hỗ trợ xử lý lỗi chuyển đổi tài liệu trọn đời máy nhé anh."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 22 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">22. "Tem cào giấy vật lý với Key Online kỹ thuật giống nhau mà sao giá sỉ Tem cào lại cao hơn?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Nêu bật 3 đòn bẩy kiếm tiền thực tế tại quầy của Tem cào Hologram 7 màu.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Về lõi kích hoạt thì cả hai đều là bản quyền vĩnh viễn gắn theo Mainboard như nhau anh ạ. Tem cào Hologram 7 màu có giá nhỉnh hơn vì ngoài chi phí in ấn bảo an chống giả phủ nhũ bạc, nó mang lại 3 lợi thế bán hàng rất lớn cho tiệm: thứ nhất là khách mua máy cầm thẻ cào vật lý trên tay thấy yên tâm ngay không lo mã code ảo; thứ hai là dán sẵn tem bản quyền lên thùng PC hay đáy Laptop giúp nâng giá trị dàn máy, chốt thêm 700k-999k dễ hơn nói miệng rất nhiều; thứ ba là anh có thể chia lẻ từng xấp tem bán sỉ lại cho thợ IT tuyến dưới thu tiền mặt ngay mà không cần tạo tài khoản trên cổng quản trị ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 23 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">23. "Vốn gói 50 key 7,45 triệu anh sợ ôm hàng chôn vốn không bán kịp?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Tháo gỡ bằng 3 chốt an toàn: Không hạn lưu kho + Không ép doanh số + Điểm hòa vốn 10 máy (hoặc bước đệm Gói trải nghiệm 5 key 1.495.000 đ).</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Kho key trên Portal Mercy Keys hoàn toàn không có hạn sử dụng lưu kho và bên em cũng không áp chỉ tiêu doanh số tháng nên anh không bao giờ lo hỏng hàng hay mất vốn anh nhé. Với gói chủ lực 50 key vốn 7.450.000 đ, cửa hàng bán lẻ 799k chỉ cần xuất kèm đúng 10 bộ máy đầu tiên là đã thu hồi đủ tiền gốc, 40 key còn lại là lãi ròng hơn 32 triệu bỏ túi. Còn nếu anh muốn cho kỹ thuật và khách quen test phản ứng thị trường trước, anh có thể lấy gói trải nghiệm mở phễu 5 key vốn chỉ 1.495.000 đ, bán 2 máy là hoàn vốn ngay rồi mình nâng lên gói 50 key sau cũng rất thoải mái ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 24 -->
+        <div class="accordion-item cat-tech">
+          <div class="accordion-header" onclick="toggleAccordion(this)">24. "Trường học hoặc Giáo viên Toán - Lý - Hóa mở đề thi có công thức MathType và LaTeX có bị lỗi không?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Khẳng định bản tối ưu mới nhất đã hỗ trợ trọn vẹn MathType &amp; LaTeX, mời mở thử trực tiếp đề thi thật.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Bản OnlyOffice tối ưu bởi Mercy Tech phiên bản mới hiện nay đã xử lý tương thích đầy đủ các công thức Toán - Lý - Hóa, hỗ trợ gõ và chỉnh sửa mượt cả MathType lẫn mã lệnh LaTeX cho giáo viên và nhà trường rồi anh nhé. Ngoài ra phần mềm còn bám sát định hướng ứng dụng văn phòng chuẩn mở trong chương trình Tin học phổ thông với mức giá dự án từ 50 máy chỉ 499.000 đ/máy. Anh gửi thử giúp em 1 file đề thi Toán hoặc Lý đang dùng qua Zalo hoặc mở UltraView 2 phút em mở trực tiếp trên máy mình để thầy cô kiểm chứng ngay nhé ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 25 -->
+        <div class="accordion-item cat-tech">
+          <div class="accordion-header" onclick="toggleAccordion(this)">25. "Công ty xây dựng / kế toán có file Excel chứa tập lệnh Macro VBA phức tạp thì chạy được không?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Thành thật thông minh (Smart Honesty về nền tảng JS vs VBA) + Tư vấn Giải pháp Phối hợp Hybrid tiết kiệm 70–80% ngân sách + Cài Demo 7 ngày test file thật.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Em xin phép chia sẻ rất thật ngay từ đầu để bên mình yên tâm: các hàm kế toán thông dụng như VLOOKUP, SUMIFS, PivotTable thì OnlyOffice chạy rất mượt, nhưng riêng các file kỹ thuật lập trình Macro VBA tự động quá chuyên sâu thì có thể khác biệt do Microsoft dùng ngôn ngữ VBA còn OnlyOffice xây dựng Macro trên nền JavaScript. Giải pháp tối ưu nhất các doanh nghiệp đang áp dụng là mô hình Hybrid: khoảng 70-80% máy nhân sự hành chính, kinh doanh, kế toán viên thông thường dùng OnlyOffice tối ưu bởi Mercy Tech chỉ 499k-699k/máy, còn đúng 1-2 máy kỹ thuật chạy VBA đặc thù thì trang bị bộ Microsoft Office Home &amp; Business 2024 chính hãng 4,5 triệu bên em. Cách này giúp công ty giảm tới 75% ngân sách mà vẫn hợp pháp toàn bộ, anh gửi em UltraView 2 phút cài bản Demo 7 ngày mở thử đúng file Excel đó trước nhé anh."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 26 -->
+        <div class="accordion-item cat-legal">
+          <div class="accordion-header" onclick="toggleAccordion(this)">26. "Cơ quan nhà nước cần tích hợp chữ ký số chuyên dụng ký trực tiếp trên cổng dịch vụ công nội bộ?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Minh bạch quy trình xuất PDF ký Token USB độc lập + gợi ý Hybrid cho máy văn thư chuyên trách.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Với các cổng phần mềm hành chính công nội bộ yêu cầu cắm plugin chữ ký số chuyên ngành trực tiếp vào Microsoft Word thì hiện OnlyOffice chưa nhúng trực tiếp module plugin riêng của từng bộ ngành anh ạ. Thực tế các đơn vị hành chính đang xử lý rất gọn bằng cách soạn thảo chuẩn thể thức trên OnlyOffice rồi xuất ra file PDF chuẩn để ký số qua phần mềm USB Token/VGCA như bình thường, hoặc trang bị riêng 1 bộ Microsoft Office bản quyền cho máy văn thư đóng dấu phát hành, còn toàn bộ dàn máy chuyên viên phòng ban dùng OnlyOffice tối ưu bởi Mercy Tech để tiết kiệm hơn 80% dự toán ngân sách nhé anh."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 27 -->
+        <div class="accordion-item cat-legal">
+          <div class="accordion-header" onclick="toggleAccordion(this)">27. "Đổi sang máy tính mới hoặc chẳng may cháy nổ, thiên tai hỏng dàn máy thì có mất bản quyền không?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Làm rõ quy định khóa Mainboard và chính sách nhân văn hỗ trợ cấp đổi khi gặp sự cố bất khả kháng.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Bản quyền OnlyOffice tối ưu bởi Mercy Tech được khóa vĩnh viễn theo bo mạch chủ Mainboard của máy nên cài lại Win, format ổ cứng hay nâng cấp RAM, SSD bao nhiêu lần cũng tự nhận lại key trọn đời. Trường hợp thanh lý đổi sang máy tính mới hoàn toàn thì theo quy định sẽ trang bị mã mới cho máy mới; tuy nhiên riêng các sự cố bất khả kháng như hỏa hoạn, cháy nổ, ngập lụt thiên tai làm hỏng thiết bị có hình ảnh hoặc biên bản xác nhận thực tế, Mercy Tech có chính sách hỗ trợ cấp đổi lại mã bản quyền để đồng hành chia sẻ rủi ro cùng doanh nghiệp và đại lý ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 28 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">28. "Anh sợ nhập về bán mà cửa hàng sát vách cũng lấy hàng bên em rồi đăng Shopee/Facebook bán phá giá rẻ bèo?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Đưa ra điều khoản Giá sàn 2 tầng + Chế tài phạt gấp 05 lần trong Hợp đồng Nguyên tắc 15.10.2026 + Đặc quyền Gói Độc quyền Tuyến.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Bên em kiểm soát chống bán phá giá cực kỳ nghiêm trong Điều 6 Hợp đồng Nguyên tắc 15.10 anh nhé: giá sàn truyền thông và bán lẻ tối thiểu bắt buộc với Key Online là từ 499.000 đ và với Tem cào vật lý là từ 699.000 đ, nghiêm cấm rao giá thấp hơn trên mọi sàn TMĐT hay mạng xã hội. Đơn vị nào vi phạm sau 2 giờ nhắc nhở không gỡ sẽ bị khóa tài khoản Portal 14 ngày, tái phạm chấm dứt hợp đồng vĩnh viễn và phạt bồi thường gấp 05 lần giá trị chênh lệch phá giá. Nếu cửa hàng mình muốn nắm trọn khu vực, anh có thể đăng ký Gói Độc Quyền Tuyến để công ty đóng dấu bảo hộ độc quyền tuyến đường đó trong suốt 1 năm luôn ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 29 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">29. "Đại lý đi chào thầu trường học, ủy ban hay doanh nghiệp trong tỉnh sợ bị đại lý khác hoặc chính hãng báo giá đè?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Trích dẫn cơ chế Bảo hộ dự án chào thầu 14 ngày (Deal Protection) &amp; cấp Chứng thư mộc đỏ từ 20 máy tại Điều 5 HĐNT 15.10.2026.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Trong Điều 5 Hợp đồng Nguyên tắc bên em có cơ chế Bảo hộ dự án chào thầu rất rõ ràng cho đại lý anh nhé. Khi anh tiếp cận một doanh nghiệp hay trường học, anh chỉ cần gửi đăng ký Tên đơn vị, Mã số thuế kèm bản Báo giá hoặc biên bản khảo sát về công ty là bên em khóa bảo hộ độc quyền dự án đó cho cửa hàng anh tối đa 14 ngày (và tới 30 ngày với Đại lý Độc quyền Tuyến). Với các đơn dự án tập trung từ 20 máy trở lên, Mercy Tech còn cấp Biên bản bàn giao kiêm Chứng thư bản quyền đóng dấu mộc đỏ ghi đích danh đơn vị thụ hưởng cuối cùng để anh kẹp hồ sơ nghiệm thu thanh quyết toán cực kỳ uy tín ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30 -->
+        <div class="accordion-item cat-legal">
+          <div class="accordion-header" onclick="toggleAccordion(this)">30. "Khách mua Microsoft Windows / Office chính hãng yêu cầu gửi bản gốc Tờ khai Hải quan nhập khẩu?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Giải thích chuẩn nghiệp vụ Bảo mật Tờ khai Hải quan Singapore (chứa giá vốn lô hàng) + cam kết xuất trình trực tiếp cho Đoàn Thanh tra Liên ngành.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Các dòng Windows Pro FPP USB (HAV-00163) và Office Home &amp; Business 2024 (EP2-06630) bên em nhập khẩu chính ngạch qua nhà phân phối khu vực Singapore, bàn giao đầy đủ Hợp đồng kinh tế, Hóa đơn GTGT điện tử, Chứng thư cam kết bản quyền chính hãng mộc đỏ của Mercy Tech và đường link đối tác trên Microsoft Partner. Riêng tờ khai Hải quan nhập khẩu gốc là chứng từ mật thương mại vì thể hiện giá vốn nhập khẩu và tổng lô hàng của công ty nên bên em không phát hành rộng rãi ra ngoài, nhưng Mercy Tech cam kết bằng văn bản sẵn sàng mang tờ khai Hải quan gốc xuất trình trực tiếp trước Đoàn Thanh tra Liên ngành hoặc cơ quan nhà nước có thẩm quyền bất cứ khi nào đơn vị mình có đợt hậu kiểm nhé anh."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 31 -->
+        <div class="accordion-item cat-price">
+          <div class="accordion-header" onclick="toggleAccordion(this)">31. "Sao ngoài thị trường bán đĩa DVD hay tem Windows / Office OEM có 500k – 900k mà bản FPP/Retail bên em 2,9 triệu – 4,5 triệu?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Phân tích sắc bén Luật Sở hữu trí tuệ giữa bản OEM (bắt buộc kèm PC mới) và bản FPP/Retail thương mại hợp pháp.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Các bản Windows hay Office dạng OEM/DVD giá 500k-900k ngoài thị trường theo quy định của Microsoft và Luật Sở hữu trí tuệ bắt buộc phải được nhà lắp ráp bán kèm bộ máy tính phần cứng mới xuất xưởng trên cùng một hóa đơn. Nếu mua tách lẻ tem OEM dán bổ sung cho dàn máy tính đang sử dụng của công ty thì khi đoàn liên ngành kiểm tra vẫn bị coi là bản quyền không hợp lệ và bị xử phạt bình thường anh ạ. Dòng Win Pro FPP USB (2,9 triệu) và Office H&amp;B 2024 Retail (4,5 triệu) bên em phân phối là phiên bản thương mại hợp pháp được phép mua bổ sung độc lập cho mọi máy tính doanh nghiệp, lại cho phép chuyển đổi sang máy mới tối đa 5 lần (mỗi lần cách nhau tối thiểu 90 ngày) nên tính ra đầu tư một lần dùng bền bỉ nhiều đời máy rất kinh tế ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 32 -->
+        <div class="accordion-item cat-tech">
+          <div class="accordion-header" onclick="toggleAccordion(this)">32. "Anh mua key Windows Pro FPP bên em thì kỹ thuật bên em có vào UltraView Ghost hay cài lại trắng bản Windows giúp anh luôn không?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Nêu rõ quy định an toàn dữ liệu của Mercy Tech: Chỉ hỗ trợ nhập Key kích hoạt bản quyền từ xa, không Ghost/Format ổ cứng cài lại Windows.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Với hệ điều hành Windows bản quyền, kỹ thuật bên em hỗ trợ kết nối UltraView để kiểm tra phiên bản, nạp mã Key chính hãng và kích hoạt bản quyền số trực tiếp lên máy cho bên mình anh nhé. Còn thao tác Ghost máy hoặc Format ổ cứng cài mới lại từ đầu hệ điều hành Windows thì bên em xin phép không thực hiện từ xa, vì việc cài lại Win bắt buộc phải có kỹ thuật viên thao tác trực tiếp tại chỗ để sao lưu toàn bộ dữ liệu kế toán, chứng từ trên ổ C tránh rủi ro mất mát tài liệu quan trọng của khách hàng. Nhờ kỹ thuật tại chỗ hoặc cửa hàng cài sẵn bản Windows Pro chuẩn rồi báo em vào kích hoạt key chỉ mất 2 phút là xong trọn vẹn ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 33 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">33. "Khách đang đứng chờ lấy máy gấp tại cửa hàng, đợi chuyển phát nhanh hộp/tem vật lý 1-2 ngày thì mất khách mất?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Đưa ngay cơ chế Giao mã khẩn cấp (Điều 3.3 HĐNT 15.10.2026) giải quyết trong 5–15 phút.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Bên em có quy trình Giao mã khẩn cấp tại Điều 3.3 Hợp đồng Nguyên tắc để phục vụ đúng các ca khách chờ lấy máy ngay tại quầy anh nhé. Với Key Online thì anh tự bấm xuất mã trên Portal Mercy Keys chỉ mất 30 giây. Còn với Tem cào Hologram hoặc hộp Microsoft FPP vật lý khi khách cần kích hoạt ngay, ngay sau khi bên mình chuyển khoản thanh toán đủ 100% vào tài khoản công ty và nhắn xác nhận từ SĐT/Email người đại diện, bộ phận kho Mercy Tech sẽ hỗ trợ cào lớp nhũ hoặc mở seal chụp ảnh rõ nét mã Serial/Key gửi qua Zalo cho kỹ thuật cửa hàng kích hoạt giao máy ngay trong 5-15 phút, sau đó đóng gói gửi chuyển phát vỏ hộp/thẻ tem vật lý gốc về cửa hàng mình lưu chứng từ sau ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 34 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">34. "Bộ cài riêng thương hiệu cửa hàng (White-Label) gồm những gì và ký hợp đồng đại lý có bị ép doanh số hàng tháng không?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Nêu chuẩn quy cách White-Label (Tên cửa hàng + Hotline, không gắn logo riêng) và điều kiện duy trì cực thoáng tại Điều 8 HĐNT 15.10.2026.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Khi cửa hàng tham gia từ Gói Đại Lý Tiêu Chuẩn (34.750.000 đ) hoặc Gói Độc Quyền Tuyến (94.300.000 đ), bên em sẽ đóng gói riêng bộ cài đặt White-Label hiển thị trực tiếp Tên cửa hàng và Số Hotline bảo hành của bên mình ngay trên trình cài đặt để khách luôn nhớ quay lại tiệm (lưu ý nhỏ là bộ cài giữ nguyên biểu tượng gốc để đảm bảo chuẩn nhận diện thương hiệu hãng nên không gắn logo riêng). Về Hợp đồng Nguyên tắc thì mình chỉ cần ký khung 1 lần duy nhất, hoàn toàn không ép doanh số hàng tháng; hợp đồng tự động gia hạn mỗi năm chỉ với điều kiện duy trì rất nhẹ là tổng lượng nhập đạt từ 50 Key/năm hoặc phát sinh tối thiểu 01 đơn hàng bất kỳ trong vòng 90 ngày thôi anh nhé."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 35 -->
+        <div class="accordion-item cat-legal">
+          <div class="accordion-header" onclick="toggleAccordion(this)">35. "Đại lý ở xa giao dịch lần đầu rất cẩn trọng, muốn kiểm tra Hóa đơn điện tử trước khi chuyển khoản có được không?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Trình bày quy trình Hóa đơn Nháp 5 bước chuẩn chỉnh của Mercy Tech.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Hoàn toàn được anh nhé, 80% các đại lý mới làm việc từ xa với bên em lần đầu đều kiểm tra qua bước này cho yên tâm. Anh chỉ cần nhắn giúp em Mã số thuế và Email nhận hóa đơn của đơn vị mình, kế toán Mercy Tech sẽ lập ngay bản Hóa đơn GTGT điện tử Nháp đầy đủ tên hàng hóa, số lượng, thành tiền và pháp nhân Công ty TNHH Công nghệ Mercy (MST 0319227767) gửi qua Zalo để anh kiểm tra từng dấu phẩy. Khi anh xác nhận thông tin trên bản nháp đã chuẩn xác và hoàn tất chuyển khoản vào tài khoản Techcombank 98896889 của công ty, kế toán sẽ bấm ký số phát hành ngay bản PDF chính thức gửi Zalo và tự động đẩy bản gốc từ hệ thống Thuế về Email của mình trong 15-30 phút ạ."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 36 -->
+        <div class="accordion-item cat-agency">
+          <div class="accordion-header" onclick="toggleAccordion(this)">36. "Chủ shop máy tính bảo: Khách ráp PC ở tỉnh toàn đòi cài phần mềm chùa miễn phí, chào mua bản quyền ai người ta mua?"</div>
+          <div class="accordion-body">
+            <p><strong>Chiến thuật:</strong> Chuyển hóa tư duy "Không bán máy trần" — biến rủi ro bảo hành crack/Ransomware thành biên lãi ròng 500k–650k/máy.</p>
+            <div class="script-box">
+              <div class="script-header"><span class="script-label">Câu Trả Lời Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+              <div class="script-text">"Thực ra trước đây nhiều anh em chủ shop cũng nghĩ vậy, nhưng giờ các bản crack hay tool kích hoạt trôi nổi dính mã độc tống tiền Ransomware khóa sạch dữ liệu kế toán của khách rất nhiều, lúc máy lỗi khách lại bê ra bắt đền cửa hàng bảo hành vặt vừa mất công vừa mất uy tín anh ạ. Bây giờ mỗi dàn PC hay Laptop bán ra cho công ty, kế toán, giáo viên, anh đừng bán máy trần mà tư vấn kẹp sẵn luôn thẻ cào bản quyền OnlyOffice vĩnh viễn dán ngay lên vỏ máy: khách chỉ bỏ thêm vài trăm nghìn (rẻ bằng 1/6 Microsoft) mà yên tâm sạch virus, có chứng nhận bản quyền đàng hoàng, còn cửa hàng mình chỉ mất 2 phút cài đặt đã đút túi thêm 500.000 - 650.000 đ tiền lãi ròng, ngang ngửa tiền lãi ráp cả bộ thùng máy luôn anh nhé."</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -2540,6 +3018,46 @@
           <div class="script-box">
             <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
             <div class="script-text">"Dạ vâng anh, em biết anh đang bận nên em xin phép không làm phiền anh lâu ạ. Em sẽ kết nối Zalo qua số điện thoại này của anh để gửi trước bản Báo giá chính thức và link dùng thử 7 ngày để lúc rảnh anh mở xem tiện hơn nhé anh. Em cảm ơn anh nhiều ạ!"</div>
+          </div>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Tình Huống E</span>
+          <h3 class="card-title">Gặp Trực Tiếp Chủ Cửa Hàng Máy Tính / Chủ Shop PC - Laptop</h3>
+          <p class="card-desc">Mục tiêu: Trò chuyện thực tế như người đồng hành kiếm tiền; đánh vào biên lãi ròng 32,5 triệu gói 50 key, điểm hòa vốn 10 máy và chính sách Không áp doanh số.</p>
+          <div class="script-box">
+            <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+            <div class="script-text">"Em chào anh [Tên], anh đang ở ngoài tiệm máy tính mình đó hả anh? Em bên đầu mối phân phối bản quyền OnlyOffice tối ưu bởi Mercy Tech cho anh em cửa hàng PC/Laptop đây anh. Đợt này các công ty với trường học quanh khu mình tìm mua phần mềm văn phòng hợp lệ thay bản crack nhiều lắm mà bộ Microsoft 4,5 triệu chát quá họ ngại mua. Bên em đang cấp sỉ mã OnlyOffice vĩnh viễn cho các shop vốn chỉ 149k/máy, không ép doanh số tháng, cửa hàng bán kèm máy thu 699k-799k là bỏ túi thêm hơn 500k tiền lãi mỗi máy ngon ơ, gói 50 key chỉ bán 10 máy là thu đủ vốn gốc rồi. Anh dùng Zalo số này đúng không, em gửi bảng giá sỉ màu cam qua anh em mình ngó thử nhé."</div>
+          </div>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Tình Huống F</span>
+          <h3 class="card-title">Gặp Nhân Viên Kỹ Thuật / Thợ Cài Máy Nghe Hộ Chủ Cửa Hàng</h3>
+          <p class="card-desc">Mục tiêu: Không báo lộ sâu chính sách vốn sỉ cho nhân viên; tạo thiện cảm kỹ thuật cài siêu nhanh 30 giây đỡ cực tìm crack lỗi font rồi xin kết nối đúng số Zalo anh chủ.</p>
+          <div class="script-box">
+            <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+            <div class="script-text">"Chào bạn, mình gọi từ bộ phận phân phối phần mềm Mercy Tech. Bên mình đang cấp bộ cài phần mềm văn phòng OnlyOffice tối ưu sẵn hơn 1.000 font tiếng Việt và bản quyền vĩnh viễn cho các cửa hàng máy tính, anh em kỹ thuật cài cho khách chỉ mất 30 giây là sạch đẹp, đỡ mất công đi tìm thuốc crack hay bị lỗi nhả key phải bảo hành lại. Hiện tại anh chủ cửa hàng mình có ở tiệm không bạn cho mình gặp 1 phút, hoặc bạn cho mình xin số Zalo của anh chủ để mình gửi hồ sơ chính sách đại lý và bộ cài Demo 7 ngày cho anh ấy duyệt nhé, cảm ơn bạn nhiều nha."</div>
+          </div>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Tình Huống G</span>
+          <h3 class="card-title">Gặp Hiệu Trưởng / Tổ Trưởng Bộ Môn Toán - Lý - Hóa - Tin Học (Trường Học)</h3>
+          <p class="card-desc">Mục tiêu: Đánh trúng khả năng hỗ trợ trọn vẹn MathType &amp; LaTeX, chuẩn mở chương trình SGK Tin học mới và mức giá dự án giáo dục từ 50 máy chỉ 499.000 đ/máy.</p>
+          <div class="script-box">
+            <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+            <div class="script-text">"Em chào thầy/cô ạ, em bên bộ phận giải pháp phần mềm giáo dục Mercy Tech. Bên em đang triển khai bản quyền vĩnh viễn OnlyOffice tối ưu bởi Mercy Tech cho phòng máy nhà trường và máy tính giáo viên, tương thích mượt với bộ công thức Toán - Lý - Hóa, MathType và LaTeX để thầy cô soạn giáo án, đề thi mà không bị nhảy khung hay lỗi phông chữ cũ, đồng thời rất sát với định hướng phần mềm văn phòng chuẩn mở trong chương trình Tin học phổ thông. Chi phí dự án từ 50 máy chỉ 499.000 đ/máy vĩnh viễn kèm đầy đủ hóa đơn hợp đồng thanh quyết toán kho bạc. Thầy/cô cho phép em kết nối Zalo gửi bản Báo giá dự toán và hỗ trợ cài thử bản Demo 7 ngày lên 1-2 máy bộ môn để các thầy cô kiểm tra thực tế nhé ạ."</div>
+          </div>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">Tình Huống H</span>
+          <h3 class="card-title">Gặp Giám Đốc Doanh Nghiệp Có Phòng Kỹ Thuật / Kế Toán Chạy File Macro VBA Nặng</h3>
+          <p class="card-desc">Mục tiêu: Tạo niềm tin bằng sự công tâm (Smart Honesty) và chốt Mô hình Phối hợp Hybrid tiết kiệm 70–80% tổng chi phí.</p>
+          <div class="script-box">
+            <div class="script-header"><span class="script-label">Câu Thoại Chuẩn</span><button class="copy-btn" onclick="copyScript(this)">Sao chép</button></div>
+            <div class="script-text">"Em chào anh [Tên], qua trao đổi em nắm được công ty mình có khoảng [X] máy văn phòng nhưng riêng phòng kỹ thuật/kế toán trưởng có vài máy chạy file Excel viết lệnh Macro VBA đặc thù. Để hiệu quả và tiết kiệm nhất cho công ty, em đề xuất phương án Hybrid rất thực tế: khoảng 80% dàn máy hành chính, nhân sự, kinh doanh mình trang bị OnlyOffice tối ưu bởi Mercy Tech bản quyền vĩnh viễn chỉ 499k-699k/máy, còn đúng 1-2 máy chạy Macro VBA chuyên sâu thì dùng bộ Microsoft Office Home &amp; Business 2024 chính hãng 4,5 triệu bên em cung cấp luôn. Như vậy toàn công ty đều có hóa đơn bản quyền hợp pháp khi thanh tra mà tổng chi phí giảm được hơn 70%. Anh cho em kết nối UltraView 2 phút cài Demo 7 ngày test trực tiếp các file của công ty mình trước nhé anh."</div>
           </div>
         </div>
       </div>
@@ -2601,6 +3119,83 @@
             </tr>
           </tbody>
         </table>
+        </div>
+      </div>
+
+      <!-- SOP 1: 7-STEP ULTRAVIEWER DEMO & 2 MANDATORY SCREENSHOTS -->
+      <div class="apple-card" style="margin-top: 18px;">
+        <span class="card-badge">SOP Vận Hành #1 — Chìa Khóa Chốt 90% Đơn Hàng</span>
+        <h3 class="card-title">Quy Trình 7 Bước Cài Đặt Demo 7 Ngày Qua UltraViewer (2–3 Phút) &amp; Bắt Buộc Chụp 02 Ảnh Nghiệm Thu</h3>
+        <p class="card-desc">90% khách hàng chốt hợp đồng đại lý và doanh nghiệp là những người ĐÃ ĐƯỢC CÀI DEMO. Sale tự thực hiện trực tiếp ngay trong cuộc tư vấn mà không cần chờ kỹ thuật:</p>
+        <div class="rule-item"><span>• <strong>Bước 1 — Mở trang tải chính thức:</strong> Trên trình duyệt máy khách qua UltraViewer, truy cập <code>onlyofficevietnam.com</code>.</span></div>
+        <div class="rule-item"><span>• <strong>Bước 2 — Tải &amp; Chạy quyền thực thi:</strong> Nhấn <strong>"Tải xuống bản dùng thử ngay"</strong> → Mở file cài đặt vừa tải → Nếu Windows hiển thị cảnh báo bảo mật thì nhấn <code>More info</code> → chọn <code>Run anyway</code>.</span></div>
+        <div class="rule-item"><span>• <strong>Bước 3 — Cài đặt chế độ Trial không nhập key:</strong> <strong>Để trống hoàn toàn ô nhập mã Key</strong> → bấm nút <code>Cài đặt</code> (hệ thống tự động bung bộ cài và hơn 1.000 font tiếng Việt trong khoảng 30 giây).</span></div>
+        <div class="rule-item"><span>• <strong>Bước 4 — Mở thử file thực tế:</strong> Khởi động ứng dụng OnlyOffice và mở ngay 1 file Word/Excel tiếng Việt có sẵn trên máy khách để khách thấy tận mắt độ mượt.</span></div>
+        <div class="rule-item"><span>• <strong>Bước 5 — Kỷ luật chụp 02 ảnh bàn giao bắt buộc gửi vào khung chat Pancake/Zalo:</strong> (1) <strong>Ảnh nghiệm thu 1:</strong> Khung Giấy chứng nhận bản quyền mẫu hiển thị rõ dòng trạng thái <code>Demo 7 ngày Trial</code>; (2) <strong>Ảnh nghiệm thu 2:</strong> Vào mục <code>About</code> (Thông tin phần mềm) chụp rõ dòng thời hạn dùng thử còn lại trên máy khách.</span></div>
+        <div class="rule-item"><span>• <strong>Bước 6 — Gắn Tag &amp; Gửi Bộ 3 Tài Liệu:</strong> Thoát UltraViewer, gắn ngay thẻ tag Pancake <code>Đã gửi demo</code> / <code>Khách tiềm năng</code>, gửi kèm Bộ 3 Tài liệu (Chính sách 15.10 PDF + Bảng giá sỉ 30.10 PNG + Hợp đồng Nguyên tắc mẫu 15.10 PDF).</span></div>
+        <div class="rule-item"><span>• <strong>Bước 7 — Nhịp Follow-up chốt đơn:</strong> Sau 1 – 3 ngày trải nghiệm, chủ động gọi/nhắn hỏi thăm cảm nhận và đề xuất chốt Gói Đại lý 50 Key (7.450.000 đ) hoặc Gói trải nghiệm 5 Key (1.495.000 đ).</span></div>
+      </div>
+
+      <!-- SOP 2 & SOP 3 GRID -->
+      <div class="grid-2" style="margin-top: 18px;">
+        <div class="apple-card">
+          <span class="card-badge">SOP Vận Hành #2 — Pháp Lý Thu Tiền</span>
+          <h3 class="card-title">Quy Trình 5 Bước Xuất Hóa Đơn GTGT Điện Tử Nháp &amp; Bắn Ảnh Bill Doanh Số</h3>
+          <p class="card-desc">Tạo niềm tin tuyệt đối cho đại lý và doanh nghiệp giao dịch từ xa lần đầu:</p>
+          <div class="rule-item"><span>• <strong>Bước 1:</strong> Xin chuẩn 2 thông tin từ khách hàng/đại lý: <strong>Mã số thuế (MST)</strong> và <strong>Email nhận hóa đơn điện tử</strong>.</span></div>
+          <div class="rule-item"><span>• <strong>Bước 2:</strong> Gửi yêu cầu lên nhóm nội bộ theo đúng cú pháp: <code>[Mã số thuế] + [Tên sản phẩm chuẩn hóa đơn / Gói đăng ký + Số lượng] + [Tổng giá tiền]</code> để Quản lý / Kế toán lập file <strong>Hóa đơn Nháp</strong>.</span></div>
+          <div class="rule-item"><span>• <strong>Bước 3:</strong> Gửi bản Hóa đơn Nháp qua Zalo để khách kiểm tra từng chi tiết tên đơn vị, MST, địa chỉ và mặt hàng trước khi ký số.</span></div>
+          <div class="rule-item"><span>• <strong>Bước 4:</strong> Khách xác nhận chuẩn và chuyển khoản 100% vào STK <strong>98896889 — Techcombank — CÔNG TY TNHH CÔNG NGHỆ MERCY</strong>; kế toán phát hành bản PDF chính thức gửi Zalo và hệ thống Thuế tự động đẩy bản gốc về Email khách sau 15–30 phút.</span></div>
+          <div class="rule-item"><span>• <strong>Bước 5 (2 thao tác bắt buộc ngay khi nhận Bill):</strong> (1) Trên Pancake đổi ngay thẻ sang <strong><code>ĐÃ THANH TOÁN</code></strong> để Paid Shield ngắt hoàn toàn Bot Re-chat; (2) Chụp màn hình hóa đơn kèm biên lai chuyển khoản dưới <strong>dạng HÌNH ẢNH</strong> (không gửi file PDF) bắn vào nhóm Zalo <code>Doanh Số MERCY TECH</code> để Bot AI ghi nhận hoa hồng.</span></div>
+        </div>
+
+        <div class="apple-card">
+          <span class="card-badge">SOP Vận Hành #3 — Bàn Giao Sau Chốt Trong 05 Phút</span>
+          <h3 class="card-title">Portal Mercy Keys, Nhóm Hỗ Trợ Kỹ Thuật Kiên &amp; Chứng Nhận Khung Kính</h3>
+          <p class="card-desc">Bàn giao chuyên nghiệp trong 05 phút đầu tiên sau thanh toán để giữ chân đại lý trọn đời:</p>
+          <div class="rule-item"><span>• <strong>Khởi tạo tài khoản Portal Mercy Keys:</strong> Quản lý tạo tài khoản đại lý theo Email khách hàng (quản lý tổng key đã nạp, kho mã key, trạng thái kích hoạt và ô ghi chú tên/SĐT khách lẻ dưới từng mã key phục vụ bảo hành).</span></div>
+          <div class="rule-item"><span>• <strong>Lập nhóm Zalo Hỗ trợ 1-kèm-1 đúng cú pháp:</strong> <code>[Tên Cửa Hàng / Tên Khách] + Hỗ trợ OnlyOffice + MERCY TECH</code> gồm: Đại diện khách hàng + Sale phụ trách + Quản lý + Kỹ thuật viên (<strong>Kiên</strong>).</span></div>
+          <div class="rule-item"><span>• <strong>Tin nhắn bàn giao chuẩn trong nhóm:</strong> <em>"Nhờ Kiên cấp [Số lượng] key vào tài khoản đại lý [email@...] và hỗ trợ kỹ thuật cho anh [Tên khách] giúp mình nhé"</em> (SLA Kỹ thuật Kiên phản hồi và cấp kho key &le; 15 phút).</span></div>
+          <div class="rule-item"><span>• <strong>Hợp đồng &amp; Giấy Chứng Nhận Đại Lý:</strong> Ký Hợp đồng Nguyên tắc Đại lý (15.10.2026) qua E-Contract hoặc bản cứng mộc đỏ. Gói 50 Key gửi file Chứng nhận PDF/JPG nét cao để đại lý in trưng bày; riêng <strong>Gói Tiêu Chuẩn (34.750.000 đ)</strong> và <strong>Gói Độc Quyền Tuyến (94.300.000 đ)</strong> công ty in màu cao cấp <strong>đóng KHUNG KÍNH trang trọng</strong> gửi chuyển phát tận nơi.</span></div>
+        </div>
+      </div>
+
+      <!-- SOP 4: INTERNAL CHANNELS, 3 CHECK-INS & 15-MIN SLA -->
+      <div class="apple-card" style="margin-top: 18px;">
+        <span class="card-badge">SOP Vận Hành #4 — Kỷ Luật Hệ Thống Nội Bộ</span>
+        <h3 class="card-title">Ma Trận Phân Luồng Kênh Nội Bộ (Zalo &amp; Telegram), Điểm Danh 3 Mốc &amp; SLA 15 Phút</h3>
+        <p class="card-desc">Sử dụng đúng chức năng từng nhóm tác nghiệp để hệ thống AI tự động chia lead và tính lương thưởng chính xác:</p>
+        <div style="overflow-x: auto; margin-top: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <table class="price-table-light" style="margin: 0; border: none; width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 32%; padding: 12px 16px;">Kênh / Nhóm Tác Nghiệp</th>
+                <th style="padding: 12px 16px;">Quy Định Sử Dụng &amp; Kỷ Luật Bắt Buộc</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Telegram Điểm Danh &amp; Chia Lead</strong></td>
+                <td>• <strong>3 mốc điểm danh bắt buộc mỗi ngày:</strong> <code>08:00</code> Sáng (Vào ca) → <code>13:30</code> Chiều (Đầu ca chiều) → <code>17:30</code> Chiều (Tan ca). Điểm danh đúng giờ hệ thống mới mở cổng chia lead.<br>• <strong>SLA Nhận Lead Nóng 15 Phút:</strong> Khi thẻ Lead nóng đổ về, Sale có tối đa <strong>15 phút</strong> để bấm nhận; quá 15 phút hệ thống tự động thu hồi xoay tua cho nhân sự tiếp theo.<br>• <strong>Lead Nguội B2B Cold &amp; Smart Re-call:</strong> Bắn tự động theo nhịp trong giờ hành chính; bấm cập nhật trạng thái trực tiếp trên thẻ Telegram (Đã gọi / Hẹn gọi lại / Thuê bao / Không nhu cầu) để đồng bộ 2 chiều lên Google Sheet CRM.</td>
+              </tr>
+              <tr>
+                <td><strong>Nhóm Zalo <code>Doanh Số MERCY TECH</code></strong></td>
+                <td><strong>CHỈ DÙNG ĐỂ BẮN ẢNH BILL DOANH SỐ</strong> theo đúng cú pháp. Tuyệt đối không chat trao đổi nghiệp vụ bằng chữ trong nhóm này để Bot AI quét doanh số tính hoa hồng chính xác.</td>
+              </tr>
+              <tr>
+                <td><strong>Nhóm Zalo <code>Kỹ Thuật MERCY TECH</code></strong></td>
+                <td>Phối hợp cùng đội Kỹ thuật (<strong>Kiên</strong>) và Quản lý xử lý các vấn đề lỗi phần mềm, hỗ trợ UltraView ca khó, cấp mã kích hoạt phát sinh.</td>
+              </tr>
+              <tr>
+                <td><strong>Nhóm Zalo <code>Team Sale</code></strong></td>
+                <td>Trao đổi kịch bản bán hàng hàng ngày, xin kinh nghiệm xử lý ca khó, chia sẻ tình huống chốt deal thực chiến (không có kỹ thuật trong nhóm).</td>
+              </tr>
+              <tr>
+                <td><strong>Luồng Cộng Tác Viên (<code>CTV</code>)</strong></td>
+                <td>Mọi trường hợp khách đăng ký làm Cộng tác viên giới thiệu hưởng hoa hồng, Sale ghi nhận thông tin và chuyển trực tiếp cho Quản lý phụ trách điều phối.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -2803,12 +3398,22 @@
       };
     }
 
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     var PLAYBOOK_CATALOG = [
       {
         id: 'oo-main',
-        group: 'ONLYOFFICE Vĩnh Viễn',
-        name: 'Bản quyền phần mềm văn phòng ONLYOFFICE tối ưu bởi Mercy Tech (Khóa Mainboard / UUID theo máy)',
-        shortName: 'ONLYOFFICE Vĩnh Viễn (799k / 699k / 499k | Sỉ 149k/129k/99k)',
+        group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
+        name: 'Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech',
+        shortName: 'OnlyOffice Tối Ưu Mercy Tech — Key Online (799k / 699k / 499k | Sỉ 149k/129k/99k)',
         unit: 'Mã',
         getPrice: function(qty, isDealer) {
           if (isDealer) {
@@ -2824,10 +3429,87 @@
         defaultQtyRetail: 5
       },
       {
+        id: 'oo-scratch',
+        group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
+        name: 'Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)',
+        shortName: 'OnlyOffice Tối Ưu Mercy Tech — Dạng Tem Cào Vĩnh Viễn (999.000 đ | Sỉ 299k/249k/149k)',
+        unit: 'Tem',
+        getPrice: function(qty, isDealer) {
+          if (isDealer) {
+            if (qty >= 500) return 149000;
+            if (qty >= 200) return 249000;
+            return 299000;
+          }
+          return 999000;
+        },
+        defaultQtyDealer: 50,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'win-fpp-usb',
+        group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
+        name: 'Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)',
+        shortName: 'Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163) - 2.900.000 đ',
+        unit: 'Hộp',
+        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 2800000 : 2900000; },
+        defaultQtyDealer: 2,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'office-2024-box',
+        group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
+        name: 'Microsoft Office Home & Business 2024 English APAC EM MEDIALess SKU EP2-06630',
+        shortName: 'Microsoft Office H&B 2024 English APAC EM MEDIALess (EP2-06630) - 4.500.000 đ',
+        unit: 'Bộ',
+        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 4400000 : 4500000; },
+        defaultQtyDealer: 2,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'oo-pkg-trial5',
+        group: '2. Gói Đại Lý & Combo Doanh Nghiệp',
+        name: 'Gói Trải Nghiệm Đại Lý Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (05 Key Online)',
+        shortName: 'Gói Trải Nghiệm Đại Lý 05 Key Online OnlyOffice (299k/key) - 1.495.000 đ',
+        unit: 'Gói',
+        getPrice: function(qty, isDealer) { return 1495000; },
+        defaultQtyDealer: 1,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'oo-pkg-std',
+        group: '2. Gói Đại Lý & Combo Doanh Nghiệp',
+        name: 'Gói Đại Lý Tiêu Chuẩn phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (200 Key Online + 50 Tem cào vật lý)',
+        shortName: 'Gói Đại Lý Tiêu Chuẩn OnlyOffice (200 Key Online + 50 Tem Cào) - 34.750.000 đ',
+        unit: 'Gói',
+        getPrice: function(qty, isDealer) { return 34750000; },
+        defaultQtyDealer: 1,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'oo-pkg-vip',
+        group: '2. Gói Đại Lý & Combo Doanh Nghiệp',
+        name: 'Gói Đại Lý Độc Quyền Tuyến phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (200 Key Online + 500 Tem cào vật lý)',
+        shortName: 'Gói Đại Lý Độc Quyền Tuyến VIP (200 Key Online + 500 Tem Cào) - 94.300.000 đ',
+        unit: 'Gói',
+        getPrice: function(qty, isDealer) { return 94300000; },
+        defaultQtyDealer: 1,
+        defaultQtyRetail: 1
+      },
+      {
+        id: 'combo-win-fpp-oo',
+        group: '2. Gói Đại Lý & Combo Doanh Nghiệp',
+        name: 'Gói Combo Doanh Nghiệp Chuẩn (Phần mềm Win Pro FPP 11 USB HAV-00163 + Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech)',
+        shortName: 'Combo Doanh Nghiệp Chuẩn (Win Pro FPP USB HAV-00163 + OnlyOffice) - 3.599.000 đ',
+        unit: 'Máy',
+        getPrice: function(qty, isDealer) { return isDealer ? 3499000 : 3599000; },
+        defaultQtyDealer: 10,
+        defaultQtyRetail: 5
+      },
+      {
         id: 'combo-win-oo',
-        group: 'Combo Tiết Kiệm Doanh Nghiệp',
-        name: 'Gói Combo Doanh Nghiệp Siêu Tiết Kiệm (Windows 11 Pro Tem COA 7 Màu + ONLYOFFICE Vĩnh Viễn)',
-        shortName: 'Combo Doanh Nghiệp (Win 11 Pro Tem COA + ONLYOFFICE) - 1.549.000 đ',
+        group: '2. Gói Đại Lý & Combo Doanh Nghiệp',
+        name: 'Gói Combo Doanh Nghiệp Siêu Tiết Kiệm (Windows 11 Pro Tem COA 7 Màu + Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech)',
+        shortName: 'Combo Tiết Kiệm (Win 11 Pro Tem COA + OnlyOffice) - 1.549.000 đ',
         unit: 'Máy',
         getPrice: function(qty, isDealer) { return isDealer ? 1350000 : 1549000; },
         defaultQtyDealer: 10,
@@ -2835,7 +3517,7 @@
       },
       {
         id: 'win11-coa',
-        group: 'Microsoft Windows',
+        group: '3. Microsoft Windows (Các dòng bổ trợ)',
         name: 'Phần mềm Microsoft Windows 11 Pro 64-Bit DSP OEI (Sticker/Tem COA 7 màu có cào bảo mật)',
         shortName: 'Win 11 Pro 64-Bit DSP OEI (Tem COA 7 màu dán case) - 850.000 đ',
         unit: 'Bộ',
@@ -2845,7 +3527,7 @@
       },
       {
         id: 'win11-dvd',
-        group: 'Microsoft Windows',
+        group: '3. Microsoft Windows (Các dòng bổ trợ)',
         name: 'Phần mềm Microsoft Windows 11 Pro DSP OEI DVD Full Box (Đĩa DVD + Thẻ Key cào + Hải quan)',
         shortName: 'Win 11 Pro DSP DVD Full Box (Đĩa DVD + Hải quan CO/CQ) - 1.300.000 đ',
         unit: 'Bộ',
@@ -2855,7 +3537,7 @@
       },
       {
         id: 'win11-esd',
-        group: 'Microsoft Windows',
+        group: '3. Microsoft Windows (Các dòng bổ trợ)',
         name: 'Phần mềm Microsoft Windows 11 Pro 64-Bit Online Download ESD (FQC-10572, Gắn TK Microsoft)',
         shortName: 'Win 11 Pro 64-Bit Online ESD (Gán TK Microsoft - Đổi máy) - 1.200.000 đ',
         unit: 'Key',
@@ -2864,18 +3546,18 @@
         defaultQtyRetail: 1
       },
       {
-        id: 'win-fpp-usb',
-        group: 'Microsoft Windows',
-        name: 'Phần mềm Microsoft Windows Pro FPP 10/11 64-Bit English International USB (Hộp USB 3.0)',
-        shortName: 'Windows Pro 10/11 USB FPP (Hộp USB 3.0 Quốc tế - Đổi máy) - 2.900.000 đ',
-        unit: 'Hộp',
-        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 2800000 : 2900000; },
+        id: 'office-2024-esd',
+        group: '4. Microsoft Office (Các dòng bổ trợ)',
+        name: 'Phần mềm Microsoft Office Home & Business 2024 Retail Online ESD (EP2-06604, Đổi được máy)',
+        shortName: 'Office Home & Business 2024 Key Online ESD (Windows & Mac) - 3.700.000 đ',
+        unit: 'Key',
+        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 3600000 : 3700000; },
         defaultQtyDealer: 2,
         defaultQtyRetail: 1
       },
       {
         id: 'office-2021-esd',
-        group: 'Microsoft Office',
+        group: '4. Microsoft Office (Các dòng bổ trợ)',
         name: 'Phần mềm Microsoft Office Professional Plus 2021 Key Online (Word, Excel, PowerPoint, Outlook, Access)',
         shortName: 'Office Professional Plus 2021 Key Online (Word, Excel, PP, Outlook) - 2.200.000 đ',
         unit: 'Key',
@@ -2885,7 +3567,7 @@
       },
       {
         id: 'office-2021-dvd',
-        group: 'Microsoft Office',
+        group: '4. Microsoft Office (Các dòng bổ trợ)',
         name: 'Phần mềm Microsoft Office Professional Plus 2021 Full Box DVD (Hộp + Đĩa + Thẻ cào + Hải quan)',
         shortName: 'Office Professional Plus 2021 Full Box DVD (Hộp đĩa DVD + Hải quan) - 2.990.000 đ',
         unit: 'Hộp',
@@ -2894,28 +3576,8 @@
         defaultQtyRetail: 1
       },
       {
-        id: 'office-2024-esd',
-        group: 'Microsoft Office',
-        name: 'Phần mềm Microsoft Office Home & Business 2024 Retail Online ESD (EP2-06604, Đổi được máy)',
-        shortName: 'Office Home & Business 2024 Key Online ESD (Windows & Mac) - 3.700.000 đ',
-        unit: 'Key',
-        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 3600000 : 3700000; },
-        defaultQtyDealer: 2,
-        defaultQtyRetail: 1
-      },
-      {
-        id: 'office-2024-box',
-        group: 'Microsoft Office',
-        name: 'Phần mềm Microsoft Office Home & Business 2024 Full Box (Hộp cứng thương mại)',
-        shortName: 'Office Home & Business 2024 Full Box (Hộp cứng thương mại) - 4.500.000 đ',
-        unit: 'Hộp',
-        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 4400000 : 4500000; },
-        defaultQtyDealer: 2,
-        defaultQtyRetail: 1
-      },
-      {
         id: 'win-server-2019',
-        group: 'Windows Server & SQL',
+        group: '5. Windows Server & SQL Server',
         name: 'Phần mềm Microsoft Windows Server Standard 2019 Full Box DVD (16 Core)',
         shortName: 'Windows Server Standard 2019 Full Box DVD (16 Core) - 8.700.000 đ',
         unit: 'Bộ',
@@ -2925,7 +3587,7 @@
       },
       {
         id: 'win-server-2022',
-        group: 'Windows Server & SQL',
+        group: '5. Windows Server & SQL Server',
         name: 'Phần mềm Microsoft Windows Server Standard 2022 Full Box DVD (16 Core)',
         shortName: 'Windows Server Standard 2022 Full Box DVD (16 Core) - 9.700.000 đ',
         unit: 'Bộ',
@@ -2935,7 +3597,7 @@
       },
       {
         id: 'win-server-2025-16c',
-        group: 'Windows Server & SQL',
+        group: '5. Windows Server & SQL Server',
         name: 'Phần mềm Microsoft Windows Server Standard 2025 Full Box DVD (16 Core)',
         shortName: 'Windows Server Standard 2025 Full Box DVD (16 Core) - 10.700.000 đ',
         unit: 'Bộ',
@@ -2945,7 +3607,7 @@
       },
       {
         id: 'sql-server-2019',
-        group: 'Windows Server & SQL',
+        group: '5. Windows Server & SQL Server',
         name: 'Phần mềm Microsoft SQL Server Standard 2019 Full Box DVD',
         shortName: 'Microsoft SQL Server Standard 2019 Full Box DVD - 8.900.000 đ',
         unit: 'Bộ',
@@ -2955,7 +3617,7 @@
       },
       {
         id: 'sql-server-2022',
-        group: 'Windows Server & SQL',
+        group: '5. Windows Server & SQL Server',
         name: 'Phần mềm Microsoft SQL Server Standard 2022 Full Box DVD',
         shortName: 'Microsoft SQL Server Standard 2022 Full Box DVD - 9.900.000 đ',
         unit: 'Bộ',
@@ -2965,7 +3627,7 @@
       },
       {
         id: 'm365-biz-std',
-        group: 'Microsoft 365 (1 Năm)',
+        group: '6. Microsoft 365 (1 Năm)',
         name: 'Microsoft 365 Business Standard 1 Năm (1 User / 5 Thiết Bị / 1TB OneDrive / Teams / Exchange)',
         shortName: 'Microsoft 365 Business Standard 1 Năm (1 User / 5 Thiết Bị / 1TB Cloud) - 4.400.000 đ',
         unit: 'Key',
@@ -2975,7 +3637,7 @@
       },
       {
         id: 'm365-fam-online',
-        group: 'Microsoft 365 (1 Năm)',
+        group: '6. Microsoft 365 (1 Năm)',
         name: 'Microsoft 365 Family Key Online 1 Năm (6 User / 6TB OneDrive)',
         shortName: 'Microsoft 365 Family Key Online 1 Năm (6 User / 6TB Cloud) - 2.350.000 đ',
         unit: 'Key',
@@ -2985,7 +3647,7 @@
       },
       {
         id: 'm365-per-online',
-        group: 'Microsoft 365 (1 Năm)',
+        group: '6. Microsoft 365 (1 Năm)',
         name: 'Microsoft 365 Personal Key Online 1 Năm (1 User / 1TB OneDrive)',
         shortName: 'Microsoft 365 Personal Key Online 1 Năm (1 User / 1TB Cloud) - 2.000.000 đ',
         unit: 'Key',
@@ -2999,11 +3661,13 @@
     var currentQuoteRows = [
       {
         productId: 'oo-main',
-        name: 'Bản quyền phần mềm văn phòng ONLYOFFICE tối ưu bởi Mercy Tech (Khóa Mainboard / UUID theo máy)',
+        name: 'Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech',
         unit: 'Mã',
         qty: 5,
         unitPrice: 699000,
-        totalPrice: 3495000
+        totalPrice: 3495000,
+        isCustomName: false,
+        isCustomPrice: false
       }
     ];
 
@@ -3119,6 +3783,10 @@
 
       var isDealer = type === 'dealer';
       currentQuoteRows.forEach(function(row) {
+        if (row.productId === 'custom') {
+          row.totalPrice = row.qty * row.unitPrice;
+          return;
+        }
         var prod = null;
         for (var i = 0; i < PLAYBOOK_CATALOG.length; i++) {
           if (PLAYBOOK_CATALOG[i].id === row.productId) {
@@ -3133,6 +3801,10 @@
         } else {
           row.qty = prod.defaultQtyRetail;
         }
+        if (!row.isCustomName) {
+          row.name = prod.name;
+        }
+        row.isCustomPrice = false;
         row.unitPrice = prod.getPrice(row.qty, isDealer);
         row.totalPrice = row.qty * row.unitPrice;
       });
@@ -3153,11 +3825,35 @@
         unit: prod.unit,
         qty: qty,
         unitPrice: unitPrice,
-        totalPrice: qty * unitPrice
+        totalPrice: qty * unitPrice,
+        isCustomName: false,
+        isCustomPrice: false
       });
 
       renderQuoteInputRows();
       renderA4Sheet();
+    }
+
+    function addCustomQuoteItemRow() {
+      currentQuoteRows.push({
+        productId: 'custom',
+        name: '',
+        unit: 'Bộ',
+        qty: 1,
+        unitPrice: 0,
+        totalPrice: 0,
+        isCustomName: true,
+        isCustomPrice: true
+      });
+
+      renderQuoteInputRows();
+      renderA4Sheet();
+
+      var newIdx = currentQuoteRows.length - 1;
+      setTimeout(function() {
+        var nameInput = document.getElementById('rowNameInput_' + newIdx);
+        if (nameInput) nameInput.focus();
+      }, 20);
     }
 
     function removeQuoteItemRow(idx) {
@@ -3171,6 +3867,28 @@
     }
 
     function onProductSelectChange(idx, newProdId) {
+      var row = currentQuoteRows[idx];
+      if (!row) return;
+
+      if (newProdId === 'custom') {
+        row.productId = 'custom';
+        row.name = '';
+        row.unit = 'Bộ';
+        row.qty = 1;
+        row.unitPrice = 0;
+        row.totalPrice = 0;
+        row.isCustomName = true;
+        row.isCustomPrice = true;
+
+        renderQuoteInputRows();
+        renderA4Sheet();
+        setTimeout(function() {
+          var nameInput = document.getElementById('rowNameInput_' + idx);
+          if (nameInput) nameInput.focus();
+        }, 20);
+        return;
+      }
+
       var prod = null;
       for (var i = 0; i < PLAYBOOK_CATALOG.length; i++) {
         if (PLAYBOOK_CATALOG[i].id === newProdId) {
@@ -3181,18 +3899,25 @@
       if (!prod) prod = PLAYBOOK_CATALOG[0];
 
       var isDealer = playbookPartnerType === 'dealer';
-      var row = currentQuoteRows[idx];
 
       row.productId = prod.id;
       row.name = prod.name;
       row.unit = prod.unit;
-      if (isDealer && row.qty < prod.defaultQtyDealer) {
-        row.qty = prod.defaultQtyDealer;
-      }
+      row.qty = isDealer ? prod.defaultQtyDealer : prod.defaultQtyRetail;
       row.unitPrice = prod.getPrice(row.qty, isDealer);
       row.totalPrice = row.qty * row.unitPrice;
+      row.isCustomName = false;
+      row.isCustomPrice = false;
 
       renderQuoteInputRows();
+      renderA4Sheet();
+    }
+
+    function onRowNameInput(idx, val) {
+      var row = currentQuoteRows[idx];
+      if (!row) return;
+      row.name = val;
+      row.isCustomName = true;
       renderA4Sheet();
     }
 
@@ -3203,6 +3928,12 @@
       if (!row) return;
 
       row.qty = qty;
+
+      if (row.productId === 'custom' || row.isCustomPrice === true) {
+        row.totalPrice = qty * row.unitPrice;
+        renderA4Sheet();
+        return;
+      }
 
       var prod = null;
       for (var i = 0; i < PLAYBOOK_CATALOG.length; i++) {
@@ -3243,6 +3974,7 @@
       if (row) {
         row.unitPrice = rawPrice;
         row.totalPrice = row.qty * rawPrice;
+        row.isCustomPrice = true;
       }
 
       var formatted = rawPrice > 0 ? formatVND(rawPrice) : (inputEl.value === '0' ? '0' : '');
@@ -3267,24 +3999,33 @@
 
       var html = '';
       currentQuoteRows.forEach(function(row, idx) {
-        var optGroupsHtml = '';
+        var optGroupsHtml = '<optgroup label="0. Tùy Chỉnh / Tự Nhập">' +
+          '<option value="custom" ' + (row.productId === 'custom' ? 'selected' : '') + '>✏️ Tự nhập tên sản phẩm / hạng mục tùy chỉnh...</option>' +
+        '</optgroup>';
+
         for (var grp in groups) {
-          optGroupsHtml += '<optgroup label="' + grp + '">';
+          optGroupsHtml += '<optgroup label="' + escapeHtml(grp) + '">';
           groups[grp].forEach(function(p) {
-            optGroupsHtml += '<option value="' + p.id + '" ' + (p.id === row.productId ? 'selected' : '') + '>' + p.shortName + '</option>';
+            optGroupsHtml += '<option value="' + p.id + '" ' + (p.id === row.productId ? 'selected' : '') + '>' + escapeHtml(p.shortName) + '</option>';
           });
           optGroupsHtml += '</optgroup>';
         }
 
         html += '<div class="repeater-row">' +
           '<div class="repeater-row-header">' +
-            '<span class="item-num-badge">SẢN PHẨM #' + (idx + 1) + '</span>' +
+            '<span class="item-num-badge">SẢN PHẨM #' + (idx + 1) +
+              (row.productId === 'custom' ? '<span class="custom-item-pill">TỰ NHẬP</span>' : '') +
+            '</span>' +
             (currentQuoteRows.length > 1 ? '<button type="button" class="btn-delete-row" onclick="removeQuoteItemRow(' + idx + ')" title="Xóa dòng">✕</button>' : '') +
           '</div>' +
           '<div class="form-row">' +
-            '<select class="form-select-sm" onchange="onProductSelectChange(' + idx + ', this.value)">' +
+            '<select id="rowProdSelect_' + idx + '" class="form-select-sm" onchange="onProductSelectChange(' + idx + ', this.value)">' +
               optGroupsHtml +
             '</select>' +
+          '</div>' +
+          '<div class="form-row">' +
+            '<label>Tên hiển thị trên Báo giá / Hóa đơn (có thể sửa trực tiếp):</label>' +
+            '<input type="text" id="rowNameInput_' + idx + '" class="form-input-sm" value="' + escapeHtml(row.name) + '" placeholder="Nhập tên sản phẩm / hạng mục hiển thị trên Báo giá..." oninput="onRowNameInput(' + idx + ', this.value)">' +
           '</div>' +
           '<div class="repeater-controls-grid">' +
             '<div class="form-row">' +
@@ -3293,7 +4034,7 @@
             '</div>' +
             '<div class="form-row">' +
               '<label>ĐVT:</label>' +
-              '<input type="text" class="form-input-sm" value="' + row.unit + '" oninput="onRowUnitInput(' + idx + ', this.value)">' +
+              '<input type="text" id="rowUnitInput_' + idx + '" class="form-input-sm" value="' + escapeHtml(row.unit) + '" oninput="onRowUnitInput(' + idx + ', this.value)">' +
             '</div>' +
             '<div class="form-row">' +
               '<label>Đơn Giá (VNĐ):</label>' +
@@ -3363,7 +4104,8 @@
       var itemsList = '';
       currentQuoteRows.forEach(function(item) {
         total += item.totalPrice;
-        itemsList += '\n- ' + item.name + ': SL ' + item.qty + ' ' + item.unit + ' x ' + item.unitPrice.toLocaleString('vi-VN') + ' đ = ' + item.totalPrice.toLocaleString('vi-VN') + ' đ';
+        var displayName = (item.name && item.name.trim()) ? item.name.trim() : '(Chưa nhập tên sản phẩm / hạng mục)';
+        itemsList += '\n- ' + displayName + ': SL ' + item.qty + ' ' + (item.unit || 'Bộ') + ' x ' + item.unitPrice.toLocaleString('vi-VN') + ' đ = ' + item.totalPrice.toLocaleString('vi-VN') + ' đ';
       });
 
       var discEl = document.getElementById('quoteDiscountVal');
@@ -3385,10 +4127,12 @@
       var grandTotal = Math.max(0, total - discountAmount);
 
       var hasOnlyOffice = currentQuoteRows.some(function(item) {
-        return item.name && item.name.toLowerCase().indexOf('onlyoffice') !== -1;
+        var nm = (item.name || '').toLowerCase();
+        return nm.indexOf('onlyoffice') !== -1;
       });
       var hasOther = currentQuoteRows.some(function(item) {
-        return item.name && item.name.toLowerCase().indexOf('onlyoffice') === -1;
+        var nm = (item.name || '').toLowerCase();
+        return nm.indexOf('onlyoffice') === -1;
       });
 
       var text = '';
@@ -3457,7 +4201,7 @@
       // Update Customer Info cleanly
       var a4CustComp = document.getElementById('a4CustCompany');
       if (a4CustComp) {
-        a4CustComp.innerHTML = company ? '<strong>' + company + '</strong>' : '<strong>Quý khách hàng</strong>';
+        a4CustComp.innerHTML = company ? '<strong>' + escapeHtml(company) + '</strong>' : '<strong>Quý khách hàng</strong>';
       }
       
       var repRow = document.getElementById('a4CustRepRow');
@@ -3498,10 +4242,11 @@
       var tableHtml = '';
       currentQuoteRows.forEach(function(item, idx) {
         subtotal += item.totalPrice;
+        var displayName = (item.name && item.name.trim()) ? item.name.trim() : '(Chưa nhập tên sản phẩm / hạng mục)';
         tableHtml += '<tr>' +
           '<td style="text-align: center; font-weight: 700; color: #64748b;">' + (idx + 1) + '</td>' +
-          '<td style="font-weight: 600; color: #0f172a;">' + item.name + '</td>' +
-          '<td style="text-align: center;">' + item.unit + '</td>' +
+          '<td style="font-weight: 600; color: #0f172a;">' + escapeHtml(displayName) + '</td>' +
+          '<td style="text-align: center;">' + escapeHtml(item.unit || '') + '</td>' +
           '<td style="text-align: center; font-weight: 700;">' + item.qty + '</td>' +
           '<td style="text-align: right;">' + item.unitPrice.toLocaleString('vi-VN') + '</td>' +
           '<td style="text-align: right; font-weight: 700;">' + item.totalPrice.toLocaleString('vi-VN') + '</td>' +
@@ -3543,10 +4288,12 @@
 
       // Dynamic Commercial Terms based on products in quote
       var hasOnlyOffice = currentQuoteRows.some(function(item) {
-        return item.name && item.name.toLowerCase().indexOf('onlyoffice') !== -1;
+        var nm = (item.name || '').toLowerCase();
+        return nm.indexOf('onlyoffice') !== -1;
       });
       var hasOther = currentQuoteRows.some(function(item) {
-        return item.name && item.name.toLowerCase().indexOf('onlyoffice') === -1;
+        var nm = (item.name || '').toLowerCase();
+        return nm.indexOf('onlyoffice') === -1;
       });
 
       var termsListEl = document.getElementById('a4TermsList');
@@ -3687,7 +4434,9 @@
           unit: prod.unit,
           qty: qty,
           unitPrice: prod.getPrice(qty, isDealer),
-          totalPrice: qty * prod.getPrice(qty, isDealer)
+          totalPrice: qty * prod.getPrice(qty, isDealer),
+          isCustomName: false,
+          isCustomPrice: false
         }
       ];
 
