@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính Sách Đối Tác Đại Lý & Bảng Giá Sỉ OnlyOffice 2026 - Mercy Tech Global</title>
+  <style>
+    :root {
+      --primary: #0F172A;
+      --primary-light: #1E293B;
+      --accent: #C2410C;
+      --accent-light: #FFF7ED;
+      --accent-border: #FDBA74;
+      --success: #047857;
+      --success-light: #ECFDF5;
+      --success-border: #A7F3D0;
+      --text: #0F172A;
+      --text-muted: #334155;
+      --border: #CBD5E1;
+      --border-dark: #94A3B8;
+      --bg-neutral: #F8FAFC;
+      /* FONT TIÊU CHUẨN VĂN BẢN PHÁP QUY VIỆT NAM (NGHỊ ĐỊNH 30/2020/NĐ-CP) */
+      --font-body: 'Times New Roman', Times, 'Liberation Serif', Cambria, Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #E2E8F0;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      padding: 28px 16px;
+    }
+
+    /* THỂ THỨC IN ẤN TIÊU CHUẨN A4 */
+    @page {
+      size: A4 portrait;
+      margin: 15mm 15mm 15mm 15mm;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #000000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .document-sheet {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        border: none !important;
+      }
+
+      .pricing-table, .two-img-grid, .grid-2col, .comparison-grid, .doc-closing-block, .bank-info-table, .market-context-box, .floor-price-rule-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .section-divider {
+        margin: 20px 0 16px 0 !important;
+      }
+    }
+
+    /* Khung Tờ Văn Bản Dọc Dài Tiêu Chuẩn */
+    .document-sheet {
+      max-width: 840px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 48px 52px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+    }
+
+    /* TOP CORPORATE LETTERHEAD (Chuẩn Nhận Diện Cân Đối 1:1) */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #0F172A;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .letterhead-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .letterhead-brand .brand-logo {
+      height: 32px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .letterhead-brand .logo-divider {
+      color: #94A3B8;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .letterhead-brand .partner-logo {
+      height: 26px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .letterhead-sub {
+      text-align: right;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .letterhead-sub .comp-legal-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      margin-bottom: 2px;
+    }
+
+    .letterhead-sub .comp-meta-text {
+      font-size: 12px;
+      color: #475569;
+    }
+
+    /* QUỐC HIỆU CĂN GIỮA CHUẨN THỂ THỨC VĂN BẢN */
+    .national-header {
+      text-align: center;
+      margin: 14px 0 18px 0;
+    }
+
+    .national-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    .national-motto {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .national-line {
+      width: 120px;
+      height: 1.5px;
+      background: var(--primary);
+      margin: 4px auto 0 auto;
+    }
+
+    .doc-date {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* TIÊU ĐỀ VĂN BẢN */
+    .doc-headline {
+      text-align: center;
+      margin: 18px 0 16px 0;
+    }
+
+    .doc-headline h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+      line-height: 1.35;
+    }
+
+    .doc-number {
+      font-size: 13.5px;
+      font-style: italic;
+      color: #475569;
+      margin-top: 4px;
+    }
+
+    .dear-line {
+      font-size: 15px;
+      margin-bottom: 18px;
+      padding: 9px 14px;
+      background: var(--bg-neutral);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      line-height: 1.5;
+    }
+
+    .dear-line strong {
+      color: var(--primary);
+    }
+
+    /* HỘP BỐI CẢNH THỊ TRƯỜNG & THỰC TRẠNG TIN HỌC 2026 */
+    .market-context-box {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+    }
+
+    .market-context-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      margin-bottom: 8px;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .market-item {
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--text);
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 5px;
+      padding: 8px 12px;
+    }
+
+    .market-item strong {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 3px;
+      font-size: 15px;
+    }
+
+    /* BẢNG GIÁ SÀN BẢO VỆ 2 TẦNG */
+    .floor-price-rule-box {
+      background: #FFF7ED;
+      border: 1.5px solid #FDBA74;
+      border-left: 5px solid #C2410C;
+      border-radius: 6px;
+      padding: 13px 16px;
+      margin: 16px 0;
+    }
+
+    .floor-rule-header {
+      font-size: 15px;
+      font-weight: 800;
+      color: #9A3412;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .floor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 10px 0 8px 0;
+    }
+
+    .floor-card {
+      background: #FFFFFF;
+      border: 1px solid #FDBA74;
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
+
+    .floor-card-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #9A3412;
+      margin-bottom: 4px;
+    }
+
+    .floor-val-row {
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 2px;
+    }
+
+    .floor-val-highlight {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #C2410C;
+      margin-top: 3px;
+    }
+
+    .floor-penalty-text {
+      font-size: 12.5px;
+      color: #9A3412;
+      line-height: 1.5;
+      border-top: 1px dashed #FDBA74;
+      padding-top: 7px;
+      margin-top: 6px;
+    }
+
+    /* ĐƯỜNG PHÂN CÁCH TRANG TRỌNG GIỮA CÁC PHẦN */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 36px 0 24px 0;
+    }
+
+    .section-divider .div-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #CBD5E1 20%, #94A3B8 50%, #CBD5E1 80%, transparent);
+    }
+
+    .section-divider .div-badge {
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #64748B;
+      font-weight: 700;
+      padding: 2px 10px;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      border-radius: 20px;
+      line-height: 1.2;
+    }
+
+    /* Section Định Dạng Chuẩn */
+    .doc-section {
+      position: relative;
+    }
+
+    .sec-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .sec-badge {
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 2px 9px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      border-radius: 4px;
+    }
+
+    p.sec-desc {
+      font-size: 15.5px;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* 2 columns split layout */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .features-list li {
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+
+    .features-list li .bullet {
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* MINH HỌA VĂN BẢN (BO GÓC MỀM MẠI) */
+    .doc-figure {
+      text-align: center;
+      margin: 6px 0;
+    }
+
+    .doc-figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: none !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      outline: none !important;
+      background: transparent;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .doc-figure-caption {
+      font-size: 12px;
+      color: #475569;
+      font-style: italic;
+      margin-top: 5px;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    /* Hàng 2 ảnh song song trong văn bản */
+    .two-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 14px 0;
+    }
+
+    /* Bảng tài chính chuyên nghiệp (Bo góc mềm mại) */
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 14.5px;
+      margin: 12px 0 14px 0;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-dark);
+    }
+
+    .pricing-table th {
+      background: var(--primary);
+      color: #FFFFFF;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13.5px;
+      padding: 9px 8px;
+      text-align: center;
+      border-bottom: 1px solid #334155;
+      border-right: 1px solid #334155;
+      letter-spacing: 0.2px;
+    }
+
+    .pricing-table th:last-child {
+      border-right: none;
+    }
+
+    .pricing-table td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      text-align: center;
+      vertical-align: middle;
+      font-size: 14.5px;
+    }
+
+    .pricing-table td:last-child {
+      border-right: none;
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table tr:nth-child(even) {
+      background-color: var(--bg-neutral);
+    }
+
+    .pricing-table td.pkg-name {
+      text-align: left;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .pricing-table td.highlight-price {
+      font-weight: 800;
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    .pricing-table td.profit-col {
+      font-weight: 800;
+      color: var(--success);
+      background: var(--success-light);
+      font-size: 15px;
+    }
+
+    .pill-hot {
+      background: #FEE2E2;
+      color: #DC2626;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 6px;
+      margin-left: 4px;
+      display: inline-block;
+      border-radius: 4px;
+    }
+
+    .pill-best {
+      background: #FEF3C7;
+      color: #B45309;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 6px;
+      margin-left: 4px;
+      display: inline-block;
+      border-radius: 4px;
+    }
+
+    /* Box ghi chú (Bo góc mềm mại) */
+    .note-box {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 9px 14px;
+      font-size: 14.5px;
+      color: #9A3412;
+      margin: 14px 0;
+      line-height: 1.5;
+    }
+
+    .note-box strong {
+      color: #7C2D12;
+      font-weight: 800;
+    }
+
+    .note-box-blue {
+      background: #EFF6FF;
+      border-left: 4px solid #2563EB;
+      border-radius: 6px;
+      padding: 9px 14px;
+      font-size: 14.5px;
+      color: #1E40AF;
+      margin: 14px 0;
+      line-height: 1.5;
+    }
+
+    .note-box-blue strong {
+      color: #1E3A8A;
+      font-weight: 800;
+    }
+
+    /* Comparison cards (Bo góc mềm mại) */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 14px 0;
+    }
+
+    .comp-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+      background: var(--bg-neutral);
+    }
+
+    .comp-card.active {
+      border: 1.5px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent-light);
+    }
+
+    .comp-card h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .comp-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    /* BẢNG THÔNG TIN TÀI KHOẢN THANH TOÁN (Bo góc mềm mại) */
+    .bank-info-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 12px 0 14px 0;
+      border: 1.5px solid var(--border);
+    }
+
+    .bank-info-table td {
+      padding: 9px 12px;
+      font-size: 15px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .bank-info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .bank-info-table td.bank-lbl {
+      width: 25%;
+      background: var(--bg-neutral);
+      font-weight: 700;
+      color: var(--primary);
+      border-right: 1px solid var(--border);
+    }
+
+    .bank-info-table td.bank-val {
+      width: 75%;
+      color: var(--text);
+    }
+
+    .bank-highlight {
+      color: var(--accent);
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      font-weight: 800;
+    }
+
+    /* KHUNG KÝ TÊN CHUẨN THỂ THỨC VĂN BẢN QUỐC GIA (Nghị định 30/2020/NĐ-CP) */
+    .doc-closing-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1.5px solid var(--border);
+    }
+
+    .closing-left {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--text-muted);
+    }
+
+    .recipients-title {
+      font-weight: 700;
+      font-style: italic;
+      color: var(--primary);
+      margin-bottom: 3px;
+      text-decoration: underline;
+    }
+
+    .recipients-item {
+      font-size: 12px;
+      color: #475569;
+    }
+
+    .closing-right {
+      text-align: center;
+      position: relative;
+    }
+
+    .sign-title {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    .sign-subtitle {
+      font-size: 12.5px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .stamp-wrap {
+      height: 105px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .stamp-wrap img {
+      max-height: 105px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .sign-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Footer Văn Bản */
+    .doc-footer-end {
+      border-top: 1.5px solid var(--primary);
+      padding-top: 10px;
+      margin-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .doc-footer-end .contact-quick {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Tối ưu Mobile */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 0;
+        background: #F1F5F9;
+        font-size: 15.5px;
+      }
+
+      .document-sheet {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 14px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .letterhead {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+      }
+
+      .letterhead-brand {
+        justify-content: center;
+      }
+
+      .letterhead-sub {
+        text-align: center;
+      }
+
+      .national-header {
+        margin: 12px 0 14px 0;
+      }
+
+      .doc-headline h1 {
+        font-size: 18.5px;
+      }
+
+      .grid-2col {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .two-img-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .doc-figure img {
+        max-height: 180px;
+      }
+
+      .pricing-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13.5px;
+      }
+
+      .pricing-table th, .pricing-table td {
+        padding: 8px 8px;
+      }
+
+      .comparison-grid, .market-grid, .floor-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .bank-info-table td {
+        display: block;
+        width: 100% !important;
+      }
+
+      .bank-info-table td.bank-lbl {
+        border-bottom: none;
+        padding-bottom: 2px;
+      }
+
+      .bank-info-table td.bank-val {
+        padding-top: 2px;
+      }
+
+      .doc-closing-block {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .closing-left {
+        text-align: left;
+      }
+
+      .doc-footer-end {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sheet Văn Bản Liền Mạch Dọc Dài -->
+  <div class="document-sheet">
+
+    <!-- TOP CORPORATE LETTERHEAD (Chuẩn Nhận Diện Cân Đối 1:1) -->
+    <div class="letterhead">
+      <div class="letterhead-brand">
+        <img src="mercy_logo_crisp.png" alt="Mercy Tech" class="brand-logo" onerror="this.src='favicon.png'">
+        <span class="logo-divider">|</span>
+        <img src="assets/dealer_policy/logo_onlyoffice_cropped.png" alt="ONLYOFFICE" class="partner-logo" onerror="this.src='assets/dealer_policy/logo_onlyoffice_default.png'">
+      </div>
+      <div class="letterhead-sub">
+        <div class="comp-legal-title">CÔNG TY TNHH CÔNG NGHỆ MERCY</div>
+        <div class="comp-meta-text">Mã số thuế: <strong>0319227767</strong> &nbsp;|&nbsp; Hotline/Zalo: <strong>0763.068.614</strong></div>
+        <div class="comp-meta-text">Email: <strong>mercytechglobal@gmail.com</strong></div>
+        <div class="comp-meta-text">Địa chỉ: 175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, TP. Hồ Chí Minh, Việt Nam</div>
+      </div>
+    </div>
+
+    <!-- QUỐC HIỆU TRANG TRỌNG CĂN GIỮA ĐÚNG CHUẨN THỂ THỨC VĂN BẢN -->
+    <div class="national-header">
+      <div class="national-title">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+      <div class="national-motto">Độc lập - Tự do - Hạnh phúc</div>
+      <div class="national-line"></div>
+      <div class="doc-date">TP. Hồ Chí Minh, ngày 02 tháng 11 năm 2026</div>
+    </div>
+
+    <!-- TIÊU ĐỀ VĂN BẢN & SỐ HIỆU CÔNG VĂN -->
+    <div class="doc-headline">
+      <h1>CHÍNH SÁCH ĐỐI TÁC ĐẠI LÝ &amp; BẢNG GIÁ SỈ ONLYOFFICE 2026 (CẬP NHẬT 02.11.2026)</h1>
+      <div class="doc-number">Số: <strong>0211/TB-MERCY/2026</strong></div>
+    </div>
+
+    <div class="dear-line">
+      <strong>Kính gửi:</strong> Quý Cửa Hàng Máy Tính, Doanh Nghiệp Tin Học &amp; Kỹ Thuật Viên Toàn Quốc.
+    </div>
+
+    <!-- BỐI CẢNH THỊ TRƯỜNG & CƠ HỘI ĐỘT PHÁ CHO ĐẠI LÝ -->
+    <div class="market-context-box">
+      <div class="market-context-title">
+        <span>BỐI CẢNH THỊ TRƯỜNG HIỆN NAY &amp; CƠ HỘI ĐỘT PHÁ CHO ĐẠI LÝ</span>
+      </div>
+      <div class="market-grid">
+        <div class="market-item">
+          <strong>1. Thuê bao Microsoft tăng cao:</strong>
+          Microsoft 365 tăng giá định kỳ hàng năm; gói FPP vĩnh viễn đắt đỏ (&gt;4.5M/máy), vượt ngân sách 80% khách mua PC/Laptop.
+        </div>
+        <div class="market-item">
+          <strong>2. Rủi ro Ransomware khi cài crack:</strong>
+          Bản bẻ khóa/ghost lậu dễ dính mã độc tống tiền, làm mất dữ liệu khách và trực tiếp gây mất uy tín cửa hàng.
+        </div>
+        <div class="market-item">
+          <strong>3. Siết chặt thanh tra bản quyền:</strong>
+          Tăng cường kiểm tra theo NĐ 131/2013/NĐ-CP (phạt tới 500 triệu). Khách doanh nghiệp bắt buộc cần hóa đơn VAT hợp pháp.
+        </div>
+        <div class="market-item">
+          <strong>4. Gia tăng lợi nhuận cho cửa hàng:</strong>
+          Ráp máy chỉ lãi 100k–200k. Bán OnlyOffice lời ngay <strong>350k – 650k/máy</strong>, khóa main vĩnh viễn, hóa đơn VAT đầy đủ.
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PHẦN I ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN I</span>
+        <span>GIẢI PHÁP BẢN QUYỀN ONLYOFFICE CHO ĐẠI LÝ</span>
+      </div>
+      <p class="sec-desc">
+        Phần mềm văn phòng bản quyền vĩnh viễn khóa mainboard, giải pháp thay thế Microsoft Office giúp cửa hàng chủ động kích hoạt và gia tăng lợi nhuận trên mỗi thiết bị bán ra:
+      </p>
+
+      <div class="grid-2col">
+        <ul class="features-list">
+          <li>
+            <span class="bullet">▪</span>
+            <span><strong>Khóa cứng Bo mạch chủ (Mainboard/UUID):</strong> Bản quyền vĩnh viễn theo máy. Cài lại Windows, ghost máy hay thay ổ cứng vẫn giữ nguyên bản quyền.</span>
+          </li>
+          <li>
+            <span class="bullet">▪</span>
+            <span><strong>Tích hợp sẵn font tiếng Việt:</strong> Tương thích chuẩn định dạng Word, Excel, PowerPoint. Mở mượt mà file văn bản, kế toán nhiều sheet, công thức tính toán phức tạp, không lỗi font hay vỡ trang in.</span>
+          </li>
+          <li>
+            <span class="bullet">▪</span>
+            <span><strong>Hóa đơn VAT (KCT) &amp; Hợp đồng đầy đủ:</strong> Cung cấp hóa đơn VAT điện tử và hợp đồng kinh tế phục vụ thanh tra thuế và hoàn thiện hồ sơ thầu dự án.</span>
+          </li>
+          <li>
+            <span class="bullet">▪</span>
+            <span><strong>Nền tảng quản lý key:</strong> Cấp tài khoản quản trị riêng, quản lý tồn kho key và ghi chú rõ ràng thông tin khách hàng nào sử dụng key nào theo từng thiết bị.</span>
+          </li>
+        </ul>
+        <div class="doc-figure">
+          <img src="assets/dealer_policy/app_spreadsheet_giao_dien.png" alt="Giao diện Excel OnlyOffice" onerror="this.src='assets/app_presentation_giao_dien.png'" style="max-height: 180px;">
+          <div class="doc-figure-caption">ẢNH 1: Giao diện bảng tính OnlyOffice trực quan, tương thích công thức Excel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHÂN CÁCH TRANG TRỌNG PHẦN I & PHẦN II -->
+    <div class="section-divider">
+      <div class="div-line"></div>
+      <div class="div-badge">❖ ❖ ❖</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ==================== PHẦN II ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN II</span>
+        <span>BẢNG GIÁ SỈ KEY ONLINE THEO SỐ LƯỢNG</span>
+      </div>
+      <p class="sec-desc">
+        Chính sách giá sỉ phân bổ theo bậc số lượng, không áp doanh số tháng. Giá bán lẻ niêm yết: <strong>799.000 đ/máy</strong>:
+      </p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Gói Sỉ Phân Bổ</th>
+            <th style="width: 17%;">Đơn Giá Sỉ</th>
+            <th style="width: 19%;">Vốn Đầu Tư Gói</th>
+            <th style="width: 18%;">Giá Bán Lẻ Đề Xuất</th>
+            <th style="width: 21%;">LỢI NHUẬN CỦA TIỆM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg-name">Gói 5 Key <span class="pill-hot">DÙNG THỬ</span></td>
+            <td class="highlight-price">299.000 đ</td>
+            <td>1.495.000 đ</td>
+            <td>799.000 đ / máy</td>
+            <td class="profit-col">+2.500.000 đ <span style="font-weight: normal; color: #047857;">(Hoàn vốn sau 2 máy)</span></td>
+          </tr>
+          <tr style="background: #FFFBEB;">
+            <td class="pkg-name">Gói 50 Key <span class="pill-best">KHUYÊN DÙNG</span></td>
+            <td class="highlight-price" style="color: #D97706;">149.000 đ</td>
+            <td>7.450.000 đ</td>
+            <td>799.000 đ / máy</td>
+            <td class="profit-col" style="background: #FEF3C7; color: #B45309;">+32.500.000 đ <span style="font-weight: normal; color: #92400E;">(Cấp Nền tảng quản lý key)</span></td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Gói 100 Key</td>
+            <td class="highlight-price">129.000 đ</td>
+            <td>12.900.000 đ</td>
+            <td>799.000 đ / máy</td>
+            <td class="profit-col">+67.000.000 đ <span style="font-weight: normal; color: #047857;">(Lãi 670k/máy)</span></td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Gói 200 Key</td>
+            <td class="highlight-price">99.000 đ</td>
+            <td>19.800.000 đ</td>
+            <td>799.000 đ / máy</td>
+            <td class="profit-col">+140.000.000 đ <span style="font-weight: normal; color: #047857;">(Chạm đáy giá sỉ)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- QUY ĐỊNH BẢO HỘ GIÁ SÀN (CHỐNG BÁN PHÁ GIÁ) -->
+      <div class="floor-price-rule-box" style="padding: 12px 16px; margin: 12px 0; background: #FFF7ED; border-left: 5px solid #EA580C; border-radius: 6px;">
+        <div style="font-size: 15px; font-weight: 800; color: #9A3412; margin-bottom: 6px; text-transform: uppercase;">
+          QUY ĐỊNH BẢO HỘ GIÁ SÀN HỆ THỐNG ĐẠI LÝ TOÀN QUỐC (CHỐNG BÁN PHÁ GIÁ - UPDATE 02.11.2026):
+        </div>
+        <div style="font-size: 15px; line-height: 1.6; color: #1E293B;">
+          • <strong>OnlyOffice Box Vật Lý (SKU: MER-00105 — Hỗ trợ đổi máy tối đa 05 lần):</strong> Niêm yết lẻ 1.899.000 đ/Box (5–49 máy: 1.799.000 đ; &ge;50 máy: 1.499.000 đ) &rarr; <strong>Giá sàn bảo hộ tối thiểu: 1.499.000 đ/Box</strong> (Cấm chào giá, niêm yết công khai &lt; 1.499.000 đ/Box).<br>
+          • <strong>Tem Cào Dán Máy (Tem 7 màu có mã cào, khóa Mainboard):</strong> Niêm yết lẻ 999.000 đ/cái (5–49 tem: 899.000 đ; &ge;50 tem: 699.000 đ) &rarr; <strong>Giá sàn bảo hộ tối thiểu: 699.000 đ/tem</strong> (Cấm bán lẻ dán máy &lt; 699.000 đ).<br>
+          • <strong>Key Online (Kích hoạt trực tuyến khóa Mainboard):</strong> Niêm yết lẻ 799.000 đ/key (5–49 key: 699.000 đ; &ge;50 key: 499.000 đ) &rarr; <strong>Giá sàn bảo hộ tối thiểu: 499.000 đ/key</strong> (Cấm chào giá, niêm yết công khai &lt; 499.000 đ).
+        </div>
+        <div style="font-size: 14px; color: #9A3412; margin-top: 6px; border-top: 1px dashed #FDBA74; padding-top: 5px;">
+          * <strong>Chế tài xử lý:</strong> Lần 1 nhắc nhở gỡ giá sau 2h | Lần 2 tạm khóa nạp key 14 ngày | Lần 3 hủy hợp đồng và thu hồi quyền đại lý vĩnh viễn.
+        </div>
+      </div>
+    </div>
+
+    <!-- PHÂN CÁCH TRANG TRỌNG -->
+    <div class="section-divider">
+      <div class="div-line"></div>
+      <div class="div-badge">❖ ❖ ❖</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ==================== PHẦN II-B: ONLYOFFICE BOX & PRE-ORDER MUA 5 TẶNG 1 ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN II-B</span>
+        <span>ONLYOFFICE BOX VẬT LÝ (SKU: MER-00105) &amp; ĐẶT TRƯỚC ĐỢT 1 MUA 5 TẶNG 1</span>
+      </div>
+      <p class="sec-desc">
+        Phiên bản hộp vật lý nguyên seal sang trọng (gồm <strong>Hộp sản phẩm + Thẻ nhựa Product Key SKU: MER-00105 + Tài liệu hướng dẫn sử dụng</strong>), bản quyền vĩnh viễn và <strong>hỗ trợ đổi máy tối đa 05 lần trọn đời</strong> (khoảng cách giữa 2 lần chuyển đổi tối thiểu 30 ngày). Giá niêm yết lẻ: <strong>1.899.000 đ/Box</strong> (5–49 máy: <strong>1.799.000 đ/Box</strong>; &ge;50 máy: <strong>1.499.000 đ/Box</strong>; Giá sàn bảo hộ đại lý: <strong>1.499.000 đ/Box</strong>):
+      </p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th style="width: 22%;">Cấp Đại Lý &amp; Số Lượng</th>
+            <th style="width: 15%;">Đơn Giá Sỉ / Box</th>
+            <th style="width: 17%;">Tổng Vốn Đầu Tư</th>
+            <th style="width: 22%;">Ưu Đãi Đặt Trước (Mua 5 Tặng 1)</th>
+            <th style="width: 24%;">LỢI NHUẬN GỘP DỰ KIẾN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg-name">Khởi đầu (05 Box)</td>
+            <td class="highlight-price">800.000 đ</td>
+            <td>4.000.000 đ</td>
+            <td><strong>Tặng +01 Box = 06 Box</strong><br><span style="font-size: 12.5px; color: #C2410C;">(Quà tặng: 1.899.000 đ)</span></td>
+            <td class="profit-col">+7.394.000 đ<br><span style="font-weight: normal; font-size: 12.5px; color: #047857;">(Lãi chuẩn: +5.495.000 đ)</span></td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Bạc (20 Box)</td>
+            <td class="highlight-price">650.000 đ</td>
+            <td>13.000.000 đ</td>
+            <td><strong>Tặng +04 Box = 24 Box</strong><br><span style="font-size: 12.5px; color: #C2410C;">(Quà tặng: 7.596.000 đ)</span></td>
+            <td class="profit-col">+32.576.000 đ<br><span style="font-weight: normal; font-size: 12.5px; color: #047857;">(Lãi chuẩn: +24.980.000 đ)</span></td>
+          </tr>
+          <tr style="background: #FFFBEB;">
+            <td class="pkg-name">Vàng (50 Box) <span class="pill-best">CHỦ LỰC</span></td>
+            <td class="highlight-price" style="color: #D97706;">500.000 đ</td>
+            <td>25.000.000 đ</td>
+            <td><strong>Tặng +10 Box = 60 Box</strong><br><span style="font-size: 12.5px; color: #B45309;">(Quà tặng: 18.990.000 đ)</span></td>
+            <td class="profit-col" style="background: #FEF3C7; color: #B45309;">+88.940.000 đ<br><span style="font-weight: normal; font-size: 12.5px; color: #92400E;">(Lãi chuẩn: +69.950.000 đ)</span></td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Kim Cương (100 Box)</td>
+            <td class="highlight-price">450.000 đ</td>
+            <td>45.000.000 đ</td>
+            <td><strong>Tặng +20 Box = 120 Box</strong><br><span style="font-size: 12.5px; color: #C2410C;">(Quà tặng: 37.980.000 đ)</span></td>
+            <td class="profit-col">+182.880.000 đ<br><span style="font-weight: normal; font-size: 12.5px; color: #047857;">(Lãi chuẩn: +144.900.000 đ)</span></td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Tổng Kho (200 Box)</td>
+            <td class="highlight-price">400.000 đ</td>
+            <td>80.000.000 đ</td>
+            <td><strong>Tặng +40 Box = 240 Box</strong><br><span style="font-size: 12.5px; color: #C2410C;">(Quà tặng: 75.960.000 đ)</span></td>
+            <td class="profit-col">+375.760.000 đ<br><span style="font-weight: normal; font-size: 12.5px; color: #047857;">(Lãi chuẩn: +299.800.000 đ)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong>THỜI GIAN ĐẶT TRƯỚC ĐỢT 1 (MUA 5 TẶNG 1):</strong> Áp dụng giới hạn cho <strong>50 Đại lý đầu tiên</strong> đăng ký đặt trước đến hết ngày <strong>30/11/2026</strong>. Thời gian giao hàng dự kiến: <strong>Tháng 12/2026</strong>.
+      </div>
+
+      <div style="font-size: 15px; font-weight: 700; color: var(--primary); margin: 14px 0 6px 0;">
+        BẢNG GIÁ BẢN QUYỀN MICROSOFT CHÍNH HÃNG RETAIL (ĐƯỢC PHÉP MUA RIÊNG LẺ HỢP PHÁP - UPDATE 02.11.2026):
+      </div>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th style="width: 38%;">Sản Phẩm Microsoft Chính Hãng (Retail)</th>
+            <th style="width: 22%;">Hình Thức &amp; Đặc Điểm</th>
+            <th style="width: 20%;">Giá Bán Lẻ Niêm Yết</th>
+            <th style="width: 20%;">Giá Sỉ Đại Lý</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg-name">Windows 11 Pro FPP Retail [HAV-00163]</td>
+            <td>Box vật lý nguyên seal (Hỗ trợ đổi máy)</td>
+            <td>3.200.000 đ / bản</td>
+            <td class="highlight-price">3.200.000 đ / bản</td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Office Home &amp; Business 2024 Retail Online ESD [EP2-06604]</td>
+            <td>Key Online chính hãng (Hỗ trợ đổi máy)</td>
+            <td>4.200.000 đ / bản quyền</td>
+            <td class="highlight-price">3.900.000 đ / bản quyền</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PHÂN CÁCH TRANG TRỌNG PHẦN II & PHẦN III -->
+    <div class="section-divider">
+      <div class="div-line"></div>
+      <div class="div-badge">❖ ❖ ❖</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ==================== PHẦN III ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN III</span>
+        <span>TEM DÁN IN 7 MÀU CÓ MÃ CÀO BẢN QUYỀN CHO PC &amp; LAPTOP</span>
+      </div>
+      <p class="sec-desc">
+        Tem dán in 7 màu có lớp cào tráng bạc chứa mã kích hoạt bản quyền, dán lên vỏ case máy tính bàn hoặc đáy laptop để bàn giao kèm máy cho khách hàng:
+      </p>
+
+      <div class="grid-2col">
+        <div>
+          <ul class="features-list">
+            <li>
+              <span class="bullet">▪</span>
+              <span><strong>Tem dán in 7 màu có mã cào:</strong> Lớp tráng bạc bảo vệ mã kích hoạt, khách hàng nhận máy tự tay cào nạp key trọn đời.</span>
+            </li>
+            <li>
+              <span class="bullet">▪</span>
+              <span><strong>Trực quan &amp; Thẩm mỹ:</strong> Tem in 7 màu ánh kim sắc nét, dán lên thân máy tạo điểm nhấn chuyên nghiệp cho thiết bị xuất xưởng.</span>
+            </li>
+            <li>
+              <span class="bullet">▪</span>
+              <span><strong>Bán kèm máy thu tiền trực tiếp:</strong> Thợ ráp máy dán sẵn lên máy bán kèm, thu thêm <strong>699.000 đ – 999.000 đ/máy</strong>.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="doc-figure">
+          <img src="assets/dealer_policy/tem_giay_onlyoffice_si_opt.jpg" alt="Tem Cào Dán Máy Thực Tế" onerror="this.src='assets/dealer_policy/tem_giay_onlyoffice_si.jpg'" style="max-height: 185px;">
+          <div class="doc-figure-caption">ẢNH 2: Mẫu tem dán in 7 màu thực tế có số Serial và ô cào mã bản quyền</div>
+        </div>
+      </div>
+
+      <div style="font-size: 15px; font-weight: 700; color: var(--primary); margin: 14px 0 6px 0;">
+        BẢNG GIÁ SỈ TEM CÀO DÁN MÁY DÀNH CHO CỬA HÀNG RÁP MÁY:
+      </div>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Gói Tem Cào Dán Máy</th>
+            <th style="width: 17%;">Giá Sỉ / Tem</th>
+            <th style="width: 19%;">Vốn Đầu Tư Gói</th>
+            <th style="width: 19%;">Giá Bán Lẻ Niêm Yết</th>
+            <th style="width: 20%;">LỢI NHUẬN THỢ BỎ TÚI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg-name">Gói 50 Tem</td>
+            <td class="highlight-price">299.000 đ</td>
+            <td>14.950.000 đ</td>
+            <td>699k – 999k / tem</td>
+            <td class="profit-col">+20.000.000 đ – +35.000.000 đ</td>
+          </tr>
+          <tr style="background: #FFFBEB;">
+            <td class="pkg-name">Gói 200 Tem <span class="pill-best">BÁN CHẠY</span></td>
+            <td class="highlight-price" style="color: #D97706;">249.000 đ</td>
+            <td>49.800.000 đ</td>
+            <td>699k – 999k / tem</td>
+            <td class="profit-col" style="background: #FEF3C7; color: #B45309;">+90.000.000 đ – +150.000.000 đ</td>
+          </tr>
+          <tr>
+            <td class="pkg-name">Gói 500 Tem</td>
+            <td class="highlight-price">149.000 đ</td>
+            <td>74.500.000 đ</td>
+            <td>699k – 999k / tem</td>
+            <td class="profit-col">+275.000.000 đ – +425.000.000 đ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Cẩm nang thợ: Khi nào dùng Key Online vs Tem cào -->
+      <div class="comparison-grid">
+        <div class="comp-card">
+          <h4>1. KHI NÀO DÙNG KEY ONLINE?</h4>
+          <p>• Cài đặt từ xa cho khách hàng qua UltraView / TeamViewer.<br>
+          • Khách hàng mang máy cá nhân, máy công ty tới tiệm cài lại hệ điều hành.<br>
+          • Triển khai văn phòng, trường học, cơ quan số lượng lớn.<br>
+          • Kích hoạt và theo dõi qua Nền tảng quản lý key, không tồn kho vật lý.</p>
+        </div>
+        <div class="comp-card active">
+          <h4>2. KHI NÀO DÁN TEM CÀO LÊN MÁY?</h4>
+          <p>• Thùng máy bàn PC ráp mới bán nguyên bộ cho khách.<br>
+          • Laptop cũ/mới trưng bày bán tại cửa hàng.<br>
+          • Dán sẵn lên máy để khách tự cào mã kích hoạt, bàn giao tiện lợi.<br>
+          • Bán kèm thu tiền mặt trực tiếp, gia tăng giá trị trọn bộ máy.</p>
+        </div>
+      </div>
+
+      <div class="note-box-blue">
+        <strong>GỢI Ý TƯ VẤN:</strong> Khi bàn giao máy tính cho khách, thợ chỉ cần tư vấn: <em>"Bên em dán sẵn tem bản quyền vĩnh viễn khóa main chuẩn hãng, anh cào mã nạp dùng trọn đời không lo bị lỗi bản quyền hay phần mềm độc hại"</em> &rarr; Phần lớn khách hàng sẵn sàng thanh toán thêm 699.000 đ – 799.000 đ.
+      </div>
+    </div>
+
+    <!-- PHÂN CÁCH TRANG TRỌNG PHẦN III & PHẦN IV -->
+    <div class="section-divider">
+      <div class="div-line"></div>
+      <div class="div-badge">❖ ❖ ❖</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ==================== PHẦN IV ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN IV</span>
+        <span>HỆ THỐNG CÔNG NGHỆ 24/7 &amp; HỖ TRỢ DỰ ÁN</span>
+      </div>
+      <p class="sec-desc">
+        Mercy Tech trang bị Nền tảng quản lý key và đồng hành kỹ thuật trực tiếp cùng đối tác:
+      </p>
+
+      <ul class="features-list" style="margin-bottom: 14px;">
+        <li>
+          <span class="bullet">▪</span>
+          <span><strong>Cấp tài khoản Nền tảng quản lý key:</strong> Cửa hàng tự quản lý số lượng key, chủ động kích hoạt và ghi chú chi tiết khách hàng nào sử dụng key nào theo từng máy (UUID).</span>
+        </li>
+        <li>
+          <span class="bullet">▪</span>
+          <span><strong>Hỗ trợ dùng thử 7 ngày miễn phí:</strong> Kỹ sư Mercy Tech hỗ trợ cài đặt và trải nghiệm trực tiếp trên máy mẫu tại cửa hàng.</span>
+        </li>
+        <li>
+          <span class="bullet">▪</span>
+          <span><strong>Hồ sơ thầu &amp; Hóa đơn VAT (KCT):</strong> Cung cấp đầy đủ hóa đơn VAT hợp lệ và hợp đồng kinh tế phục vụ tham gia đấu thầu cơ quan, doanh nghiệp.</span>
+        </li>
+        <li>
+          <span class="bullet">▪</span>
+          <span><strong>Nhóm Zalo hỗ trợ kỹ thuật 1-1:</strong> Kết nối trực tiếp đội ngũ kỹ sư hãng, phản hồi và hỗ trợ xử lý trong 15 phút.</span>
+        </li>
+      </ul>
+
+      <!-- BỐ CỤC 2 ẢNH MINH HỌA SONG SONG (KHÔNG KHUNG VIỀN) -->
+      <div class="two-img-grid">
+        <div class="doc-figure">
+          <img src="assets/dealer_policy/nentangquanlykey_opt.jpg" alt="Nền tảng quản lý key" onerror="this.src='assets/dealer_policy/nentangquanlykey.jpg'" style="max-height: 175px; width: 100%; object-fit: contain;">
+          <div class="doc-figure-caption">ẢNH 3: Giao diện Nền tảng quản lý key cấp riêng cho đối tác theo dõi &amp; ghi chú khách hàng</div>
+        </div>
+        <div class="doc-figure">
+          <img src="assets/dealer_policy/hoa_don_gtgt_opt.jpg" alt="Hóa đơn VAT điện tử mộc đỏ" onerror="this.src='assets/dealer_policy/hoa_don_gtgt.jpg'" style="max-height: 175px; width: 100%; object-fit: contain;">
+          <div class="doc-figure-caption">ẢNH 4: Hóa đơn VAT điện tử mộc đỏ hợp lệ phục vụ thuế &amp; dự án</div>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <strong>CAM KẾT ĐỒNG HÀNH:</strong> Mọi vướng mắc về font chữ, định dạng hoặc kỹ thuật trong quá trình khách hàng sử dụng đều được đội ngũ kỹ thuật hãng hỗ trợ xử lý trong vòng 15 phút.
+      </div>
+    </div>
+
+    <!-- PHÂN CÁCH TRANG TRỌNG PHẦN IV & PHẦN V -->
+    <div class="section-divider">
+      <div class="div-line"></div>
+      <div class="div-badge">❖ ❖ ❖</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ==================== PHẦN V ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN V</span>
+        <span>CHÍNH SÁCH ĐẠI LÝ TIÊU CHUẨN &amp; ĐỘC QUYỀN TUYẾN ĐƯỜNG</span>
+      </div>
+      <p class="sec-desc">
+        Chính sách đặc quyền dành cho cửa hàng máy tính, đại lý tin học phát triển độc quyền theo từng tuyến đường:
+      </p>
+
+      <!-- BẢNG ĐỊNH LƯỢNG & SO SÁNH 2 GÓI CHIẾN LƯỢC (RÚT GỌN TỐI ĐA) -->
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th style="width: 24%;">Hạng Mục Đầu Tư</th>
+            <th style="width: 38%;">GÓI ĐẠI LÝ TIÊU CHUẨN</th>
+            <th style="width: 38%; background: #9A3412;">GÓI KHỞI NGHIỆP ĐỘC QUYỀN TUYẾN VIP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg-name"><strong>Vốn Đầu Tư Trọn Gói</strong></td>
+            <td style="font-weight: 800; color: #1D4ED8;">34.750.000 đ</td>
+            <td style="font-weight: 800; color: #C2410C; background: #FFF7ED;">94.300.000 đ</td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Cơ Cấu Sản Phẩm</strong></td>
+            <td style="text-align: left; line-height: 1.5;">
+              • <strong>200 Key Online</strong> (Đơn giá 99k = 19.8M)<br>
+              • <strong>50 Tem Cào</strong> (Đơn giá 299k = 14.95M)
+            </td>
+            <td style="text-align: left; line-height: 1.5; background: #FFF7ED;">
+              • <strong>200 Key Online</strong> (Đơn giá 99k = 19.8M)<br>
+              • <strong>500 Tem Cào</strong> (sỉ đáy 149k = 74.5M)
+            </td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Doanh Thu Bán Lẻ</strong></td>
+            <td style="font-weight: 700;">134,7 – 209,75 Triệu đ</td>
+            <td style="font-weight: 700; color: #9A3412; background: #FFF7ED;">539,3 – 759,3 Triệu đ</td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Lợi Nhuận Bỏ Túi</strong></td>
+            <td class="profit-col">+100 – 175 Triệu đ<br><span style="font-weight: normal; color: #047857;">(ROI &gt; 280%)</span></td>
+            <td class="profit-col" style="color: #B45309; background: #FEF3C7;">+445 – 665 Triệu đ<br><span style="font-weight: normal; color: #92400E;">(Hoàn vốn sau ~100 máy)</span></td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Bảo Hộ Tuyến Đường</strong></td>
+            <td style="color: #475569;">Đại lý ủy quyền tiêu chuẩn</td>
+            <td style="background: #FFF7ED; font-weight: 700; color: #C2410C; text-align: left; line-height: 1.5;">
+              <strong>ĐỘC QUYỀN TUYẾN ĐƯỜNG 1 NĂM (Mộc đỏ)</strong><br>
+              <span style="font-weight: normal; color: #475569;">• Không cấp đại lý thứ 2 trên tuyến/huyện.<br>• Chuyển 100% khách địa phương về đại lý.</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Danh Mục Đặc Quyền</strong></td>
+            <td style="text-align: left; line-height: 1.5;">
+              <strong style="color: #1D4ED8;">Trọn bộ 5 đặc quyền:</strong><br>
+              1. Giấy chứng nhận mộc đỏ khung kính.<br>
+              2. Bộ cài White-Label (Tên shop, Hotline).<br>
+              3. Tặng 03 Key Online (thu 1.5 – 2.4M).<br>
+              4. Kho Marketing VIP hình ảnh, video.<br>
+              5. Xuất Chứng nhận bản quyền cho khách.
+            </td>
+            <td style="text-align: left; line-height: 1.5; background: #FFF7ED;">
+              <strong style="color: #EA580C;">Trọn bộ 8 đặc quyền VIP:</strong><br>
+              1. <strong>Độc quyền tuyến 1 năm</strong> (Mộc đỏ).<br>
+              2. <strong>Tặng Web TMĐT SEO + Domain + Hosting</strong>.<br>
+              3. Bộ cài White-Label (Tên shop, Hotline).<br>
+              4. Tặng 10 Key Online (thu 5 – 8M).<br>
+              5. Kho Marketing VIP &amp; File in ấn đại lý.<br>
+              6. Xuất Chứng nhận bản quyền &amp; hồ sơ thầu.<br>
+              7. Giấy chứng nhận mộc đỏ khung kính.<br>
+              8. <strong>Trợ giá Win Pro USB &amp; Office 2024 Box</strong>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- KHỐI CAM KẾT KHẢO SÁT & ẢNH CHỨNG NHẬN KHUNG KÍNH TRANG TRỌNG -->
+      <div class="grid-2col" style="margin-top: 12px; align-items: center;">
+        <div class="note-box-blue" style="margin: 0; padding: 12px 16px;">
+          <div style="font-size: 15px; font-weight: 800; color: #1E40AF; margin-bottom: 4px;">
+            QUY TRÌNH BẢO HỘ ĐỘC QUYỀN TUYẾN ĐƯỜNG:
+          </div>
+          <p style="font-size: 14.5px; color: #1E3A8A; line-height: 1.5; margin-bottom: 4px;">
+            Mỗi tuyến đường / huyện chỉ cấp duy nhất <strong>01 Đại lý độc quyền</strong> (ưu tiên đăng ký trước). Hợp đồng mộc đỏ cam kết không cấp đại lý thứ 2.
+          </p>
+          <div style="font-size: 14px; color: #1E40AF; font-weight: 700;">
+            * Khảo sát địa bàn tuyến: Liên hệ Giám Đốc Vy Thiên Hùng (Hotline/Zalo: <strong>0763.068.614</strong>).
+          </div>
+        </div>
+        <div class="doc-figure" style="margin: 0;">
+          <img src="assets/dealer_policy/mockup_chung_nhan_khung_kinh_opt.jpg" alt="Chứng nhận đại lý khung kính" onerror="this.src='assets/dealer_policy/mockup_chung_nhan_khung_kinh.png'" style="max-height: 165px; width: 100%; object-fit: contain;">
+          <div class="doc-figure-caption">ẢNH 5: Giấy chứng nhận đại lý ủy quyền đóng khung kính trang trọng</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHÂN CÁCH TRANG TRỌNG PHẦN V & PHẦN VI -->
+    <div class="section-divider">
+      <div class="div-line"></div>
+      <div class="div-badge">❖ ❖ ❖</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ==================== PHẦN VI ==================== -->
+    <div class="doc-section">
+      <div class="sec-title">
+        <span class="sec-badge">PHẦN VI</span>
+        <span>THÔNG TIN THANH TOÁN &amp; QUY TRÌNH KÍCH HOẠT HỢP TÁC</span>
+      </div>
+
+      <p class="sec-desc">
+        Để hoàn tất thủ tục đăng ký và kích hoạt hệ thống tài khoản đại lý, Quý đối tác vui lòng thực hiện chuyển khoản thanh toán theo thông tin tài khoản chính thức dưới đây:
+      </p>
+
+      <!-- BẢNG THÔNG TIN TÀI KHOẢN THANH TOÁN TRANG TRỌNG -->
+      <table class="bank-info-table">
+        <tbody>
+          <tr>
+            <td class="bank-lbl">Đơn vị thụ hưởng:</td>
+            <td class="bank-val"><strong>CÔNG TY TNHH CÔNG NGHỆ MERCY</strong></td>
+          </tr>
+          <tr>
+            <td class="bank-lbl">Số tài khoản:</td>
+            <td class="bank-val"><strong class="bank-highlight">98896889</strong></td>
+          </tr>
+          <tr>
+            <td class="bank-lbl">Ngân hàng thụ hưởng:</td>
+            <td class="bank-val"><strong>Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box" style="margin-top: 10px;">
+        <strong>* Cam kết bàn giao:</strong> Ngay sau khi xác nhận chuyển khoản, bộ phận kỹ thuật Mercy Tech sẽ liên hệ qua Hotline/Zalo để bàn giao tài khoản Nền tảng quản lý key, nạp đủ số lượng key theo gói và kết nối vào nhóm Zalo hỗ trợ kỹ thuật 1-1 trong vòng 05 phút.
+      </div>
+
+      <!-- KHUNG KÝ TÊN CHUẨN THỂ THỨC VĂN BẢN QUỐC GIA (Nghị định 30/2020/NĐ-CP) -->
+      <div class="doc-closing-block">
+        <div class="closing-left">
+          <div class="recipients-title"><strong>Nơi nhận:</strong></div>
+          <div class="recipients-item">- Như Kính gửi (để phối hợp);</div>
+          <div class="recipients-item">- Ban Giám đốc (để chỉ đạo);</div>
+          <div class="recipients-item">- Bộ phận Kỹ thuật &amp; CSKH;</div>
+          <div class="recipients-item">- Lưu: VT, HS.ĐL.2026.</div>
+        </div>
+
+        <div class="closing-right">
+          <div class="sign-title">ĐẠI DIỆN THEO PHÁP LUẬT</div>
+          <div class="sign-subtitle">CÔNG TY TNHH CÔNG NGHỆ MERCY</div>
+          <div class="stamp-wrap">
+            <img src="assets/dealer_policy/chu_ky_moc_opt.png" alt="Mộc đỏ Giám Đốc Vy Thiên Hùng" onerror="this.src='assets/dealer_policy/chu_ky_moc.png'">
+          </div>
+          <div class="sign-name">GIÁM ĐỐC: VY THIÊN HÙNG</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chân trang văn bản hoàn chỉnh -->
+    <div class="doc-footer-end">
+      <div class="contact-quick">CÔNG TY TNHH CÔNG NGHỆ MERCY &nbsp;|&nbsp; Hotline/Zalo: 0763.068.614 &nbsp;|&nbsp; Email: mercytechglobal@gmail.com</div>
+      <div style="font-weight: 700; color: var(--accent);">Văn bản lưu hành nội bộ đại lý 2026</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
