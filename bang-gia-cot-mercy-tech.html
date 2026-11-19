@@ -179,14 +179,14 @@
 
     .logo-divider {
       width: 1.5px;
-      height: 28px;
+      height: 22px;
       background: #CBD5E1;
     }
 
     .mercy-brand-logo {
-      height: 34px;
+      height: 22px;
       width: auto;
-      max-width: 165px;
+      max-width: 120px;
       object-fit: contain;
       display: block;
     }
@@ -264,17 +264,19 @@
       background: var(--orange-header);
     }
 
-    /* Cột Tên sản phẩm — Thanh thoát chuẩn Apple (Không dày cục, dãn ngang thoáng) */
+    /* Cột Tên sản phẩm — Thanh thoát chuẩn Apple, tự xuống dòng gọn không bao giờ đè cột ĐVT */
     table.matrix-table td.prod-cell {
       text-align: left;
-      font-weight: 400;
+      font-weight: 500;
       color: #1D1D1F;
       padding-left: 16px;
       padding-right: 12px;
+      white-space: normal;
+      word-break: break-word;
     }
 
     .sheet-wholesale table.matrix-table td.prod-cell {
-      font-size: 13.4px;
+      font-size: 13.2px;
       padding-left: 14px;
       padding-right: 10px;
       letter-spacing: -0.01em;
@@ -282,6 +284,47 @@
 
     table.matrix-table td.prod-cell.is-highlight {
       font-weight: 600;
+    }
+
+    /* Note nhỏ dưới tên sản phẩm: Gắn cố định theo Main vs Đổi được máy */
+    .prod-device-note {
+      display: block;
+      font-size: 11.8px;
+      font-weight: 500;
+      margin-top: 3px;
+      line-height: 1.3;
+    }
+
+    .prod-device-note.note-mainboard {
+      color: #64748B;
+    }
+
+    .prod-device-note.note-transferable {
+      color: #0F539C;
+    }
+
+    /* Dải phân nhóm I. ONLYOFFICE vs II. MICROSOFT CHÍNH HÃNG để không bị lẫn */
+    table.matrix-table tr.group-divider-row td.col-framed {
+      padding: 8px 16px !important;
+      font-size: 12.5px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    table.matrix-table tr.group-oo td.col-framed {
+      background-color: #FFF3EB !important;
+      color: #C2410C !important;
+      border-top: 1.5px solid #64748B;
+      border-bottom: 1.5px solid #64748B;
+    }
+
+    table.matrix-table tr.group-ms td.col-framed {
+      background-color: #E2EEFA !important;
+      color: #0F4C81 !important;
+      border-top: 2px solid #475569;
+      border-bottom: 1.5px solid #64748B;
     }
 
     /* Cột ĐVT & Đơn Giá */
@@ -469,8 +512,15 @@
             </tr>
           </thead>
           <tbody>
+            <tr class="group-divider-row group-oo">
+              <td class="col-framed" colspan="5">I. NHÓM SẢN PHẨM VĂN PHÒNG ONLYOFFICE (TỐI ƯU BỞI MERCY TECH)</td>
+              <td class="col-tag-outside"></td>
+            </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech</td>
+              <td class="col-framed prod-cell is-highlight">
+                Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech
+                <span class="prod-device-note note-mainboard">Key Online &bull; Vĩnh viễn gắn cố định theo Mainboard (không đổi máy)</span>
+              </td>
               <td class="col-framed unit-cell">Mã</td>
               <td class="col-framed price-cell">799.000</td>
               <td class="col-framed price-cell">699.000</td>
@@ -478,7 +528,10 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)</td>
+              <td class="col-framed prod-cell">
+                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)
+                <span class="prod-device-note note-mainboard">Tem cào 7 màu dán máy &bull; Vĩnh viễn gắn cố định theo Mainboard (không đổi máy)</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">999.000</td>
               <td class="col-framed price-cell">899.000</td>
@@ -486,15 +539,25 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)</td>
+              <td class="col-framed prod-cell is-highlight">
+                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)
+                <span class="prod-device-note note-transferable">Hộp vật lý kèm thẻ Key &bull; Vĩnh viễn, hỗ trợ đổi máy tối đa 05 lần</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">1.899.000</td>
               <td class="col-framed price-cell">1.799.000</td>
               <td class="col-framed price-cell">1.499.000</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
+            <tr class="group-divider-row group-ms">
+              <td class="col-framed" colspan="5">II. NHÓM SẢN PHẨM MICROSOFT CHÍNH HÃNG (PHIÊN BẢN RETAIL)</td>
+              <td class="col-tag-outside"></td>
+            </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD</td>
+              <td class="col-framed prod-cell is-highlight">
+                Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD
+                <span class="prod-device-note note-transferable">Key Online ESD &bull; Vĩnh viễn, hỗ trợ đổi máy theo chính sách Retail Microsoft</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">1.200.000</td>
               <td class="col-framed price-cell">1.200.000</td>
@@ -502,7 +565,10 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)</td>
+              <td class="col-framed prod-cell">
+                Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)
+                <span class="prod-device-note note-transferable">Hộp vật lý kèm USB 3.0 &bull; Vĩnh viễn, hỗ trợ đổi máy / nâng cấp Mainboard trọn đời</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">3.200.000</td>
               <td class="col-framed price-cell">3.200.000</td>
@@ -510,7 +576,10 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)</td>
+              <td class="col-framed prod-cell is-highlight">
+                Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)
+                <span class="prod-device-note note-transferable">Key Online ESD &bull; Vĩnh viễn gắn tài khoản Microsoft, hỗ trợ đổi máy</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">4.200.000</td>
               <td class="col-framed price-cell">4.200.000</td>
@@ -523,10 +592,10 @@
 
       <div class="sheet-footer">
         <div class="sheet-footer-left">
-          <strong>Lưu ý pháp lý:</strong> Toàn bộ đơn giá trên đã bao gồm Hóa đơn GTGT điện tử hợp pháp (mặt hàng phần mềm thuộc diện Không chịu thuế GTGT - KCT). Các sản phẩm Microsoft do Mercy Tech cung cấp là <strong>phiên bản Retail chính hãng</strong> — được phép mua bán riêng lẻ hợp pháp theo Luật Sở hữu trí tuệ.
+          <strong>Lưu ý pháp lý:</strong> Toàn bộ đơn giá trên đã bao gồm Hóa đơn GTGT điện tử hợp pháp (mặt hàng phần mềm thuộc diện Không chịu thuế GTGT - KCT). Các sản phẩm Microsoft do Mercy Tech cung cấp là <strong>phiên bản Retail chính hãng</strong> — được phép mua bán riêng lẻ hợp pháp theo Luật Sở hữu trí tuệ. Đơn hàng số lượng lớn từ 100+ bộ vui lòng liên hệ để nhận báo giá dự án riêng.
         </div>
         <div class="sheet-footer-right">
-          CÔNG TY TNHH CÔNG NGHỆ MERCY &bull; MST: 0319227767 &bull; Hotline/Zalo: 0763.068.614
+          CÔNG TY TNHH CÔNG NGHỆ MERCY &bull; MST: 0319227767
         </div>
       </div>
     </section>
@@ -585,8 +654,15 @@
             </tr>
           </thead>
           <tbody>
+            <tr class="group-divider-row group-oo">
+              <td class="col-framed" colspan="9">I. NHÓM SẢN PHẨM VĂN PHÒNG ONLYOFFICE (TỐI ƯU BỞI MERCY TECH)</td>
+              <td class="col-tag-outside"></td>
+            </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech</td>
+              <td class="col-framed prod-cell is-highlight">
+                Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech
+                <span class="prod-device-note note-mainboard">Key Online &bull; Vĩnh viễn gắn cố định theo Mainboard (không đổi máy)</span>
+              </td>
               <td class="col-framed unit-cell">Mã</td>
               <td class="col-framed price-cell price-retail-ref">799.000</td>
               <td class="col-framed price-cell">299.000</td>
@@ -594,11 +670,14 @@
               <td class="col-framed price-cell">149.000</td>
               <td class="col-framed price-cell">129.000</td>
               <td class="col-framed price-cell">99.000</td>
-              <td class="col-framed price-cell">99.000</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>ĐẠI LÝ IT</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)</td>
+              <td class="col-framed prod-cell">
+                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)
+                <span class="prod-device-note note-mainboard">Tem cào 7 màu dán máy &bull; Vĩnh viễn gắn cố định theo Mainboard (không đổi máy)</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">999.000</td>
               <td class="col-framed price-cell price-muted">—</td>
@@ -610,7 +689,10 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)</td>
+              <td class="col-framed prod-cell is-highlight">
+                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)
+                <span class="prod-device-note note-transferable">Hộp vật lý kèm thẻ Key &bull; Vĩnh viễn, hỗ trợ đổi máy tối đa 05 lần</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">1.899.000</td>
               <td class="col-framed price-cell">800.000</td>
@@ -618,11 +700,18 @@
               <td class="col-framed price-cell">500.000</td>
               <td class="col-framed price-cell">450.000</td>
               <td class="col-framed price-cell">400.000</td>
-              <td class="col-framed price-cell">400.000</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
+            <tr class="group-divider-row group-ms">
+              <td class="col-framed" colspan="9">II. NHÓM SẢN PHẨM MICROSOFT CHÍNH HÃNG (PHIÊN BẢN RETAIL)</td>
+              <td class="col-tag-outside"></td>
+            </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD</td>
+              <td class="col-framed prod-cell is-highlight">
+                Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD
+                <span class="prod-device-note note-transferable">Key Online ESD &bull; Vĩnh viễn, hỗ trợ đổi máy theo chính sách Retail Microsoft</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">1.200.000</td>
               <td class="col-framed price-cell">950.000</td>
@@ -634,7 +723,10 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)</td>
+              <td class="col-framed prod-cell">
+                Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)
+                <span class="prod-device-note note-transferable">Hộp vật lý kèm USB 3.0 &bull; Vĩnh viễn, hỗ trợ đổi máy / nâng cấp Mainboard trọn đời</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">3.200.000</td>
               <td class="col-framed price-cell">2.900.000</td>
@@ -646,7 +738,10 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)</td>
+              <td class="col-framed prod-cell is-highlight">
+                Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)
+                <span class="prod-device-note note-transferable">Key Online ESD &bull; Vĩnh viễn gắn tài khoản Microsoft, hỗ trợ đổi máy</span>
+              </td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">4.200.000</td>
               <td class="col-framed price-cell">3.900.000</td>
@@ -663,10 +758,10 @@
 
       <div class="sheet-footer">
         <div class="sheet-footer-left">
-          <strong>Chính sách Đại lý:</strong> Đối với 03 sản phẩm Microsoft Chính Hãng (Retail), Đại lý đã xác thực được hưởng ngay đơn giá sỉ (<strong>950.000đ</strong> / <strong>2.900.000đ</strong> / <strong>3.900.000đ</strong>) từ 01 Bộ. Tổng đơn từ <strong>30 Triệu đồng</strong> hưởng quyền lợi Đại lý Tiêu chuẩn; từ <strong>150 Triệu (Tỉnh) / 300 Triệu (HN &amp; TP.HCM)</strong> hưởng quyền lợi Đại lý Độc quyền Tuyến.
+          <strong>Chính sách Đại lý:</strong> Đối với 03 sản phẩm Microsoft Chính Hãng (Retail), Đại lý đã xác thực được hưởng ngay đơn giá sỉ (<strong>950.000đ</strong> / <strong>2.900.000đ</strong> / <strong>3.900.000đ</strong>) từ 01 Bộ (từ 50+ Bộ giảm thêm 100.000đ/Bộ). Tổng đơn <strong>sản phẩm OnlyOffice từ 30 Triệu đồng</strong> hưởng quyền lợi Đại lý Tiêu chuẩn; tổng đơn <strong>sản phẩm OnlyOffice từ 150 Triệu (Tỉnh) / 300 Triệu (HN &amp; TP.HCM)</strong> hưởng quyền lợi Đại lý Độc quyền Tuyến.
         </div>
         <div class="sheet-footer-right">
-          CÔNG TY TNHH CÔNG NGHỆ MERCY &bull; MST: 0319227767 &bull; Hotline/Zalo: 0763.068.614
+          CÔNG TY TNHH CÔNG NGHỆ MERCY &bull; MST: 0319227767
         </div>
       </div>
     </section>
