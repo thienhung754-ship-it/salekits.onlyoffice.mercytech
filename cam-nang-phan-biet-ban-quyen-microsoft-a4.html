@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Phân Biệt Các Loại Bản Quyền Phần Mềm Microsoft & Quy Định Luật SHTT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F172A;
+      --primary-dark: #020617;
+      --secondary: #334155;
+      --muted: #64748B;
+      --border: #CBD5E1;
+      --border-light: #E2E8F0;
+      --bg-page: #F1F5F9;
+      --bg-card: #FFFFFF;
+      --blue: #0284C7;
+      --blue-dark: #0369A1;
+      --blue-light: #F0F9FF;
+      --blue-border: #BAE6FD;
+      --green: #047857;
+      --green-light: #ECFDF5;
+      --green-border: #A7F3D0;
+      --amber: #B45309;
+      --amber-light: #FFFBEB;
+      --amber-border: #FDE68A;
+      --red: #B91C1C;
+      --red-light: #FEF2F2;
+      --red-border: #FECACA;
+      --orange: #C2410C;
+      --orange-light: #FFF7ED;
+      --orange-border: #FED7AA;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--primary);
+      line-height: 1.45;
+      font-size: 13.5px;
+      padding: 20px 16px 60px 16px;
+    }
+
+    /* ACTION BAR */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      max-width: 1080px;
+      margin: 0 auto 16px auto;
+      border-radius: 8px;
+    }
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .top-badge {
+      background: var(--blue);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .top-bar-title {
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+    .btn-print {
+      background: #FFFFFF;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 12.5px;
+      padding: 7px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-print:hover {
+      background: #E2E8F0;
+      transform: translateY(-1px);
+    }
+
+    /* WRAPPER & SHEETS */
+    .sheet-wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .document-sheet {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+      padding: 18px 22px;
+      position: relative;
+    }
+
+    /* HEADER */
+    .header-box {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 5px;
+      margin-bottom: 7px;
+    }
+    .header-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.5px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .doc-main-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+    .doc-sub-title {
+      font-size: 11px;
+      color: var(--secondary);
+      line-height: 1.35;
+    }
+    .doc-sub-title strong {
+      color: var(--primary);
+    }
+
+    /* PAGE 2 MINI HEADER */
+    .page2-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 8px;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .page2-header strong {
+      color: var(--primary);
+    }
+
+    /* SECTIONS */
+    .section-wrap {
+      margin-bottom: 7px;
+    }
+    .sec-heading {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 2.5px;
+      margin-bottom: 6px;
+    }
+    .sec-tag {
+      background: var(--primary);
+      color: #fff;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 1.5px 6px;
+      border-radius: 3px;
+    }
+
+    /* COMPARISON TABLE */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 7px;
+      font-size: 10.8px;
+      background: #FFFFFF;
+    }
+    .compare-table th {
+      background: #1E293B;
+      color: #FFFFFF;
+      font-size: 10.2px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      padding: 5px 4px;
+      text-align: center;
+      border-right: 1px solid #334155;
+      border-bottom: 1px solid #334155;
+      vertical-align: middle;
+      line-height: 1.25;
+    }
+    .compare-table th.col-onlyoffice {
+      background: #C2410C;
+      border-bottom: 2px solid #EA580C;
+      color: #FFFFFF;
+    }
+    .compare-table th.col-highlight {
+      background: #0F172A;
+      border-bottom: 2px solid var(--blue);
+      color: #38BDF8;
+    }
+    .compare-table th:last-child {
+      border-right: none;
+    }
+    .compare-table td {
+      padding: 4px 6px;
+      border-bottom: 1px solid var(--border-light);
+      border-right: 1px solid var(--border-light);
+      vertical-align: middle;
+      line-height: 1.28;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-table td:last-child {
+      border-right: none;
+    }
+    .compare-table tr:nth-child(even) td {
+      background: #F8FAFC;
+    }
+    .compare-table td.cell-crit {
+      font-weight: 700;
+      color: var(--primary);
+      background: #F8FAFC;
+      width: 14%;
+    }
+    .compare-table td.cell-onlyoffice {
+      background: #FFF7ED !important;
+      border-right: 1.5px solid var(--orange-border);
+      border-left: 1.5px solid var(--orange-border);
+    }
+    .compare-table td.cell-retail {
+      background: #F0F9FF !important;
+      border-right: 1.5px solid var(--blue-border);
+      border-left: 1.5px solid var(--blue-border);
+    }
+    .badge-ok {
+      color: var(--green);
+      font-weight: 800;
+    }
+    .badge-warn {
+      color: var(--amber);
+      font-weight: 700;
+    }
+    .badge-danger {
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    /* HYBRID / ONLYOFFICE BANNER */
+    .hybrid-box {
+      border: 1.5px solid var(--orange-border);
+      border-left: 4px solid var(--orange);
+      border-radius: 6px;
+      background: var(--orange-light);
+      padding: 7px 10px;
+      margin-bottom: 0;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .hybrid-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #9A3412;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      letter-spacing: 0.2px;
+    }
+    .hybrid-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-top: 6px;
+    }
+    .hybrid-desc {
+      font-size: 12.2px;
+      line-height: 1.45;
+      color: #7C2D12;
+    }
+    .hybrid-suite-thumb {
+      background: #FFFFFF;
+      border: 1px solid var(--orange-border);
+      border-radius: 6px;
+      padding: 6px;
+      text-align: center;
+    }
+    .hybrid-suite-thumb img {
+      max-width: 100%;
+      max-height: 95px;
+      object-fit: contain;
+    }
+
+    /* PRODUCT CARDS GRID (3 RECOMMENDED + 4 WARNINGS) */
+    .product-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-bottom: 9px;
+    }
+    .product-grid-3 .prod-thumb {
+      width: 60px;
+      height: 76px;
+    }
+    .product-grid-3 .prod-title {
+      font-size: 11.4px;
+    }
+    .product-grid-3 .prod-sku {
+      font-size: 10px;
+    }
+    .product-grid-3 .prod-points {
+      font-size: 10.5px;
+      line-height: 1.32;
+    }
+    .product-grid-6 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+    .prod-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 11px;
+      background: #FFFFFF;
+      display: flex;
+      gap: 11px;
+      align-items: center;
+    }
+    .prod-card.recommended {
+      border: 1.5px solid var(--green-border);
+      border-left: 4px solid var(--green);
+      background: #F0FDF4;
+    }
+    .prod-card.warning-box {
+      border: 1.5px solid var(--red-border);
+      border-left: 4px solid var(--red);
+      background: #FEF2F2;
+    }
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 2px;
+    }
+    .badge-status-ok {
+      background: #047857;
+      color: #FFFFFF;
+      box-shadow: 0 1px 2px rgba(4, 120, 87, 0.2);
+    }
+    .badge-status-err {
+      background: #B91C1C;
+      color: #FFFFFF;
+      box-shadow: 0 1px 2px rgba(185, 28, 28, 0.2);
+    }
+    .badge-mercy-dist {
+      display: inline-block;
+      font-size: 8.8px;
+      font-weight: 800;
+      color: #0369A1;
+      background: #E0F2FE;
+      border: 1px solid #BAE6FD;
+      padding: 1.5px 5px;
+      border-radius: 3px;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+    .prod-thumb {
+      width: 78px;
+      height: 92px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 3px;
+    }
+    .prod-thumb img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .prod-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .prod-title {
+      font-size: 12.2px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1px;
+      line-height: 1.28;
+    }
+    .prod-sku {
+      font-size: 10.5px;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .prod-points {
+      list-style: none;
+      font-size: 11.2px;
+      line-height: 1.36;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5px;
+    }
+    .prod-points li {
+      position: relative;
+      padding-left: 9px;
+    }
+    .prod-points li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+    .prod-card.recommended .prod-points li::before {
+      color: var(--green);
+    }
+    .prod-card.warning-box .prod-points li::before {
+      color: var(--red);
+    }
+
+    /* PARTNER VERIFICATION SECTION */
+    .partner-verify-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .partner-verify-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #FFFFFF;
+      padding: 8px 11px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .partner-header {
+      border-bottom: 1px dashed #E2E8F0;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+    }
+    .partner-badge {
+      display: inline-block;
+      background: #0284C7;
+      color: #FFFFFF;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 1.5px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .partner-badge.onlyoffice {
+      background: #C2410C;
+    }
+    .partner-org-name {
+      font-weight: 800;
+      font-size: 11.2px;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+    .partner-location {
+      font-size: 9.8px;
+      color: var(--muted);
+    }
+    .partner-body {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .qr-col {
+      width: 72px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .qr-img {
+      width: 70px;
+      height: 70px;
+      display: block;
+      border: 1px solid #CBD5E1;
+      border-radius: 4px;
+      padding: 1px;
+      background: #FFFFFF;
+    }
+    .qr-caption {
+      font-size: 8px;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+    .verify-instructions {
+      flex-grow: 1;
+      font-size: 10.5px;
+      line-height: 1.38;
+      color: var(--secondary);
+    }
+    .verify-step strong { color: var(--primary); }
+    .partner-link {
+      color: #0284C7;
+      text-decoration: none;
+      font-weight: 700;
+      word-break: break-all;
+      display: block;
+      margin: 1.5px 0;
+      font-size: 9.5px;
+    }
+    .partner-link:hover { text-decoration: underline; }
+    .step-subtext {
+      font-size: 9px;
+      color: var(--muted);
+      display: block;
+      margin-top: 1px;
+    }
+
+    /* IP LAW & CITATION BOX */
+    .law-box {
+      border: 1px solid var(--border);
+      background: #F8FAFC;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 11.5px;
+      line-height: 1.42;
+      color: var(--secondary);
+    }
+    .law-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      letter-spacing: 0.2px;
+    }
+    .law-columns {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 12px;
+    }
+    .doc-required-list {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 7px 10px;
+    }
+    .doc-required-list strong {
+      color: var(--primary);
+      font-size: 11px;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    /* FOOTER */
+    .footer-note {
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* PRINT STYLES FOR EXACT 2-PAGE A4 FIT (CLEAR, BOLD & READABLE) */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 7mm 9mm;
+      }
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        font-size: 10.8px !important;
+        color: #000000 !important;
+      }
+      .top-bar {
+        display: none !important;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .sheet-wrapper {
+        gap: 0 !important;
+        max-width: 100% !important;
+        display: block !important;
+      }
+      .document-sheet {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        box-sizing: border-box !important;
+        display: block !important;
+      }
+      .document-sheet#page-1 {
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .document-sheet#page-2 {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .header-box {
+        padding-bottom: 2px !important;
+        margin-bottom: 4px !important;
+      }
+      .header-meta {
+        font-size: 8.8px !important;
+        margin-bottom: 2px !important;
+      }
+      .doc-main-title {
+        font-size: 13.5px !important;
+        margin-bottom: 2px !important;
+        line-height: 1.2 !important;
+      }
+      .doc-sub-title {
+        font-size: 9.5px !important;
+        line-height: 1.22 !important;
+      }
+      .section-wrap {
+        margin-bottom: 4px !important;
+      }
+      .sec-heading {
+        font-size: 10.5px !important;
+        margin-bottom: 3px !important;
+        padding-bottom: 1.5px !important;
+      }
+      .compare-table {
+        font-size: 8.8px !important;
+        margin-bottom: 4px !important;
+      }
+      .compare-table th {
+        font-size: 8.5px !important;
+        padding: 2.8px 2.5px !important;
+        line-height: 1.18 !important;
+      }
+      .compare-table th span {
+        font-size: 7.2px !important;
+        font-weight: 500 !important;
+        display: block !important;
+        margin-top: 1px !important;
+        white-space: nowrap !important;
+      }
+      .compare-table td {
+        font-size: 8.8px !important;
+        padding: 2.4px 4px !important;
+        line-height: 1.2 !important;
+      }
+      .hybrid-box {
+        padding: 4px 8px !important;
+        margin-bottom: 0 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .hybrid-title {
+        font-size: 9.8px !important;
+        margin-bottom: 2px !important;
+      }
+      .hybrid-desc {
+        font-size: 8.8px !important;
+        line-height: 1.22 !important;
+      }
+      .hybrid-desc p {
+        margin-bottom: 2px !important;
+      }
+      .hybrid-suite-thumb img {
+        max-height: 48px !important;
+      }
+      .page2-header {
+        padding-bottom: 3px !important;
+        margin-bottom: 4px !important;
+        font-size: 9px !important;
+      }
+      .product-grid-3 {
+        gap: 5px !important;
+        margin-bottom: 5px !important;
+      }
+      .product-grid-3 .prod-thumb {
+        width: 40px !important;
+        height: 52px !important;
+      }
+      .product-grid-3 .prod-title {
+        font-size: 9px !important;
+      }
+      .product-grid-3 .prod-sku {
+        font-size: 8px !important;
+      }
+      .product-grid-3 .prod-points {
+        font-size: 8.2px !important;
+        line-height: 1.18 !important;
+      }
+      .product-grid-6 {
+        gap: 5px !important;
+        margin-bottom: 5px !important;
+      }
+      .prod-card {
+        padding: 4px 7px !important;
+        gap: 6px !important;
+      }
+      .badge-status {
+        font-size: 8px !important;
+        padding: 1px 4px !important;
+        margin-bottom: 1px !important;
+      }
+      .badge-mercy-dist {
+        font-size: 7.8px !important;
+        padding: 1px 3.5px !important;
+        margin-bottom: 1px !important;
+      }
+      .prod-thumb {
+        width: 52px !important;
+        height: 64px !important;
+      }
+      .prod-title {
+        font-size: 9.8px !important;
+      }
+      .prod-sku {
+        font-size: 8.6px !important;
+        margin-bottom: 1px !important;
+      }
+      .prod-points {
+        font-size: 8.8px !important;
+        gap: 1px !important;
+        line-height: 1.22 !important;
+      }
+      .partner-verify-grid {
+        gap: 6px !important;
+        margin-bottom: 5px !important;
+      }
+      .partner-verify-card {
+        padding: 4px 7px !important;
+      }
+      .qr-col {
+        width: 52px !important;
+      }
+      .qr-img {
+        width: 50px !important;
+        height: 50px !important;
+      }
+      .partner-org-name {
+        font-size: 9.4px !important;
+      }
+      .partner-location {
+        font-size: 8.2px !important;
+      }
+      .verify-instructions {
+        font-size: 8.6px !important;
+        line-height: 1.28 !important;
+      }
+      .partner-link {
+        font-size: 8px !important;
+      }
+      .law-box {
+        padding: 5px 8px !important;
+        font-size: 8.8px !important;
+        line-height: 1.28 !important;
+      }
+      .law-title {
+        font-size: 9.5px !important;
+        margin-bottom: 2px !important;
+      }
+      .doc-required-list {
+        padding: 4px 7px !important;
+      }
+      .doc-required-list strong {
+        font-size: 8.8px !important;
+      }
+      .doc-required-list ol {
+        font-size: 8.5px !important;
+      }
+      .footer-note {
+        margin-top: 3px !important;
+        padding-top: 2px !important;
+        font-size: 8px !important;
+      }
+        padding-top: 3px !important;
+        font-size: 8.8px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP ACTION BAR (ẨN KHI IN) -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span class="top-badge">TÀI LIỆU THAM CHIẾU</span>
+      <span class="top-bar-title">Cẩm Nang Bản Quyền Phần Mềm &amp; Luật Sở Hữu Trí Tuệ (Khổ A4 • 2 Trang)</span>
+    </div>
+    <div>
+      <button type="button" class="btn-print" onclick="window.print()">In hoặc Lưu PDF (A4)</button>
+    </div>
+  </div>
+
+  <div class="sheet-wrapper">
+
+    <!-- ==================== TRANG 1 ==================== -->
+    <div class="document-sheet" id="page-1">
+      <div>
+        <!-- HEADER TRUNG LẬP CHUẨN MỰC -->
+        <div class="header-box">
+          <div class="header-meta">
+            <span>Tài Liệu Tổng Hợp Quy Chuẩn Bản Quyền Phần Mềm Thương Mại</span>
+            <span>Cập Nhật Tháng 11/2026 • Trang 1 / 2</span>
+          </div>
+          <h1 class="doc-main-title">CẨM NANG PHÂN BIỆT CÁC LOẠI BẢN QUYỀN PHẦN MỀM MICROSOFT &amp; QUY ĐỊNH LUẬT SỞ HỮU TRÍ TUỆ</h1>
+          <p class="doc-sub-title">
+            Căn cứ theo <strong>Điều khoản Cấp phép Phần mềm Microsoft (Microsoft Software License Terms / EULA)</strong> và <strong>Luật Sở hữu trí tuệ Việt Nam</strong> hiện hành. Hướng dẫn dành cho Cửa hàng máy tính, Đại lý phân phối &amp; Khách hàng Doanh nghiệp.
+          </p>
+        </div>
+
+        <!-- PHẦN 1: BẢNG SO SÁNH CÁC KÊNH BẢN QUYỀN -->
+        <div class="section-wrap">
+          <div class="sec-heading">
+            <span class="sec-tag">PHẦN 1</span>
+            <span>BẢNG ĐỐI CHIẾU CÁC KÊNH BẢN QUYỀN PHẦN MỀM THƯƠNG MẠI TRÊN THỊ TRƯỜNG</span>
+          </div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th style="width: 14%;">Tiêu Chí Cấp Phép</th>
+                <th class="col-onlyoffice" style="width: 22%;">ONLYOFFICE TỐI ƯU BỞI MERCY TECH<br><span style="font-size: 8.5px; font-weight: 500; text-transform: none; color: #FFEDD5; display: block; margin-top: 2px; white-space: nowrap;">(Vĩnh Viễn • Tiết Kiệm • Đủ VAT)</span></th>
+                <th class="col-highlight" style="width: 20%;">1. MS RETAIL (FPP / ESD)<br><span style="font-size: 8.5px; font-weight: 500; text-transform: none; color: #BAE6FD; display: block; margin-top: 2px; white-space: nowrap;">(Hàng Phân Phối Chính Ngạch)</span></th>
+                <th style="width: 15%;">2. MS OEM / OEI<br><span style="font-size: 8.5px; font-weight: 400; text-transform: none; color: #94A3B8; display: block; margin-top: 2px; white-space: nowrap;">(System Builder / DVD)</span></th>
+                <th style="width: 14%;">3. MS 365 THUÊ BAO<br><span style="font-size: 8.5px; font-weight: 400; text-transform: none; color: #94A3B8; display: block; margin-top: 2px; white-space: nowrap;">(Business &amp; Personal)</span></th>
+                <th style="width: 15%;">4. KEY TRÔI NỔI LẬU<br><span style="font-size: 8.5px; font-weight: 400; text-transform: none; color: #FCA5A5; display: block; margin-top: 2px; white-space: nowrap;">(Crack / KMS / MAK Lậu)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-crit">Quy cách sản phẩm</td>
+                <td class="cell-onlyoffice"><strong>Gói Thương Mại Mercy Tech:</strong> Hộp Box (MER-00105), <strong>Tem cào 7 màu</strong> hoặc <strong>Key Online</strong> (Khác bản AGPLv3 miễn phí: Có Giấy chứng nhận pháp nhân, xuất đủ Hóa đơn VAT &amp; hỗ trợ kỹ thuật).</td>
+                <td class="cell-retail"><strong>Key Online ESD chính hãng</strong> (Win 11 Pro <strong>FQC-10572</strong> &bull; Office H&amp;B 2024 <strong>EP2-06604</strong>) hoặc <strong>Hộp FPP nguyên seal</strong> kèm USB 3.0 (<strong>HAV-00163</strong>).</td>
+                <td>Bì thư giấy trắng mỏng + đĩa DVD + Tem COA. Phân phối nguyên bộ chưa mở cho đơn vị lắp ráp máy (System Builder).</td>
+                <td>Tài khoản Email tổ chức (Bản Business) hoặc Thẻ cào/Email cá nhân (Bản Personal/Family).</td>
+                <td>Chỉ gửi 1 dòng text 25 ký tự qua Zalo/Facebook; không hộp, không bill.</td>
+              </tr>
+              <tr>
+                <td class="cell-crit">Quyền mua bán rời (Standalone)</td>
+                <td class="cell-onlyoffice"><span class="badge-ok">&#10004; ĐƯỢC PHÉP BÁN RỜI</span><br>Tự do phân phối sỉ/lẻ độc lập cho cửa hàng, tiệm net, đại lý.</td>
+                <td class="cell-retail"><span class="badge-ok">&#10004; ĐƯỢC PHÉP BÁN RỜI</span><br>Bán lẻ hợp pháp, không ràng buộc phải kèm theo máy mới.</td>
+                <td><span class="badge-warn">QUY CHUẨN SYSTEM BUILDER</span><br>Được phân phối nguyên seal cho đơn vị lắp ráp; không bán lẻ rời cho người dùng cuối tự cài lên máy cũ.</td>
+                <td><span class="badge-warn">Không bán lẻ rời</span><br>Ký hợp đồng thuê bao năm hoặc mua thẻ thuê bao từ đại lý.</td>
+                <td><span class="badge-danger">&#10008; VI PHẠM PHÁP LUẬT</span><br>Tách lậu key doanh nghiệp hoặc key học sinh đem bán chợ đen.</td>
+              </tr>
+              <tr>
+                <td class="cell-crit">Cài cho máy tính cũ đang sử dụng?</td>
+                <td class="cell-onlyoffice"><span class="badge-ok">&#10004; TUÂN THỦ ĐẦY ĐỦ</span><br>Dùng hợp thức hóa ngay cho cả dàn máy cũ lẫn máy mới ráp.</td>
+                <td class="cell-retail"><span class="badge-ok">&#10004; TUÂN THỦ ĐẦY ĐỦ</span><br>Dùng hợp thức hóa cho cả dàn máy cũ lẫn máy mới.</td>
+                <td><span class="badge-danger">&#10008; KHÔNG PHÙ HỢP EULA</span><br>Mua bì thư hoặc bóc tem dán lên máy cũ không đúng thỏa thuận cấp phép System Builder.</td>
+                <td><span class="badge-ok">Hợp lệ</span><br>(Phải duy trì kết nối Internet định kỳ để xác minh hạn bản quyền).</td>
+                <td><span class="badge-danger">&#10008; VI PHẠM QUYỀN TÁC GIẢ</span><br>Dù Windows báo Activated, khi kiểm tra vẫn bị coi là xâm phạm quyền tác giả.</td>
+              </tr>
+              <tr>
+                <td class="cell-crit">Chuyển sang máy khác khi hỏng/đổi máy</td>
+                <td class="cell-onlyoffice"><span class="badge-ok">&#10004; ĐỔI MÁY SAU 30 NGÀY (BOX)</span><br>Dòng Box (MER-00105) hỗ trợ đổi máy 05 lần trọn đời; Key Online &amp; Tem cào gắn cố định Mainboard.</td>
+                <td class="cell-retail"><span class="badge-ok">&#10004; ĐƯỢC ĐỔI MÁY TRỌN ĐỜI</span><br>Win 11 Pro (ESD <strong>FQC-10572</strong> &amp; FPP <strong>HAV-00163</strong>): Đổi máy theo chính sách Retail.<br>Office H&amp;B 2024 ESD: Đổi máy sau 90 ngày.</td>
+                <td><span class="badge-warn">GẮN LIỀN PHẦN CỨNG GỐC</span><br>Gắn theo Mainboard đầu tiên. Ngoại lệ: Được hỗ trợ kích hoạt lại nếu thay Mainboard bảo hành chính hãng do lỗi phần cứng.</td>
+                <td><span class="badge-warn">Đổi được nhưng phụ thuộc</span><br>Hết hạn thuê bao năm không gia hạn là phần mềm bị khóa.</td>
+                <td><span class="badge-danger">&#10008; KHÔNG CÓ QUYỀN LỢI</span><br>Có thể bị máy chủ Microsoft thu hồi hoặc khóa (Block) bất kỳ lúc nào.</td>
+              </tr>
+              <tr>
+                <td class="cell-crit">Tính thương mại (Commercial Use)</td>
+                <td class="cell-onlyoffice"><strong>Đầy đủ quyền thương mại:</strong> Hóa đơn VAT &amp; Chứng nhận định danh pháp nhân bảo trợ doanh nghiệp.</td>
+                <td class="cell-retail"><strong>Đầy đủ quyền thương mại</strong> cho Công ty, Cửa hàng, Trường học.</td>
+                <td>Quyền thương mại gắn liền theo cấu hình máy tính nguyên bản ban đầu.</td>
+                <td>• <strong>M365 Business:</strong> Đầy đủ quyền thương mại &amp; quản trị doanh nghiệp.<br>• <strong>M365 Personal / Family:</strong> Định vị cá nhân/hộ gia đình (Non-commercial).</td>
+                <td><span class="badge-danger">Vi phạm nghiêm trọng</span> cả quyền tác giả lẫn quy định thuế.</td>
+              </tr>
+              <tr>
+                <td class="cell-crit">Hiệu quả đầu tư ngân sách</td>
+                <td class="cell-onlyoffice"><span class="badge-ok">&#10004; TỐI ƯU CHI PHÍ TỐI ĐA</span><br>Bản quyền vĩnh viễn trọn đời, chi phí đầu tư ban đầu thấp nhất, không phí duy trì.</td>
+                <td class="cell-retail">Đầu tư bản quyền chính ngạch một lần (mua đứt sở hữu vĩnh viễn), phù hợp vị trí trọng yếu.</td>
+                <td>Chi phí trung bình cao, không được chuyển nhượng bản quyền khi người dùng chủ động nâng cấp máy mới.</td>
+                <td>Chi phí định kỳ hàng năm (phí thuê bao lũy kế tăng dần theo thời gian sử dụng).</td>
+                <td><span class="badge-danger">Rủi ro pháp lý theo quy định</span><br>Xâm phạm quyền tác giả theo Luật SHTT, bị xử phạt hành chính tùy theo mức độ.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PHẦN 2: CHÈN NHẸ GIẢI PHÁP ONLYOFFICE HYBRID BẢN QUYỀN VĨNH VIỄN -->
+        <div class="section-wrap" style="margin-bottom: 0;">
+          <div class="hybrid-box">
+            <div class="badge-status badge-status-ok" style="margin-bottom: 4px;">&#10004; GIẢI PHÁP TIẾT KIỆM • TUÂN THỦ BẢN QUYỀN THƯƠNG MẠI • ĐẦY ĐỦ HÓA ĐƠN VAT</div>
+            <div class="hybrid-title">MÔ HÌNH KẾT HỢP (HYBRID) VỚI ONLYOFFICE &mdash; TỐI ƯU CHI PHÍ BẢN QUYỀN VĂN PHÒNG</div>
+            <div class="hybrid-grid">
+              <div class="hybrid-desc">
+                <p style="margin-bottom: 3px;">
+                  • <strong>Bài toán ngân sách:</strong> Trang bị toàn bộ máy tính bằng MS bản quyền tạo áp lực ngân sách lớn cho doanh nghiệp, trường học và khách mua PC ráp.
+                </p>
+                <p style="margin-bottom: 3px;">
+                  • <strong>Mô hình Hybrid tối ưu chi phí &amp; tuân thủ pháp lý:</strong>
+                </p>
+                <ul style="padding-left: 16px; line-height: 1.36;">
+                  <li><strong>Hệ điều hành &amp; Máy trọng yếu (Giám đốc, Kế toán):</strong> Trang bị <strong>Windows 11 Pro 64-bit Retail Online ESD [FQC-10572]</strong> hoặc <strong>Windows 11 Pro FPP USB [HAV-00163]</strong> kết hợp <strong>Microsoft Office Home &amp; Business 2024 Retail Online ESD [EP2-06604]</strong> chính ngạch.</li>
+                  <li><strong>Dàn nhân viên, phòng ban &amp; PC ráp cửa hàng:</strong> Trang bị <strong>Gói thương mại OnlyOffice tối ưu bởi Mercy Tech</strong> &mdash; xuất đủ <strong>Hóa đơn VAT &amp; Giấy chứng nhận</strong> pháp nhân, tích hợp sẵn bộ font tiếng Việt và <strong>MathType / LaTeX</strong> kèm hỗ trợ kỹ thuật (khác biệt bản AGPLv3 miễn phí không có VAT và dịch vụ bảo trợ doanh nghiệp).</li>
+                  <li><strong>Dòng Hộp OnlyOffice Box (MER-00105):</strong> Mua bán độc lập tương tự FPP, <strong>hỗ trợ đổi máy tối đa 05 lần (sau 30 ngày)</strong> (linh hoạt hơn 90 ngày của MS).</li>
+                </ul>
+              </div>
+              <div class="hybrid-suite-thumb">
+                <img src="assets/dealer_policy/onlyoffice_mercy_tech_product_suite.png" alt="Bộ sản phẩm OnlyOffice Box, Tem 7 màu và Key Online">
+                <div style="font-size: 10.5px; font-weight: 700; color: #9A3412; margin-top: 4px;">
+                  OnlyOffice Box • Tem Cào 7 Màu • Key Online
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>Cẩm Nang Bản Quyền Phần Mềm Thương Mại &bull; Trang 1 / 2</span>
+        <span>Căn cứ Điều khoản Microsoft EULA &amp; Luật Sở hữu trí tuệ Việt Nam</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== TRANG 2 ==================== -->
+    <div class="document-sheet" id="page-2">
+      <div>
+        <!-- SUB HEADER TRANG 2 -->
+        <div class="page2-header">
+          <span>CẨM NANG PHÂN BIỆT BẢN QUYỀN PHẦN MỀM MICROSOFT &bull; TRANG 2 / 2</span>
+          <span>HÌNH ẢNH NHẬN DIỆN THỰC TẾ &bull; XÁC MINH ĐỐI TÁC &bull; CHẾ TÀI PHÁP LÝ</span>
+        </div>
+
+        <!-- PHẦN 3: NHẬN DIỆN CÁC SẢN PHẨM CỤ THỂ QUA HÌNH ẢNH (6 THẺ TRỰC QUAN) -->
+        <div class="section-wrap">
+          <div class="sec-heading">
+            <span class="sec-tag">PHẦN 2</span>
+            <span>HÌNH ẢNH NHẬN DIỆN SẢN PHẨM MICROSOFT CHÍNH HÃNG &amp; CẢNH BÁO VI PHẠM</span>
+          </div>
+
+          <!-- 03 SẢN PHẨM MICROSOFT RETAIL CHÍNH HÃNG MERCY TECH ĐANG PHÂN PHỐI -->
+          <div class="product-grid-3">
+            <!-- CARD 1: WIN 11 PRO RETAIL ONLINE ESD (FQC-10572) -->
+            <div class="prod-card recommended">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/win11_pro_fpp_hav00163.png" alt="Windows 11 Pro Retail Online ESD FQC-10572" onerror="this.src='assets/ms_guide/win11_pro_fpp_3d_clean.jpg'">
+              </div>
+              <div class="prod-info">
+                <div style="display: flex; gap: 3px; align-items: center; flex-wrap: wrap; margin-bottom: 2px;">
+                  <span class="badge-status badge-status-ok">&#10004; BẢN QUYỀN RETAIL &bull; BÁN RỜI HỢP PHÁP</span>
+                  <span class="badge-mercy-dist">MERCY TECH ĐANG PHÂN PHỐI</span>
+                </div>
+                <div class="prod-title" style="color: #047857;">Windows 11 Pro 64-Bit Retail Online ESD</div>
+                <div class="prod-sku">Mã hãng: <strong>FQC-10572</strong> &bull; Key Online ESD Vĩnh viễn</div>
+                <ul class="prod-points">
+                  <li><strong>Key Online ESD chính hãng:</strong> Kích hoạt trực tuyến hợp lệ cho cả Win 10 Pro &amp; Win 11 Pro.</li>
+                  <li><strong>Mua bán riêng lẻ hợp pháp:</strong> Cấp cho máy mới ráp hoặc hợp thức hóa dàn máy cũ.</li>
+                  <li><strong>Hỗ trợ đổi máy:</strong> Được chuyển bản quyền khi nâng cấp hoặc đổi PC theo chính sách Retail.</li>
+                  <li><strong>Đủ tính năng Pro &amp; Hóa đơn VAT:</strong> BitLocker, Remote Desktop, Hyper-V, Domain Join.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 2: WIN 11 PRO FPP (HỘP USB HAV-00163) -->
+            <div class="prod-card recommended">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/win11_pro_fpp_3d_clean.jpg" alt="Windows 11 Pro FPP Retail Box HAV-00163" onerror="this.src='assets/win_pro_fpp_usb_box.jpg'">
+              </div>
+              <div class="prod-info">
+                <div style="display: flex; gap: 3px; align-items: center; flex-wrap: wrap; margin-bottom: 2px;">
+                  <span class="badge-status badge-status-ok">&#10004; HỘP VẬT LÝ FPP &bull; BÁN RỜI HỢP PHÁP</span>
+                  <span class="badge-mercy-dist">MERCY TECH ĐANG PHÂN PHỐI</span>
+                </div>
+                <div class="prod-title" style="color: #047857;">Windows 11 Pro 64-Bit FPP (Hộp USB 3.0)</div>
+                <div class="prod-sku">Mã hãng: <strong>HAV-00163</strong> &bull; Hộp Vật Lý Vĩnh viễn Retail</div>
+                <ul class="prod-points">
+                  <li><strong>Hộp vật lý nguyên seal:</strong> Kèm USB 3.0 cài đặt &amp; Thẻ Product Key chính hãng Microsoft.</li>
+                  <li><strong>Được phép mua đi bán lại rời:</strong> Cài cho máy mới ráp hoặc hợp thức hóa máy cũ.</li>
+                  <li><strong>Chuyển đổi máy trọn đời:</strong> Hỏng linh kiện, thay Mainboard hoặc đổi PC vẫn giữ nguyên key.</li>
+                  <li><strong>Đầy đủ tính năng doanh nghiệp:</strong> BitLocker, Remote Desktop, Hyper-V &amp; Hóa đơn VAT.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 3: OFFICE H&B 2024 RETAIL ONLINE ESD (EP2-06604) -->
+            <div class="prod-card recommended">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/office_hb_2024_clean.jpg" alt="Office Home & Business 2024 Retail Online ESD EP2-06604" onerror="this.src='assets/ms_guide/office_hb_2024_surfaceviet.jpg'">
+              </div>
+              <div class="prod-info">
+                <div style="display: flex; gap: 3px; align-items: center; flex-wrap: wrap; margin-bottom: 2px;">
+                  <span class="badge-status badge-status-ok">&#10004; COMMERCIAL USE &bull; DOANH NGHIỆP</span>
+                  <span class="badge-mercy-dist">MERCY TECH ĐANG PHÂN PHỐI</span>
+                </div>
+                <div class="prod-title" style="color: #047857;">Office Home &amp; Business 2024 Retail ESD</div>
+                <div class="prod-sku">Mã hãng: <strong>EP2-06604</strong> &bull; Key Online ESD Vĩnh viễn</div>
+                <ul class="prod-points">
+                  <li><strong>Có chữ &ldquo;Business&rdquo; &rarr; Commercial Use:</strong> Cấp phép thương mại hợp pháp cho doanh nghiệp.</li>
+                  <li><strong>Trọn bộ ứng dụng vĩnh viễn:</strong> Word, Excel, PowerPoint, Outlook, OneNote (Win/Mac).</li>
+                  <li><strong>Quyền đổi máy chính ngạch:</strong> Hỗ trợ chuyển sang thiết bị khác theo chính sách Retail MS.</li>
+                  <li><strong>Xuất đủ Hóa đơn VAT:</strong> Hợp thức hóa hồ sơ quyết toán chi phí doanh nghiệp theo quy định thuế.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-grid-6">
+            <!-- CARD 4: CẢNH BÁO MICROSOFT 365 PERSONAL -->
+            <div class="prod-card warning-box">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/m365_personal_clean.jpg" alt="Microsoft 365 Personal Subscription Box">
+              </div>
+              <div class="prod-info">
+                <div class="badge-status badge-status-err">ĐỊNH VỊ CÁ NHÂN &amp; GIA ĐÌNH (NON-COMMERCIAL)</div>
+                <div class="prod-title" style="color: var(--red);">Microsoft 365 Personal (Hoặc Family)</div>
+                <div class="prod-sku">Thuê Bao 1 Năm • Cấp phép người dùng cá nhân</div>
+                <ul class="prod-points">
+                  <li><strong>Định vị cấp phép:</strong> Thiết kế cho nhu cầu cá nhân/hộ gia đình (Non-commercial), thiếu các công cụ quản trị bảo mật Entra ID/Exchange doanh nghiệp.</li>
+                  <li><strong>Hình thức thuê bao:</strong> Trả phí định kỳ hàng năm; hết hạn 12 tháng phần mềm sẽ bị giới hạn tính năng chỉnh sửa tài liệu.</li>
+                  <li><strong>Lưu ý cho doanh nghiệp:</strong> Doanh nghiệp trang bị máy cho nhân viên nên chọn gói Business hoặc Office H&amp;B để bảo đảm tuân thủ kiểm toán bản quyền.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 4: CẢNH BÁO OFFICE HOME (NON-COMMERCIAL) -->
+            <div class="prod-card warning-box">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/office_home_2024_clean.jpg" alt="Office Home 2024 Non Commercial">
+              </div>
+              <div class="prod-info">
+                <div class="badge-status badge-status-err">ĐỊNH VỊ HỌC SINH &amp; GIA ĐÌNH (NON-COMMERCIAL)</div>
+                <div class="prod-title" style="color: var(--red);">Office Home 2024 (Hoặc Home &amp; Student)</div>
+                <div class="prod-sku">Mã: <strong>EP2-06811</strong> / <strong>EP2-06797</strong> • Không có chữ Business</div>
+                <ul class="prod-points">
+                  <li><strong>Mục đích cấp phép:</strong> Dành cho học sinh, sinh viên và cá nhân; không bao gồm quyền sử dụng thương mại cấp doanh nghiệp.</li>
+                  <li><strong>Không kèm Outlook:</strong> Chỉ bao gồm Word, Excel, PowerPoint; không có ứng dụng email Outlook bản quyền.</li>
+                  <li><strong>Lưu ý kiểm toán:</strong> Pháp nhân doanh nghiệp sử dụng bản này cho văn phòng sẽ không phù hợp với chuẩn mực cấp phép thương mại.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 5: CẢNH BÁO WIN OEM SYSTEM BUILDER -->
+            <div class="prod-card warning-box">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/win11_pro_oem_clean.jpg" alt="Windows 11 Pro OEM DVD System Builder" onerror="this.src='assets/win11_pro_oei_dvd_box.jpg'">
+              </div>
+              <div class="prod-info">
+                <div class="badge-status badge-status-err">CẤP PHÉP SYSTEM BUILDER • ĐI KÈM MÁY MỚI RÁP</div>
+                <div class="prod-title" style="color: var(--red);">Windows 11 Pro OEM / OEI (Bì Thư DVD)</div>
+                <div class="prod-sku">Mã: <strong>FQC-10528</strong> • Cấp phép System Builder</div>
+                <ul class="prod-points">
+                  <li><strong>Phân phối System Builder:</strong> Microsoft cho phép cung cấp bộ OEM nguyên seal cho đơn vị lắp ráp máy để cài sẵn lên PC mới.</li>
+                  <li><strong>Không bán lẻ người dùng cuối:</strong> Không cấp phép bán lẻ rời cho người dùng tự nâng cấp máy cũ đã qua sử dụng.</li>
+                  <li><strong>Chính sách đổi phần cứng:</strong> Bản quyền gắn theo bo mạch chủ gốc; được hỗ trợ kích hoạt lại nếu thay Mainboard bảo hành do lỗi phần cứng.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 6: CẢNH BÁO TEM OEM COA DÁN MÁY -->
+            <div class="prod-card warning-box">
+              <div class="prod-thumb">
+                <img src="assets/ms_guide/win11_pro_coa_sticker_annotated.jpg" alt="Tem OEM COA Dán Máy Cấm Bán Rời" onerror="this.src='assets/ms_guide/win11_pro_coa_label_clean.jpg'">
+              </div>
+              <div class="prod-info">
+                <div class="badge-status badge-status-err">IN RÕ "LABEL NOT TO BE SOLD SEPARATELY"</div>
+                <div class="prod-title" style="color: var(--red);">Tem OEM COA Dán Máy (Certificate of Authenticity)</div>
+                <div class="prod-sku">Tem dán vỏ máy • Mã vạch System Builder COA Sticker</div>
+                <ul class="prod-points">
+                  <li><strong>Quy định in hoa trên tem:</strong> Ghi rõ dòng <i>LABEL NOT TO BE SOLD SEPARATELY</i> (Tem chứng nhận COA không được tách rời để bán riêng lẻ).</li>
+                  <li><strong>Nguyên tắc dán tem:</strong> Tem COA phải được dán cố định vào thùng máy tính lắp ráp mới hoàn chỉnh, không được bóc dán sang thiết bị khác.</li>
+                  <li><strong>Yêu cầu đối soát:</strong> Cần đi kèm hóa đơn mua máy tính mới ban đầu để đảm bảo tính hợp lệ khi đối soát bản quyền.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHẦN 4: THÔNG TIN XÁC MINH ĐỐI TÁC TRÊN MICROSOFT MARKETPLACE & ONLYOFFICE TOÀN CẦU -->
+        <div class="section-wrap">
+          <div class="sec-heading">
+            <span class="sec-tag">ĐỐI TÁC CHÍNH THỨC</span>
+            <span>THÔNG TIN XÁC MINH TƯ CÁCH ĐỐI TÁC TOÀN CẦU CỦA MERCY TECH</span>
+          </div>
+          <div class="partner-verify-grid">
+            <!-- Box 1: MICROSOFT MARKETPLACE PARTNER -->
+            <div class="partner-verify-card">
+              <div class="partner-header">
+                <span class="partner-badge">MICROSOFT MARKETPLACE</span>
+                <div class="partner-org-name">MERCY TECH COMPANY LIMITED</div>
+                <div class="partner-location">Location: Ho Chi Minh City, Vietnam &bull; Marketplace Partner Profile</div>
+              </div>
+              <div class="partner-body">
+                <div class="qr-col">
+                  <img src="assets/ms_guide/qr_microsoft_marketplace.png" alt="QR Microsoft Marketplace Partner" class="qr-img">
+                  <div class="qr-caption">Quét Camera / Zalo</div>
+                </div>
+                <div class="verify-instructions">
+                  <div class="verify-step">
+                    <strong>Cách 1: Truy cập link đối tác chính thức:</strong>
+                    <a href="https://marketplace.microsoft.com/en-us/partners/d5fb60a7-0e14-4be6-8ff3-1a84d0e66c37/overview" target="_blank" class="partner-link">
+                      marketplace.microsoft.com/.../overview
+                    </a>
+                  </div>
+                  <div class="verify-step" style="margin-top: 3px;">
+                    <strong>Cách 2:</strong> Dùng camera điện thoại hoặc Zalo quét mã QR bên cạnh để xem trực tiếp hồ sơ đối tác của Mercy Tech trên <em>Microsoft Marketplace</em>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Box 2: ONLYOFFICE OFFICIAL PARTNER -->
+            <div class="partner-verify-card">
+              <div class="partner-header">
+                <span class="partner-badge onlyoffice">ONLYOFFICE PARTNER</span>
+                <div class="partner-org-name">CÔNG TY TNHH CÔNG NGHỆ MERCY</div>
+                <div class="partner-location">Khu vực: Vietnam &bull; Authorized Solutions & Implementation Partner</div>
+              </div>
+              <div class="partner-body">
+                <div class="qr-col">
+                  <img src="assets/ms_guide/qr_onlyoffice_partner.png" alt="QR OnlyOffice Official Partner" class="qr-img">
+                  <div class="qr-caption">Quét Camera / Zalo</div>
+                </div>
+                <div class="verify-instructions">
+                  <div class="verify-step">
+                    <strong>Cách 1: Truy cập danh bạ đối tác toàn cầu:</strong>
+                    <a href="https://www.onlyoffice.com/find-partners" target="_blank" class="partner-link">
+                      www.onlyoffice.com/find-partners
+                    </a>
+                    <span class="step-subtext">*(Mục <strong>Country / Region</strong>: chọn <strong>Vietnam</strong> để tra cứu tên niêm yết).*</span>
+                  </div>
+                  <div class="verify-step" style="margin-top: 3px;">
+                    <strong>Cách 2:</strong> Quét mã QR bên cạnh để tra cứu trực tiếp danh bạ đối tác chính thức của <em>OnlyOffice</em>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHẦN 5: CĂN CỨ LUẬT SỞ HỮU TRÍ TUỆ & CHỨNG TỪ BẮT BUỘC -->
+        <div class="section-wrap" style="margin-bottom: 0;">
+          <div class="sec-heading">
+            <span class="sec-tag">PHÁP LÝ</span>
+            <span>CĂN CỨ PHÁP LUẬT SỞ HỮU TRÍ TUỆ VIỆT NAM &amp; CHỨNG TỪ HỢP LỆ</span>
+          </div>
+
+          <div class="law-box">
+            <div class="law-columns">
+              <div>
+                <div class="law-title">CÁC CHẾ TÀI XỬ PHẠT VI PHẠM BẢN QUYỀN PHẦN MỀM HIỆN HÀNH:</div>
+                <ul style="padding-left: 14px; display: flex; flex-direction: column; gap: 3px;">
+                  <li>
+                    <strong>Luật Sở hữu trí tuệ (Số 50/2005/QH11, sửa đổi 2022):</strong> Điều 14 &amp; 28 quy định chương trình máy tính là đối tượng bảo hộ quyền tác giả. Mọi hành vi sao chép không phép, bẻ khóa, phân phối key lậu đều cấu thành hành vi xâm phạm quyền tác giả.
+                  </li>
+                  <li>
+                    <strong>Nghị định 131/2013/NĐ-CP &amp; Nghị định 17/2023/NĐ-CP:</strong> Điều 18 quy định phạt tiền từ 15 &ndash; 35 triệu đồng (cá nhân), tổ chức vi phạm phạt gấp 2 lần (lên đến 70 triệu đồng) đối với hành vi sao chép phần mềm không phép, kèm biện pháp buộc dỡ bỏ bản sao vi phạm. Mức phạt tiền hành chính tối đa đối với tổ chức vi phạm đặc biệt nghiêm trọng có thể lên đến 500 triệu đồng.
+                  </li>
+                  <li>
+                    <strong>Điều 225 Bộ luật Hình sự:</strong> Xử lý hình sự khi hành vi xâm phạm quyền tác giả thực hiện ở quy mô thương mại (thu lợi bất chính từ 100 triệu hoặc gây thiệt hại từ 300 triệu đồng trở lên); đối với pháp nhân thương mại, mức phạt từ 300 triệu đến 3 tỷ đồng hoặc đình chỉ hoạt động có thời hạn.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="doc-required-list">
+                <strong>03 CHỨNG TỪ BẮT BUỘC ĐỂ CHỨNG MINH TÍNH HỢP PHÁP:</strong>
+                <ol style="padding-left: 14px; display: flex; flex-direction: column; gap: 2.5px; font-size: 10.5px;">
+                  <li><strong>Hóa đơn GTGT (VAT) điện tử hợp lệ:</strong> Thể hiện rõ tên mã phiên bản phần mềm (Retail FPP/ESD hoặc OnlyOffice).</li>
+                  <li><strong>Hộp sản phẩm vật lý / Thẻ Product Key / Giấy chứng nhận bản quyền:</strong> Có mã kích hoạt trùng khớp với dữ liệu nhà cấp phép.</li>
+                  <li><strong>Hợp đồng kinh tế &amp; Biên bản bàn giao:</strong> Ký kết với đơn vị phân phối pháp nhân chính ngạch tại Việt Nam.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>Cẩm Nang Bản Quyền Phần Mềm Thương Mại &bull; Trang 2 / 2</span>
+        <span>Nguồn tham chiếu: microsoft.com/useterms &bull; onlyoffice.com &bull; Cục Bản quyền tác giả Việt Nam</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
