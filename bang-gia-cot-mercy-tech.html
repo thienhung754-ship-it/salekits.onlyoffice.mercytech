@@ -6,19 +6,19 @@
   <title>Bảng Giá Bản Quyền Phần Mềm (Bán Lẻ &amp; Sỉ Đại Lý) — Mercy Tech Global</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
   <style>
     :root {
       --blue-brand: #1858A8;
       --blue-header: #1656A5;
       --blue-row-alt: #EAF3FB;
-      --blue-border: #3B4958;
+      --blue-border: #4A5568;
       --orange-brand: #C2410C;
       --orange-header: #B93808;
       --orange-row-alt: #FEF3EB;
-      --text-dark: #1A202C;
-      --text-muted: #4A5568;
+      --text-dark: #1D1D1F;
+      --text-muted: #515154;
       --red-tag: #C53030;
     }
 
@@ -29,16 +29,18 @@
     }
 
     body {
-      font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', 'Helvetica Neue', Arial, sans-serif;
       background: #E2E8F0;
       color: var(--text-dark);
       padding: 24px 16px 60px;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     /* Thanh điều khiển nổi trên cùng (Không xuất hiện trong ảnh tải về) */
     .control-bar {
-      max-width: 1280px;
+      max-width: 1480px;
       margin: 0 auto 24px;
       background: #FFFFFF;
       border: 1px solid #CBD5E1;
@@ -111,7 +113,7 @@
       background: #9A3412;
     }
 
-    /* Khung Bảng Giá Chuẩn Xuất Ảnh 1280px */
+    /* Khung Bảng Giá Dãn Ngang Chuẩn Apple SF Pro / Inter (1480px) */
     .sheets-wrapper {
       display: flex;
       flex-direction: column;
@@ -120,10 +122,10 @@
     }
 
     .price-sheet {
-      width: 1280px;
+      width: 1480px;
       background: #FFFFFF;
       border-top: 8px solid var(--blue-brand);
-      padding: 40px 44px 34px 52px;
+      padding: 38px 42px 32px 48px;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       position: relative;
       overflow: hidden;
@@ -228,70 +230,70 @@
 
     table.matrix-table th,
     table.matrix-table td {
-      padding: 13px 14px;
+      padding: 15px 14px;
       font-size: 14.5px;
-      line-height: 1.35;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
     }
 
     /* Các cột nằm trong khung viền bảng */
     table.matrix-table th.col-framed,
     table.matrix-table td.col-framed {
-      border: 1px solid #4A5568;
+      border: 1px solid #64748B;
     }
 
     table.matrix-table thead th.col-framed {
       background: var(--blue-header);
       color: #FFFFFF;
-      font-weight: 800;
-      font-size: 14.5px;
+      font-weight: 700;
+      font-size: 14px;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.4px;
-      padding: 14px 12px;
+      padding: 14px 10px;
     }
 
     .sheet-wholesale.theme-orange table.matrix-table thead th.col-framed {
       background: var(--orange-header);
     }
 
-    /* Cột Tên sản phẩm */
+    /* Cột Tên sản phẩm — Thanh thoát chuẩn Apple (Không dày cục, 1 dòng ngang gọn gàng) */
     table.matrix-table td.prod-cell {
       text-align: left;
-      font-weight: 500;
-      color: #1A202C;
-      padding-left: 16px;
-      padding-right: 14px;
+      font-weight: 400;
+      color: #1D1D1F;
+      padding-left: 18px;
+      padding-right: 16px;
+      white-space: nowrap;
+    }
+
+    .sheet-wholesale table.matrix-table td.prod-cell {
+      font-size: 13.8px;
+      padding-left: 15px;
+      padding-right: 12px;
     }
 
     table.matrix-table td.prod-cell.is-highlight {
-      font-weight: 800;
-    }
-
-    .prod-subnote {
-      display: block;
-      font-size: 12px;
-      font-weight: 500;
-      color: #4A5568;
-      margin-top: 2px;
+      font-weight: 600;
     }
 
     /* Cột ĐVT & Đơn Giá */
     table.matrix-table td.unit-cell {
       text-align: center;
-      font-weight: 600;
+      font-weight: 500;
       color: #334155;
-      width: 64px;
+      width: 58px;
     }
 
     table.matrix-table td.price-cell {
       text-align: center;
-      font-weight: 800;
-      font-size: 15.5px;
-      color: #1A202C;
+      font-weight: 700;
+      font-size: 15px;
+      color: #1D1D1F;
     }
 
     table.matrix-table td.price-cell.price-retail-ref {
-      font-weight: 600;
+      font-weight: 500;
       color: #334155;
     }
 
@@ -437,12 +439,12 @@
         <table class="matrix-table">
           <thead>
             <tr>
-              <th class="col-framed" style="width: 48%;">TÊN SẢN PHẨM</th>
-              <th class="col-framed" style="width: 7%;">ĐVT</th>
-              <th class="col-framed" style="width: 11%;">1 – 4 (LẺ)</th>
-              <th class="col-framed" style="width: 11%;">5 – 49</th>
-              <th class="col-framed" style="width: 11%;">50+</th>
-              <th class="col-tag-outside" style="width: 12%;"></th>
+              <th class="col-framed" style="width: 55%;">TÊN SẢN PHẨM</th>
+              <th class="col-framed" style="width: 5%;">ĐVT</th>
+              <th class="col-framed" style="width: 10%;">1 – 4 (LẺ)</th>
+              <th class="col-framed" style="width: 10%;">5 – 49</th>
+              <th class="col-framed" style="width: 10%;">50+</th>
+              <th class="col-tag-outside" style="width: 10%;"></th>
             </tr>
           </thead>
           <tbody>
@@ -549,16 +551,16 @@
         <table class="matrix-table">
           <thead>
             <tr>
-              <th class="col-framed" style="width: 31%;">TÊN SẢN PHẨM</th>
-              <th class="col-framed" style="width: 5%;">ĐVT</th>
-              <th class="col-framed" style="width: 7.5%;">LẺ</th>
-              <th class="col-framed" style="width: 7.5%;">5+</th>
-              <th class="col-framed" style="width: 7.5%;">20+</th>
-              <th class="col-framed" style="width: 7.5%;">50+</th>
-              <th class="col-framed" style="width: 7.5%;">100+</th>
-              <th class="col-framed" style="width: 7.5%;">200+</th>
-              <th class="col-framed" style="width: 7.5%;">500+</th>
-              <th class="col-tag-outside" style="width: 11.5%;"></th>
+              <th class="col-framed" style="width: 47.5%;">TÊN SẢN PHẨM</th>
+              <th class="col-framed" style="width: 4%;">ĐVT</th>
+              <th class="col-framed" style="width: 5.5%;">LẺ</th>
+              <th class="col-framed" style="width: 5.5%;">5+</th>
+              <th class="col-framed" style="width: 5.5%;">20+</th>
+              <th class="col-framed" style="width: 5.5%;">50+</th>
+              <th class="col-framed" style="width: 5.5%;">100+</th>
+              <th class="col-framed" style="width: 5.5%;">200+</th>
+              <th class="col-framed" style="width: 5.5%;">500+</th>
+              <th class="col-tag-outside" style="width: 10%;"></th>
             </tr>
           </thead>
           <tbody>
