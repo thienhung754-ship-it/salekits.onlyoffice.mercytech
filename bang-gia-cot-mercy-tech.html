@@ -177,35 +177,16 @@
 
     .logo-divider {
       width: 1.5px;
-      height: 24px;
+      height: 28px;
       background: #CBD5E1;
     }
 
-    .mercy-wordmark {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    .mercy-wordmark-main {
-      font-size: 18px;
-      font-weight: 900;
-      color: #1858A8;
-      letter-spacing: 0.6px;
-      line-height: 1;
-    }
-
-    .sheet-wholesale.theme-orange .mercy-wordmark-main {
-      color: #C2410C;
-    }
-
-    .mercy-wordmark-sub {
-      font-size: 9.5px;
-      font-weight: 700;
-      color: #64748B;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      margin-top: 2px;
+    .mercy-brand-logo {
+      height: 34px;
+      width: auto;
+      max-width: 165px;
+      object-fit: contain;
+      display: block;
     }
 
     /* Khung Bảng & Cột Nhãn Đỏ Bên Phải */
@@ -222,24 +203,18 @@
       transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
-      gap: 18px;
-      opacity: 0.055;
+      justify-content: center;
+      opacity: 0.06;
       pointer-events: none;
       z-index: 2;
       user-select: none;
-      white-space: nowrap;
     }
 
-    .watermark-text {
-      font-size: 62px;
-      font-weight: 900;
-      color: #1858A8;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .sheet-wholesale.theme-orange .watermark-text {
-      color: #C2410C;
+    .watermark-logo-img {
+      width: 420px;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
 
     /* Bảng Ma Trận Cột */
@@ -448,10 +423,7 @@
               <path d="M121.362 6.13408V17.8659H128.6V15.7877H123.821V12.7877H128.167V10.8603H123.821V8.21229H128.6V6.13408H121.362Z" fill="#1E293B"/>
             </svg>
             <div class="logo-divider"></div>
-            <div class="mercy-wordmark">
-              <span class="mercy-wordmark-main">MERCY TECH</span>
-              <span class="mercy-wordmark-sub">Official Partner</span>
-            </div>
+            <img src="mercy_logo_crisp.png" alt="Mercy Tech" class="mercy-brand-logo" onerror="this.src='mercy_logo.png'">
           </div>
         </div>
       </div>
@@ -459,11 +431,7 @@
       <div class="matrix-container">
         <!-- Watermark Chìm Giữa Bảng -->
         <div class="matrix-watermark" aria-hidden="true">
-          <svg width="110" height="125" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 4L10 20V54C10 82 27 103 50 111C73 103 90 82 90 54V20L50 4Z" stroke="#1858A8" stroke-width="7" fill="none"/>
-            <path d="M33 56L45 68L69 42" stroke="#1858A8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="watermark-text">MERCY TECH</span>
+          <img src="mercy_logo_crisp.png" alt="" class="watermark-logo-img" onerror="this.src='mercy_logo.png'">
         </div>
 
         <table class="matrix-table">
@@ -479,10 +447,7 @@
           </thead>
           <tbody>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech
-                <span class="prod-subnote">Key Online kích hoạt trực tuyến &bull; Vĩnh viễn theo Mainboard</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech</td>
               <td class="col-framed unit-cell">Mã</td>
               <td class="col-framed price-cell">799.000</td>
               <td class="col-framed price-cell">699.000</td>
@@ -490,10 +455,7 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">
-                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)
-                <span class="prod-subnote">Tem phủ cào Hologram 7 màu dán máy &bull; Vĩnh viễn theo Mainboard</span>
-              </td>
+              <td class="col-framed prod-cell">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">999.000</td>
               <td class="col-framed price-cell">899.000</td>
@@ -501,10 +463,7 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)
-                <span class="prod-subnote">Hộp cứng nguyên seal kèm thẻ Product Key &bull; Hỗ trợ đổi máy tối đa 05 lần</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">1.899.000</td>
               <td class="col-framed price-cell">1.799.000</td>
@@ -512,10 +471,7 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD
-                <span class="prod-subnote">Key Online ESD chính hãng Microsoft (kích hoạt Win 10 Pro / Win 11 Pro) &bull; Bản quyền Retail vĩnh viễn</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">1.200.000</td>
               <td class="col-framed price-cell">1.200.000</td>
@@ -523,10 +479,7 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">
-                Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)
-                <span class="prod-subnote">Hộp vật lý nguyên seal kèm USB 3.0 chính hãng Microsoft &bull; Bản quyền FPP đổi máy trọn đời</span>
-              </td>
+              <td class="col-framed prod-cell">Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">3.200.000</td>
               <td class="col-framed price-cell">3.200.000</td>
@@ -534,10 +487,7 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)
-                <span class="prod-subnote">Key Online ESD chính hãng Microsoft (Word, Excel, PowerPoint, Outlook) &bull; Gắn tài khoản Microsoft vĩnh viễn</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">4.200.000</td>
               <td class="col-framed price-cell">4.200.000</td>
@@ -585,10 +535,7 @@
               <path d="M121.362 6.13408V17.8659H128.6V15.7877H123.821V12.7877H128.167V10.8603H123.821V8.21229H128.6V6.13408H121.362Z" fill="#1E293B"/>
             </svg>
             <div class="logo-divider"></div>
-            <div class="mercy-wordmark">
-              <span class="mercy-wordmark-main">MERCY TECH</span>
-              <span class="mercy-wordmark-sub">Official Partner</span>
-            </div>
+            <img src="mercy_logo_crisp.png" alt="Mercy Tech" class="mercy-brand-logo" onerror="this.src='mercy_logo.png'">
           </div>
         </div>
       </div>
@@ -596,11 +543,7 @@
       <div class="matrix-container">
         <!-- Watermark Chìm Giữa Bảng -->
         <div class="matrix-watermark" aria-hidden="true">
-          <svg width="110" height="125" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 4L10 20V54C10 82 27 103 50 111C73 103 90 82 90 54V20L50 4Z" stroke="currentColor" stroke-width="7" fill="none"/>
-            <path d="M33 56L45 68L69 42" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="watermark-text">MERCY TECH</span>
+          <img src="mercy_logo_crisp.png" alt="" class="watermark-logo-img" onerror="this.src='mercy_logo.png'">
         </div>
 
         <table class="matrix-table">
@@ -620,10 +563,7 @@
           </thead>
           <tbody>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech
-                <span class="prod-subnote">Key Online cấp trên Web quản lý Key 24/7 &bull; Giá sàn bán lẻ &ge; 499.000đ</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech</td>
               <td class="col-framed unit-cell">Mã</td>
               <td class="col-framed price-cell price-retail-ref">799.000</td>
               <td class="col-framed price-cell">299.000</td>
@@ -635,10 +575,7 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>ĐẠI LÝ IT</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">
-                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)
-                <span class="prod-subnote">Tem phủ cào Hologram 7 màu dán máy (Gói 50 / 200 / 500 Tem) &bull; Giá sàn &ge; 699.000đ</span>
-              </td>
+              <td class="col-framed prod-cell">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">999.000</td>
               <td class="col-framed price-cell price-muted">—</td>
@@ -650,10 +587,7 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (hộp vật lý nguyên seal - SKU: MER-00105)
-                <span class="prod-subnote">Hộp cứng kèm thẻ Key (Đổi máy 05 lần) &bull; Đặt trước Mua 5 Tặng 1 &bull; Giá sàn &ge; 1.499.000đ</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal - SKU: MER-00105)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">1.899.000</td>
               <td class="col-framed price-cell">800.000</td>
@@ -665,10 +599,7 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD
-                <span class="prod-subnote">Key Online ESD chính hãng Microsoft (kích hoạt Win 10/11 Pro) &bull; Đại lý lấy từ 01 Bộ hưởng giá sỉ</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">1.200.000</td>
               <td class="col-framed price-cell">950.000</td>
@@ -680,10 +611,7 @@
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell">
-                Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)
-                <span class="prod-subnote">Hộp vật lý nguyên seal kèm USB 3.0 chính hãng Microsoft &bull; Đại lý lấy từ 01 Bộ hưởng giá sỉ</span>
-              </td>
+              <td class="col-framed prod-cell">Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">3.200.000</td>
               <td class="col-framed price-cell">2.900.000</td>
@@ -695,10 +623,7 @@
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
-              <td class="col-framed prod-cell is-highlight">
-                Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)
-                <span class="prod-subnote">Key Online ESD chính hãng Microsoft (Word, Excel, PowerPoint, Outlook) &bull; Đại lý lấy từ 01 Bộ hưởng giá sỉ</span>
-              </td>
+              <td class="col-framed prod-cell is-highlight">Phần mềm Microsoft Office Home &amp; Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)</td>
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell price-retail-ref">4.200.000</td>
               <td class="col-framed price-cell">3.900.000</td>
