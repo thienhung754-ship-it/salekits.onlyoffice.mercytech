@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hợp Đồng Nguyên Tắc Phân Phối Bản Quyền &amp; Đại Lý Độc Quyền Tuyến — GÓI KHỞI NGHIỆP ĐỘC QUYỀN</title>
+  <meta name="description" content="Mẫu hợp đồng nguyên tắc cung cấp và phân phối bản quyền phần mềm độc quyền tuyến đường / khu vực giữa Mercy Tech Global và Đại lý đối tác">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & SYSTEM TOKENS */
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --gold: #f59e0b;
+      --gold-dark: #d97706;
+      --gold-light: #fef3c7;
+      --border: #cbd5e1;
+      --border-light: #e2e8f0;
+      --bg-page: #f1f5f9;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #334155;
+      --text-light: #64748b;
+      --blue: #1d4ed8;
+      --blue-light: #dbeafe;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-size: 9.1pt;
+      line-height: 1.45;
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+
+    /* ACTION BAR (NON-PRINT) */
+    .action-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(12px);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .bar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-logo-badge {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0f172a;
+      font-weight: 900;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .bar-title {
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: 0.2px;
+    }
+    .bar-sub {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      border: none;
+    }
+    .btn-primary {
+      background: #f59e0b;
+      color: #0f172a;
+    }
+    .btn-primary:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.22);
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #f59e0b;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background: #f59e0b;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+
+    /* PAPER CONTAINER (4 SEPARATE A4 PAGES BALANCED) */
+    .page-container {
+      max-width: 820px;
+      margin: 24px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .doc-page {
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 4px;
+      padding: 20px 38px 14px 38px;
+      border: 1px solid #cbd5e1;
+      position: relative;
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page-content {
+      flex: 1;
+    }
+
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+      margin-top: 12px;
+      font-size: 8.5pt;
+      color: #64748b;
+    }
+
+    /* LETTERHEAD & HEADINGS */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .brand-logo {
+      height: 44px;
+      max-width: 240px;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-sub {
+      text-align: right;
+      font-size: 8.5pt;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .national-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .national-title {
+      font-size: 10.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .national-sub {
+      font-size: 9.5pt;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .national-line {
+      width: 130px;
+      height: 1.5px;
+      background: #000;
+      margin: 4px auto 0 auto;
+    }
+
+    .doc-title {
+      font-size: 12.5pt;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 3px;
+      color: #0f172a;
+      letter-spacing: 0.2px;
+      line-height: 1.35;
+    }
+    .doc-number {
+      font-size: 9.2pt;
+      font-style: italic;
+      text-align: center;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .legal-bases {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 10px;
+      font-size: 8.6pt;
+      color: #334155;
+    }
+    .legal-bases li {
+      margin-bottom: 2.5px;
+      line-height: 1.42;
+    }
+    .legal-bases li::before {
+      content: "- ";
+      font-weight: bold;
+      color: #0f172a;
+    }
+    .doc-date {
+      font-size: 9pt;
+      margin-bottom: 10px;
+      color: #1e293b;
+    }
+
+    /* PARTIES GRID */
+    .party-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .party-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+    .party-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+    }
+    .party-title {
+      font-size: 9pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #0f172a;
+    }
+    .party-tag {
+      font-size: 8pt;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .tag-a {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    .tag-b {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+    .info-row {
+      display: flex;
+      margin-bottom: 3.5px;
+      font-size: 8.6pt;
+      line-height: 1.4;
+    }
+    .info-lbl {
+      width: 145px;
+      flex-shrink: 0;
+      color: #475569;
+      font-weight: 600;
+    }
+    .info-val {
+      flex: 1;
+      color: #0f172a;
+    }
+
+    /* CLAUSES & ARTICLES */
+    h2.article-title {
+      font-size: 9.3pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #0f172a;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      border-left: 3.5px solid #f59e0b;
+      padding-left: 8px;
+    }
+    .clause-text {
+      font-size: 8.1pt;
+      color: #1e293b;
+      margin-bottom: 2px;
+      text-align: justify;
+      line-height: 1.28;
+    }
+    .clause-item {
+      margin-bottom: 2px;
+      text-align: justify;
+      line-height: 1.26;
+      font-size: 8.1pt;
+    }
+    .clause-item strong {
+      color: #0f172a;
+    }
+
+    /* POLICY HIGHLIGHT BOX */
+    .policy-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 9px 12px;
+      margin: 6px 0;
+    }
+
+    /* PRIVILEGES LIST (8 SPECIAL RIGHTS) */
+    .privilege-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      margin: 8px 0;
+    }
+    .privilege-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #f59e0b;
+      border-radius: 4px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 8.4pt;
+    }
+    .privilege-num {
+      background: #f59e0b;
+      color: #0f172a;
+      font-weight: 900;
+      font-size: 8pt;
+      padding: 1px 6px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .privilege-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* SECTION BADGE IN TABLE */
+    .table-section-title {
+      background: #e2e8f0;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 7.9pt;
+      padding: 2.5px 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* PRODUCT TABLE */
+    table.product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0;
+      font-size: 8.3pt;
+      background: #fff;
+    }
+    table.product-table th {
+      background: #0f172a;
+      color: #fff;
+      font-weight: 700;
+      padding: 2.5px 4px;
+      border: 1px solid #0f172a;
+      text-align: center;
+      font-size: 7.8pt;
+    }
+    table.product-table td {
+      padding: 1.4px 4px;
+      border: 1px solid #cbd5e1;
+      vertical-align: middle;
+      color: #1e293b;
+      line-height: 1.18;
+      font-size: 7.5pt;
+    }
+    .prod-desc-title {
+      font-weight: 800;
+      color: #0f172a;
+      font-size: 7.9pt;
+    }
+    .prod-desc-sub {
+      font-size: 7.1pt;
+      color: #475569;
+      margin-top: 0px;
+      line-height: 1.18;
+    }
+    .summary-row td {
+      font-weight: 700;
+      background: #f8fafc;
+      font-size: 7.8pt;
+      padding: 2px 6px;
+    }
+
+    /* HIGHLIGHT BANNERS */
+    .framework-highlight {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 8px;
+      font-size: 8.5pt;
+      color: #1e40af;
+      line-height: 1.45;
+    }
+    .danger-highlight {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 8.4pt;
+      color: #9f1239;
+      line-height: 1.42;
+    }
+    .support-highlight {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 8.4pt;
+      color: #166534;
+      line-height: 1.42;
+    }
+
+    /* SIGNATURES */
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+      padding-top: 8px;
+    }
+    .sig-col {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .sig-title {
+      font-weight: 800;
+      font-size: 9.3pt;
+      text-transform: uppercase;
+      color: #0f172a;
+    }
+    .sig-subtitle {
+      font-size: 8.6pt;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 2px;
+    }
+    .sig-instruction {
+      font-size: 7.8pt;
+      font-style: italic;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .sig-space {
+      height: 70px;
+    }
+    .sig-name {
+      font-weight: 800;
+      font-size: 9.3pt;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+    .sig-role {
+      font-size: 8.3pt;
+      color: #475569;
+    }
+
+    /* PRINT OPTIMIZATION (100% CLEAN A4 PRINTING - ZERO CUTOFFS) */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 10mm;
+      }
+      body {
+        background: #fff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .page-container {
+        margin: 0 !important;
+        gap: 0 !important;
+        max-width: 100% !important;
+      }
+      .doc-page {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 10mm 12mm 8mm 12mm !important;
+        min-height: 280mm !important;
+        height: 280mm !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+      }
+      .doc-page:last-child {
+        page-break-after: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP ACTION BAR -->
+  <div class="action-bar">
+    <div class="bar-brand">
+      <span class="bar-logo-badge">MERCY TECH</span>
+      <div>
+        <div class="bar-title">HỢP ĐỒNG NGUYÊN TẮC PHÂN PHỐI BẢN QUYỀN &amp; ĐẠI LÝ ĐỘC QUYỀN TUYẾN</div>
+        <div class="bar-sub">Mẫu Độc Quyền Tuyến Đường — GÓI KHỞI NGHIỆP ĐỘC QUYỀN TUYẾN (Lấy Trước Số Lượng Đạt Điều Kiện)</div>
+      </div>
+    </div>
+    <div class="bar-actions">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Gói Khởi Nghiệp Độc Quyền Tuyến
+      </div>
+      <button type="button" class="btn btn-secondary" onclick="copyShareLink()">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+        Sao Chép Link
+      </button>
+      <button type="button" class="btn btn-primary" onclick="window.print()">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        In Hợp Đồng / Xuất PDF (A4)
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" style="display:none; position:fixed; bottom:20px; right:20px; background:#0f172a; color:#f59e0b; padding:10px 18px; border-radius:6px; font-weight:700; border:1px solid #f59e0b; z-index:9999;">Đã sao chép liên kết hợp đồng vào bộ nhớ tạm!</div>
+
+  <!-- DOCUMENT PAGES CONTAINER -->
+  <div class="page-container">
+
+    <!-- ==================== TRANG 1 ==================== -->
+    <div class="doc-page">
+      <div class="page-content">
+        <!-- LETTERHEAD WITH BASE64 LOGO -->
+        <div class="letterhead">
+          <div class="brand-logo-wrap">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAtGVYSWZJSSoACAAAAAYAEgEDAAEAAAABAAAAGgEFAAEAAABWAAAAGwEFAAEAAABeAAAAKAEDAAEAAAACAAAAEwIDAAEAAAABAAAAaYcEAAEAAABmAAAAAAAAAGAAAAABAAAAYAAAAAEAAAAGAACQBwAEAAAAMDIxMAGRBwAEAAAAAQIDAACgBwAEAAAAMDEwMAGgAwABAAAA//8AAAKgBAABAAAAWAIAAAOgBAABAAAALAEAAAAAAADUdAWIAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFUWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTA3LTIyPC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUhRRjZKaVptNCZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBRWhwT1pJZFZzJnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0TFqW5nIFBo4bqhbSZxdW90O308L0F0dHJpYjpEYXRhPgogICAgIDxBdHRyaWI6RXh0SWQ+MDllYzkwYzYtMzYyYS00MGJiLWJkOWUtNjVkMmIyOTI2ZTM3PC9BdHRyaWI6RXh0SWQ+CiAgICAgPEF0dHJpYjpGYklkPjUyNTI2NTkxNDE3OTU4MDwvQXR0cmliOkZiSWQ+CiAgICAgPEF0dHJpYjpUb3VjaFR5cGU+MjwvQXR0cmliOlRvdWNoVHlwZT4KICAgIDwvcmRmOmxpPgogICA8L3JkZjpTZXE+CiAgPC9BdHRyaWI6QWRzPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpkYz0naHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8nPgogIDxkYzp0aXRsZT4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPlRoaeG6v3Qga+G6vyBjaMawYSBjw7MgdMOqbiAtIDE8L3JkZjpsaT4KICAgPC9yZGY6QWx0PgogIDwvZGM6dGl0bGU+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnBkZj0naHR0cDovL25zLmFkb2JlLmNvbS9wZGYvMS4zLyc+CiAgPHBkZjpBdXRob3I+VGhpw6puIEjDuW5nPC9wZGY6QXV0aG9yPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczp4bXA9J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8nPgogIDx4bXA6Q3JlYXRvclRvb2w+Q2FudmEgZG9jPURBSFFGNkppWm00IHVzZXI9VUFFaHBPWklkVnMgYnJhbmQ9RMWpbmcgUGjhuqFtPC94bXA6Q3JlYXRvclRvb2w+CiA8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVuZD0ncic/Pg2etc4AACAASURBVHic7Z0LvBVlvfcXeCkFEa8hAoJcBS95v4vcQTeCd1FSQU0BUSEMsVSolBDNFFO5CAiCZlYeMwrRqEzrGKfLyTrdfevNt47pKdNTKuvy/v7D88yetfasvddl1r5+v5/Pz1lr1syznnnW2szX/8yaSaUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyqJTLpcLctttt3UuJ349a4O+AgAAQIfFiUbnJ554YqdUwrJx/vnn72RxIlM11k7Sbfp2TbqsXZsm1S4AAAB0MEyqLHHzN2/e3GXr1q09tmzZcvBTTz01+Bvf+EaYp59+eohPdP7Xvva1gc8++2xPLb/Htm3bdolpt5NJXCViVEx8rK/qx+7Kvs8888zBan+w9deyYcOGIdH412xqff3mN7/ZW/P3aqyv5fYTAAAAOiiF1R+JVPe1a9eOePjhh+esXLly1fLly7/10EMP/fKBBx74y4MPPvg3Tf/xhS984W2f+++//x2LPV62bFk0bymvK7/R6/+u17+ide9QexdJVgZE39Mfoiu3r5KivdXe6Pvuu+/Ge++9d/XnPve5rcrP77777tfuuuuuvy1duvQfytt33nnn20uWLPF5xyWcr+lbyht6/H+03svKl5RF99xzzzmrVq06KNKFTqX2FQAAADog/twj//ypp546cvXq1fdIpn4jGUpLXHISrNyKFStyEquc5gWRLOVFApWT4ISR6ISx12wZW09yFcSW+fznP/83vbZJbU+R0HW19/eH5Zrqqy23YcOGo7X+A5Kp30uE0moveD8JUU5yldO8nIQpJ2EK89nPfjY2ixcvzntu6/n19Vr2jjvu+Kuef1l9r9u0adMH4sYOAAAAIOXkIKjCPPbYY6c+/PDDj0uo3tE0J8HKOnnKSGLSmqY1zVr0OOsfRyNpCiPRCSPxCaLHGU1NhNKSIJsXCppe+6kEbqYXrcIKUbSvEsCRWv6rauOfJmomUxKh7NKlSzNKWo8tGQlVNhqJU2xMoHwkUtnbb7/dphklrcfpz3zmMzk9zqltkzRr90X1faoXraTP/QIAAIA2iD+B3R5v2bJlnzVr1nxBQvXuqlWrrMpkApXWNBNXqSqsWkVTrIIVjUmVj0nW5z73OZOtjBMzm/fyypUrT7a++XOsfF8lX/vqfZdrme3WloQnazLlxCrnY1Unn1KrV9GYTPlIsHyyEi2TLZM1v+yzEtLDrG8cMgQAAOjARA/Bbdy48UzJzM+tYvXAAw9kLCZY/jBgMwhWGIlW5u677864df9X7X/ylVde2dX3e/Xq1Wdo/i9dxSpz1113mVRlo2JVY8EKRUvJSLSskmXLvKn+XKdx3Tnlzs1qsQ8XAAAAmp+oXK1fv/7GFStWpO3cKjvXSnKVtXOjonLVzILlk9Fzq6BZm1+UZHVdvnz5TK37vi1nhwAlV1k7PypOrppBsILYYcNPf/rTdggx4ypaq5944ondbGyRLAAAgA6CP3xllZa1a9febSeuP/jgg1kl408892lhwbIKlR06zLgT4f/LKlq2jFWtTKx8WlqwnGRllYxb7xnJ4L42zkgWAABAOyd6ZfJHH330vjVr1phcpZ1g5VqbYEWrWbacq1hl/S8DW5NgOcnKfepTn9ru2tqs8e0eGXcAAABoj/hqytq1az9lJ7JH5aqVC1ZQzXLJk6tWKFihZGm9J/0vDJEsAACAdoi/8vjGjRun2snsdkgwKletXbCcZIVp5YKVW7RoUdq931Ibdw4VAgAAtDP8zv1LX/rSsJUrV/7ZLhrqBCuHYNVGsJSskrFzs9Tfi6KfAwAAALR9/EntndesWbPZXYohXShXCFbigmXJuIuT/kl96G+fQwtIVqd2nLZIS49Za0hz0dLb2dJJcixgB4wj1OMPDW7YsOFKf52rOLlCsGoiWMGhQtfeg/Y51FKwrG27KGvk5tft/Q+6U3SbW9t5btG+6WlH+DxaDD/WemhhnAGgtvgdzg9+8INuq1at+om7JENSguVvjZMpjMQqjN0Wx90ax98mJ9sCghXeDsducaNpbCRBQew2OZFUJVjuUKG99o62+2j7PJKUrIhMNfo9aG9pZHM7uR1ti+xkIzv6ou9fsC2dXYpta+dGUuqypbRb6vuX8vk02uekxrqM735j/WkrKfdvJG+sK1i/1L83gI6Jr149/vjjV9olGYodGixHsLxE2bxyxcyqW0600s0kWBmXBstHq1uFlS6bWkXL3Ysw7e5LWKlgBVUs196j9nlU+w+WrV+4E7d/UDds2DBQ73OR+rJo4cKFD99yyy1f/uQnP/mMslmPw+j5s5ZPfOITDXLzzTc3yE033RRm/vz5YaLzPv7xj2/x82+88cYtpeZjH/vYlrlz58Zmzpw5Qa6//vot1113nU2f9dHzTZo+qddXatlFCxYsuGD9+vUHRMepOat4cVKlv7ke6lvd1VdfvWD69OkPTZs27YnLLrvsa8qzl19++RZNw0ydOjXIpZdeGsQ/t1xyySWxufjii/Ny0UUXFc2FF164RX2MzXnnnbfl3HPPbZCzzz57y+TJk/MyadKk2EycODFMXV1dXs4880zL5gkTJrygNu/MuVteVYiN8U7RGWpvp2uvvXaI3nvq2LFjPz1ixIg1p59++ldPO+20b+jxFj3eosexOfXUU8OccsopeTnppJO2nHjiiQ1y/PHHhznuuOOCHHPMMc8Vy9FHH/3cUUcdFebDH/5wmCOOOCLM4YcfHptDDz30uWHDhm0pzNChQ7cMGTIkiD32OeSQQ57VvO8edthhZ9n42H5Aj5f179//uwMHDtw8YMCALXq85eCDD26Qvn37RvOspV+/ft/UNh7hhrsjnkcabPMBBxwwuVu3bluVTXvsscc3C9O1a9cwXbp0CbPbbrt9XfnOfvvtN9+1h7C2A4IP0f7xWbt27XcjvxysSLB8tcpOkLdo3jta5g+a/j4aiVQYLZ+X++67739MtKxtd5PnTI0EK7jhs61jbUqY/qn8UfmdBOr3Ni0WvR5EovKGVbysfX9bnEoFy6pY7rW3tP3D7HOptIoVOdxk/3Duqu07cfHixZ+RUL0kQXr71ltvzantnE0tEqq8SKzCaPkwEqkGkbSEkUjlJE+xkVyFkTTl5s2bFxvJVBiJRxhJUl5uuOGGMJKoMLNnzw4jwQqiHWuYmTNnvq7lNqhPZ2ucw5uF1/qwbLR9jevgWbNm3XDllVdukji9LlnKaZqzaWE+8pGP5CRQQSRMeZkyZUoYCVIYiVKYCy64IIy+FzmJUmzOOeecMBKcBpEghTnrrLPyImkJI1kKI2EKc8YZZ+QkT2HGjx8fZty4cT5pe651t9q/SW64ytrRRCVWY/5BSeCper/PSqL+XYL0v5Ki3Mknn5yzqX/sIzEKc8IJJ4SRJIWRROSOPfbYvEiQwkiUgkiSwkiSgkiQcpKhBpHY5CRIYSRGYSRDOclQGElRmMGDB4eRFIWRHIWRJOUkRQ0iIcrYVK/PtrH66Ec/uosev9ynT5+ckrFpr1698nLggQcG6dmzZxgJRVaxqW3HKPcx7FTs82nHBNu85557ztl9991zkqWMkivMBz/4wTAf+MAHwuy6667pXXbZJaf1H3ftdURJbV/4f/SffPLJkyVE7z300EP+iu1lC5YdDrR7Ezqx+p6mV65ateqY1atX9964cWPPuOj1IP652j9wxYoVwzQ9T218RW1m3E2ds0kKlh0OtCu922FIPf6Z3R9QcneiRK6PxKmnHsdG23SAxT9XG0P0npPU5nqJ1nuuAtVAskoUrOCEdzvUqOWC/4txO4uSyUVub6THu6h/U9TmtyRN/1y0aFEgT06GspKjtKZBJEaZaCQfYSREYSRGDSIpCiMpykiGYiMpCiMpykhyYiMhCiNJCiM5yosEJYykKcyMGTPyonnpa665JsjVV1+d1dQkK6epvbZN23CJrxbWQLI6RStkktSTtCN77PLLL39dCaTKyVJWSftcfPHFGR/JU0bSFETClBdJUxh9V8JImMJIMMJInjKSpdhInMJImhpE0hMbyVNG8pQXCU2DSJwyEqgwY8eODTNmzJggerxdUxOyzRUIli0XfH52XTlt+6WjR49+4bTTTvuXEsrUSSedlJVApTW1ZKKRTIWRTIWRVIWRUGUkUnmRUIWRUAU58sgjw0iugkiwMhKqBpGYZCRWYSRWYSRYGYlVGIlVGIlVGIlVGIlVGEmTiVSDSLC2m2BpmWvcd39nPX/RCdZ2kyxJVV4kV0EkVmEkVmknWe9qG4e7z6IjykHwfe3evfu1JljKdiVTGCdeQSRZYSRZ70uyct26dVvn2uuIY9i+8DuURx555FaJUJPVq0LBilSvgvUkRP+j6bX+wpmpysucwXqSrUkSrD9aRcvdd7BqwXJyZa/bLXVufeKJJ7om0Vf1c6QE66dxklWBYH2jsP2miO7INQ4jJVRbFy5cmFOyVomSUGW0g09rmo2rPhVWonyKVaGi1SifwgpUY9WoaAWqWDXKV6As0cqUJVqVkmSFMXkqjElVJFmJVlqik5WABa+rjack1gNt7JI6Nysqu1ax0nuunjZt2ntKUJmaOnVqRkkr2bjqlI8kK7ZK1VSlyidapZJk5VWqopk8eXKYaLXKp1iVKq5S5VNYsYpUqnKSqTAmVS4mWdbOlnIEK/rd1zaPVzsvnX766blTTz01K7HKSqzSmqbdY5Os2DRWtfIprFhFq1bRypXEKkxrrmBpmRluDE2wXqq0gtWjR4/31XcEq3v32U6wMm6al0aqWWkTrD333HO9a68jjmG7IvyHa82aNV8zwXrooYfKEiyLVa5sviTrdSX4A7OdlB3Tt3/4yj1R0tbx67q+DVm2bNkv7dwsCVGmGsGKyNW/1N751r4/4biavvpK08aNGz+kHfX37fysqGSVKliSoqx7/N+rVq06yNos5Vws//72Q4XFixcvu/XWW9+1Q4ASqox27uno4b5ih/c6kGDlJDtBJFkZky1bRrL1Z/X/XP+dqOYPy31mweem7bjaKlYmVh/5yEcykqu0ptnooT8Eq3LB8p+VpnvrPVYOHz78fVexykiw0kp4ODBSxUKwEKykQbCgHr/jfuaZZ/Z6+OGHf2O/HixXsPyhQXus16ZYe1u3bt05oV+UmMDsbA82bNhwtITodTsXSxKVrUawbL4k7QZr1+Qo6b6uW7dugCTrVbvsgpesMipYQcXJllN/z/R9bOyNvVxp/Idq/e9b+5KpjJOrBudTIVj1ghVJ2r32L23TFTaelUqWX0/fse5qb/X06dOtYpV1cpWNO7cKwapMsPx3/7LLLvuw2tzmqlYZCZbFHucQLASrmSg8RIhgdWT8jmDTpk1Hrlix4l07/0pp9PyrGMFKm5gtX778AWurKRmoBBM2m+o9rjOhsypWhYIV/CpR8591v1BK/NdjXrKsOmaCJVHKViBYaXfNrZusrcbG1L927733jtd6f7FDgq5ilS2UKwSrUcEKqllXXXVVxl7Xdl1n41ruOXD+b0qfcW+19ZLJlXb+aSdXRU9eR7AqEqzgdY1P3ciRI98wuZJUpZWsyRWChWA1MwgW1ON3zpqebZdnsJPb3UnupQpW1k3f1nrHWFu1+CWWrzDZ4S87VGgnvdv5WOUKllWv7PX7779/UnT7Eybo60svvbSb3u/7/nyscgRr0aJFwU2gtewKa6vYmEYqJZO13t+dXGUKfwWIYJUsWDlJUfbKK6+05++pn1MaG/9in4emA9TOz7xclfLrQASrbMEKXtP2XTxq1Kh3TK6GDx+e9mKFYFUmWHqMYFUOggX1+GrL448/fvUjjzxi8pQuU7AyK1assCrW9yUru7lma3LtDr/zUv++YO8teUqXKVjBuVua96vNmzd3qWVffdVD77XYDktKsNJlClbaHV78SrF++ve49957x2qdt+18K4lVOu4yCwhWWYKVk2Bl7LHm/V1jdFz0+1eMiFz11Pr/aXJ1+eWXB3KFYFUkWM82IljRytU/JVY5CVbGVbAQrCoES8t+H8GqGM7Bgnp8BWfjxo2frFCw0qtWrbLDio9YO7W8kq/v6/Lly6+1w4QVVLDSdkkGzXvGNVnzvkroLvcnu5crWO6XhJvj2vc7c43DIVr+j1a5klRlil3HCsEqT7Bc7JIOduL7C6+++uoHm/jOBPOffvrp3bX8piuuuCKQK38ZBgQrOcHy332N6dFa9i8mVV6uECwEq4VJRLC6deuGYLUHvAisW7dukQmWRGl7OYJl51+5C5PeZ+3U8kKNvq96ryv8JRsqESxJzwbXZM0Fa9myZXXuUF+2TMEKLtVg16+KNOsvCBtMX3vttd21zAu2vFWuCi8WimBVLVg5iVIgWepTcC5cI+djBd979WmxHV7Uzn+7yRWClfghwmCqv+NuWu7lESNGmFSlvVwhWAhWC4NgQT1eBNauXfupagRL63ze2mkOwdJ7TbPLNUieiv6SsDHB0uvrm6uvduJ5NYKlZbdGms27EOadd955hy3j5QrBSl6wJEv+fKy/aNwPjvve+OfavonTp0/PSqp8EKwaCZbe755Ro0Y1kCsEC8FqYRAsqKctCtbKlSunVVnBajbB0ntNSFKwfJ/tZtBa5m13q5ssglUbwXKSFVSx1O6nYr43wQ7fbrejZX9khwanTZuW9nKFYCUnWH7ctZ2jRowYYWKV1TSLYCFYrQgEC+ppi4JlFayOKFjRC1eqzSesDUlVWL1CsGpSwbLDhMEJ78pP1q1bl/fjCH/IUNtytS1rcmUXE0Wwqhcsu/lz3DlYWu9pq16ZZLlDhAhWlYKlIFjJgGBBPQhWbfuapGD5Nu12PHZPQatcRW/WXKlguXsPpuMioQqmkqgwkqhGI8FKS6ZiI7EKIylJS6CajMQqjKQqLxKrMBKrMHbvwcLY7XEqESwnWVl7rvEYaZ+BiZU/F27lypV7a73fuF8NZqoVLLv3YPSehO6+hGnJVRBJVV4kVmEkVmHUxzCSqjASqfTZZ58dG0lUmLPOOqtBJD1hJFJ5kUyFkUyFkVSFsRs5S57CSKbCjB49Oogev194L0Ivstqu0SNHjgxEyuQqAcHK2D0Jo5FMhZFMhZFUhZFQpSVSeZFQhZFQBZFQhZFYBZFMpSVTDSIxSUumwkiqwkiq8iKxCiKpSg8aNCiMZKow0XsRpgvj70WIYCUGggX1IFi17WuSguX7q/lr7MKlep6uRrAWLFiQsRs+2zxrp7At355fJ7p+YQorYoVVr7gUVr4Kq2C+EhatevnKl08pVS//3AlWthLBssOEto6k7nb7DGyH73f6mnelLePlqgrBsps9B7fPKVw+ulxcdcvHV7kKK13R6lZhRauwuuUj4WqQaGVLwpWXUqpbcRWtaFxly8TM2vy2BGtn9/UPvvta5qv+3KtqBMuJVXBPQovN88tEq1laJkxhZSta0fJVLZ+mqlq+mhWNVbasiuVTWM2yKpZPsWqWJCtMYTXLqliFsRs+21TLXOf+jUGwqoPLNEA9CFZt+5qUYPlqid2bUK+/Vm0Fy+TKPc5Iin6h5VeoT/MWLlw4ozBqt8monQbRe1QVSVhJkYg1GoncXAnYl2fMmPGu3djZS1YZ52CF52HZJRjcRxz+olPzv1GtYEmUMv7ehMrvtd6j6ssnlVnKjCuuuCKI2q4oeq8Zep+yIkkrK5K4vEjkYnPOOefERvIWRGJ1jSTtWrU50X3vg79TieKwkSNH/t2JVbZSwZJQZSLTV0aPHr1c4jdPbV+jXK1li0bLf7Qwkq+8x4WRjBWNZOyqaCRlH5WEWa4qjAQsjAQsNpKvvEi6rvSRdDXI4MGDp0uurpaoDXPf584IVlUgWFBPUoK1fPnye6wdBCu/r0kJVqS9Kba+pCYTV3UqRbBMrtyyP9F7XbB+/fpurts1u2xFCxNsl0TrAgnSP1wFK1umYNktdOz1n0ly9/ANazwH67U37fCgRCZbjmA5mfJyZY//pPav0We6b8sNVevDVwolXrPs0KGkKuPlqhzBcpJlN3+29V6uq6ubfOONN/rPsr1+90sl/B8GruReFQgW1JOUYGkeghXT1wQPEfpLMzxshwft5PZKBMsqVm6dr6xZs6a7tWn/qNpYWJ8tdpiguTJ8+PCaJ3o4b+7cuTfZSfCSqUyZgpV1z/+sz7OP/5znzJlzsc2PVq/KqWBNnTo1uD+hlts2b968/q7Z4PPw/W6OMWqNiVxzLNj5jx8//nEnWOlKBMvL1bhx49ZHJDmokLWXcda2VJrO/t8C7kVYFQgW1INg1bavSZ6D9corr3TV81/Z65VUsEyu7IrvylP+13DWz1pefb+1EDl/bYCvYkmoGlSxShCsNzSWA327s2fP/oLN978eLLOClbH5WuYX8+fP72vt2U6yI3weZRCMxdKlS7uMHTv2F+7XgyVXsCLVq0Cu1MYTGt9drU0ncIz1DsIKFoJVFQgW1INg1bavSQiW3+EuW7bsMM1/z4lVthzBMrlyr/9e49Db2mvkquTtDj+Gy5cvP2DmzJmv27lYFQrWmwsWLBji2txZovaDwvOvShSs4HwrTf95ww03nGztuQoERPB/o/psho4ePfod+wVh9PyrEgXLHxb8ldrb39rrSN/9EkGwkgHBgnoQrNr2tdoruWu5b/t+alvGu+pVKFflCJZVr9TuXLfttjPv1FHib2qucThFUpSptIKl6V99BUvfwR56/pfC869KFKyg4qX1l1tb7PDj8eNy4YUX1rnDg3lyVYpgnXLKKVl7fNZZZ02Ltgl5IFjJgGBBPQhWbfuapGAtXbp0WuEJ7iUKVtY9f0vbPrjW294KCQ8DXX/99Y/ZOVgSrHQl52Dp9T8sWbKkp7Wl8RwmuXrXSVW5ghXMmz179lhri51+PL6qd9555800wRo5cmS6TMHKmmRp/h/0GfZyzXJYsCEIVjIgWFAPglXbviZxL0J/eEvt3OBOcC9LsPyJ7crL/rpCLXWej72vT5JtNvH6TvrsB82ZM+fhCm+VE17NXcu8rM92N2v32muvPc5uBl2BYGXdie3/rc+0Vynb0FHx4jl58uTb7OruFQhWxqZa7ltxV4WHEAQrGRAsqAfBqm1fkxSsJUuWzK9EsHwFS3lT7b6gvLhw4cIXtXwQexwXe03rxubmm29uNAsWLHjxpptuCmPPLfPnz8/LjTfeWDTz5s1rkI997GNFI4EKc8MNNwTR4+9dd91122bNmvUPu51OtRcanTlz5mP+M1a7p9gV3qNiVaJgZdxrP9u6desHXXPs9GPwgnXmmWd+1gRr1KhR28sUrPTw4cNtOf+5Mc7xJCJYyvtHHHHE6a7NjigHCBbUg2DVtq9JCtbixYtvrlCwgtg8Wz66TGPXy4q7rU6xexcW3rcw7n6F1dyzMO7K7f7q7dGrtvv7FUbvUWhxJ7VnqhUs9WGm/4z1/qe6mzuXJVj260E3/0d6v11cc+z44/GCdWc1gjVy5MhHXHuMczwIVjIgWFAPglXbvrYmwbJKlrtye8bdJieIuxdhg0iUwkiOwkiOGkSyFEaClJEYxUaCEkaCkpEgxUaiFEbCFEaylJdZs2aFmTlzZhgJVV40L+8+hGUKVtamev43fTbhJRqqFSzlx8uXL0ewGif4O5owYUJVgqXl1rj2GOd4EKxkQLCgHgSrtn1N+BBhtYIVW5WKq0jFVaWi9xBMqjJVWJFq6r6CVp2KJlqlspPXfSRUDVKFYAUnxGudr9rn4A9bIVjNQiKCpfmrXXvssOKJCtaLCFbFIFhQD4JV274iWG1fsOw8K3us9z/XPgd/WA/BahaSEqyHXXvssOJBsJIBwYJ6EKza9jWJyzQgWC0nWIqvXr2wbdu2QIaSqmBxDlZJJCJYo0ePRrAaB8FKBgQL6kGwattXBKttC5ZVr+xGzxqD8HpV/nuDYDULSQnWKtceO6x4EKxkQLCgHgSrtn1FsNquYEmstttyM2bMyKt+UMFqVhIRrDFjxqx07bHDigfBSgYEC+rpiIKl1xEsBKspwUrbYy1n96/rY+PvPwdOcm9W/GUallYjWOPGjVvh2mOHFQ+ClQwIFtSDYNW2rwhW2xIsS0Su3tS2H1/4XUGwmpVEBEvrLnftscOKB8FKBgQL6kGwattXBKtNCVZWYrXdPX5D2zUh7nviBUvbimDVHn+IcKndi7BSwRo/fvyDrj12WPEgWMmAYEE9CFZt+4pgtQ3BklhlNE3bcjNmzPittvlYG/O4mzAjWM1KIoI1bty4B1x77LDiQbCSAcGCehCs2vYVwWr1gmU3cc64k9mtnSc15gfZeMfJVXQ+gtUsJCJYZ5xxxv2uPXZY8SBYyYBgQT1JCZbW+Zy1g2Dl9xXBalWClY1kuxOrrFv+T+r35Rrrzk19NxCsZgXBah4QrGRAsKAeBKu2fW1tgiW5ykqqshKoMBKoU3D4HwAAHVxJREFU2EimwkiiwkgsGkRyEkYilZVAxUZSFUYilZVAxUYyFUYiFUYilRfJURi736DPjBkzGsRXrlylKucPB6pft+gz6uW/E019LxCsZiURwdL697n22GHFg2AlA4IF9SBYte1raxMsv3yplS6fpipehdWuuCpXNZUun2KVrsLqVrSyZc9dlSotwXpH099r3SfUn4s0xvu4j6yT+z40KToIVrOSyHWwEKwmCQVrwIABVQnWsGHDTndtdsSxTkqwHnHtdcQxbD8gWLXtaxKC5fspwbqxEsGSIAXLL1y48Htq40K9/+WLFy++1KLHQeyx3rdBtF44LTd676oimYuNBO5SidxHLPbYR8IWGy13iSTwPMnaGC13xMqVK/eOflalVK2iIFjNhx/rurq627nQaE0Jv38SrO+UK1hOsoIMGTKkzjUVew5jOyfYZgnSfCdT6QoF6wuuPb6vbRkEq7Z9TVKwli5dOrNSwZJc2bLfi3Sxo+/QO2nHu3OqgnFAsJoP9xmlzjvvvI+bYI0cOTJdpmBlbKr1tvjz61KMdTGCcenXr98mJ1jpMipYlow9Hjhw4GzXXkcUrOA7ZhUok6dKBUvz73TtdcQxbD8gWLXta5KCpX5fYOtJpLJlHiLM2lTz3pWkBZcfsFu0mCh0tNhY+kOulYJgNR9+rM8999ypdg6WRClTpmBlFZv/3xr3QdZWLf/u2zjBuAwaNOiRSgXLplrny669jvadDrb3hBNO2LtLly6vOsHKlilYGSXXtWvX+a5NBKstg2DVtq/VCpaW3eqFQG2dpNfyqlelnoPlq1hKcDkNXxmA8kGwmg//N3rxxRefPGrUqIwEy6QqW6pgWU455ZSgijVhwoSF1hbf/aIE3+shQ4bcetBBB1UiWNkePXrY9L3jRbTNDkLwvdpzzz3nNFa9akKwsiZY3bt3v8y12ZHGr/2BYNW2r0kIVqTNA7XeX93hvmw5guWrWMo7S5YsOdXaczcaZsdeJghWsxKMy7x583qMHTv2tXIFy6pXvoolsXprypQpJ1p7SFYswfd66NChl7gKVraCc7DSJlla7ztTp07tEm23nRN8nySmh3Tp0uX/OZGKrV41IliBXO26667v77vvvqe6dqm2tmUQrNr2NUnBMjTvOVtXfU+X+ytCq2K5ZX4nyRpo7flDZ65KRhqmAQhWs+J/3dZ53Lhx3x49erRJVaacCpaTrKCKpdd/Pnfu3N6u7Z3cZ9nS37HWECP49/Doo48+SoL0tpesck9y94cKDz744GWRz3En135Lb2fS6ey2LXXsscfu061bt+819uvBpgTLzr+SZP3f3r1793Tjxr8LbRkEq7Z9TUqw/E79zjvvvMnmS5TKFiwvWfbazTff/Gv1YazrLn/EZYBgNTvB32ldXd1n7TysCgUrOFSo2Do/u+CCC0a4thn3eoKx0Pe7a79+/bb5XxJWIFi5Hj16BJLVt2/fxyTF7VkWgm2SEB3TtWvXbSZPXbp0aVSuGhGsjDvB/fnIeaLtccw6DghWbfualGD5vqq9ExYuXPi+k6tsJVdytwuNOtnarnUeWbx48WlLly7dX33ebevWrTu31+gfrbw0tdy2bdt2ifuOIFjNi/8MJEXjyj3JPSpYTrKybvovu3TD5MmTTxk/fvx+c+bMif3u23egME19f1rou71TU7F/k3yi82z9yPc8mA4YMOA+EyyJQ7oSwfKSZYcLtewfBg4c+LFDDz10yNFHH72nnZoQ7UslsYpmS2bo0KG7anz20nYete+++94luXrby5XSqFwVEyz/C8Lu3bvf7D6LjnBotX2DYNW2rwkeIgx2wL/+9a8/cPvtt7/gfk2YqfRWOQsWLMjYVdxtHT1/V/mNxOslrfe8RcvlRa9/y6JlnvfR+kVz0003xebjH/94XiQpz8+bN6/RzJ0793ntAIvm+uuvb5DrrrsuNrNnzw4zc+bMb82aNatBbP6MGTOe1+PvzZ8//3Qb9+h9CRGsZicYG433HpKi/3TnYWUqqGD5ZE466aSsPT755JPf1fTXWu7F4cOHf0t5Xs+j+VZMntd6z59wwgl5Of744xvk2GOPDXPMMccEkWQ8f+SRR8bmwx/+cJgjjjgizGGHHZYXyUphnrMMGzYsjCTguSFDhgQZPHjwc5KcvNg8idQWPX7hkEMOmWRjrL4F30e9/3AnWGVfB6sgmQ996EM5d/L7m8pPla1af4vynB5v0Wux0XrRPBfNfvvtt6WUSH7yss8++8Rmr7322iKxKZo999zTps9puedsuscee3ynW7dur0is3nFilXXJVShYwflXmr6lz66/+95z/lVbB8GqbV8TPsndHya8IXo9rCruRWi3ykmbaPnXGvkVYuxV3eOu7m5Xc/dXbo/ew9BS6pXcS7mqe+GV3ePuXRi9h2H0XoXF7ldot9FxN4LO2FXg9f4XRcfeSEqwNO9H7ocGBoLVCH7MJ06cuMDOw5JIpasQLBOr7IknnphWsnqci0bzwkicwkiYwhx33HE5SVNeJE9hJCpBjjrqqDASqCCSl5ykqUEOP/zwnOQpjIQpjHa6OQlTGAlRGAlUGMlSGMlTmP79+9s5UQ3Sr1+/jE31+uzoOBuat9kJVroKwfKSFVSzLCZc0ey///6xkSDlRYIURlJUNHvvvXcYCVEYiVHRSKDyInkKI4lqEAlWEPc8o4RyVaFgpd3lGTa64effg/ZAWxSslStXTlu2bJnJU7YjCZbv77p16/aXYP1WywSSlcTNniVFmcJIiMJIlsJILBpEshRGUpKRDMVGUhRGUpSREMVGUhRGchRG0pMXiVIYCVIYiVKDmDRFYzd7LsxVV12VufLKKy3btYwJ1nk25rWoYCFYZRGMjz6P/ceMGfNbJ1fZKgQrd9JJJ/lkopFMhZFMhZFUhZFQZSRSeZFQhZFQBZFQhZFYBZFMZSRTDSKpykimwkiqwkiqMpKpMJKpMIMHDw4jsQojsQojWTKRahAJ1nYTLC1zjRvnnVxS6udk9yvCbJWClXNyZZdxCGQrGslUbCRVeZFYhZFIFY3EKozEKoxEqmgkVXmRWIWRSBWNiZWXrkoEK3qJBjsHS30e4z4HqlftAQSrtn1N+FeEnfzOXdtwjbWTlGCVcn9BnyTvMVh4b8HCalRhRSp6v8HCew42VZ3yN3v2MYEqjIQnJ8nKmWTZMtqe8228EaxWga9i3Txq1KiwipWAYOWlsaqVT2HFKlq1ilaufNXKV6589cqqVYWJq1r5NFa1kliFqbSCpcyIjHHwXbTD13379n3BiVU6AcFqkxUsX62KS7SqVYVg+erVpsh3nX8P2gMIVm37mrRguaQ2b97cRW287M7FSiNYCFYHIBgjfR/3GTt27M9cFSuDYCUuWEbwb6O2c1Tv3r23S6iyvpKFYCUnWIo/9+ptfU5HRsce2gEIVm37WgPBCvut7Rit5d41mbLb5yBYCFZ7x4/9JZdcMlZy9Z6EKuuCYCUrWIa/dc6d0SoWgpVoBSuoXqmthdExh3YCglXbvtZCsKJ91zZ9PFrFQrAQrPaO/+5PnDjx03aocPjw4WkEqzrB0jJxghV8J6dPn75H3759v+8lC8GqTrAi1avtdlkGzfuu/k3ZLTrm0E5oi4JlvyLs6ILlHneya9ksXrx4o7UpqUojWMkKlvqJYLU+grHatGnTB8aPH/9vdqgwKlkIVmKCZQT/Ro4cOXJonz59/uTkKo1gVS1YaTv/Ss9/07t3by7L0F5BsGrb1xoKVspf7Vc7mm5a9nlrUwK1HcFCsDoAwXjp89l33LhxL7qT3bcjWIkLlhH8O6ltsPOx3nKSlUGwKj5EmHFy9cZBBx10QnSMoZ2RlGBp3j3WDocI8/taS8GKbsP69esP8PcplESllQyChWC1c4Lvvr7PvceOHftdX8lSsghWooIVjrX6daYk63UnVWkli2CVJViBXO22225vaizGNzHm0NZBsGrb12oFS48bFazodvzkJz/pcvvtt6+2tm+55ZaME60sgoVgtVf8d19/Y3tOmDDhMbvKu6Qq42/uXHCbHASrcsEKX9O42M2gf+WkyiQr05hcIVhBssp2Ozyo1/+scRhewnhDW6ctClZHupJ7KYIV3RY7J2vJkiVzFi5c+DcluLmzJSpaCBaC1Z6IfPd3mTRp0vwRI0b8Y/jw4SZVGRcEKxnBCl+3Gzhr3ccjlSuTrCyCFStYaYlVxuRK67zQt2/fwSWONbR12qpgWQWrUsG655571jVXX2t9iDCKnZPld/76XA5XG1tNsuym0HZbHIlVUNFCsJIRLPUTwWoluPMRg79nje8xEoDvufOx7J6DJllpJYtglXWZhmJ4oe2sfk498MAD/+Qkyq7UnraqVqFsdUDBykbFSo/fV3/uHDNmTJcyxhnaOm1ZsKo4RPhIc/W1uSpYHtvR+O3aunXrB5cuXXqZJOuHJlkmW1bBMtlS0ha7D2EkCBaC1ZYJ/wdD3/fdJ0+e/NGRI0f+yJ+TZVUsiVVGSdvUbvgcCYK1g1J3/J1dUhrLPmp/Sc+ePaOi5ataJlsZNy9IOxasjJK2mz77Xwtq+p7a+Lq2+zT/HU1xQnvHISJYixQTpfeVrOSp0UisfLavWrUqt3z58mYTLPXv8vvuu8/kKWOSFRfJVBhJRhA93v75z3++WQVLfRm/ePFik6qMpCrrI3HKSqKKRjKUths6a9lvRZoteSds2+a3z37Orm2epLa+duutt/7NrpflbxLtq1kRmcr6SKbCSKLCSKIaRFIVRiKVlZjERlIVRoKSlUDFRjIVRiIVRiKVF8lUGElUmBkzZjSIBCovkpsGkVxlJVeWdLF7EfpxNcGaPn16VrLUIJKnMJKqIBIrn7QTrv9AsGpCuPPX399uU6ZMOXfMmDHflGC9ZZJlsuUrWNEbO9uNny2SqTCSqTCSqjASqqxEKi8SqjASqiASqjASqyCSqaxkqkEkVVnJVBhJVRhJVVYyFUYyFWbQoEFhJFNhJD1hJFBZyVSD9O3bN61pJYJleFkIvrtnnHFGD/Vhbu/evX8sqXovWr2KEaqsj+QpNhKpvEiewkieikYyFUbyFEbiFJfEBKvgsOAbaudxjcUpkf1MOFbQQfAi8Oijj97+2GOP5VauXBkIk6a5FStW5MXm+fkSKp+0Vb40b5m10xzS8vDDD19hVbZ77703YxWpuJhI+dxzzz1BJBlpCaG9vrG5+nr//fefYVU0SVbWKlk+Jl0mUMUiIUtLCm2570aaLeuPM1rN8s8lx4P1/tMkeA/ecsstLyivSrLeWrBgQdpkK3odrcJLPdjrcYk7zBitfkVTWPWyaldcilW9fOXLp5SqV7T6VaziFY1kzCpcdqNp6+cF0c/T8LKlvp1mEmYVLxMzN/UVsDBW5bJIxoJMmzbNbiZtj39q93ur5LOFJsmrFNjhLIntIZMmTbpy1KhRK0aOHPmiROvVU0455S2rZkXP0So8fBiVsMLqVmFVyyeushWtavlqVmEKK1o+cRUtn8LKVrSiJeEJUljRilS2Mq7ida0bqkoOXYVCa+jvcjdt44lqe16fPn029urV6z8kWlbdescfOmzskGGxylaxalZhSq1ouaqWSdZ7XrYqFSyrWun5D7XuMvXvUo1934LvIocEOyL+WkpPPvnkkC996UvnSLLqHn/88YmlxpbfuHHj2Xp8qGuyZjsK31cJXZ81a9ZMXr169cTCSACDxL2m9eokZ2dremRT75VUX9etW7e/dqJnSQgnSkLrLJKcJrNs2bI6yeDkBx988OQEutPJBMH3ybNt27ZdNB77mXTdddddJ0lCx2laJ7GbGI0ktc5SOL8wtm7c+tFIGEuOJLOkLFq0qKRIGMNIPOuij6ORTAbR47OWLFnSM/p5+vG0/9xxxx37SC4n2rJ+6h/Pnz9/ooSyLi72mjJJIjq88DOBxPGHDfPGWZ/trhLu/STSgy+++OKTp06dOn7KlCkTfS644IIgWvesuPjXzz777LPics4550yMRmIXpq6ubqKw/9TZ42gmTJhQ5zN27Ni8SAzzMm7cuDML540ePfrM008/vUEkkGdKFs+QVOZFMjlBmai2+vrxqmKsTbIaiIRdpXz48OE9JKiHSkRPlYCOk0xOaCoSy6KRTFaTMySidRLPUUccccTpkrlNJlJRySpDsLJOsN6MnLzeubHxAIB2ilW04nY4AO0dvvvNhq/YtNaxDvo0YMCAbvvss8/dkqj3qzhEaOdd2eMfDx06tKtrf+cU51lBFPvHx6oclaaWh9sKsf/rp6+J0MkfRqz2828NsZ1n0mmswuR/tVlpmvN7CA0IbjXlpaujpyNUUt3f626DBg3q16tXr1l77733q06oslUIlp3Ubsutdm/D3zQAAADUjEDYDjvssFl9+/b9qrK+X79+GzXd0KdPn5LTu3fv2Bx44IGx6dmz54YePXrEZv/99/+ypOqF7t27/8WLlB5n3HlYlQpWcIhQfZrktptDggAAAFAzgkpO//79N7qT1tP+hPamLsdQyqUZoieuFybmRPa4SzJknFxV8yvC4PCglv/pvffe+wG33e2+EggAAAAtRyBYBx988CMmVZKr9+wipCZahZFkxUaClRdJVhhJVtFIssJIsMJIpNK+YpXQdbACwVLfKrnEBQAAAEDZeMF61AlWutglGdrohUYzdmhQ058PGTJkH7fNVK8AAACgpnjBWt9eBcumBxxwwMVue6leAQAAQM1pz4IV/HJQ7T/mtpXKFQAAADQL7VWw0nZoUOv8ctiwYb2j2woAAABQa9qjYAVypXl/PeSQQ46PbicAAABAc9DeBMuf1P7WQQcdNMFtI+ddAQAAQLPSXgQr6ytXmr7Zp0+fOrd9yBUAAAA0O+1BsDLRc64GDRp0rNs25AoAAABahLYsWFknV8HhQbX55aOPPvoAt13IFQAAALQYbVGwMkraHRa053/u1avXFbfddtvO0W0CAAAAaCn8vQhb65Xcsy5265y0q1oFhwb1/A29xwNDhw7tE9kWrnUFAAAALY6vYK1zIvVe3H0IW+JehCZThRUsEyst/7uePXt+4rDDDjvYbUOnFHIFAAAArYhAsAYMGPD4AQccYLeUSbupVbPyElfV8pWtJCtY9txkylWz3tb0VbX1nN7r7r59+541fvz4bgX955AgAAAAtCqCqs9RRx01rn///vOUawcOHHjdwQcffJ1kZnYp6dOnT9H06tWrsVzrI6ELc+CBB14tobusX79+dYcffvihmn7o/PPP37Wg33YSO2IFAAAAUCW+WsWhQAAAAGgTmLjs3Mriq1QIFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA26GT0jnBdGplfaxFf0rt704F6dwCfah0HArXBwAAAGgRSpWo5pYtAAAAaGZ2Vw5XDksgRyjdXbtJVo76KR9WDm0l/SmkU0H7H1KOUyYoFyjnKKcp/ZWdI8vVQrJ8P/ZJ1Y+ZjcNeBa83RX+3no3j0FR+vwEAAKAIfud+vPJ35a0q8zfl/dQOoTB2SqCPXgaeVNLK/5TRH9umfynnJ9ifxvpo05HKF5XX3HvnInnf9f/flTmpeuFJWrK8CF2lZJU3lO3KFDe/lHGwPj2b2tHnt5U/Kj3cay1xyBUAAKDN4HfsJyqZ1A4JyKbypaCc+DYuce0mUfHwO/Ovu7bTZfTHb8tFro1aCJYfw57KhoL+ZWMS7devUzsqW0aS0uLHfWaqXuxsemnB641h/XkhVb8tJs8HRF4DAACAIng5OCnVcOcfJyvZRl6PCtZU126SgvWMa3t7E32IE6xyKjfl4Mevj/KTSP+80Pi8l2oohu9Flr+goL1q8eN+TcF7faTg9cawcf9OpL9WBUOwAAAASiB6ro4dRjuvILbjP1O5K5VfPVqb2nFu0YUFy5+b2iEzfQraT6KPXrAsf1EmKeOUM1xfiqUutaO6lFR/Cvu1h7I1VS9LXjKfV+a6fp6qjEjtqOwtUX6Rqh9Py2TXVtKCNSOVX8EqV7C+m6of8zdTCBYAAEAi+IqPHcaK7qivd/Ob46TnOMH6vfLBgtebGy9Dd6Tqx8YqZiZM84r0y8/rqixw630n5vVqQbAAAABaAbbDLLxek2VX97pVqqI76o+5+R8osl4tKkVRwXo1tUNSjJ2L9KFW/Yn2ySp1r6Xyq3s3uNeK9SV6PSqr9vlzsJI80R3BAgAAaMX4CpYdPozuqOe6+S1VwTLB2q3g9ebEj8uVqfxxeTZVL3SN9ctfwLNWIFgAAACtmNYsWKVWsGohMr7NL6byx2Wam1/qyfS1usp8McG6zM3fNdX01e+tDQQLAACgBrRWwfpdquXOwfLvZ+//m0if3lUOca+19BXaiwlWKZfPiI7nt1MIFgAAQOK0VsGyazJ9WrlVua1I7LXbU/WXQEi6P32V/4306f8oXQqWaSkKBWu7mz6tLFTuVD7bRBandlxcFMECAABImNYoWKVeaNQv93RBO9Xiq1NHpup/OWjv88NU/Xi1tIAUClY5F2ctdi0xBAsAACAh2oNgfbWgnWrxgnVsKv+ipy9GXmtpAUGwAAAAWjGtUbDsQp52j7/vK99L7RCbuNhtXn6U2nGYMNpOtXiJshsoRytY/5mqH4+WFpBigmU/DrBK249TO8amsWxT/pHiECEAAEDitEbB8qLgz3fyvxSMSy1+Rej7s39qh3T4Pr2e2nFF/OgyLUWxk9yvcPPt6vO7NxG7DEb0XoQIFgAAQEK0VsFqySu5+/ezsflhqr6qZpWsU91rpUpdU9fLqpRqroMV7U/0XoQIFgAAQEK0VsGyCtbubr6/llRjSRo/Lve5/vibKX+q4PXGqFXfjGKCdambv0uq6TGzceU6WAAAADWgNQtWa7iS+5mphuc4+Rtd29gUux+hX99uNdQ1Zplq4UruAAAArZjWLFilnIPlU6t7EVoV7T9S+WPzb6l8+Yve5zFatbLna1PlVb1KBcECAABoxbRWwWrJK7l7/NjYhUz9eVi+kmX3JDwxtaNCVcheygS3jC37y1TyJ8cjWAAAAK2Y1ihYdjL528p6ZU1qRxWoWOz1R5UTXBtJ/6LQt7c4VX+o0I/RP1M7qlv2/nau1oPKU8pvU/VXVn/XTWe5dpKqYiFYAAAArRi/wz8vtWMn+y83nePmN6dgPZ2qP6E8kyrtIpl+OX8PviQPw0X7ZieN35OqvybW9ib6GK12vaIcU9BetfjP5ZpU/uc2teD1xrC+bI301y5DgWABAAAkgBeSi1L5v5ab7+Y3p2B9M1X+Vcm95Fzs2khasHz/fB8np3ZUqKJXQC+Mn29VpWWp2lw7y38u16XyP7dpBa83hlXnXkrV99uqhr3cawgWAABAFfhDYCcrm5QnlS3KJDe/FsJSiN+Z282bTbK+ktpxqK2U2G1yvq6c5tpI+hBhtI++7W7Kucry1A5B+a/UjhtB23ljdoX0L6Z2HGI9NLJu0sLiPxd/rpd9bjZ2I9z8UsbB+mSHPu1ztxP37VDn3pHXAAAAAGpOVLI8dpK7SYld9X2/VMNLMnSOWQcAAAA6ELW+eGe5719Omrufjd2ip6nXk+5LNWPR0p85AAAAQANaWvYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKDd8f8BCwOg43Mf0F0AAAAASUVORK5CYII=" class="brand-logo" alt="Mercy Tech" />
+          </div>
+          <div class="brand-sub">
+            <div><strong>CÔNG TY TNHH CÔNG NGHỆ MERCY</strong></div>
+            <div>Hotline: <strong>0763.068.614</strong> | Email: <strong>mercytechglobal@gmail.com</strong></div>
+            <div>Địa chỉ: 175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, TP. Hồ Chí Minh, Việt Nam</div>
+          </div>
+        </div>
+
+        <!-- NATIONAL TITLE -->
+        <div class="national-header">
+          <div class="national-title">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+          <div class="national-sub">Độc lập - Tự do - Hạnh phúc</div>
+          <div class="national-line"></div>
+        </div>
+
+        <!-- DOCUMENT TITLE -->
+        <div class="doc-title">HỢP ĐỒNG NGUYÊN TẮC PHÂN PHỐI BẢN QUYỀN PHẦN MỀM<br>&amp; ĐẠI LÝ ĐỘC QUYỀN TUYẾN</div>
+        <div class="doc-number">Số: 2026/HĐNT-DOCQUYEN-TUYEN/MERCY-[MÃ ĐẠI LÝ]</div>
+
+        <!-- LEGAL BASES -->
+        <ul class="legal-bases">
+          <li>Căn cứ Bộ luật Dân sự số 91/2015/QH13 ban hành ngày 24/11/2015;</li>
+          <li>Căn cứ Luật Thương mại số 36/2005/QH11 ban hành ngày 14/06/2005;</li>
+          <li>Căn cứ Luật Sở hữu trí tuệ số 50/2005/QH11 và Luật sửa đổi, bổ sung một số điều của Luật Sở hữu trí tuệ số 07/2022/QH15;</li>
+          <li>Căn cứ Luật Thuế Giá trị gia tăng và Nghị định số 123/2020/NĐ-CP của Chính phủ quy định về hóa đơn, chứng từ điện tử;</li>
+          <li>Căn cứ thỏa thuận chính sách "Gói Khởi Nghiệp Độc Quyền Tuyến" và năng lực phát triển thị trường của hai bên.</li>
+        </ul>
+
+        <div class="doc-date">Hôm nay, ngày [Ngày] tháng [Tháng] năm 2026, đại diện hai bên chúng tôi gồm có:</div>
+
+        <!-- PARTIES -->
+        <div class="party-grid">
+          <!-- BÊN A -->
+          <div class="party-box">
+            <div class="party-header">
+              <div class="party-title">BÊN A (BÊN BÁN / NHÀ PHÂN PHỐI): CÔNG TY TNHH CÔNG NGHỆ MERCY</div>
+              <span class="party-tag tag-a">NHÀ PHÂN PHỐI</span>
+            </div>
+            <div class="info-row"><div class="info-lbl">Địa chỉ đăng ký:</div><div class="info-val">175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, TP. Hồ Chí Minh, Việt Nam</div></div>
+            <div class="info-row"><div class="info-lbl">Mã số thuế:</div><div class="info-val"><strong>0319227767</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Đại diện:</div><div class="info-val"><strong>Ông Vy Thiên Hùng</strong> &nbsp;|&nbsp; Chức vụ: <strong>Giám đốc</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Điện thoại / Zalo:</div><div class="info-val"><strong>0763.068.614</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Email tiếp nhận:</div><div class="info-val"><strong>mercytechglobal@gmail.com</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Số tài khoản:</div><div class="info-val"><strong>98896889</strong> tại Ngân hàng <strong>Techcombank</strong> - Chủ tài khoản: <strong>CÔNG TY TNHH CÔNG NGHỆ MERCY</strong></div></div>
+          </div>
+
+          <!-- BÊN B (NỔI BẬT KHUNG VÀNG CAM) -->
+          <div class="party-box" style="border: 2px solid #f59e0b; background: #fffdf5;">
+            <div class="party-header">
+              <div class="party-title" style="color: #b45309;">BÊN B (ĐẠI LÝ ĐỘC QUYỀN TUYẾN): [TÊN DOANH NGHIỆP / CỬA HÀNG ĐẠI LÝ]</div>
+              <span class="party-tag tag-b">ĐẠI LÝ ĐỘC QUYỀN TUYẾN</span>
+            </div>
+            <div class="info-row"><div class="info-lbl">Địa chỉ đăng ký:</div><div class="info-val">[Địa chỉ đăng ký kinh doanh / Địa chỉ cửa hàng của Bên B]</div></div>
+            <div class="info-row"><div class="info-lbl">Mã số thuế / ĐKKD:</div><div class="info-val"><strong>[Mã số thuế / Số ĐKKD Bên B]</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Đại diện:</div><div class="info-val"><strong>[Họ và tên người đại diện]</strong> &nbsp;|&nbsp; Chức vụ: <strong>[Chức vụ đại diện]</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Điện thoại / Zalo:</div><div class="info-val"><strong>[Số điện thoại Zalo Bên B]</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Email nhận hóa đơn:</div><div class="info-val"><strong>[Email nhận Hóa đơn GTGT của Bên B]</strong></div></div>
+            <div class="info-row"><div class="info-lbl">Tuyến đường / Khu vực:</div><div class="info-val"><strong>[Tuyến đường độc quyền / Khu vực địa bàn chỉ định của Bên B]</strong></div></div>
+          </div>
+        </div>
+
+        <div class="framework-highlight">
+          <strong>QUY CHẾ ĐẠI LÝ ĐỘC QUYỀN TUYẾN (GÓI KHỞI NGHIỆP):</strong> Đây là Hợp đồng nguyên tắc khung xác lập tư cách <strong>Đại lý Độc quyền Tuyến</strong> của Bên B theo chương trình <em>"Gói Khởi Nghiệp Độc Quyền Tuyến"</em>. Khi Bên B thực hiện <strong>lấy trước số lượng bản quyền (Key Online / Tem Cào) đạt hạn ngạch cam kết ban đầu</strong> theo Đơn đặt hàng đợt 1, Bên B chính thức <strong>đạt điều kiện kích hoạt tư cách Đại lý Độc quyền Tuyến</strong>, được Bên A bảo hộ <strong>độc quyền tuyến đường không cấp đại lý thứ 2</strong>, nhận trọn bộ <strong>các Đặc quyền đại lý &amp; Gói tài trợ khởi nghiệp</strong> và hưởng cơ chế <strong>bảo vệ giữ chỗ dự án trong 30 ngày</strong>.
+        </div>
+
+        <div class="clause-text" style="font-style: italic; margin-top: 4px;">
+          Sau khi bàn bạc thống nhất, hai bên cùng ký kết Hợp đồng nguyên tắc này với các điều khoản chi tiết sau đây:
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <div>Hợp đồng nguyên tắc phân phối bản quyền &amp; Đại lý độc quyền tuyến — Số: 2026/HĐNT-DOCQUYEN-TUYEN</div>
+        <div>Trang 1 / 4</div>
+      </div>
+    </div>
+
+    <!-- ==================== TRANG 2 ==================== -->
+    <div class="doc-page">
+      <div class="page-content">
+        <h2 class="article-title">ĐIỀU 1. GIẢI THÍCH TỪ NGỮ VÀ KHÁI NIỆM PHÁP LÝ</h2>
+        <div class="clause-item">
+          <strong>1.1. "Hợp đồng nguyên tắc độc quyền tuyến":</strong> Là văn bản thỏa thuận pháp lý khung xác lập tư cách đại lý độc quyền trên phạm vi tuyến đường/địa bàn chỉ định, quy định nguyên tắc giao nhận, điều kiện bảo vệ tuyến đường, quy chế giữ chỗ dự án và các đặc quyền đi kèm cho Bên B.
+        </div>
+        <div class="clause-item">
+          <strong>1.2. "Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech":</strong> Bản quyền phần mềm văn phòng vĩnh viễn được tối ưu hóa toàn diện bộ phông chữ tiếng Việt chuẩn văn phòng, định dạng văn bản công sở, tương thích mượt mà Word/Excel/PowerPoint/Macro VBA, cung cấp dưới 03 hình thức: Key kỹ thuật số qua Portal, Tem cào Hologram 7 màu niêm phong chống hàng giả, và Hộp vật lý nguyên seal kèm thẻ bản quyền (SKU: MER-00105, hỗ trợ đổi máy tối đa 05 lần).
+        </div>
+        <div class="clause-item">
+          <strong>1.3. "Bộ cài đặt White-Label mang thương hiệu riêng":</strong> Gói cài đặt phần mềm được Bên A tùy biến kỹ thuật tích hợp hiển thị đích danh Logo, Tên cửa hàng và Hotline của Bên B trực tiếp trong mục Giới thiệu (About) của phần mềm và trên Chứng nhận bản quyền thiết bị, giúp Bên B khẳng định thương hiệu và bảo vệ trọn vẹn tệp khách hàng của mình.
+        </div>
+        <div class="clause-item">
+          <strong>1.4. "Độc quyền tuyến đường (Territory Protection)":</strong> Phạm vi tuyến đường hoặc khu vực địa lý cụ thể được Bên A cam kết chỉ định duy nhất Bên B được quyền phân phối chính thức; Bên A cam kết không cấp quyền cho bất kỳ đại lý thứ hai nào cùng tuyến trong thời hạn hiệu lực của thỏa thuận.
+        </div>
+        <div class="clause-item">
+          <strong>1.5. "Portal Mercy Keys":</strong> Hệ thống phần mềm quản trị, cấp phát và nạp khóa bản quyền tự động 24/7 do Bên A vận hành dành riêng cho hệ thống Đại lý chủ động thao tác.
+        </div>
+        <div class="clause-item">
+          <strong>1.6. "Giá sàn bán lẻ":</strong> Mức giá bán lẻ tối thiểu do Bên A quy định bắt buộc áp dụng trên toàn hệ thống nhằm chống bán phá giá thị trường và bảo vệ quyền lợi lợi nhuận ròng của các Đại lý.
+        </div>
+
+        <h2 class="article-title" style="margin-top: 10px;">ĐIỀU 2. PHẠM VI HỢP TÁC, ĐỊA BÀN ĐỘC QUYỀN VÀ HẠN NGẠCH LẤY TRƯỚC ĐẠT ĐIỀU KIỆN</h2>
+        <div class="clause-text">
+          <strong>2.1. Chỉ định độc quyền tuyến:</strong> Bên A chỉ định Bên B làm <strong>ĐẠI LÝ PHÂN PHỐI ĐỘC QUYỀN TUYẾN</strong> đối với các dòng sản phẩm phần mềm do Bên A cung cấp tại địa bàn được chỉ định: <strong>[Tuyến đường / Khu vực địa bàn chỉ định của Bên B]</strong>.
+        </div>
+        <div class="clause-text">
+          <strong>2.2. Danh mục sản phẩm Gói Khởi Nghiệp Độc Quyền Tuyến:</strong>
+        </div>
+
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th style="width: 6%;">STT</th>
+              <th style="width: 44%;">Danh mục hàng hoá &amp; Diễn giải quy cách</th>
+              <th style="width: 14%;">Đơn vị tính</th>
+              <th style="width: 12%;">Số lượng</th>
+              <th style="width: 12%;">Đơn giá (VND)</th>
+              <th style="width: 12%;">Thành tiền (VND)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" class="table-section-title">PHẦN 1: NHÓM SẢN PHẨM ONLYOFFICE (MÃ NGUỒN MỞ — TỐI ƯU BỞI MERCY TECH)</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700;">1</td>
+              <td>
+                <div class="prod-desc-title">BẢN QUYỀN PHẦN MỀM VĂN PHÒNG ONLYOFFICE TỐI ƯU BỞI MERCY TECH</div>
+                <div class="prod-desc-sub">Bản quyền vĩnh viễn khóa cố định Mainboard, tối ưu font tiếng Việt, cấp mã qua Portal 24/7.</div>
+              </td>
+              <td style="text-align: center;">Mã</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo Bảng giá hiện hành]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700;">2</td>
+              <td>
+                <div class="prod-desc-title">PHẦN MỀM VĂN PHÒNG ONLYOFFICE TỐI ƯU BỞI MERCY TECH (DẠNG TEM CÀO KÍCH HOẠT VĨNH VIỄN)</div>
+                <div class="prod-desc-sub">Tem phủ cào Hologram kèm Seri &amp; Code kích hoạt vĩnh viễn khóa Mainboard, dán trực tiếp thân máy.</div>
+              </td>
+              <td style="text-align: center;">Bộ</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo Bảng giá hiện hành]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700;">3</td>
+              <td>
+                <div class="prod-desc-title">PHẦN MỀM VĂN PHÒNG ONLYOFFICE TỐI ƯU BỞI MERCY TECH (DẠNG HỘP VẬT LÝ NGUYÊN SEAL - SKU: MER-00105)</div>
+                <div class="prod-desc-sub">Hộp vật lý nguyên seal + Thẻ Product Key + HDSD, bản quyền vĩnh viễn, hỗ trợ đổi máy tối đa 05 lần (cách nhau &ge; 30 ngày; người dùng cuối tự bảo quản, chụp hình/ghi chú lưu lại mã Key).</div>
+              </td>
+              <td style="text-align: center;">Bộ</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo Bảng giá hiện hành]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+            </tr>
+            <tr>
+              <td colspan="6" class="table-section-title">PHẦN 2: NHÓM SẢN PHẨM MICROSOFT CHÍNH HÃNG RETAIL (PHÂN PHỐI HỢP PHÁP RIÊNG LẺ)</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700;">4</td>
+              <td>
+                <div class="prod-desc-title">PHẦN MỀM WINDOWS 11 PRO 64-BIT ALL LNG PK LIC ONLINE DWNLD NR FQC-10572_ RETAIL ONLINE ESD</div>
+                <div class="prod-desc-sub">Bản quyền thương mại Retail Online ESD chính hãng Microsoft (kích hoạt Win 10/11 Pro), được phép mua bán riêng lẻ hợp pháp.</div>
+              </td>
+              <td style="text-align: center;">Bộ</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo Bảng giá hiện hành]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700;">5</td>
+              <td>
+                <div class="prod-desc-title">PHẦN MỀM WIN PRO FPP 11 P2 32-BIT/64-BIT ENG INTL USB (HAV-00163)</div>
+                <div class="prod-desc-sub">Bản quyền FPP Retail chính ngạch Microsoft nguyên seal kèm USB cài đặt, được phép mua riêng lẻ hợp pháp, hỗ trợ đổi máy trọn đời.</div>
+              </td>
+              <td style="text-align: center;">Bộ</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo Bảng giá hiện hành]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 700;">6</td>
+              <td>
+                <div class="prod-desc-title">PHẦN MỀM MICROSOFT OFFICE HOME &amp; BUSINESS 2024 ALL LNG APAC EM RETAIL ONLINE ESD (EP2-06604)</div>
+                <div class="prod-desc-sub">Bản quyền thương mại vĩnh viễn Word, Excel, PowerPoint, Outlook, kích hoạt trực tuyến chính hãng Microsoft, hỗ trợ đổi máy.</div>
+              </td>
+              <td style="text-align: center;">Bộ</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo Bảng giá hiện hành]</td>
+              <td style="text-align: center; font-size: 8pt;">[Theo từng đơn]</td>
+            </tr>
+            <tr class="summary-row">
+              <td colspan="5" style="text-align: right; text-transform: uppercase;">CỘNG TIỀN HÀNG:</td>
+              <td style="text-align: center; font-weight: 700;">[Theo từng đơn mua]</td>
+            </tr>
+            <tr class="summary-row">
+              <td colspan="5" style="text-align: right; text-transform: uppercase;">THUẾ SUẤT GTGT (VAT):</td>
+              <td style="text-align: center; font-weight: 700; color: #1d4ed8; font-size: 8pt;">Theo thời điểm quy định (KCT / 8% / 10%)</td>
+            </tr>
+            <tr class="summary-row" style="background: #f1f5f9;">
+              <td colspan="5" style="text-align: right; text-transform: uppercase; font-weight: 800; color: #0f172a;">TỔNG CỘNG THANH TOÁN:</td>
+              <td style="text-align: center; font-weight: 800; color: #0f172a;">[Theo Hóa đơn GTGT]</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="clause-text" style="font-size: 8.3pt; color: #1e293b; background: #fffdf5; border: 1px solid #fef3c7; border-left: 3px solid #f59e0b; padding: 5px 8px; border-radius: 4px; margin-top: 4px; margin-bottom: 5px; line-height: 1.4;">
+          <strong>* Cơ chế đạt điều kiện độc quyền tuyến:</strong> Bên B cam kết <strong>lấy trước số lượng bản quyền (Key Online / Tem Cào)</strong> theo hạn ngạch thỏa thuận tại Đơn đặt hàng đợt 1. Khi Bên B hoàn tất lấy trước số lượng này, Bên B chính thức <strong>đạt điều kiện kích hoạt tư cách Đại lý Độc quyền Tuyến</strong> và được Bên A kích hoạt các đặc quyền đại lý cùng gói tài trợ khởi nghiệp theo chính sách hiện hành. Các đợt tiếp theo Bên B lấy theo nhu cầu thực tế.
+        </div>
+
+        <div class="clause-text">
+          <strong>2.3. Quy định về Thuế GTGT và Hóa đơn điện tử:</strong> Thuế suất GTGT áp dụng theo thời điểm quy định pháp luật hiện hành (Chuyển giao bản quyền giải pháp phần mềm OnlyOffice thuộc diện Không chịu thuế GTGT - KCT theo Thông tư 219/2013/TT-BTC; Các sản phẩm hàng hóa vật lý khác xuất VAT theo quy định). Hóa đơn GTGT điện tử được phát hành hợp pháp gửi trực tiếp vào email đăng ký của Bên B.
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <div>Hợp đồng nguyên tắc phân phối bản quyền &amp; Đại lý độc quyền tuyến — Số: 2026/HĐNT-DOCQUYEN-TUYEN</div>
+        <div>Trang 2 / 4</div>
+      </div>
+    </div>
+
+    <!-- ==================== TRANG 3 ==================== -->
+    <div class="doc-page">
+      <div class="page-content">
+        <h2 class="article-title">ĐIỀU 3. QUY TRÌNH ĐẶT HÀNG, BÀN GIAO VÀ CƠ CHẾ GIAO MÃ KHẨN CẤP</h2>
+        <div class="clause-item">
+          <strong>3.1. Phương thức đặt hàng tinh gọn:</strong> Bên B đặt hàng thông qua tin nhắn Zalo CSKH chính thức, Email đại diện hoặc thao tác trực tiếp trên Portal Mercy Keys căn cứ trên Hóa đơn GTGT điện tử / Bảng xác nhận đơn hàng mà không cần lập văn bản giấy riêng biệt cho từng đợt rút hàng.
+        </div>
+        <div class="clause-item">
+          <strong>3.2. Thời hạn bàn giao sản phẩm:</strong>
+          <br>&bull; <em>Bản quyền kỹ thuật số (Key Online OnlyOffice / Nạp hạn ngạch Portal / Windows 11 Pro ESD Key Online [FQC-10572] / Office 2024 ESD Key Online [EP2-06604]):</em> Bên A kích hoạt và bàn giao trong vòng 15 – 30 phút kể từ khi xác nhận thanh toán.
+          <br>&bull; <em>Hàng hóa vật lý (OnlyOffice Box SKU: MER-00105 / Tem cào OnlyOffice / Hộp Windows 11 Pro FPP [HAV-00163] nguyên seal):</em> Bên A đóng gói niêm phong cẩn thận và bàn giao qua bưu điện/chuyển phát trong vòng 24 – 48 giờ làm việc.
+        </div>
+        <div class="clause-item" style="background: #eff6ff; border: 1px dashed #3b82f6; padding: 6px 10px; border-radius: 4px;">
+          <strong>3.3. Cơ chế giao mã khẩn cấp (Chỉ thực hiện khi thanh toán 100%):</strong> Khi Bên B cần mã gấp để kích hoạt cho khách hàng, sau khi Bên B hoàn tất thanh toán 100% và xác nhận qua Zalo/Email đại diện, Bên A thực hiện cào tem hoặc mở seal hộp Microsoft để chụp ảnh gửi mã Seri/Code kích hoạt trước, sau đó gửi vỏ tem/hộp vật lý qua bưu điện. Bên B cam kết không khiếu nại, không từ chối nhận hàng và không yêu cầu đổi trả đối với hàng hóa đã được mở mã theo yêu cầu này.
+        </div>
+
+        <h2 class="article-title" style="margin-top: 10px;">ĐIỀU 4. CƠ CHẾ ĐỘC QUYỀN TUYẾN ĐƯỜNG, CHỐNG BÁN VƯỢT TUYẾN &amp; BẢO VỆ DỰ ÁN</h2>
+        
+        <div class="policy-box">
+          <div class="clause-item" style="margin-bottom: 5px;">
+            <strong>&bull; Độc quyền tuyến đường &amp; Không cấp đại lý thứ 2 (Territory Exclusivity):</strong>
+            <br>Bên A cam kết <strong>không phát triển hoặc chỉ định thêm bất kỳ đại lý phân phối nào khác</strong> tại khu vực tuyến đường/địa bàn đã giao cho Bên B. Đồng thời, Bên A cam kết <strong>không thực hiện bán lẻ trực tiếp (vượt tuyến)</strong> cho khách hàng nằm trong phạm vi tuyến của Bên B. Trường hợp khách hàng tại khu vực của Bên B liên hệ trực tiếp với Bên A, Bên A có trách nhiệm chuyển hướng toàn bộ thông tin khách hàng đó về cho Bên B để thực hiện ký kết hợp đồng và hưởng trọn vẹn doanh thu.
+          </div>
+          <div class="clause-item" style="margin-bottom: 0;">
+            <strong>&bull; Đăng ký bảo vệ giữ chỗ dự án (Customer Lock Policy):</strong>
+            <br>Khi Bên B đang tiếp cận tư vấn hoặc triển khai bản dùng thử cho một khách hàng tiềm năng, Bên B có quyền đăng ký thông tin khách hàng đó (Tên đơn vị, Mã số thuế) với Bên A. Bên A sẽ thiết lập chế độ <strong>bảo vệ giữ chỗ độc quyền khách hàng cho Bên B trong vòng 30 ngày</strong>. Trong thời gian bảo vệ, Bên A cam kết không thực hiện chào giá trực tiếp hoặc cấp quyền chào giá cạnh tranh cho đại lý khác tại khách hàng đó.
+          </div>
+        </div>
+
+        <h2 class="article-title" style="margin-top: 10px;">ĐIỀU 5. ĐẶC QUYỀN ĐẠI LÝ VÀ CHÍNH SÁCH TÀI TRỢ KHỞI NGHIỆP ĐỘC QUYỀN TUYẾN</h2>
+        <div class="clause-text">
+          Bên B khi tham gia Gói Khởi Nghiệp Độc Quyền Tuyến được Bên A bảo hộ các Đặc quyền đại lý nền tảng và tài trợ gói hỗ trợ khởi động theo chính sách áp dụng tại thời điểm ký kết:
+        </div>
+
+        <div class="privilege-grid">
+          <div class="privilege-item">
+            <span class="privilege-num">01</span>
+            <div><span class="privilege-title">Độc quyền tuyến 1 năm</span> (Hợp đồng mộc đỏ, không cấp đại lý thứ 2 cùng tuyến)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">02</span>
+            <div><span class="privilege-title">Tài trợ Website riêng</span> (Hỗ trợ website bán hàng theo chương trình từng thời kỳ)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">03</span>
+            <div><span class="privilege-title">Bộ cài White-Label riêng</span> (Tên shop &amp; Hotline đại lý)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">04</span>
+            <div><span class="privilege-title">Gói Key Online khởi động</span> (Số lượng nạp Portal theo Đơn đặt hàng &amp; Chương trình áp dụng)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">05</span>
+            <div><span class="privilege-title">Kho Marketing VIP hàng tuần</span> (Hình ảnh, Video, Content, File in ấn showroom)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">06</span>
+            <div><span class="privilege-title">Chứng nhận bản quyền cho khách</span> (Xuất chứng nhận Key - UUID theo từng máy)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">07</span>
+            <div><span class="privilege-title">Chứng nhận đại lý khung kính</span> (Mộc đỏ pháp nhân gửi tận nơi treo showroom)</div>
+          </div>
+          <div class="privilege-item">
+            <span class="privilege-num">08</span>
+            <div><span class="privilege-title">Ưu đãi trợ giá sỉ Microsoft</span> (Hưởng giá sỉ đại lý từ 01 Bộ cho cả 03 mã Microsoft Retail ESD &amp; FPP)</div>
+          </div>
+        </div>
+
+        <div class="clause-item" style="font-size: 8pt; color: #475569; margin-top: 4px; line-height: 1.4;">
+          <em>* Ghi chú về tính linh hoạt chính sách: Danh mục quà tặng, số lượng key kích hoạt, tài nguyên số (Website, White-Label) và chính sách trợ giá nêu trên mang tính chất tài trợ thương mại theo Chương trình Khởi Nghiệp tại thời điểm ký kết Hợp đồng. Bên A bảo lưu quyền chủ động cập nhật, điều chỉnh hoặc thay thế danh mục quà tặng theo từng giai đoạn chính sách mà không làm ảnh hưởng đến quyền bảo hộ độc quyền tuyến của Bên B. Nội dung bàn giao thực tế căn cứ theo Đơn đặt hàng đợt 1 và được kích hoạt trong vòng 03 – 07 ngày làm việc kể từ thời điểm Bên B hoàn tất thanh toán.</em>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <div>Hợp đồng nguyên tắc phân phối bản quyền &amp; Đại lý độc quyền tuyến — Số: 2026/HĐNT-DOCQUYEN-TUYEN</div>
+        <div>Trang 3 / 4</div>
+      </div>
+    </div>
+
+    <!-- ==================== TRANG 4 ==================== -->
+    <div class="doc-page">
+      <div class="page-content">
+        <h2 class="article-title">ĐIỀU 6. PHƯƠNG THỨC THANH TOÁN VÀ TÀI KHOẢN THỤ HƯỞNG</h2>
+        <div class="clause-item">
+          <strong>6.1. Quy định thanh toán:</strong> Bên B có nghĩa vụ thanh toán <strong>100% GIÁ TRỊ TỪNG ĐỢT ĐƠN HÀNG</strong> trước khi Bên A kích hoạt nạp key trên Portal hoặc xuất kho hàng hóa tem cào vật lý.
+        </div>
+        <div class="clause-item">
+          <strong>6.2. Tài khoản thanh toán chính thức của Bên A:</strong>
+          <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 4px; padding: 5px 12px; margin-top: 2px; font-size: 8.6pt;">
+            <strong>STK: 98896889 - Ngân hàng Techcombank - Chủ tài khoản: CÔNG TY TNHH CÔNG NGHỆ MERCY</strong>
+          </div>
+        </div>
+        <div class="clause-item">
+          <strong>6.3. Trách nhiệm xuất Hóa đơn GTGT điện tử:</strong> Bên A phát hành Hóa đơn GTGT điện tử hợp pháp truyền vào hộp thư điện tử của Bên B theo từng đợt đơn hàng căn cứ trên số lượng thực tế đã bàn giao và thanh toán đầy đủ.
+        </div>
+
+        <h2 class="article-title" style="margin-top: 9px;">ĐIỀU 7. CAM KẾT SẢN LƯỢNG DUY TRÌ ĐỘC QUYỀN VÀ BẢO HỘ GIÁ SÀN BÁN LẺ</h2>
+        <div class="clause-item">
+          <strong>7.1. Hạn ngạch ban đầu &amp; Duy trì độc quyền:</strong>
+          <br>&bull; <em>Hạn ngạch lấy trước đạt điều kiện ban đầu:</em> Bên B cam kết <strong>lấy trước số lượng bản quyền đạt hạn ngạch thỏa thuận</strong> trong Đơn đặt hàng đợt 1 ngay khi ký kết Hợp đồng này để chính thức <strong>đạt điều kiện kích hoạt tư cách Đại lý Độc quyền Tuyến</strong> và nhận bàn giao các Đặc quyền đại lý cùng gói tài trợ khởi nghiệp.
+          <br>&bull; <em>Mức tiêu thụ duy trì:</em> Để duy trì quyền độc quyền tuyến đường cho các kỳ tiếp theo, Bên B cam kết duy trì mức sản lượng tiêu thụ định kỳ <strong>[Theo hạn ngạch cam kết thỏa thuận trong Đơn đặt hàng / Phụ lục định kỳ]</strong>.
+          <br>&bull; <em>Cơ chế rớt hạng:</em> Trường hợp 02 kỳ liên tiếp không đạt mức tiêu thụ duy trì, quyền độc quyền tuyến của Bên B chuyển về trạng thái <em>Đại lý Phân phối Tiêu chuẩn</em> (Bên B vẫn sở hữu và phân phối số lượng đã mua, Bên A có quyền phát triển thêm đại lý khác).
+        </div>
+        <div class="clause-item">
+          <strong>7.2. Cam kết tuân thủ Giá sàn bảo hộ đại lý (Tuyệt đối không bán dưới Giá sàn):</strong> Bên B cam kết tuyệt đối <strong>không chào bán, quảng cáo hoặc bán dưới mức Giá sàn tối thiểu</strong> đối với 03 dòng sản phẩm OnlyOffice: <strong>(1) Bản quyền phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (Key Online):</strong> Giá sàn tối thiểu <strong>499.000 VNĐ/Key</strong>; <strong>(2) Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng tem cào kích hoạt vĩnh viễn):</strong> Giá sàn tối thiểu <strong>699.000 VNĐ/Tem</strong>; <strong>(3) Phần mềm văn phòng OnlyOffice tối ưu bởi Mercy Tech (dạng hộp vật lý nguyên seal, kèm thẻ bản quyền kích hoạt vĩnh viễn - SKU: MER-00105):</strong> Giá sàn tối thiểu <strong>1.499.000 VNĐ/Hộp</strong> (hoặc theo thông báo điều chỉnh Giá sàn từng thời kỳ của Bên A).
+        </div>
+        <div class="danger-highlight">
+          <strong>7.3. CHẾ TÀI XỬ LÝ VI PHẠM GIÁ SÀN:</strong> Nếu Bên B vi phạm bán phá giá dưới giá sàn quy định:
+          <br>1. <strong>ĐÌNH CHỈ QUYỀN ĐỘC QUYỀN TUYẾN &amp; KHÓA TÀI KHOẢN PORTAL MERCY KEYS</strong> của Bên B.
+          <br>2. <strong>ĐƠN PHƯƠNG CHẤM DỨT HỢP ĐỒNG NGAY LẬP TỨC</strong> mà không phải bồi thường; thu hồi toàn bộ quyền lợi độc quyền.
+          <br>3. <strong>BỒI THƯỜNG THIỆT HẠI:</strong> Chịu phạt vi phạm bằng 05 (năm) lần tổng giá trị chênh lệch do bán phá giá gây ra.
+        </div>
+
+        <h2 class="article-title" style="margin-top: 9px;">ĐIỀU 8. CHÍNH SÁCH HỖ TRỢ KỸ THUẬT VÀ GIẢI QUYẾT TRANH CHẤP</h2>
+        <div class="support-highlight">
+          <strong>8.1. CHÍNH SÁCH BẢN QUYỀN, TRÁCH NHIỆM TỰ BẢO QUẢN KEY BOX &amp; HỖ TRỢ KỸ THUẬT:</strong>
+          <br>&bull; <em>Key Online &amp; Tem vật lý:</em> Khóa cố định theo Mainboard kích hoạt ban đầu (cài lại Win/thay ổ cứng, RAM trên cùng Mainboard được tái kích hoạt miễn phí trọn đời). Bản Hộp vật lý OnlyOffice Box [SKU: MER-00105] hỗ trợ đổi máy tối đa 05 lần trọn đời (cách nhau tối thiểu 30 ngày).
+          <br>&bull; <em>Trách nhiệm tự bảo quản mã Key vật lý &amp; Miễn trừ của Bên A:</em> Đối với bản Hộp vật lý OnlyOffice Box [SKU: MER-00105] và Tem cào, Người dùng cuối và Bên B có trách nhiệm tự chủ động bảo quản thẻ/hộp đảm bảo an toàn, bắt buộc chủ động chụp hình lưu lại mã Seri / Product Key hoặc ghi chú bảo mật ngay khi mở seal. Bên A hoàn toàn không chịu trách nhiệm bảo quản hộ, lưu trữ hộ mã khóa và không cấp lại key mới nếu khách hàng làm mất thẻ/hộp mà không lưu giữ hình ảnh/ghi chú mã Key.
+          <br>&bull; <em>Hỗ trợ kỹ thuật UltraView:</em> Đội ngũ kỹ thuật viên Bên A đồng hành hỗ trợ từ xa qua UltraView xử lý tương thích văn phòng và kích hoạt bản quyền.
+        </div>
+        <div class="clause-item">
+          <strong>8.2. Giải quyết tranh chấp:</strong> Mọi tranh chấp phát sinh được ưu tiên thương lượng hòa giải trong vòng 30 ngày. Trường hợp không hòa giải được sẽ đưa ra Tòa án nhân dân có thẩm quyền tại TP. Hồ Chí Minh để giải quyết.
+        </div>
+
+        <h2 class="article-title" style="margin-top: 9px;">ĐIỀU 9. HIỆU LỰC HỢP ĐỒNG VÀ ĐIỀU KHOẢN THI HÀNH</h2>
+        <div class="clause-item">
+          <strong>9.1. Thời hạn hiệu lực:</strong> Hợp đồng nguyên tắc này có hiệu lực <strong>01 (một) năm</strong> kể từ ngày ký. Hết thời hạn, nếu Bên B duy trì đúng sản lượng cam kết và hai bên không có văn bản chấm dứt trước 30 ngày, Hợp đồng sẽ được tự động gia hạn thêm từng năm.
+        </div>
+        <div class="clause-item">
+          <strong>9.2. Số bản phát hành:</strong> Hợp đồng này được lập thành 02 (hai) bản bằng tiếng Việt có giá trị pháp lý như nhau, mỗi bên giữ 01 (một) bản để thực hiện.
+        </div>
+
+        <!-- SIGNATURES BLOCK -->
+        <div class="signatures">
+          <!-- BÊN A -->
+          <div class="sig-col">
+            <div class="sig-title">ĐẠI DIỆN BÊN A (NHÀ PHÂN PHỐI)</div>
+            <div class="sig-subtitle">CÔNG TY TNHH CÔNG NGHỆ MERCY</div>
+            <div class="sig-instruction">(Ký, ghi rõ họ tên và đóng dấu)</div>
+            <div class="sig-space"></div>
+            <div class="sig-name">VY THIÊN HÙNG</div>
+            <div class="sig-role">Giám đốc</div>
+          </div>
+
+          <!-- BÊN B -->
+          <div class="sig-col">
+            <div class="sig-title">ĐẠI DIỆN BÊN B (ĐẠI LÝ ĐỘC QUYỀN)</div>
+            <div class="sig-subtitle">[TÊN CÔNG TY / CỬA HÀNG ĐẠI LÝ]</div>
+            <div class="sig-instruction">(Ký, ghi rõ họ tên và đóng dấu)</div>
+            <div class="sig-space"></div>
+            <div class="sig-name">[HỌ VÀ TÊN NGƯỜI ĐẠI DIỆN]</div>
+            <div class="sig-role">[Chức vụ]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <div>Hợp đồng nguyên tắc phân phối bản quyền &amp; Đại lý độc quyền tuyến — Số: 2026/HĐNT-DOCQUYEN-TUYEN</div>
+        <div>Trang 4 / 4</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function copyShareLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000);
+      }).catch(() => {
+        prompt("Sao chép liên kết hợp đồng bên dưới:", url);
+      });
+    }
+  </script>
+</body>
+</html>
