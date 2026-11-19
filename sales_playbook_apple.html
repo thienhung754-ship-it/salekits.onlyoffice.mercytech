@@ -3826,9 +3826,12 @@
         id: 'win-11-pro-esd',
         group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
         name: 'Phần mềm Windows 11 Pro 64-bit All Lng PK Lic Online DwnLd NR FQC-10572_ Retail Online ESD',
-        shortName: 'Windows 11 Pro 64-bit Retail Online ESD (Key Online FQC-10572) - Lẻ 1.200.000 đ / Sỉ 950.000 đ',
+        shortName: 'Windows 11 Pro 64-bit Retail Online ESD (Key Online FQC-10572) - Lẻ 1.200.000 đ / Sỉ 950.000 đ (50+ giảm 100k)',
         unit: 'Bộ',
-        getPrice: function(qty, isDealer) { return isDealer ? 950000 : 1200000; },
+        getPrice: function(qty, isDealer) {
+          var base = isDealer ? 950000 : 1200000;
+          return qty >= 50 ? (base - 100000) : base;
+        },
         defaultQtyDealer: 5,
         defaultQtyRetail: 1
       },
@@ -3836,9 +3839,12 @@
         id: 'win-fpp-usb',
         group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
         name: 'Phần mềm Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163)',
-        shortName: 'Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163) - Lẻ 3.200.000 đ / Sỉ 2.900.000 đ',
+        shortName: 'Win Pro FPP 11 P2 32-Bit/64-Bit Eng Intl USB (HAV-00163) - Lẻ 3.200.000 đ / Sỉ 2.900.000 đ (50+ giảm 100k)',
         unit: 'Bộ',
-        getPrice: function(qty, isDealer) { return isDealer ? 2900000 : 3200000; },
+        getPrice: function(qty, isDealer) {
+          var base = isDealer ? 2900000 : 3200000;
+          return qty >= 50 ? (base - 100000) : base;
+        },
         defaultQtyDealer: 2,
         defaultQtyRetail: 1
       },
@@ -3846,9 +3852,12 @@
         id: 'office-2024-esd',
         group: '1. Sản Phẩm Chủ Lực (Chuẩn Hóa Đơn VAT)',
         name: 'Phần mềm Microsoft Office Home & Business 2024 All Lng APAC EM Retail Online ESD (EP2-06604)',
-        shortName: 'Microsoft Office H&B 2024 Retail Online ESD (Key Online EP2-06604) - Lẻ 4.200.000 đ / Sỉ 3.900.000 đ',
+        shortName: 'Microsoft Office H&B 2024 Retail Online ESD (Key Online EP2-06604) - Lẻ 4.200.000 đ / Sỉ 3.900.000 đ (50+ giảm 100k)',
         unit: 'Bộ',
-        getPrice: function(qty, isDealer) { return (isDealer || qty >= 50) ? 3900000 : 4200000; },
+        getPrice: function(qty, isDealer) {
+          var base = isDealer ? 3900000 : 4200000;
+          return qty >= 50 ? (base - 100000) : base;
+        },
         defaultQtyDealer: 2,
         defaultQtyRetail: 1
       },
