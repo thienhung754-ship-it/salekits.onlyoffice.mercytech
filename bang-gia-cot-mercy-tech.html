@@ -113,7 +113,7 @@
       background: #9A3412;
     }
 
-    /* Khung Bảng Giá Dãn Ngang Chuẩn Apple SF Pro / Inter (1480px) */
+    /* Khung Bảng Giá Dãn Ngang Chuẩn Apple SF Pro / Inter */
     .sheets-wrapper {
       display: flex;
       flex-direction: column;
@@ -122,13 +122,13 @@
     }
 
     .price-sheet {
-      width: 1480px;
+      width: 100%;
+      max-width: 1420px;
       background: #FFFFFF;
       border-top: 8px solid var(--blue-brand);
-      padding: 38px 42px 32px 48px;
+      padding: 36px 36px 30px 42px;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       position: relative;
-      overflow: hidden;
     }
 
     .price-sheet.sheet-wholesale {
@@ -222,6 +222,7 @@
     /* Bảng Ma Trận Cột */
     table.matrix-table {
       width: 100%;
+      table-layout: fixed;
       border-collapse: collapse;
       position: relative;
       z-index: 1;
@@ -230,10 +231,16 @@
 
     table.matrix-table th,
     table.matrix-table td {
-      padding: 15px 14px;
-      font-size: 14.5px;
-      line-height: 1.4;
+      padding: 14px 10px;
+      font-size: 14px;
+      line-height: 1.38;
       letter-spacing: -0.01em;
+    }
+
+    .sheet-wholesale table.matrix-table th,
+    .sheet-wholesale table.matrix-table td {
+      padding: 13px 6px;
+      font-size: 13.2px;
     }
 
     /* Các cột nằm trong khung viền bảng */
@@ -246,31 +253,31 @@
       background: var(--blue-header);
       color: #FFFFFF;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13.5px;
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: 0.4px;
-      padding: 14px 10px;
+      letter-spacing: 0.3px;
+      padding: 13px 6px;
     }
 
     .sheet-wholesale.theme-orange table.matrix-table thead th.col-framed {
       background: var(--orange-header);
     }
 
-    /* Cột Tên sản phẩm — Thanh thoát chuẩn Apple (Không dày cục, 1 dòng ngang gọn gàng) */
+    /* Cột Tên sản phẩm — Thanh thoát chuẩn Apple (Không dày cục, dãn ngang thoáng) */
     table.matrix-table td.prod-cell {
       text-align: left;
       font-weight: 400;
       color: #1D1D1F;
-      padding-left: 18px;
-      padding-right: 16px;
-      white-space: nowrap;
+      padding-left: 16px;
+      padding-right: 12px;
     }
 
     .sheet-wholesale table.matrix-table td.prod-cell {
-      font-size: 13.8px;
-      padding-left: 15px;
-      padding-right: 12px;
+      font-size: 13.4px;
+      padding-left: 14px;
+      padding-right: 10px;
+      letter-spacing: -0.01em;
     }
 
     table.matrix-table td.prod-cell.is-highlight {
@@ -282,19 +289,33 @@
       text-align: center;
       font-weight: 500;
       color: #334155;
-      width: 58px;
     }
 
     table.matrix-table td.price-cell {
       text-align: center;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 14.5px;
       color: #1D1D1F;
+    }
+
+    .sheet-wholesale table.matrix-table td.price-cell {
+      font-size: 13.5px;
     }
 
     table.matrix-table td.price-cell.price-retail-ref {
       font-weight: 500;
       color: #334155;
+    }
+
+    table.matrix-table td.price-cell.price-custom-quote {
+      font-weight: 600;
+      font-size: 12px;
+      color: #1858A8;
+      letter-spacing: -0.01em;
+    }
+
+    .sheet-wholesale.theme-orange table.matrix-table td.price-cell.price-custom-quote {
+      color: #C2410C;
     }
 
     table.matrix-table td.price-cell.price-muted {
@@ -320,20 +341,20 @@
     table.matrix-table td.col-tag-outside {
       border: none !important;
       background: transparent !important;
-      width: 148px;
-      padding: 4px 0 4px 16px;
+      padding: 4px 0 4px 12px;
       vertical-align: middle;
       text-align: left;
     }
 
     .bestseller-tag {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 800;
       color: var(--red-tag);
       text-transform: uppercase;
       line-height: 1.25;
       letter-spacing: 0.2px;
       display: inline-block;
+      white-space: nowrap;
     }
 
     /* Ghi chú chân trang */
@@ -477,7 +498,7 @@
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">1.200.000</td>
               <td class="col-framed price-cell">1.200.000</td>
-              <td class="col-framed price-cell">1.200.000</td>
+              <td class="col-framed price-cell">1.100.000</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
@@ -485,7 +506,7 @@
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">3.200.000</td>
               <td class="col-framed price-cell">3.200.000</td>
-              <td class="col-framed price-cell">3.200.000</td>
+              <td class="col-framed price-cell">3.100.000</td>
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
@@ -493,7 +514,7 @@
               <td class="col-framed unit-cell">Bộ</td>
               <td class="col-framed price-cell">4.200.000</td>
               <td class="col-framed price-cell">4.200.000</td>
-              <td class="col-framed price-cell">4.200.000</td>
+              <td class="col-framed price-cell">4.100.000</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
           </tbody>
@@ -551,16 +572,16 @@
         <table class="matrix-table">
           <thead>
             <tr>
-              <th class="col-framed" style="width: 47.5%;">TÊN SẢN PHẨM</th>
-              <th class="col-framed" style="width: 4%;">ĐVT</th>
-              <th class="col-framed" style="width: 5.5%;">LẺ</th>
-              <th class="col-framed" style="width: 5.5%;">5+</th>
-              <th class="col-framed" style="width: 5.5%;">20+</th>
-              <th class="col-framed" style="width: 5.5%;">50+</th>
-              <th class="col-framed" style="width: 5.5%;">100+</th>
-              <th class="col-framed" style="width: 5.5%;">200+</th>
-              <th class="col-framed" style="width: 5.5%;">500+</th>
-              <th class="col-tag-outside" style="width: 10%;"></th>
+              <th class="col-framed" style="width: 42%;">TÊN SẢN PHẨM</th>
+              <th class="col-framed" style="width: 3.8%;">ĐVT</th>
+              <th class="col-framed" style="width: 6.2%;">LẺ</th>
+              <th class="col-framed" style="width: 6.2%;">5+</th>
+              <th class="col-framed" style="width: 6.2%;">20+</th>
+              <th class="col-framed" style="width: 6.2%;">50+</th>
+              <th class="col-framed" style="width: 6.8%;">100+</th>
+              <th class="col-framed" style="width: 6.8%;">200+</th>
+              <th class="col-framed" style="width: 6.8%;">500+</th>
+              <th class="col-tag-outside" style="width: 9%;"></th>
             </tr>
           </thead>
           <tbody>
@@ -606,10 +627,10 @@
               <td class="col-framed price-cell price-retail-ref">1.200.000</td>
               <td class="col-framed price-cell">950.000</td>
               <td class="col-framed price-cell">950.000</td>
-              <td class="col-framed price-cell">950.000</td>
-              <td class="col-framed price-cell">950.000</td>
-              <td class="col-framed price-cell">950.000</td>
-              <td class="col-framed price-cell">950.000</td>
+              <td class="col-framed price-cell">850.000</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
             <tr>
@@ -618,10 +639,10 @@
               <td class="col-framed price-cell price-retail-ref">3.200.000</td>
               <td class="col-framed price-cell">2.900.000</td>
               <td class="col-framed price-cell">2.900.000</td>
-              <td class="col-framed price-cell">2.900.000</td>
-              <td class="col-framed price-cell">2.900.000</td>
-              <td class="col-framed price-cell">2.900.000</td>
-              <td class="col-framed price-cell">2.900.000</td>
+              <td class="col-framed price-cell">2.800.000</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
               <td class="col-tag-outside"></td>
             </tr>
             <tr>
@@ -630,10 +651,10 @@
               <td class="col-framed price-cell price-retail-ref">4.200.000</td>
               <td class="col-framed price-cell">3.900.000</td>
               <td class="col-framed price-cell">3.900.000</td>
-              <td class="col-framed price-cell">3.900.000</td>
-              <td class="col-framed price-cell">3.900.000</td>
-              <td class="col-framed price-cell">3.900.000</td>
-              <td class="col-framed price-cell">3.900.000</td>
+              <td class="col-framed price-cell">3.800.000</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
+              <td class="col-framed price-cell price-custom-quote">Báo giá riêng</td>
               <td class="col-tag-outside"><span class="bestseller-tag">BEST SELLER<br>DOANH NGHIỆP</span></td>
             </tr>
           </tbody>
