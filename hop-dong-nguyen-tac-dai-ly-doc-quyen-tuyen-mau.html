@@ -399,8 +399,8 @@
       background: #e2e8f0;
       color: #0f172a;
       font-weight: 800;
-      font-size: 7.9pt;
-      padding: 2.5px 8px;
+      font-size: 7.5pt;
+      padding: 2px 6px;
       text-transform: uppercase;
       letter-spacing: 0.3px;
     }
@@ -409,43 +409,43 @@
     table.product-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 6px 0;
-      font-size: 8.3pt;
+      margin: 4px 0;
+      font-size: 7.9pt;
       background: #fff;
     }
     table.product-table th {
       background: #0f172a;
       color: #fff;
       font-weight: 700;
-      padding: 2.5px 4px;
+      padding: 2px 4px;
       border: 1px solid #0f172a;
       text-align: center;
-      font-size: 7.8pt;
+      font-size: 7.5pt;
     }
     table.product-table td {
-      padding: 1.4px 4px;
+      padding: 1.2px 4px;
       border: 1px solid #cbd5e1;
       vertical-align: middle;
       color: #1e293b;
-      line-height: 1.18;
-      font-size: 7.5pt;
+      line-height: 1.14;
+      font-size: 7.3pt;
     }
     .prod-desc-title {
       font-weight: 800;
       color: #0f172a;
-      font-size: 7.9pt;
+      font-size: 7.6pt;
     }
     .prod-desc-sub {
-      font-size: 7.1pt;
+      font-size: 6.9pt;
       color: #475569;
       margin-top: 0px;
-      line-height: 1.18;
+      line-height: 1.14;
     }
     .summary-row td {
       font-weight: 700;
       background: #f8fafc;
-      font-size: 7.8pt;
-      padding: 2px 6px;
+      font-size: 7.5pt;
+      padding: 1.5px 5px;
     }
 
     /* HIGHLIGHT BANNERS */
@@ -549,11 +549,20 @@
         box-shadow: none !important;
         border: none !important;
         border-radius: 0 !important;
-        padding: 10mm 12mm 8mm 12mm !important;
-        min-height: 280mm !important;
-        height: 280mm !important;
+        padding: 2mm 4mm 4mm 4mm !important;
+        margin: 0 !important;
+        width: 100% !important;
+        min-height: 278mm !important;
+        height: 278mm !important;
+        max-height: 278mm !important;
+        overflow: hidden !important;
         page-break-after: always !important;
+        break-after: page !important;
         page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
       }
       .doc-page:last-child {
         page-break-after: auto !important;

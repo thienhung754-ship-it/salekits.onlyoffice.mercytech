@@ -324,30 +324,30 @@
 
     /* ARTICLES & CLAUSES */
     h2.article-title {
-      font-size: 9.7pt;
+      font-size: 8.6pt;
       font-weight: 800;
       text-transform: uppercase;
       color: #0f172a;
-      margin-top: 10px;
-      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-bottom: 2.5px;
       border-left: 3px solid #f59e0b;
-      padding-left: 8px;
+      padding-left: 7px;
     }
     .clause-text {
-      font-size: 8.9pt;
+      font-size: 8pt;
       color: #1e293b;
-      margin-bottom: 6px;
+      margin-bottom: 3px;
       text-align: justify;
-      line-height: 1.45;
+      line-height: 1.3;
     }
     .clause-list {
-      margin-left: 16px;
-      margin-bottom: 6px;
-      font-size: 8.9pt;
+      margin-left: 14px;
+      margin-bottom: 3px;
+      font-size: 8pt;
     }
     .clause-list li {
-      margin-bottom: 3.5px;
-      line-height: 1.45;
+      margin-bottom: 2px;
+      line-height: 1.3;
       text-align: justify;
     }
     .badge-tested {
@@ -355,20 +355,20 @@
       background: #ecfdf5;
       color: #047857;
       font-weight: 700;
-      padding: 2px 7px;
+      padding: 1.5px 6px;
       border-radius: 4px;
       border: 1px solid #a7f3d0;
-      font-size: 8.2pt;
+      font-size: 7.5pt;
       margin-left: 4px;
     }
     .box-trial-notice {
       background: #f0fdf4;
       border: 1px solid #bbf7d0;
       border-radius: 6px;
-      padding: 8px 12px;
-      margin: 6px 0 8px 0;
-      font-size: 8.8pt;
-      line-height: 1.45;
+      padding: 5px 9px;
+      margin: 3px 0 5px 0;
+      font-size: 7.95pt;
+      line-height: 1.32;
       color: #166534;
     }
 
@@ -376,48 +376,48 @@
     table.product-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 8px 0;
-      font-size: 8.8pt;
+      margin: 4px 0;
+      font-size: 7.9pt;
       background: #fff;
     }
     table.product-table th {
       background: #0f172a;
       color: #fff;
       font-weight: 700;
-      padding: 8px 6px;
+      padding: 4px 4px;
       border: 1px solid #0f172a;
       text-align: center;
-      font-size: 8.5pt;
+      font-size: 7.75pt;
     }
     table.product-table td {
       border: 1px solid #cbd5e1;
-      padding: 7px 6px;
+      padding: 3.5px 5px;
       vertical-align: middle;
-      line-height: 1.35;
+      line-height: 1.22;
     }
     .prod-desc-title {
       font-weight: 700;
       color: #0f172a;
-      font-size: 8.8pt;
-      margin-bottom: 2px;
+      font-size: 7.9pt;
+      margin-bottom: 1px;
     }
     .prod-desc-sub {
-      font-size: 7.9pt;
+      font-size: 7.25pt;
       color: #475569;
-      line-height: 1.35;
+      line-height: 1.2;
     }
     .summary-row td {
       font-weight: 700;
       background: #f8fafc;
-      padding: 6px 8px;
+      padding: 3.5px 5px;
     }
 
     /* SIGNATURES */
     .signatures {
       display: flex;
       justify-content: space-between;
-      margin-top: 18px;
-      padding-top: 6px;
+      margin-top: 10px;
+      padding-top: 4px;
     }
     .sig-col {
       width: 48%;
@@ -429,34 +429,34 @@
     }
     .sig-title {
       font-weight: 800;
-      font-size: 9.3pt;
+      font-size: 9pt;
       text-transform: uppercase;
       color: #0f172a;
     }
     .sig-subtitle {
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       font-weight: 700;
       color: #1e293b;
       margin-top: 2px;
     }
     .sig-instruction {
-      font-size: 8pt;
+      font-size: 7.7pt;
       font-style: italic;
       color: #64748b;
       margin-top: 2px;
     }
     .sig-space {
-      height: 65px;
+      height: 56px;
       width: 100%;
     }
     .sig-name {
       font-weight: 800;
-      font-size: 9.7pt;
+      font-size: 9.2pt;
       color: #0f172a;
       text-transform: uppercase;
     }
     .sig-role {
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       color: #475569;
       margin-top: 2px;
     }
@@ -465,7 +465,7 @@
     @media print {
       @page {
         size: A4 portrait;
-        margin: 0;
+        margin: 8mm 10mm;
       }
       body {
         background: #fff !important;
@@ -485,11 +485,15 @@
         box-shadow: none !important;
         border: none !important;
         border-radius: 0 !important;
-        padding: 10mm 14mm 10mm 14mm !important;
+        padding: 3mm 4mm 5mm 4mm !important;
         margin: 0 !important;
-        min-height: auto !important;
-        height: 297mm !important;
+        width: 100% !important;
+        min-height: 278mm !important;
+        height: 278mm !important;
+        max-height: 278mm !important;
+        overflow: hidden !important;
         page-break-after: always !important;
+        break-after: page !important;
         page-break-inside: avoid !important;
         break-inside: avoid !important;
         display: flex !important;
